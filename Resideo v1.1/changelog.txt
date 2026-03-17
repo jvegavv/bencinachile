@@ -1,0 +1,34 @@
+----------------------------------------------------------------------------
+Release notes for Resideo
+----------------------------------------------------------------------------
+
+Template Name: Resideo
+
+Version: 1.1
+
+by Pixel Prime
+https://themeforest.net/user/pixel_prime
+
+----------------------------------------------------------------------------
+Change log
+----------------------------------------------------------------------------
+
+=== v1.0 - Aug 21, 2019 ===
+
+* Initial Release
+
+=== v1.1 - Aug 24, 2021 ===
+
+* Added half height image page header
+* Added services section with columns
+* Added services accordion section
+* Added counters section
+* Added contact form page header
+* Added search form with tabs on page header
+* Added neighborhoods carousel section
+* Added video section
+* Added services tabs section
+* Added search properties form section
+* Added promo slider section
+* Added promo with image on the side
+* Added 3 more homepage layouts

@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?sdsa">
+    <title>Resideo Documentation</title>
+</head>
+</head>
+
+<body id="top">
+    <header data-spy="affix" data-offset-top="120">
+        <div class="main-container">
+            <div class="logo pull-left"><a href="#top" class="in-page-nav">resideo.</a></div>
+            <div class="tagline pull-left">Documentation</div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <main>
+        <div class="side-nav">
+            <div class="side-nav-search">
+                <div class="dropdown search-dropdown">
+                    <input type="text" class="form-control" name="doc-search" id="doc-search" placeholder="Search documentation..." data-toggle="dropdown">
+                    <ul class="dropdown-menu search-results" aria-labelledby="dropdownMenu">
+                    </ul>
+                </div>
+            </div>
+            <div class="side-nav-toc">
+                <ul>
+                    <li>
+                        <a href="#getting-started">Getting started</a>
+                        <ul>
+                            <li><a href="#installation-setup">Installation and Setup</a></li>
+                            <li><a href="#themes">Themes</a></li>
+                            <li><a href="#gmaps">Google Maps</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#css">CSS</a>
+                        <ul>
+                            <li><a href="#css-toc">Table of Contents</a></li>
+                            <li><a href="#css-icons">Icons</a></li>
+                            <li><a href="#css-modes">Modes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#html">HTML</a>
+                        <ul>
+                            <li><a href="#html-layout">Layout Structure</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#js">Javascript</a>
+                        <ul>
+                            <li><a href="#js-files">Files</a></li>
+                            <li><a href="#js-libs">Libraries</a></li>
+                            <li><a href="#js-gmaps">Google Maps</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="alert alert-success">Thank you for purchasing Resideo template.<br>If you have any questions that are beyond the scope of this documentation, please feel free to contact us <a href="http://themeforest.net/user/mariusnastase" target="_blank">here</a>.</div>
+
+            <h2 id="getting-started">Getting started</h2>
+
+            <h3 id="installation-setup">Installation and Setup</h3>
+            <p>Resideo template is pure HTML and it doesn't require any special installation process. You can just upload it on a server or open it locally and it works.</p>
+
+            <h3 id="themes">Themes</h3>
+            <p>The template has two color tone variations, or modes: light and dark. Each version has its own folder which can be used independently.</p>
+
+            <h3 id="gmaps">Google Maps</h3>
+            <p>The following pages  </p>
+            <pre>contact.html
+properties.html
+single-property.html
+submit-property.html</pre>
+            <p>are using Google Maps and in order to use them Google requires an API key. You can get it from <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">here</a>. After getting the key, open the above files and replace <i><b>YOUR_GOOGLE_MAPS_KEY_HERE</b></i> text with your key from this line at the end of the file:</p>
+            <pre>&lt;script src=&quot;https://maps.googleapis.com/maps/api/js?key=<b>YOUR_GOOGLE_MAPS_KEY_HERE</b>&amp;amp;libraries=geometry&amp;amp;libraries=places&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</pre>
+
+            <h2 id="css">CSS</h2>
+            <p>The template is based on <b>Bootstrap v4.3.1</b>. For Bootstrap css and components, please check <a href="https://getbootstrap.com/" target="_blank">here</a>.</p>
+            <p>All custom css styles are found in <b><i>/css/style.css</i></b> file.</p>
+
+            <h3 id="css-toc">Table of Contents</h3>
+            <p><b>Homepage Version 1 Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Hero | <b><i>.pxp-hero</i></b>
+
+        - Properties Carousel | <b><i>.pxp-props-carousel-right</i></b>
+            { Properties Cards | <b><i>.pxp-prop-card-1</i></b> }
+
+        - Services | <b><i>.pxp-services</i></b>
+            { Services Cards | <b><i>.pxp-services-item</i></b> }
+
+        - Areas
+            { Areas Cards | <b><i>.pxp-areas-1-item</i></b> }
+
+        - CTA Section | <b><i>.pxp-cta-1</i></b> | <b><i>.pxp-full</i></b> / <b><i>.pxp-full-left</i></b> / <b><i>.pxp-full-right</i></b>
+            { Caption | <b><i>.pxp-cta-1-content</i></b> | <b><i>.pxp-top-left</i></b> / <b><i>.pxp-top-right</i></b> / <b><i>.pxp-bottom-left</i></b> / <b><i>.pxp-bottom-right</i></b> / <b><i>.pxp-center</i></b> / <b><i>.pxp-center-left</i></b> / <b><i>.pxp-center-right</i></b> }
+
+        - Agents
+            { Agents Cards | <b><i>.pxp-agents-1-item</i></b> }
+
+        - Membership Plans
+            { Plans Items | <b><i>.pxp-plans-1-item</i></b> | <b><i>.pxp-is-popular</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Homepage Version 2 Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Hero | <b><i>.pxp-hero</i></b>
+            { Properties Image Carousel | <b><i>.pxp-hero-props-carousel-1</i></b> }
+            { Properties Prices Carousel | <b><i>.pxp-hero-props-carousel-1-prices</i></b> }
+
+        - Properties Carousel | <b><i>.pxp-props-carousel-right</i></b> / <b><i>.pxp-has-intro</i></b>
+            { Properties Cards | <b><i>.pxp-prop-card-1</i></b> }
+
+        - Services | <b><i>.pxp-services-h</i></b>
+            { Services Cards | <b><i>.pxp-services-h-item</i></b> }
+
+        - CTA Section | <b><i>.pxp-cta-1</i></b> | <b><i>.pxp-full</i></b> / <b><i>.pxp-full-left</i></b> / <b><i>.pxp-full-right</i></b>
+            { Caption | <b><i>.pxp-cta-1-content</i></b> | <b><i>.pxp-top-left</i></b> / <b><i>.pxp-top-right</i></b> / <b><i>.pxp-bottom-left</i></b> / <b><i>.pxp-bottom-right</i></b> / <b><i>.pxp-center</i></b> / <b><i>.pxp-center-left</i></b> / <b><i>.pxp-center-right</i></b> }
+
+        - Testimonials | <b><i>.pxp-testim-1</i></b>
+            { Testimonials Items | <b><i>.pxp-testim-1-item</i></b> }
+
+        - Blog Articles
+            { Articles Cards | <b><i>.pxp-posts-1-item</i></b> }
+
+        - Newsletter
+            { Subscription Form | <b><i>.pxp-newsletter-1-form</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Homepage Version 3 Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Hero | <b><i>.pxp-hero</i></b>
+            { Left Carousel | <b><i>.pxp-hero-props-carousel-2-left</i></b> }
+            { Right Carousel | <b><i>.pxp-hero-props-carousel-2-right</i></b> }
+
+        - Properties List
+            { Properties Cards | <b><i>.pxp-prop-card-1</i></b> }
+
+        - Services | <b><i>.pxp-services-c</i></b>
+            { Services Cards | <b><i>.pxp-services-c-item</i></b> }
+
+        - Agents
+            { Agents Cards | <b><i>.pxp-agents-1-item</i></b> }
+
+        - CTA Section | <b><i>.pxp-cta-1</i></b> | <b><i>.pxp-full</i></b> / <b><i>.pxp-full-left</i></b> / <b><i>.pxp-full-right</i></b>
+            { Caption | <b><i>.pxp-cta-1-content</i></b> | <b><i>.pxp-top-left</i></b> / <b><i>.pxp-top-right</i></b> / <b><i>.pxp-bottom-left</i></b> / <b><i>.pxp-bottom-right</i></b> / <b><i>.pxp-center</i></b> / <b><i>.pxp-center-left</i></b> / <b><i>.pxp-center-right</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Properties List Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Content Map | <b><i>.pxp-map-side</i></b>
+
+        - Content Side | <b><i>.pxp-content-side</i></b>
+
+            -- Search Form | <b><i>.pxp-content-side-search-form</i></b>
+
+            -- Search Form Advanced | <b><i>.pxp-content-side-search-form-adv</i></b>
+
+            -- Properties List
+                { Properties Cards | <b><i>.pxp-results-card-1</i></b> }
+
+            -- Pagination | <b><i>.pxp-paginantion</i></b>
+
+            -- Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Single Property Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Property Top Info | <b><i>.pxp-single-property-top</i></b>
+
+        - Photo Gallery | <b><i>.pxp-single-property-gallery-container</i></b>
+
+        - Info Sections
+            { Info Sections Items | <b><i>.pxp-single-property-section</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Submit Property Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Agents Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Hero | <b><i>.pxp-agents-hero</i></b>
+            { Search Form | <b><i>.pxp-agents-hero-search-form</i></b> }
+
+        - Agents List
+            { Agents Cards | <b><i>.pxp-agents-1-item</i></b> }
+
+        - Pagination | <b><i>.pxp-paginantion</i></b>
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Single Agent Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Info Sections
+            { Info Sections Items | <b><i>.pxp-agent-section</i></b> }
+
+        - Agent Listings
+            { Agent Listings Cards | <b><i>.pxp-prop-card-1</i></b> }
+
+        - Pagination | <b><i>.pxp-paginantion</i></b>
+
+        - Comments/Reviews | <b><i>.pxp-agent-comments</i></b>
+            { Comments Form | <b><i>.pxp-agent-comments-form</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Blog Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Featured Posts Carousel | <b><i>.pxp-blog-posts-carousel-1</i></b>
+
+        - Blog Posts List
+            { Posts List Cards | <b><i>.pxp-posts-1-item</i></b> }
+
+        - Pagination | <b><i>.pxp-paginantion</i></b>
+
+        - Side Sections
+            { Side Sections Items | <b><i>.pxp-blog-posts-side-section</i></b> }
+
+        - Newsletter
+            { Subscription Form | <b><i>.pxp-newsletter-1-form</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Single Blog Post Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Hero | <b><i>.pxp-blog-post-hero</i></b>
+
+        - Sharing Options | <b><i>.pxp-blog-post-share</i></b>
+
+        - Content Blocks
+            { Content Blocks Items | <b><i>.pxp-blog-post-block</i></b> }
+        
+        - Related Posts
+            { Related Posts Cards | <b><i>.pxp-posts-1-item</i></b> }
+
+        - Comments | <b><i>.pxp-blog-post-comments</i></b>
+            { Comments Form | <b><i>.pxp-blog-post-comments-form</i></b> }
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <p><b>Contact Us Layout</b></p>
+            <pre>* Body
+
+    + Header | <b><i>.pxp-header</i></b>
+
+        - Navigation | <b><i>.pxp-nav</i></b>
+
+    + Content | <b><i>.pxp-content</i></b>
+
+        - Hero | <b><i>.pxp-contact-hero</i></b>
+
+        - Offices | <b><i>.pxp-contact-hero-offices</i></b>
+
+        - Contact Form | <b><i>.pxp-contact-form</i></b>
+
+        - Contact Map | <b><i>.pxp-contact-map</i></b>
+
+    + Footer | <b><i>.pxp-footer</i></b></pre>
+
+            <h3 id="css-icons">Icons</h3>
+            <p>The template makes use of <a href="https://fontawesome.com/v4.7.0/" target="_blank">Font Awesome 4.7.0</a> web font as its icons set.</p>
+
+            <h3 id="css-icons">Modes</h3>
+            <p>The template has two modes: <i>light</i> and <i>dark</i>. It's simple to switch between them just by adding and removing the <b><i>.pxp-dark-mode</i></b> CSS class to the <b><i>body</i></b> HTML tag. Also you have to make sure when using the dark mode to add <b><i>.text-white</i></b> CSS class to the text elements that are being displayed on a dark background.</p>
+
+            <h2 id="html">HTML</h2>
+
+            <h3 id="html-layout">Layout Structure</h3>
+            <p>All the pages(except the properties list page) are structured with containers for header, content and footer, as seen below:</p>
+            <pre>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        ...
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;pxp-header&quot;&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class=&quot;pxp-content&quot;&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class=&quot;pxp-footer&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            <p>The properties list page is structured the same as the other pages, except the content that is split in half: a part lisiting content and half the map, as seen below:</p>
+            <pre>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        ...
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;pxp-header&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class=&quot;pxp-content&gt;
+            &lt;div class=&quot;pxp-map-side pxp-map-right pxp-half&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div class=&quot;pxp-content-side pxp-content-left pxp-half&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pxp-footer&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+            <h2 id="js">Javascript</h2>
+
+            <h3 id="js-files">Files</h3>
+            <p>The template client-side functionality is based on <a href="https://jquery.com/" target="_blank">jQuery</a> javascript library.</p>
+            <p>Javascript custom files included:</p>
+            <ul>
+                <li><b>main.js</b> &mdash; Main interactions functionality</li>
+                <li><b>gallery.js</b> &mdash; Gallery functionality for single property page</li>
+                <li><b>map.js</b> &mdash; Map functionality for properties list page</li>
+                <li><b>single-map.js</b> &mdash; Map functionality for single property page</li>
+                <li><b>submit-property-map.js</b> &mdash; Map functionality for submit property page</li>
+                <li><b>contact-map.js</b> &mdash; Map functionality for contact us page</li>
+            </ul>
+
+            <h3 id="js-libs">Libraries</h3>
+            <p>External javascript libraries included:</p>
+            <ul>
+                <li><a href="https://www.chartjs.org/" target="_blank">Chart.js</a></li>
+                <li><a href="https://www.dropzonejs.com/" target="_blank">DropzoneJS</a></li>
+                <li>Infobox</li>
+                <li><a href="http://stickyjs.com/" target="_blank">jQuery Sticky</a></li>
+                <li>Markerclusterer</li>
+                <li><a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank">Owl Carousel</a></li>
+                <li><a href="https://photoswipe.com/" target="_blank">PhotoSwipe</a></li>
+            </ul>
+
+            <h3 id="js-gmaps">Google Maps</h3>
+            <p>Google Maps API (more on how to use the API <a href="#gmaps">here</a>) is used on the following pages:</p>
+            <ol>
+                <li>
+                    <p><b>properties.html</b></p>
+                    <p>The functionality for the map is found in <b><i>map.js</i></b> file. The properties markers displayed on the map are generated from JSON format, which is defined inside the map.js file, like this:</p>
+                    <pre>propertiesList = [{
+    id: 1,
+    title: 'Chic Apartment in Downtown',
+    photo: 'images/ph-thmb.jpg',
+    position: {
+        lat: '37.779023',
+        lng: '-122.48862200000002'
+    },
+    price: {
+        long: '$890,000',
+        short: '$890k'
+    },
+    link: 'single-property.html',
+    features: {
+        beds: 2,
+        baths: 2,
+        size: '920 SF'
+    }
+}, { 
+    ... 
+}];</pre>
+                </li>
+                <li>
+                    <p><b>single-property.html</b></p>
+                    <p>The functionality for the map is found in <b><i>single-map.js</i></b> file. The marker coordinates are given by these two variables:</p>
+                    <pre>var propLat = '37.75347110977809';
+var propLng = '-122.46686778459474';</pre>
+                </li>
+                <li>
+                    <p><b>submit-property.html</b></p>
+                    <p>The functionality for the map is found in <b><i>submit-property-map.js</i></b> file. The marker coordinates are given by these two variables:</p>
+                    <pre>var propLat = '37.75347110977809';
+var propLng = '-122.46686778459474';</pre>
+                </li>
+                <li>
+                    <p><b>contact.html</b></p>
+                    <p>The functionality for the map is found in <b><i>contact-map.js</i></b> file. The marker coordinates are given by these two variables:</p>
+                    <pre>var propLat = '37.75347110977809';
+var propLng = '-122.46686778459474';</pre>
+                </li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <div class="main-container">
+            <div class="footer-copyright">Copyright &copy; 2019 Pixel Prime. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js?asd11"></script>
+</body>
+</html>
