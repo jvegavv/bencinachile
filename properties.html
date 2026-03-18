@@ -14,7 +14,72 @@
     </head>
     <body>
         
-        <div id="menu-container"></div>
+        <!--####################### MENU #######################-->
+        <div class="pxp-header pxp-full fixed-top">
+            <div class="pxp-container-full">
+                <div class="row align-items-center">
+                    <div class="col-5 col-md-2">
+                        <a href="index.html" class="pxp-logo text-decoration-none">resideo.</a>
+                    </div>
+                    <div class="col-2 col-md-8 text-center">
+                        <ul class="pxp-nav list-inline">
+                            <li class="list-inline-item">
+                                <a href="#">Home</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="index.html">Version 1</a></li>
+                                    <li><a href="index-2.html">Version 2</a></li>
+                                    <li><a href="index-3.html">Version 3</a></li>
+                                    <li><a href="index-4.html">Version 4</a></li>
+                                    <li><a href="index-5.html">Version 5</a></li>
+                                    <li><a href="index-6.html">Version 6</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Properties</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="properties.html">All Properties</a></li>
+                                    <li><a href="single-property.html">Single Property</a></li>
+                                    <li><a href="submit-property.html">Submit New Property</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Agents</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="agents.html">All Agents</a></li>
+                                    <li><a href="single-agent.html">Single Agent</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Blog</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="blog.html">All Blog Posts</a></li>
+                                    <li><a href="single-post.html">Single Blog Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Themes</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="../light/properties.html">Light</a></li>
+                                    <li><a href="../dark/properties.html">Dark</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item pxp-is-last"><a href="contact.html">Contact Us</a></li>
+                            <li class="list-inline-item pxp-has-btns">
+                                <div class="pxp-user-btns">
+                                    <a href="#" class="pxp-user-btns-signup pxp-signup-trigger">Sign Up</a>
+                                    <a href="#" class="pxp-user-btns-login pxp-signin-trigger">Sign In</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-5 col-md-2 text-right">
+                        <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
+                        <a href="javascript:void(0);" class="pxp-header-user pxp-signin-trigger"><span class="fa fa-user-o"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--####################### MENU #######################-->
 
         <div class="pxp-content pxp-full-height">
             <div class="pxp-map-side pxp-map-right pxp-half">
@@ -23,6 +88,8 @@
             </div>
             <div class="pxp-content-side pxp-content-left pxp-half">
                 <div class="pxp-content-side-wrapper">
+
+                    <!--####################### FILTRO #######################-->
                     <div class="d-flex">
                         <div class="pxp-content-side-search-form">
                             <div class="row pxp-content-side-search-form-row">
@@ -202,6 +269,7 @@
                             </div>
                         </div>
                     </div>
+                     <!--####################### FILTRO #######################-->
 
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-xxxl-4">
@@ -396,19 +464,111 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY_HERE&amp;libraries=geometry&amp;libraries=places"></script>
-        <script src="js/markerclusterer.js"></script>
-        <script src="js/main.js?asdsd"></script>
-        <script src="js/map.js?asldksjd"></script>
+
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
         <!-- Codigo agregado manual-->
         <script>
-            fetch('menu.html')
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById('menu-container').innerHTML = data;
-              });
-          </script>
-          <style>
+            document.addEventListener('DOMContentLoaded', function() {
+                // 1. Inicializar mapa con estilo "Voyager" (estilo Google Maps)
+                var map = L.map('results-map', {
+                    zoomControl: false // Los controles de Resideo suelen chocar, mejor quitarlos o moverlos
+                }).setView([-36.7412, -72.4643], 15);
+        
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                    attribution: '© OpenStreetMap'
+                }).addTo(map);
+        
+                L.control.zoom({ position: 'bottomright' }).addTo(map);
+        
+                // 2. Iconos Personalizados
+                var iconoAuto = L.icon({
+                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/3085/3085330.png',
+                    iconSize: [40, 40],
+                    iconAnchor: [20, 20]
+                });
+        
+                var iconoBomba = L.icon({
+                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/3448/3448636.png',
+                    iconSize: [35, 35],
+                    iconAnchor: [17, 34],
+                    popupAnchor: [0, -30]
+                });
+        
+                // 3. Datos de las Estaciones
+                var estaciones = [
+                    {
+                        lat: -36.74277021626831, lng: -72.47071266174316,
+                        nombre: "Aramco - Quillón",
+                        direccion: "Av Bernardo O Higgins N° 1033",
+                        precios: "93: $1.186 | 95: $1.222 | DI: $954"
+                    },
+                    {
+                        lat: -36.74126545532326, lng: -72.4643547882989,
+                        nombre: "Copec - Quillón",
+                        direccion: "Avda O`higgins 1192",
+                        precios: "93: $1.188 | 95: $1.224 | DI: $954"
+                    },
+                    {
+                        lat: -36.7391678501493, lng: -72.47076630592346,
+                        nombre: "Independiente - Quillón",
+                        direccion: "Avda O`higgins 1192",
+                        precios: "93: $1.188 | 95: $1.224 | DI: $954"
+                    }
+                ];
+        
+                // 4. Dibujar marcadores de bombas
+                estaciones.forEach(function(est) {
+                    L.marker([est.lat, est.lng], { icon: iconoBomba })
+                        .addTo(map)
+                        .bindPopup(`<b>${est.nombre}</b><br><small>${est.direccion}</small><br><div class="precio">${est.precios}</div>`);
+                });
+        
+                // 5. GPS con Icono de Auto
+                var userMarker;
+                map.on('locationfound', function(e) {
+                    if (!userMarker) {
+                        userMarker = L.marker(e.latlng, { icon: iconoAuto }).addTo(map).bindPopup("Estás aquí");
+                    } else {
+                        userMarker.setLatLng(e.latlng);
+                    }
+                });
+        
+                map.locate({ setView: false, watch: true, enableHighAccuracy: true });
+        
+                // FIX CRÍTICO: Forzar al mapa a recalcular su tamaño después de que la página cargue
+                setTimeout(function() {
+                    map.invalidateSize();
+                }, 800);
+            });
+        </script>
+
+   
+        <style>
+            /* Estilo para que el mapa llene todo su contenedor lateral */
+            #results-map {
+                width: 100% !important;
+                height: 100% !important;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background-color: #e5e3df;
+            }
+
+            /* Estilo del Popup estilo Gmaps */
+            .leaflet-popup-content-wrapper { border-radius: 12px; padding: 5px; }
+            .popup-combustible { display: flex; justify-content: space-between; font-size: 0.9em; margin: 4px 0; }
+            .precio { font-weight: bold; color: #1e88e5; }
+            
+            .texto-destacado {
+                font-weight: 900;
+                color: black;
+                text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff;
+            }
+
             /* Aquí pegas tu fragmento de CSS */
             .texto-destacado {
                 font-weight: 900;
