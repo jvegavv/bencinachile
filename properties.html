@@ -306,7 +306,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-xxxl-4">
-                            <a href="single-property.html" class="pxp-results-card-1 rounded-lg" data-prop="1">
+                            <a href="single-property.html" class="pxp-results-card-1 rounded-lg" data-prop="2">
                                 <div id="card-carousel-1" class="carousel slide" data-ride="carousel" data-interval="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" style="
@@ -339,7 +339,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-xxxl-4">
-                            <a href="single-property.html" class="pxp-results-card-1 rounded-lg" data-prop="1">
+                            <a href="single-property.html" class="pxp-results-card-1 rounded-lg" data-prop="3">
                                 <div id="card-carousel-1" class="carousel slide" data-ride="carousel" data-interval="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" style="
@@ -472,9 +472,37 @@
 
         <!-- Codigo agregado manual-->
         <script>
+            var marcadoresEstaciones = {};
+            var map;
+                $(document).ready(function() {
+                    // Detectar el paso del mouse sobre la tarjeta
+                    $('.pxp-results-card-1').on('mouseenter', function() {
+                        // Obtenemos el ID de la estación desde el atributo data-prop
+                        var propId = $(this).attr('data-prop');
+                        // Verificamos si el marcador existe en nuestro objeto global
+                        if (marcadoresEstaciones[propId]) {
+                            var marker = marcadoresEstaciones[propId];
+                            
+                            // Abrimos el popup
+                            marker.openPopup();
+                            
+                            // Opcional: Centrar el mapa suavemente en la estación al pasar el mouse
+                            map.panTo(marker.getLatLng());
+                        }
+                    });
+
+                    // Opcional: Cerrar el popup al quitar el mouse
+                    $('.pxp-results-card-1').on('mouseleave', function() {
+                        var propId = $(this).attr('data-prop');
+                        if (marcadoresEstaciones[propId]) {
+                            marcadoresEstaciones[propId].closePopup();
+                        }
+                    });
+                });
+
             document.addEventListener('DOMContentLoaded', function() {
                 // 1. Inicializar mapa con estilo "Voyager" (estilo Google Maps)
-                var map = L.map('results-map', {
+                    map = L.map('results-map', {
                     zoomControl: false // Los controles de Resideo suelen chocar, mejor quitarlos o moverlos
                 }).setView([-36.7412, -72.4643], 15);
         
@@ -504,27 +532,33 @@
                         lat: -36.74277021626831, lng: -72.47071266174316,
                         nombre: "Aramco - Quillón",
                         direccion: "Av Bernardo O Higgins N° 1033",
-                        precios: "93: $1.186 | 95: $1.222 | DI: $954"
+                        precios: "93: $1.186 | 95: $1.222 | DI: $954",
+                        estacion_id: 1
                     },
                     {
                         lat: -36.74126545532326, lng: -72.4643547882989,
                         nombre: "Copec - Quillón",
                         direccion: "Avda O`higgins 1192",
-                        precios: "93: $1.188 | 95: $1.224 | DI: $954"
+                        precios: "93: $1.188 | 95: $1.224 | DI: $954",
+                        estacion_id: 2
                     },
                     {
                         lat: -36.7391678501493, lng: -72.47076630592346,
                         nombre: "Independiente - Quillón",
                         direccion: "Avda O`higgins 1192",
-                        precios: "93: $1.188 | 95: $1.224 | DI: $954"
+                        precios: "93: $1.188 | 95: $1.224 | DI: $954",
+                        estacion_id: 3
                     }
                 ];
         
                 // 4. Dibujar marcadores de bombas
+                
                 estaciones.forEach(function(est) {
-                    L.marker([est.lat, est.lng], { icon: iconoBomba })
+                    var marker_map = L.marker([est.lat, est.lng], { icon: iconoBomba })
                         .addTo(map)
                         .bindPopup(`<b>${est.nombre}</b><br><small>${est.direccion}</small><br><div class="precio">${est.precios}</div>`);
+                        marcadoresEstaciones[est.estacion_id] = marker_map;
+                        console.log(marcadoresEstaciones);
                 });
         
                 // 5. GPS con Icono de Auto
@@ -539,10 +573,22 @@
         
                 map.locate({ setView: false, watch: true, enableHighAccuracy: true });
         
-                // FIX CRÍTICO: Forzar al mapa a recalcular su tamaño después de que la página cargue
-                setTimeout(function() {
-                    map.invalidateSize();
-                }, 800);
+
+                // Seleccionamos todos los botones que activan cambios de vista
+                const toggleButtons = document.querySelectorAll('.pxp-adv-toggle, .pxp-map-toggle, .pxp-list-toggle');
+
+                toggleButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Esperamos un momento breve (200ms) para que la animación de CSS termine 
+                        // y el div tenga su tamaño final antes de recalcular.
+                        setTimeout(function() {
+                            map.invalidateSize({
+                                animate: true
+                            });
+                            console.log("Mapa recalculado");
+                        }, 300); 
+                    });
+                });
             });
         </script>
 

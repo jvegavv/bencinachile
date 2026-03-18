@@ -3340,7 +3340,7 @@ a.pxp-adv-toggle.pxp-active:hover {
 }
 a.pxp-list-toggle {
     position: fixed;
-    z-index: 400;
+    z-index: 400; /*Editado por Jvega*/
     top: 99px;
     left: 30px;
     background-color: #fff;
