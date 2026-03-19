@@ -84,7 +84,7 @@
         <div class="pxp-content pxp-full-height">
             <div class="pxp-map-side pxp-map-right pxp-half">
                 <div id="results-map"></div>
-                <a href="javascript:void(0);" class="pxp-list-toggle" style="display: inline;"><span class="fa fa-list"></span></a>
+                <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
             </div>
             <div class="pxp-content-side pxp-content-left pxp-half">
                 <div class="pxp-content-side-wrapper">
@@ -474,6 +474,9 @@
         <script>
             var marcadoresEstaciones = {};
             var map;
+
+            /* Estye codigo abre y cierra los popup cuando nos acercamos a las propiedades*/
+
                 $(document).ready(function() {
                     // Detectar el paso del mouse sobre la tarjeta
                     $('.pxp-results-card-1').on('mouseenter', function() {
@@ -481,13 +484,13 @@
                         var propId = $(this).attr('data-prop');
                         // Verificamos si el marcador existe en nuestro objeto global
                         if (marcadoresEstaciones[propId]) {
-                            var marker = marcadoresEstaciones[propId];
+                            var marker_map = marcadoresEstaciones[propId];
                             
                             // Abrimos el popup
-                            marker.openPopup();
+                            marker_map.openPopup();
                             
                             // Opcional: Centrar el mapa suavemente en la estación al pasar el mouse
-                            map.panTo(marker.getLatLng());
+                            map.panTo(marker_map.getLatLng());
                         }
                     });
 
@@ -499,6 +502,8 @@
                         }
                     });
                 });
+
+
 
             document.addEventListener('DOMContentLoaded', function() {
                 // 1. Inicializar mapa con estilo "Voyager" (estilo Google Maps)
@@ -562,16 +567,42 @@
                 });
         
                 // 5. GPS con Icono de Auto
-                var userMarker;
-                map.on('locationfound', function(e) {
-                    if (!userMarker) {
-                        userMarker = L.marker(e.latlng, { icon: iconoAuto }).addTo(map).bindPopup("Estás aquí");
-                    } else {
-                        userMarker.setLatLng(e.latlng);
-                    }
-                });
-        
-                map.locate({ setView: false, watch: true, enableHighAccuracy: true });
+              
+                // 1. Definir el marcador fuera para mayor control
+                    var userMarker;
+
+                    // 2. Escuchar el evento 'locationfound'
+                    map.on('locationfound', function(e) {
+      
+
+                        if (!userMarker) {
+                            // Primera vez: creamos el marcador y centramos el mapa
+                            userMarker = L.marker(e.latlng, { icon: iconoAuto }).addTo(map)
+                                .bindPopup("Estás aqui").openPopup();
+                            
+                            map.setView(e.latlng, 16); // Centrar la cámara la primera vez
+                        } else {
+                            // Actualizaciones siguientes: solo movemos el marcador
+                            userMarker.setLatLng(e.latlng);
+                            
+                            // OPCIONAL: Si quieres que el mapa SIEMPRE te siga al centro:
+                            map.panTo(e.latlng); 
+                        }
+                    });
+
+                    // 3. Manejo de errores (Muy importante en móviles)
+                    map.on('locationerror', function(e) {
+                        alert("No se pudo obtener tu ubicación: " + e.message);
+                    });
+
+                    // 4. Iniciar el rastreo
+                    map.locate({ 
+                        setView: false, // Lo manejamos manualmente arriba para mejor control
+                        watch: true, 
+                        enableHighAccuracy: true,
+                        maximumAge: 1000, // No usar posiciones guardadas en caché de más de 1 seg
+                        timeout: 10000    // Tiempo límite para encontrar señal
+});
         
 
                 // Seleccionamos todos los botones que activan cambios de vista
@@ -609,12 +640,7 @@
             .popup-combustible { display: flex; justify-content: space-between; font-size: 0.9em; margin: 4px 0; }
             .precio { font-weight: bold; color: #1e88e5; }
             
-            .texto-destacado {
-                font-weight: 900;
-                color: black;
-                text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff;
-            }
-
+         
             /* Aquí pegas tu fragmento de CSS */
             .texto-destacado {
                 font-weight: 900;
