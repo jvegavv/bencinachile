@@ -1,0 +1,121 @@
+{
+    "comuna": "Santa María",
+    "estaciones": [
+        {
+            "id": 462,
+            "marca": 5,
+            "direccion": "irarrazabal, esquina o´higgins, s/n, 0",
+            "latitud": "-32.7477892699211",
+            "longitud": "-70.65755814313889",
+            "region": "Valparaíso",
+            "comuna": "Santa María",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 462,
+                    "precio": "1198.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 10:47:19",
+                    "updated_at": "2026-03-19 10:47:19",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 462,
+                    "precio": "1267.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 10:47:19",
+                    "updated_at": "2026-03-19 10:47:19",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 462,
+                    "precio": "953.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-03-20 12:33:29",
+                    "updated_at": "2026-03-20 12:33:29",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 462,
+                    "precio": "1395.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 10:47:19",
+                    "updated_at": "2026-03-19 10:47:19",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 462,
+                    "precio": "1233.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 10:47:19",
+                    "updated_at": "2026-03-19 10:47:19",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 462
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 462
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        }
+    ]
+}

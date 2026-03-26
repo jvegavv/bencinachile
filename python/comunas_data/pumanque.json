@@ -1,0 +1,29 @@
+{
+    "comuna": "Pumanque",
+    "estaciones": [
+        {
+            "id": 648,
+            "marca": 10,
+            "direccion": "1 1",
+            "latitud": "-34.602619",
+            "longitud": "-71.654875",
+            "region": "Del Libertador Gral. Bernardo O’Higgins",
+            "comuna": "Pumanque",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/",
+            "logo": "https://api.bencinaenlinea.cl/",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "Sin Bandera"
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "comuna": "Placilla",
+    "estaciones": [
+        {
+            "id": 646,
+            "marca": 48,
+            "direccion": "RUTA 90 KM 15 0",
+            "latitud": "-34.633795",
+            "longitud": "-71.110827",
+            "region": "Del Libertador Gral. Bernardo O’Higgins",
+            "comuna": "Placilla",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697485062_logo48.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697485062_logo48.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 646,
+                    "precio": "1172.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 10 horas",
+                    "precio_fecha": "2026-03-25 11:25:57",
+                    "updated_at": "2026-03-25 11:25:57",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 646,
+                    "precio": "1000.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 10 horas",
+                    "precio_fecha": "2026-03-25 11:25:57",
+                    "updated_at": "2026-03-25 11:25:57",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 646,
+                    "precio": "1260.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-03-20 08:52:40",
+                    "updated_at": "2026-03-20 08:52:40",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 646,
+                    "precio": "1198.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-03-20 08:52:40",
+                    "updated_at": "2026-03-20 08:52:40",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 646
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "Combustibles Ortiz"
+        }
+    ]
+}
