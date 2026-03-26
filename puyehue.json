@@ -1,0 +1,408 @@
+{
+    "comuna": "Puyehue",
+    "estaciones": [
+        {
+            "id": 1472,
+            "marca": 5,
+            "direccion": "MANUEL RODRIGUEZ 69",
+            "latitud": "-40.68310092903034",
+            "longitud": "-72.60435655787845",
+            "region": "De los Lagos",
+            "comuna": "Puyehue",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1472,
+                    "precio": "1316.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 9 meses",
+                    "precio_fecha": "2025-06-05 17:27:42",
+                    "updated_at": "2025-06-05 17:27:42",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1472,
+                    "precio": "1363.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 9 meses",
+                    "precio_fecha": "2025-06-05 17:27:42",
+                    "updated_at": "2025-06-05 17:27:42",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1472,
+                    "precio": "1008.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 9 meses",
+                    "precio_fecha": "2025-06-05 17:27:42",
+                    "updated_at": "2025-06-05 17:27:42",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 1472,
+                    "precio": "1030.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 9 meses",
+                    "precio_fecha": "2025-06-12 13:52:45",
+                    "updated_at": "2025-06-12 13:52:45",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1472,
+                    "precio": "1337.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 9 meses",
+                    "precio_fecha": "2025-06-05 17:27:42",
+                    "updated_at": "2025-06-05 17:27:42",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1472
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1472
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 2181,
+            "marca": 151,
+            "direccion": "Ruta 215",
+            "latitud": "-40.68622143804883",
+            "longitud": "-72.59287608868839",
+            "region": "De los Lagos",
+            "comuna": "Puyehue",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1715355420_Aramco1.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 2181,
+                    "precio": "1237.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 08:41:56",
+                    "updated_at": "2026-03-19 08:41:56",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 2181,
+                    "precio": "1263.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 08:41:56",
+                    "updated_at": "2026-03-19 08:41:56",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 2181,
+                    "precio": "1288.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 08:41:56",
+                    "updated_at": "2026-03-19 08:41:56",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 2181,
+                    "precio": "994.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 08:41:56",
+                    "updated_at": "2026-03-19 08:41:56",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2181
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2181
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2181
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2181
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2181
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "ARAMCO"
+        },
+        {
+            "id": 2188,
+            "marca": 5,
+            "direccion": "RUTA 215 S/N, SECTOR ENTRELAGOS",
+            "latitud": "-40.686018912661346",
+            "longitud": "-72.59216787210934",
+            "region": "De los Lagos",
+            "comuna": "Puyehue",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 2188,
+                    "precio": "1237.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:25:06",
+                    "updated_at": "2026-03-19 15:25:06",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 2188,
+                    "precio": "1263.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:25:06",
+                    "updated_at": "2026-03-19 15:25:06",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 2188,
+                    "precio": "1288.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:25:06",
+                    "updated_at": "2026-03-19 15:25:06",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 2188,
+                    "precio": "1416.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:25:06",
+                    "updated_at": "2026-03-19 15:25:06",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 2188,
+                    "precio": "994.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-13 16:28:00",
+                    "updated_at": "2026-03-13 16:28:00",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2188
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2188
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2188
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2188
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2188
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 2210,
+            "marca": 5,
+            "direccion": "Marina Rupanco s/n",
+            "latitud": "-40.772225329953535",
+            "longitud": "-72.68366260227631",
+            "region": "De los Lagos",
+            "comuna": "Puyehue",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 2210,
+                    "precio": "1394.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 año",
+                    "precio_fecha": "2025-03-17 13:35:38",
+                    "updated_at": "2025-03-17 13:35:38",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        }
+    ]
+}
