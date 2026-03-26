@@ -1,0 +1,330 @@
+{
+    "comuna": "San Pablo",
+    "estaciones": [
+        {
+            "id": 1476,
+            "marca": 5,
+            "direccion": "RUTA 5 SUR KM 906 0",
+            "latitud": "-40.40870897347225",
+            "longitud": "-73.0024766921997",
+            "region": "De los Lagos",
+            "comuna": "San Pablo",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 8,
+                    "nombre_corto": "A93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1476,
+                    "precio": "1242.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-18 22:55:54",
+                    "updated_at": "2026-03-18 22:55:54",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 5
+                },
+                {
+                    "id": 9,
+                    "nombre_corto": "A95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1476,
+                    "precio": "1265.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-18 22:55:54",
+                    "updated_at": "2026-03-18 22:55:54",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 4
+                },
+                {
+                    "id": 10,
+                    "nombre_corto": "A97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1476,
+                    "precio": "1289.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-18 22:55:54",
+                    "updated_at": "2026-03-18 22:55:54",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 3
+                },
+                {
+                    "id": 11,
+                    "nombre_corto": "ADI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1476,
+                    "precio": "995.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-11 22:44:50",
+                    "updated_at": "2026-03-11 22:44:50",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 2
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1476
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1476
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1476
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1476
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1476
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1476
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 1477,
+            "marca": 5,
+            "direccion": "RUTA 5 SUR KM 904",
+            "latitud": "-40.430942304712104",
+            "longitud": "-73.00891399383545",
+            "region": "De los Lagos",
+            "comuna": "San Pablo",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1477,
+                    "precio": "1242.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:31:49",
+                    "updated_at": "2026-03-19 15:31:49",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1477,
+                    "precio": "1289.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:31:49",
+                    "updated_at": "2026-03-19 15:31:49",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1477,
+                    "precio": "995.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-12 09:08:54",
+                    "updated_at": "2026-03-12 09:08:54",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1477,
+                    "precio": "1265.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 15:31:49",
+                    "updated_at": "2026-03-19 15:31:49",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1477
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1477
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 1478,
+            "marca": 128,
+            "direccion": "CRUZ 697",
+            "latitud": "-40.411981",
+            "longitud": "-73.011451",
+            "region": "De los Lagos",
+            "comuna": "San Pablo",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/",
+            "logo": "https://api.bencinaenlinea.cl/",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1478,
+                    "precio": "1246.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 22:10:48",
+                    "updated_at": "2026-03-19 22:10:48",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1478,
+                    "precio": "1293.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 22:10:48",
+                    "updated_at": "2026-03-19 22:10:48",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1478,
+                    "precio": "999.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-12 22:01:53",
+                    "updated_at": "2026-03-12 22:01:53",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1478,
+                    "precio": "1269.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 22:10:48",
+                    "updated_at": "2026-03-19 22:10:48",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1478
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1478
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1478
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "GSP Combustibles"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "comuna": "Cabo de Hornos",
+    "estaciones": [
+        {
+            "id": 1531,
+            "marca": 5,
+            "direccion": "avenida costanera 154",
+            "latitud": "-54.93334335456218",
+            "longitud": "-67.60408580303192",
+            "region": "Magallanes y de la Antártica Chilena",
+            "comuna": "Cabo de Hornos",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1531,
+                    "precio": "1460.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 10:08:37",
+                    "updated_at": "2026-03-19 10:08:37",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1531,
+                    "precio": "1183.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 10:08:37",
+                    "updated_at": "2026-03-19 10:08:37",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        }
+    ]
+}

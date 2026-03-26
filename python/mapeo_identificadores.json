@@ -85,1572 +85,1886 @@
         {
             "id": 1,
             "nombre": "Algarrobo",
-            "nombre_pagina": "algarrobo.html"
+            "nombre_pagina": "algarrobo.html",
+            "nombre_json": "algarrobo.json"
         },
         {
             "id": 2,
             "nombre": "Alhué",
-            "nombre_pagina": "alhue.html"
+            "nombre_pagina": "alhue.html",
+            "nombre_json": "alhue.json"
         },
         {
             "id": 3,
             "nombre": "Alto Hospicio",
-            "nombre_pagina": "alto-hospicio.html"
+            "nombre_pagina": "alto-hospicio.html",
+            "nombre_json": "alto-hospicio.json"
         },
         {
             "id": 4,
             "nombre": "Ancud",
-            "nombre_pagina": "ancud.html"
+            "nombre_pagina": "ancud.html",
+            "nombre_json": "ancud.json"
         },
         {
             "id": 5,
             "nombre": "Andacollo",
-            "nombre_pagina": "andacollo.html"
+            "nombre_pagina": "andacollo.html",
+            "nombre_json": "andacollo.json"
         },
         {
             "id": 6,
             "nombre": "Angol",
-            "nombre_pagina": "angol.html"
+            "nombre_pagina": "angol.html",
+            "nombre_json": "angol.json"
         },
         {
             "id": 7,
             "nombre": "Antofagasta",
-            "nombre_pagina": "antofagasta.html"
+            "nombre_pagina": "antofagasta.html",
+            "nombre_json": "antofagasta.json"
         },
         {
             "id": 8,
             "nombre": "Antuco",
-            "nombre_pagina": "antuco.html"
+            "nombre_pagina": "antuco.html",
+            "nombre_json": "antuco.json"
         },
         {
             "id": 9,
             "nombre": "Arauco",
-            "nombre_pagina": "arauco.html"
+            "nombre_pagina": "arauco.html",
+            "nombre_json": "arauco.json"
         },
         {
             "id": 10,
             "nombre": "Arica",
-            "nombre_pagina": "arica.html"
+            "nombre_pagina": "arica.html",
+            "nombre_json": "arica.json"
         },
         {
             "id": 11,
             "nombre": "Aysén",
-            "nombre_pagina": "aysen.html"
+            "nombre_pagina": "aysen.html",
+            "nombre_json": "aysen.json"
         },
         {
             "id": 12,
             "nombre": "Buin",
-            "nombre_pagina": "buin.html"
+            "nombre_pagina": "buin.html",
+            "nombre_json": "buin.json"
         },
         {
             "id": 13,
             "nombre": "Bulnes",
-            "nombre_pagina": "bulnes.html"
+            "nombre_pagina": "bulnes.html",
+            "nombre_json": "bulnes.json"
         },
         {
             "id": 14,
             "nombre": "Cabildo",
-            "nombre_pagina": "cabildo.html"
+            "nombre_pagina": "cabildo.html",
+            "nombre_json": "cabildo.json"
         },
         {
             "id": 15,
             "nombre": "Cabo de Hornos",
-            "nombre_pagina": "cabo-de-hornos.html"
+            "nombre_pagina": "cabo-de-hornos.html",
+            "nombre_json": "cabo-de-hornos.json"
         },
         {
             "id": 16,
             "nombre": "Cabrero",
-            "nombre_pagina": "cabrero.html"
+            "nombre_pagina": "cabrero.html",
+            "nombre_json": "cabrero.json"
         },
         {
             "id": 17,
             "nombre": "Calama",
-            "nombre_pagina": "calama.html"
+            "nombre_pagina": "calama.html",
+            "nombre_json": "calama.json"
         },
         {
             "id": 18,
             "nombre": "Calbuco",
-            "nombre_pagina": "calbuco.html"
+            "nombre_pagina": "calbuco.html",
+            "nombre_json": "calbuco.json"
         },
         {
             "id": 19,
             "nombre": "Caldera",
-            "nombre_pagina": "caldera.html"
+            "nombre_pagina": "caldera.html",
+            "nombre_json": "caldera.json"
         },
         {
             "id": 20,
             "nombre": "Calera",
-            "nombre_pagina": "calera.html"
+            "nombre_pagina": "calera.html",
+            "nombre_json": "calera.json"
         },
         {
             "id": 21,
             "nombre": "Calera de Tango",
-            "nombre_pagina": "calera-de-tango.html"
+            "nombre_pagina": "calera-de-tango.html",
+            "nombre_json": "calera-de-tango.json"
         },
         {
             "id": 22,
             "nombre": "Calle Larga",
-            "nombre_pagina": "calle-larga.html"
+            "nombre_pagina": "calle-larga.html",
+            "nombre_json": "calle-larga.json"
         },
         {
             "id": 23,
             "nombre": "Canela",
-            "nombre_pagina": "canela.html"
+            "nombre_pagina": "canela.html",
+            "nombre_json": "canela.json"
         },
         {
             "id": 24,
             "nombre": "Carahue",
-            "nombre_pagina": "carahue.html"
+            "nombre_pagina": "carahue.html",
+            "nombre_json": "carahue.json"
         },
         {
             "id": 25,
             "nombre": "Cartagena",
-            "nombre_pagina": "cartagena.html"
+            "nombre_pagina": "cartagena.html",
+            "nombre_json": "cartagena.json"
         },
         {
             "id": 26,
             "nombre": "Casablanca",
-            "nombre_pagina": "casablanca.html"
+            "nombre_pagina": "casablanca.html",
+            "nombre_json": "casablanca.json"
         },
         {
             "id": 27,
             "nombre": "Castro",
-            "nombre_pagina": "castro.html"
+            "nombre_pagina": "castro.html",
+            "nombre_json": "castro.json"
         },
         {
             "id": 28,
             "nombre": "Catemu",
-            "nombre_pagina": "catemu.html"
+            "nombre_pagina": "catemu.html",
+            "nombre_json": "catemu.json"
         },
         {
             "id": 29,
             "nombre": "Cauquenes",
-            "nombre_pagina": "cauquenes.html"
+            "nombre_pagina": "cauquenes.html",
+            "nombre_json": "cauquenes.json"
         },
         {
             "id": 30,
             "nombre": "Cañete",
-            "nombre_pagina": "canete.html"
+            "nombre_pagina": "canete.html",
+            "nombre_json": "canete.json"
         },
         {
             "id": 31,
             "nombre": "Cerrillos",
-            "nombre_pagina": "cerrillos.html"
+            "nombre_pagina": "cerrillos.html",
+            "nombre_json": "cerrillos.json"
         },
         {
             "id": 32,
             "nombre": "Cerro Navia",
-            "nombre_pagina": "cerro-navia.html"
+            "nombre_pagina": "cerro-navia.html",
+            "nombre_json": "cerro-navia.json"
         },
         {
             "id": 33,
             "nombre": "Chaitén",
-            "nombre_pagina": "chaiten.html"
+            "nombre_pagina": "chaiten.html",
+            "nombre_json": "chaiten.json"
         },
         {
             "id": 34,
             "nombre": "Chanco",
-            "nombre_pagina": "chanco.html"
+            "nombre_pagina": "chanco.html",
+            "nombre_json": "chanco.json"
         },
         {
             "id": 35,
             "nombre": "Chañaral",
-            "nombre_pagina": "chanaral.html"
+            "nombre_pagina": "chanaral.html",
+            "nombre_json": "chanaral.json"
         },
         {
             "id": 36,
             "nombre": "Chiguayante",
-            "nombre_pagina": "chiguayante.html"
+            "nombre_pagina": "chiguayante.html",
+            "nombre_json": "chiguayante.json"
         },
         {
             "id": 37,
             "nombre": "Chile Chico",
-            "nombre_pagina": "chile-chico.html"
+            "nombre_pagina": "chile-chico.html",
+            "nombre_json": "chile-chico.json"
         },
         {
             "id": 38,
             "nombre": "Chillán",
-            "nombre_pagina": "chillan.html"
+            "nombre_pagina": "chillan.html",
+            "nombre_json": "chillan.json"
         },
         {
             "id": 39,
             "nombre": "Chillán Viejo",
-            "nombre_pagina": "chillan-viejo.html"
+            "nombre_pagina": "chillan-viejo.html",
+            "nombre_json": "chillan-viejo.json"
         },
         {
             "id": 40,
             "nombre": "Chimbarongo",
-            "nombre_pagina": "chimbarongo.html"
+            "nombre_pagina": "chimbarongo.html",
+            "nombre_json": "chimbarongo.json"
         },
         {
             "id": 41,
             "nombre": "Cholchol",
-            "nombre_pagina": "cholchol.html"
+            "nombre_pagina": "cholchol.html",
+            "nombre_json": "cholchol.json"
         },
         {
             "id": 42,
             "nombre": "Chonchi",
-            "nombre_pagina": "chonchi.html"
+            "nombre_pagina": "chonchi.html",
+            "nombre_json": "chonchi.json"
         },
         {
             "id": 43,
             "nombre": "Chépica",
-            "nombre_pagina": "chepica.html"
+            "nombre_pagina": "chepica.html",
+            "nombre_json": "chepica.json"
         },
         {
             "id": 44,
             "nombre": "Cisnes",
-            "nombre_pagina": "cisnes.html"
+            "nombre_pagina": "cisnes.html",
+            "nombre_json": "cisnes.json"
         },
         {
             "id": 45,
             "nombre": "Cobquecura",
-            "nombre_pagina": "cobquecura.html"
+            "nombre_pagina": "cobquecura.html",
+            "nombre_json": "cobquecura.json"
         },
         {
             "id": 46,
             "nombre": "Cochrane",
-            "nombre_pagina": "cochrane.html"
+            "nombre_pagina": "cochrane.html",
+            "nombre_json": "cochrane.json"
         },
         {
             "id": 47,
             "nombre": "Codegua",
-            "nombre_pagina": "codegua.html"
+            "nombre_pagina": "codegua.html",
+            "nombre_json": "codegua.json"
         },
         {
             "id": 48,
             "nombre": "Coelemu",
-            "nombre_pagina": "coelemu.html"
+            "nombre_pagina": "coelemu.html",
+            "nombre_json": "coelemu.json"
         },
         {
             "id": 49,
             "nombre": "Coihaique",
-            "nombre_pagina": "coihaique.html"
+            "nombre_pagina": "coihaique.html",
+            "nombre_json": "coihaique.json"
         },
         {
             "id": 50,
             "nombre": "Coihueco",
-            "nombre_pagina": "coihueco.html"
+            "nombre_pagina": "coihueco.html",
+            "nombre_json": "coihueco.json"
         },
         {
             "id": 51,
             "nombre": "Coinco",
-            "nombre_pagina": "coinco.html"
+            "nombre_pagina": "coinco.html",
+            "nombre_json": "coinco.json"
         },
         {
             "id": 52,
             "nombre": "Colbún",
-            "nombre_pagina": "colbun.html"
+            "nombre_pagina": "colbun.html",
+            "nombre_json": "colbun.json"
         },
         {
             "id": 53,
             "nombre": "Colina",
-            "nombre_pagina": "colina.html"
+            "nombre_pagina": "colina.html",
+            "nombre_json": "colina.json"
         },
         {
             "id": 54,
             "nombre": "Collipulli",
-            "nombre_pagina": "collipulli.html"
+            "nombre_pagina": "collipulli.html",
+            "nombre_json": "collipulli.json"
         },
         {
             "id": 55,
             "nombre": "Coltauco",
-            "nombre_pagina": "coltauco.html"
+            "nombre_pagina": "coltauco.html",
+            "nombre_json": "coltauco.json"
         },
         {
             "id": 56,
             "nombre": "Combarbalá",
-            "nombre_pagina": "combarbala.html"
+            "nombre_pagina": "combarbala.html",
+            "nombre_json": "combarbala.json"
         },
         {
             "id": 57,
             "nombre": "Concepción",
-            "nombre_pagina": "concepcion.html"
+            "nombre_pagina": "concepcion.html",
+            "nombre_json": "concepcion.json"
         },
         {
             "id": 58,
             "nombre": "Conchalí",
-            "nombre_pagina": "conchali.html"
+            "nombre_pagina": "conchali.html",
+            "nombre_json": "conchali.json"
         },
         {
             "id": 59,
             "nombre": "Concón",
-            "nombre_pagina": "concon.html"
+            "nombre_pagina": "concon.html",
+            "nombre_json": "concon.json"
         },
         {
             "id": 60,
             "nombre": "Constitución",
-            "nombre_pagina": "constitucion.html"
+            "nombre_pagina": "constitucion.html",
+            "nombre_json": "constitucion.json"
         },
         {
             "id": 61,
             "nombre": "Contulmo",
-            "nombre_pagina": "contulmo.html"
+            "nombre_pagina": "contulmo.html",
+            "nombre_json": "contulmo.json"
         },
         {
             "id": 62,
             "nombre": "Copiapó",
-            "nombre_pagina": "copiapo.html"
+            "nombre_pagina": "copiapo.html",
+            "nombre_json": "copiapo.json"
         },
         {
             "id": 63,
             "nombre": "Coquimbo",
-            "nombre_pagina": "coquimbo.html"
+            "nombre_pagina": "coquimbo.html",
+            "nombre_json": "coquimbo.json"
         },
         {
             "id": 64,
             "nombre": "Coronel",
-            "nombre_pagina": "coronel.html"
+            "nombre_pagina": "coronel.html",
+            "nombre_json": "coronel.json"
         },
         {
             "id": 65,
             "nombre": "Corral",
-            "nombre_pagina": "corral.html"
+            "nombre_pagina": "corral.html",
+            "nombre_json": "corral.json"
         },
         {
             "id": 66,
             "nombre": "Cunco",
-            "nombre_pagina": "cunco.html"
+            "nombre_pagina": "cunco.html",
+            "nombre_json": "cunco.json"
         },
         {
             "id": 67,
             "nombre": "Curacautín",
-            "nombre_pagina": "curacautin.html"
+            "nombre_pagina": "curacautin.html",
+            "nombre_json": "curacautin.json"
         },
         {
             "id": 68,
             "nombre": "Curacaví",
-            "nombre_pagina": "curacavi.html"
+            "nombre_pagina": "curacavi.html",
+            "nombre_json": "curacavi.json"
         },
         {
             "id": 69,
             "nombre": "Curanilahue",
-            "nombre_pagina": "curanilahue.html"
+            "nombre_pagina": "curanilahue.html",
+            "nombre_json": "curanilahue.json"
         },
         {
             "id": 70,
             "nombre": "Curarrehue",
-            "nombre_pagina": "curarrehue.html"
+            "nombre_pagina": "curarrehue.html",
+            "nombre_json": "curarrehue.json"
         },
         {
             "id": 71,
             "nombre": "Curepto",
-            "nombre_pagina": "curepto.html"
+            "nombre_pagina": "curepto.html",
+            "nombre_json": "curepto.json"
         },
         {
             "id": 72,
             "nombre": "Curicó",
-            "nombre_pagina": "curico.html"
+            "nombre_pagina": "curico.html",
+            "nombre_json": "curico.json"
         },
         {
             "id": 73,
             "nombre": "Dalcahue",
-            "nombre_pagina": "dalcahue.html"
+            "nombre_pagina": "dalcahue.html",
+            "nombre_json": "dalcahue.json"
         },
         {
             "id": 74,
             "nombre": "Diego de Almagro",
-            "nombre_pagina": "diego-de-almagro.html"
+            "nombre_pagina": "diego-de-almagro.html",
+            "nombre_json": "diego-de-almagro.json"
         },
         {
             "id": 75,
             "nombre": "Doñihue",
-            "nombre_pagina": "donihue.html"
+            "nombre_pagina": "donihue.html",
+            "nombre_json": "donihue.json"
         },
         {
             "id": 76,
             "nombre": "El Bosque",
-            "nombre_pagina": "el-bosque.html"
+            "nombre_pagina": "el-bosque.html",
+            "nombre_json": "el-bosque.json"
         },
         {
             "id": 77,
             "nombre": "El Carmen",
-            "nombre_pagina": "el-carmen.html"
+            "nombre_pagina": "el-carmen.html",
+            "nombre_json": "el-carmen.json"
         },
         {
             "id": 78,
             "nombre": "El Monte",
-            "nombre_pagina": "el-monte.html"
+            "nombre_pagina": "el-monte.html",
+            "nombre_json": "el-monte.json"
         },
         {
             "id": 79,
             "nombre": "El Quisco",
-            "nombre_pagina": "el-quisco.html"
+            "nombre_pagina": "el-quisco.html",
+            "nombre_json": "el-quisco.json"
         },
         {
             "id": 80,
             "nombre": "Empedrado",
-            "nombre_pagina": "empedrado.html"
+            "nombre_pagina": "empedrado.html",
+            "nombre_json": "empedrado.json"
         },
         {
             "id": 81,
             "nombre": "Estación Central",
-            "nombre_pagina": "estacion-central.html"
+            "nombre_pagina": "estacion-central.html",
+            "nombre_json": "estacion-central.json"
         },
         {
             "id": 82,
             "nombre": "Florida",
-            "nombre_pagina": "florida.html"
+            "nombre_pagina": "florida.html",
+            "nombre_json": "florida.json"
         },
         {
             "id": 83,
             "nombre": "Freire",
-            "nombre_pagina": "freire.html"
+            "nombre_pagina": "freire.html",
+            "nombre_json": "freire.json"
         },
         {
             "id": 84,
             "nombre": "Fresia",
-            "nombre_pagina": "fresia.html"
+            "nombre_pagina": "fresia.html",
+            "nombre_json": "fresia.json"
         },
         {
             "id": 85,
             "nombre": "Frutillar",
-            "nombre_pagina": "frutillar.html"
+            "nombre_pagina": "frutillar.html",
+            "nombre_json": "frutillar.json"
         },
         {
             "id": 86,
             "nombre": "Futaleufú",
-            "nombre_pagina": "futaleufu.html"
+            "nombre_pagina": "futaleufu.html",
+            "nombre_json": "futaleufu.json"
         },
         {
             "id": 87,
             "nombre": "Futrono",
-            "nombre_pagina": "futrono.html"
+            "nombre_pagina": "futrono.html",
+            "nombre_json": "futrono.json"
         },
         {
             "id": 88,
             "nombre": "Galvarino",
-            "nombre_pagina": "galvarino.html"
+            "nombre_pagina": "galvarino.html",
+            "nombre_json": "galvarino.json"
         },
         {
             "id": 89,
             "nombre": "Gorbea",
-            "nombre_pagina": "gorbea.html"
+            "nombre_pagina": "gorbea.html",
+            "nombre_json": "gorbea.json"
         },
         {
             "id": 90,
             "nombre": "Graneros",
-            "nombre_pagina": "graneros.html"
+            "nombre_pagina": "graneros.html",
+            "nombre_json": "graneros.json"
         },
         {
             "id": 91,
             "nombre": "Hijuelas",
-            "nombre_pagina": "hijuelas.html"
+            "nombre_pagina": "hijuelas.html",
+            "nombre_json": "hijuelas.json"
         },
         {
             "id": 92,
             "nombre": "Hualaihué",
-            "nombre_pagina": "hualaihue.html"
+            "nombre_pagina": "hualaihue.html",
+            "nombre_json": "hualaihue.json"
         },
         {
             "id": 93,
             "nombre": "Hualañé",
-            "nombre_pagina": "hualane.html"
+            "nombre_pagina": "hualane.html",
+            "nombre_json": "hualane.json"
         },
         {
             "id": 94,
             "nombre": "Hualpén",
-            "nombre_pagina": "hualpen.html"
+            "nombre_pagina": "hualpen.html",
+            "nombre_json": "hualpen.json"
         },
         {
             "id": 95,
             "nombre": "Hualqui",
-            "nombre_pagina": "hualqui.html"
+            "nombre_pagina": "hualqui.html",
+            "nombre_json": "hualqui.json"
         },
         {
             "id": 96,
             "nombre": "Huasco",
-            "nombre_pagina": "huasco.html"
+            "nombre_pagina": "huasco.html",
+            "nombre_json": "huasco.json"
         },
         {
             "id": 97,
             "nombre": "Huechuraba",
-            "nombre_pagina": "huechuraba.html"
+            "nombre_pagina": "huechuraba.html",
+            "nombre_json": "huechuraba.json"
         },
         {
             "id": 98,
             "nombre": "Illapel",
-            "nombre_pagina": "illapel.html"
+            "nombre_pagina": "illapel.html",
+            "nombre_json": "illapel.json"
         },
         {
             "id": 99,
             "nombre": "Independencia",
-            "nombre_pagina": "independencia.html"
+            "nombre_pagina": "independencia.html",
+            "nombre_json": "independencia.json"
         },
         {
             "id": 100,
             "nombre": "Iquique",
-            "nombre_pagina": "iquique.html"
+            "nombre_pagina": "iquique.html",
+            "nombre_json": "iquique.json"
         },
         {
             "id": 101,
             "nombre": "Isla de Maipo",
-            "nombre_pagina": "isla-de-maipo.html"
+            "nombre_pagina": "isla-de-maipo.html",
+            "nombre_json": "isla-de-maipo.json"
         },
         {
             "id": 102,
             "nombre": "Isla de Pascua",
-            "nombre_pagina": "isla-de-pascua.html"
+            "nombre_pagina": "isla-de-pascua.html",
+            "nombre_json": "isla-de-pascua.json"
         },
         {
             "id": 103,
             "nombre": "La Cisterna",
-            "nombre_pagina": "la-cisterna.html"
+            "nombre_pagina": "la-cisterna.html",
+            "nombre_json": "la-cisterna.json"
         },
         {
             "id": 104,
             "nombre": "La Cruz",
-            "nombre_pagina": "la-cruz.html"
+            "nombre_pagina": "la-cruz.html",
+            "nombre_json": "la-cruz.json"
         },
         {
             "id": 105,
             "nombre": "La Estrella",
-            "nombre_pagina": "la-estrella.html"
+            "nombre_pagina": "la-estrella.html",
+            "nombre_json": "la-estrella.json"
         },
         {
             "id": 106,
             "nombre": "La Florida",
-            "nombre_pagina": "la-florida.html"
+            "nombre_pagina": "la-florida.html",
+            "nombre_json": "la-florida.json"
         },
         {
             "id": 107,
             "nombre": "La Granja",
-            "nombre_pagina": "la-granja.html"
+            "nombre_pagina": "la-granja.html",
+            "nombre_json": "la-granja.json"
         },
         {
             "id": 108,
             "nombre": "La Ligua",
-            "nombre_pagina": "la-ligua.html"
+            "nombre_pagina": "la-ligua.html",
+            "nombre_json": "la-ligua.json"
         },
         {
             "id": 109,
             "nombre": "La Pintana",
-            "nombre_pagina": "la-pintana.html"
+            "nombre_pagina": "la-pintana.html",
+            "nombre_json": "la-pintana.json"
         },
         {
             "id": 110,
             "nombre": "La Reina",
-            "nombre_pagina": "la-reina.html"
+            "nombre_pagina": "la-reina.html",
+            "nombre_json": "la-reina.json"
         },
         {
             "id": 111,
             "nombre": "La Serena",
-            "nombre_pagina": "la-serena.html"
+            "nombre_pagina": "la-serena.html",
+            "nombre_json": "la-serena.json"
         },
         {
             "id": 112,
             "nombre": "La Unión",
-            "nombre_pagina": "la-union.html"
+            "nombre_pagina": "la-union.html",
+            "nombre_json": "la-union.json"
         },
         {
             "id": 113,
             "nombre": "Lago Ranco",
-            "nombre_pagina": "lago-ranco.html"
+            "nombre_pagina": "lago-ranco.html",
+            "nombre_json": "lago-ranco.json"
         },
         {
             "id": 114,
             "nombre": "Laguna Blanca",
-            "nombre_pagina": "laguna-blanca.html"
+            "nombre_pagina": "laguna-blanca.html",
+            "nombre_json": "laguna-blanca.json"
         },
         {
             "id": 115,
             "nombre": "Laja",
-            "nombre_pagina": "laja.html"
+            "nombre_pagina": "laja.html",
+            "nombre_json": "laja.json"
         },
         {
             "id": 116,
             "nombre": "Lampa",
-            "nombre_pagina": "lampa.html"
+            "nombre_pagina": "lampa.html",
+            "nombre_json": "lampa.json"
         },
         {
             "id": 117,
             "nombre": "Lanco",
-            "nombre_pagina": "lanco.html"
+            "nombre_pagina": "lanco.html",
+            "nombre_json": "lanco.json"
         },
         {
             "id": 118,
             "nombre": "Las Cabras",
-            "nombre_pagina": "las-cabras.html"
+            "nombre_pagina": "las-cabras.html",
+            "nombre_json": "las-cabras.json"
         },
         {
             "id": 119,
             "nombre": "Las Condes",
-            "nombre_pagina": "las-condes.html"
+            "nombre_pagina": "las-condes.html",
+            "nombre_json": "las-condes.json"
         },
         {
             "id": 120,
             "nombre": "Lautaro",
-            "nombre_pagina": "lautaro.html"
+            "nombre_pagina": "lautaro.html",
+            "nombre_json": "lautaro.json"
         },
         {
             "id": 121,
             "nombre": "Lebu",
-            "nombre_pagina": "lebu.html"
+            "nombre_pagina": "lebu.html",
+            "nombre_json": "lebu.json"
         },
         {
             "id": 122,
             "nombre": "Licantén",
-            "nombre_pagina": "licanten.html"
+            "nombre_pagina": "licanten.html",
+            "nombre_json": "licanten.json"
         },
         {
             "id": 123,
             "nombre": "Limache",
-            "nombre_pagina": "limache.html"
+            "nombre_pagina": "limache.html",
+            "nombre_json": "limache.json"
         },
         {
             "id": 124,
             "nombre": "Linares",
-            "nombre_pagina": "linares.html"
+            "nombre_pagina": "linares.html",
+            "nombre_json": "linares.json"
         },
         {
             "id": 125,
             "nombre": "Litueche",
-            "nombre_pagina": "litueche.html"
+            "nombre_pagina": "litueche.html",
+            "nombre_json": "litueche.json"
         },
         {
             "id": 126,
             "nombre": "Llaillay",
-            "nombre_pagina": "llaillay.html"
+            "nombre_pagina": "llaillay.html",
+            "nombre_json": "llaillay.json"
         },
         {
             "id": 127,
             "nombre": "Llanquihue",
-            "nombre_pagina": "llanquihue.html"
+            "nombre_pagina": "llanquihue.html",
+            "nombre_json": "llanquihue.json"
         },
         {
             "id": 128,
             "nombre": "Lo Barnechea",
-            "nombre_pagina": "lo-barnechea.html"
+            "nombre_pagina": "lo-barnechea.html",
+            "nombre_json": "lo-barnechea.json"
         },
         {
             "id": 129,
             "nombre": "Lo Espejo",
-            "nombre_pagina": "lo-espejo.html"
+            "nombre_pagina": "lo-espejo.html",
+            "nombre_json": "lo-espejo.json"
         },
         {
             "id": 130,
             "nombre": "Lo Prado",
-            "nombre_pagina": "lo-prado.html"
+            "nombre_pagina": "lo-prado.html",
+            "nombre_json": "lo-prado.json"
         },
         {
             "id": 131,
             "nombre": "Lolol",
-            "nombre_pagina": "lolol.html"
+            "nombre_pagina": "lolol.html",
+            "nombre_json": "lolol.json"
         },
         {
             "id": 132,
             "nombre": "Loncoche",
-            "nombre_pagina": "loncoche.html"
+            "nombre_pagina": "loncoche.html",
+            "nombre_json": "loncoche.json"
         },
         {
             "id": 133,
             "nombre": "Longaví",
-            "nombre_pagina": "longavi.html"
+            "nombre_pagina": "longavi.html",
+            "nombre_json": "longavi.json"
         },
         {
             "id": 134,
             "nombre": "Lonquimay",
-            "nombre_pagina": "lonquimay.html"
+            "nombre_pagina": "lonquimay.html",
+            "nombre_json": "lonquimay.json"
         },
         {
             "id": 135,
             "nombre": "Los Andes",
-            "nombre_pagina": "los-andes.html"
+            "nombre_pagina": "los-andes.html",
+            "nombre_json": "los-andes.json"
         },
         {
             "id": 136,
             "nombre": "Los Lagos",
-            "nombre_pagina": "los-lagos.html"
+            "nombre_pagina": "los-lagos.html",
+            "nombre_json": "los-lagos.json"
         },
         {
             "id": 137,
             "nombre": "Los Muermos",
-            "nombre_pagina": "los-muermos.html"
+            "nombre_pagina": "los-muermos.html",
+            "nombre_json": "los-muermos.json"
         },
         {
             "id": 138,
             "nombre": "Los Sauces",
-            "nombre_pagina": "los-sauces.html"
+            "nombre_pagina": "los-sauces.html",
+            "nombre_json": "los-sauces.json"
         },
         {
             "id": 139,
             "nombre": "Los Vilos",
-            "nombre_pagina": "los-vilos.html"
+            "nombre_pagina": "los-vilos.html",
+            "nombre_json": "los-vilos.json"
         },
         {
             "id": 140,
             "nombre": "Los Álamos",
-            "nombre_pagina": "los-alamos.html"
+            "nombre_pagina": "los-alamos.html",
+            "nombre_json": "los-alamos.json"
         },
         {
             "id": 141,
             "nombre": "Los Ángeles",
-            "nombre_pagina": "los-angeles.html"
+            "nombre_pagina": "los-angeles.html",
+            "nombre_json": "los-angeles.json"
         },
         {
             "id": 142,
             "nombre": "Lota",
-            "nombre_pagina": "lota.html"
+            "nombre_pagina": "lota.html",
+            "nombre_json": "lota.json"
         },
         {
             "id": 143,
             "nombre": "Lumaco",
-            "nombre_pagina": "lumaco.html"
+            "nombre_pagina": "lumaco.html",
+            "nombre_json": "lumaco.json"
         },
         {
             "id": 144,
             "nombre": "Machalí",
-            "nombre_pagina": "machali.html"
+            "nombre_pagina": "machali.html",
+            "nombre_json": "machali.json"
         },
         {
             "id": 145,
             "nombre": "Macul",
-            "nombre_pagina": "macul.html"
+            "nombre_pagina": "macul.html",
+            "nombre_json": "macul.json"
         },
         {
             "id": 146,
             "nombre": "Maipú",
-            "nombre_pagina": "maipu.html"
+            "nombre_pagina": "maipu.html",
+            "nombre_json": "maipu.json"
         },
         {
             "id": 147,
             "nombre": "Malloa",
-            "nombre_pagina": "malloa.html"
+            "nombre_pagina": "malloa.html",
+            "nombre_json": "malloa.json"
         },
         {
             "id": 148,
             "nombre": "Marchihue",
-            "nombre_pagina": "marchihue.html"
+            "nombre_pagina": "marchihue.html",
+            "nombre_json": "marchihue.json"
         },
         {
             "id": 149,
             "nombre": "Mariquina",
-            "nombre_pagina": "mariquina.html"
+            "nombre_pagina": "mariquina.html",
+            "nombre_json": "mariquina.json"
         },
         {
             "id": 150,
             "nombre": "María Elena",
-            "nombre_pagina": "maria-elena.html"
+            "nombre_pagina": "maria-elena.html",
+            "nombre_json": "maria-elena.json"
         },
         {
             "id": 151,
             "nombre": "María Pinto",
-            "nombre_pagina": "maria-pinto.html"
+            "nombre_pagina": "maria-pinto.html",
+            "nombre_json": "maria-pinto.json"
         },
         {
             "id": 152,
             "nombre": "Maule",
-            "nombre_pagina": "maule.html"
+            "nombre_pagina": "maule.html",
+            "nombre_json": "maule.json"
         },
         {
             "id": 153,
             "nombre": "Maullín",
-            "nombre_pagina": "maullin.html"
+            "nombre_pagina": "maullin.html",
+            "nombre_json": "maullin.json"
         },
         {
             "id": 154,
             "nombre": "Mejillones",
-            "nombre_pagina": "mejillones.html"
+            "nombre_pagina": "mejillones.html",
+            "nombre_json": "mejillones.json"
         },
         {
             "id": 155,
             "nombre": "Melipeuco",
-            "nombre_pagina": "melipeuco.html"
+            "nombre_pagina": "melipeuco.html",
+            "nombre_json": "melipeuco.json"
         },
         {
             "id": 156,
             "nombre": "Melipilla",
-            "nombre_pagina": "melipilla.html"
+            "nombre_pagina": "melipilla.html",
+            "nombre_json": "melipilla.json"
         },
         {
             "id": 157,
             "nombre": "Molina",
-            "nombre_pagina": "molina.html"
+            "nombre_pagina": "molina.html",
+            "nombre_json": "molina.json"
         },
         {
             "id": 158,
             "nombre": "Monte Patria",
-            "nombre_pagina": "monte-patria.html"
+            "nombre_pagina": "monte-patria.html",
+            "nombre_json": "monte-patria.json"
         },
         {
             "id": 159,
             "nombre": "Mostazal",
-            "nombre_pagina": "mostazal.html"
+            "nombre_pagina": "mostazal.html",
+            "nombre_json": "mostazal.json"
         },
         {
             "id": 160,
             "nombre": "Mulchén",
-            "nombre_pagina": "mulchen.html"
+            "nombre_pagina": "mulchen.html",
+            "nombre_json": "mulchen.json"
         },
         {
             "id": 161,
             "nombre": "Máfil",
-            "nombre_pagina": "mafil.html"
+            "nombre_pagina": "mafil.html",
+            "nombre_json": "mafil.json"
         },
         {
             "id": 162,
             "nombre": "Nacimiento",
-            "nombre_pagina": "nacimiento.html"
+            "nombre_pagina": "nacimiento.html",
+            "nombre_json": "nacimiento.json"
         },
         {
             "id": 163,
             "nombre": "Nancagua",
-            "nombre_pagina": "nancagua.html"
+            "nombre_pagina": "nancagua.html",
+            "nombre_json": "nancagua.json"
         },
         {
             "id": 164,
             "nombre": "Natales",
-            "nombre_pagina": "natales.html"
+            "nombre_pagina": "natales.html",
+            "nombre_json": "natales.json"
         },
         {
             "id": 165,
             "nombre": "Navidad",
-            "nombre_pagina": "navidad.html"
+            "nombre_pagina": "navidad.html",
+            "nombre_json": "navidad.json"
         },
         {
             "id": 166,
             "nombre": "Ninhue",
-            "nombre_pagina": "ninhue.html"
+            "nombre_pagina": "ninhue.html",
+            "nombre_json": "ninhue.json"
         },
         {
             "id": 167,
             "nombre": "Nogales",
-            "nombre_pagina": "nogales.html"
+            "nombre_pagina": "nogales.html",
+            "nombre_json": "nogales.json"
         },
         {
             "id": 168,
             "nombre": "Nueva Imperial",
-            "nombre_pagina": "nueva-imperial.html"
+            "nombre_pagina": "nueva-imperial.html",
+            "nombre_json": "nueva-imperial.json"
         },
         {
             "id": 169,
             "nombre": "Olivar",
-            "nombre_pagina": "olivar.html"
+            "nombre_pagina": "olivar.html",
+            "nombre_json": "olivar.json"
         },
         {
             "id": 170,
             "nombre": "Olmué",
-            "nombre_pagina": "olmue.html"
+            "nombre_pagina": "olmue.html",
+            "nombre_json": "olmue.json"
         },
         {
             "id": 171,
             "nombre": "Osorno",
-            "nombre_pagina": "osorno.html"
+            "nombre_pagina": "osorno.html",
+            "nombre_json": "osorno.json"
         },
         {
             "id": 172,
             "nombre": "Ovalle",
-            "nombre_pagina": "ovalle.html"
+            "nombre_pagina": "ovalle.html",
+            "nombre_json": "ovalle.json"
         },
         {
             "id": 173,
             "nombre": "O’Higgins",
-            "nombre_pagina": "ohiggins.html"
+            "nombre_pagina": "ohiggins.html",
+            "nombre_json": "ohiggins.json"
         },
         {
             "id": 174,
             "nombre": "Padre Hurtado",
-            "nombre_pagina": "padre-hurtado.html"
+            "nombre_pagina": "padre-hurtado.html",
+            "nombre_json": "padre-hurtado.json"
         },
         {
             "id": 175,
             "nombre": "Padre las Casas",
-            "nombre_pagina": "padre-las-casas.html"
+            "nombre_pagina": "padre-las-casas.html",
+            "nombre_json": "padre-las-casas.json"
         },
         {
             "id": 176,
             "nombre": "Paillaco",
-            "nombre_pagina": "paillaco.html"
+            "nombre_pagina": "paillaco.html",
+            "nombre_json": "paillaco.json"
         },
         {
             "id": 177,
             "nombre": "Paine",
-            "nombre_pagina": "paine.html"
+            "nombre_pagina": "paine.html",
+            "nombre_json": "paine.json"
         },
         {
             "id": 178,
             "nombre": "Palena",
-            "nombre_pagina": "palena.html"
+            "nombre_pagina": "palena.html",
+            "nombre_json": "palena.json"
         },
         {
             "id": 179,
             "nombre": "Palmilla",
-            "nombre_pagina": "palmilla.html"
+            "nombre_pagina": "palmilla.html",
+            "nombre_json": "palmilla.json"
         },
         {
             "id": 180,
             "nombre": "Panguipulli",
-            "nombre_pagina": "panguipulli.html"
+            "nombre_pagina": "panguipulli.html",
+            "nombre_json": "panguipulli.json"
         },
         {
             "id": 181,
             "nombre": "Panquehue",
-            "nombre_pagina": "panquehue.html"
+            "nombre_pagina": "panquehue.html",
+            "nombre_json": "panquehue.json"
         },
         {
             "id": 182,
             "nombre": "Papudo",
-            "nombre_pagina": "papudo.html"
+            "nombre_pagina": "papudo.html",
+            "nombre_json": "papudo.json"
         },
         {
             "id": 183,
             "nombre": "Paredones",
-            "nombre_pagina": "paredones.html"
+            "nombre_pagina": "paredones.html",
+            "nombre_json": "paredones.json"
         },
         {
             "id": 184,
             "nombre": "Parral",
-            "nombre_pagina": "parral.html"
+            "nombre_pagina": "parral.html",
+            "nombre_json": "parral.json"
         },
         {
             "id": 185,
             "nombre": "Pedro Aguirre Cerda",
-            "nombre_pagina": "pedro-aguirre-cerda.html"
+            "nombre_pagina": "pedro-aguirre-cerda.html",
+            "nombre_json": "pedro-aguirre-cerda.json"
         },
         {
             "id": 186,
             "nombre": "Pelarco",
-            "nombre_pagina": "pelarco.html"
+            "nombre_pagina": "pelarco.html",
+            "nombre_json": "pelarco.json"
         },
         {
             "id": 187,
             "nombre": "Pelluhue",
-            "nombre_pagina": "pelluhue.html"
+            "nombre_pagina": "pelluhue.html",
+            "nombre_json": "pelluhue.json"
         },
         {
             "id": 188,
             "nombre": "Pemuco",
-            "nombre_pagina": "pemuco.html"
+            "nombre_pagina": "pemuco.html",
+            "nombre_json": "pemuco.json"
         },
         {
             "id": 189,
             "nombre": "Pencahue",
-            "nombre_pagina": "pencahue.html"
+            "nombre_pagina": "pencahue.html",
+            "nombre_json": "pencahue.json"
         },
         {
             "id": 190,
             "nombre": "Penco",
-            "nombre_pagina": "penco.html"
+            "nombre_pagina": "penco.html",
+            "nombre_json": "penco.json"
         },
         {
             "id": 191,
             "nombre": "Peralillo",
-            "nombre_pagina": "peralillo.html"
+            "nombre_pagina": "peralillo.html",
+            "nombre_json": "peralillo.json"
         },
         {
             "id": 192,
             "nombre": "Perquenco",
-            "nombre_pagina": "perquenco.html"
+            "nombre_pagina": "perquenco.html",
+            "nombre_json": "perquenco.json"
         },
         {
             "id": 193,
             "nombre": "Petorca",
-            "nombre_pagina": "petorca.html"
+            "nombre_pagina": "petorca.html",
+            "nombre_json": "petorca.json"
         },
         {
             "id": 194,
             "nombre": "Peumo",
-            "nombre_pagina": "peumo.html"
+            "nombre_pagina": "peumo.html",
+            "nombre_json": "peumo.json"
         },
         {
             "id": 195,
             "nombre": "Peñaflor",
-            "nombre_pagina": "penaflor.html"
+            "nombre_pagina": "penaflor.html",
+            "nombre_json": "penaflor.json"
         },
         {
             "id": 196,
             "nombre": "Peñalolén",
-            "nombre_pagina": "penalolen.html"
+            "nombre_pagina": "penalolen.html",
+            "nombre_json": "penalolen.json"
         },
         {
             "id": 197,
             "nombre": "Pica",
-            "nombre_pagina": "pica.html"
+            "nombre_pagina": "pica.html",
+            "nombre_json": "pica.json"
         },
         {
             "id": 198,
             "nombre": "Pichidegua",
-            "nombre_pagina": "pichidegua.html"
+            "nombre_pagina": "pichidegua.html",
+            "nombre_json": "pichidegua.json"
         },
         {
             "id": 199,
             "nombre": "Pichilemu",
-            "nombre_pagina": "pichilemu.html"
+            "nombre_pagina": "pichilemu.html",
+            "nombre_json": "pichilemu.json"
         },
         {
             "id": 200,
             "nombre": "Pinto",
-            "nombre_pagina": "pinto.html"
+            "nombre_pagina": "pinto.html",
+            "nombre_json": "pinto.json"
         },
         {
             "id": 201,
             "nombre": "Pirque",
-            "nombre_pagina": "pirque.html"
+            "nombre_pagina": "pirque.html",
+            "nombre_json": "pirque.json"
         },
         {
             "id": 202,
             "nombre": "Pitrufquén",
-            "nombre_pagina": "pitrufquen.html"
+            "nombre_pagina": "pitrufquen.html",
+            "nombre_json": "pitrufquen.json"
         },
         {
             "id": 203,
             "nombre": "Placilla",
-            "nombre_pagina": "placilla.html"
+            "nombre_pagina": "placilla.html",
+            "nombre_json": "placilla.json"
         },
         {
             "id": 204,
             "nombre": "Porvenir",
-            "nombre_pagina": "porvenir.html"
+            "nombre_pagina": "porvenir.html",
+            "nombre_json": "porvenir.json"
         },
         {
             "id": 205,
             "nombre": "Pozo Almonte",
-            "nombre_pagina": "pozo-almonte.html"
+            "nombre_pagina": "pozo-almonte.html",
+            "nombre_json": "pozo-almonte.json"
         },
         {
             "id": 206,
             "nombre": "Primavera",
-            "nombre_pagina": "primavera.html"
+            "nombre_pagina": "primavera.html",
+            "nombre_json": "primavera.json"
         },
         {
             "id": 207,
             "nombre": "Providencia",
-            "nombre_pagina": "providencia.html"
+            "nombre_pagina": "providencia.html",
+            "nombre_json": "providencia.json"
         },
         {
             "id": 208,
             "nombre": "Puchuncaví",
-            "nombre_pagina": "puchuncavi.html"
+            "nombre_pagina": "puchuncavi.html",
+            "nombre_json": "puchuncavi.json"
         },
         {
             "id": 209,
             "nombre": "Pucón",
-            "nombre_pagina": "pucon.html"
+            "nombre_pagina": "pucon.html",
+            "nombre_json": "pucon.json"
         },
         {
             "id": 210,
             "nombre": "Pudahuel",
-            "nombre_pagina": "pudahuel.html"
+            "nombre_pagina": "pudahuel.html",
+            "nombre_json": "pudahuel.json"
         },
         {
             "id": 211,
             "nombre": "Puente Alto",
-            "nombre_pagina": "puente-alto.html"
+            "nombre_pagina": "puente-alto.html",
+            "nombre_json": "puente-alto.json"
         },
         {
             "id": 212,
             "nombre": "Puerto Montt",
-            "nombre_pagina": "puerto-montt.html"
+            "nombre_pagina": "puerto-montt.html",
+            "nombre_json": "puerto-montt.json"
         },
         {
             "id": 213,
             "nombre": "Puerto Octay",
-            "nombre_pagina": "puerto-octay.html"
+            "nombre_pagina": "puerto-octay.html",
+            "nombre_json": "puerto-octay.json"
         },
         {
             "id": 214,
             "nombre": "Puerto Varas",
-            "nombre_pagina": "puerto-varas.html"
+            "nombre_pagina": "puerto-varas.html",
+            "nombre_json": "puerto-varas.json"
         },
         {
             "id": 215,
             "nombre": "Pumanque",
-            "nombre_pagina": "pumanque.html"
+            "nombre_pagina": "pumanque.html",
+            "nombre_json": "pumanque.json"
         },
         {
             "id": 216,
             "nombre": "Punitaqui",
-            "nombre_pagina": "punitaqui.html"
+            "nombre_pagina": "punitaqui.html",
+            "nombre_json": "punitaqui.json"
         },
         {
             "id": 217,
             "nombre": "Punta Arenas",
-            "nombre_pagina": "punta-arenas.html"
+            "nombre_pagina": "punta-arenas.html",
+            "nombre_json": "punta-arenas.json"
         },
         {
             "id": 218,
             "nombre": "Purranque",
-            "nombre_pagina": "purranque.html"
+            "nombre_pagina": "purranque.html",
+            "nombre_json": "purranque.json"
         },
         {
             "id": 219,
             "nombre": "Purén",
-            "nombre_pagina": "puren.html"
+            "nombre_pagina": "puren.html",
+            "nombre_json": "puren.json"
         },
         {
             "id": 220,
             "nombre": "Putaendo",
-            "nombre_pagina": "putaendo.html"
+            "nombre_pagina": "putaendo.html",
+            "nombre_json": "putaendo.json"
         },
         {
             "id": 221,
             "nombre": "Puyehue",
-            "nombre_pagina": "puyehue.html"
+            "nombre_pagina": "puyehue.html",
+            "nombre_json": "puyehue.json"
         },
         {
             "id": 222,
             "nombre": "Quellón",
-            "nombre_pagina": "quellon.html"
+            "nombre_pagina": "quellon.html",
+            "nombre_json": "quellon.json"
         },
         {
             "id": 223,
             "nombre": "Quemchi",
-            "nombre_pagina": "quemchi.html"
+            "nombre_pagina": "quemchi.html",
+            "nombre_json": "quemchi.json"
         },
         {
             "id": 224,
             "nombre": "Quilicura",
-            "nombre_pagina": "quilicura.html"
+            "nombre_pagina": "quilicura.html",
+            "nombre_json": "quilicura.json"
         },
         {
             "id": 225,
             "nombre": "Quilleco",
-            "nombre_pagina": "quilleco.html"
+            "nombre_pagina": "quilleco.html",
+            "nombre_json": "quilleco.json"
         },
         {
             "id": 226,
             "nombre": "Quillota",
-            "nombre_pagina": "quillota.html"
+            "nombre_pagina": "quillota.html",
+            "nombre_json": "quillota.json"
         },
         {
             "id": 227,
             "nombre": "Quillón",
-            "nombre_pagina": "quillon.html"
+            "nombre_pagina": "quillon.html",
+            "nombre_json": "quillon.json"
         },
         {
             "id": 228,
             "nombre": "Quilpué",
-            "nombre_pagina": "quilpue.html"
+            "nombre_pagina": "quilpue.html",
+            "nombre_json": "quilpue.json"
         },
         {
             "id": 229,
             "nombre": "Quinchao",
-            "nombre_pagina": "quinchao.html"
+            "nombre_pagina": "quinchao.html",
+            "nombre_json": "quinchao.json"
         },
         {
             "id": 230,
             "nombre": "Quinta Normal",
-            "nombre_pagina": "quinta-normal.html"
+            "nombre_pagina": "quinta-normal.html",
+            "nombre_json": "quinta-normal.json"
         },
         {
             "id": 231,
             "nombre": "Quinta de Tilcoco",
-            "nombre_pagina": "quinta-de-tilcoco.html"
+            "nombre_pagina": "quinta-de-tilcoco.html",
+            "nombre_json": "quinta-de-tilcoco.json"
         },
         {
             "id": 232,
             "nombre": "Quintero",
-            "nombre_pagina": "quintero.html"
+            "nombre_pagina": "quintero.html",
+            "nombre_json": "quintero.json"
         },
         {
             "id": 233,
             "nombre": "Quirihue",
-            "nombre_pagina": "quirihue.html"
+            "nombre_pagina": "quirihue.html",
+            "nombre_json": "quirihue.json"
         },
         {
             "id": 234,
             "nombre": "Rancagua",
-            "nombre_pagina": "rancagua.html"
+            "nombre_pagina": "rancagua.html",
+            "nombre_json": "rancagua.json"
         },
         {
             "id": 235,
             "nombre": "Rauco",
-            "nombre_pagina": "rauco.html"
+            "nombre_pagina": "rauco.html",
+            "nombre_json": "rauco.json"
         },
         {
             "id": 236,
             "nombre": "Recoleta",
-            "nombre_pagina": "recoleta.html"
+            "nombre_pagina": "recoleta.html",
+            "nombre_json": "recoleta.json"
         },
         {
             "id": 237,
             "nombre": "Renaico",
-            "nombre_pagina": "renaico.html"
+            "nombre_pagina": "renaico.html",
+            "nombre_json": "renaico.json"
         },
         {
             "id": 238,
             "nombre": "Renca",
-            "nombre_pagina": "renca.html"
+            "nombre_pagina": "renca.html",
+            "nombre_json": "renca.json"
         },
         {
             "id": 239,
             "nombre": "Rengo",
-            "nombre_pagina": "rengo.html"
+            "nombre_pagina": "rengo.html",
+            "nombre_json": "rengo.json"
         },
         {
             "id": 240,
             "nombre": "Requínoa",
-            "nombre_pagina": "requinoa.html"
+            "nombre_pagina": "requinoa.html",
+            "nombre_json": "requinoa.json"
         },
         {
             "id": 241,
             "nombre": "Retiro",
-            "nombre_pagina": "retiro.html"
+            "nombre_pagina": "retiro.html",
+            "nombre_json": "retiro.json"
         },
         {
             "id": 242,
             "nombre": "Rinconada",
-            "nombre_pagina": "rinconada.html"
+            "nombre_pagina": "rinconada.html",
+            "nombre_json": "rinconada.json"
         },
         {
             "id": 243,
             "nombre": "Romeral",
-            "nombre_pagina": "romeral.html"
+            "nombre_pagina": "romeral.html",
+            "nombre_json": "romeral.json"
         },
         {
             "id": 244,
             "nombre": "Ránquil",
-            "nombre_pagina": "ranquil.html"
+            "nombre_pagina": "ranquil.html",
+            "nombre_json": "ranquil.json"
         },
         {
             "id": 245,
             "nombre": "Río Bueno",
-            "nombre_pagina": "rio-bueno.html"
+            "nombre_pagina": "rio-bueno.html",
+            "nombre_json": "rio-bueno.json"
         },
         {
             "id": 246,
             "nombre": "Río Claro",
-            "nombre_pagina": "rio-claro.html"
+            "nombre_pagina": "rio-claro.html",
+            "nombre_json": "rio-claro.json"
         },
         {
             "id": 247,
             "nombre": "Río Ibáñez",
-            "nombre_pagina": "rio-ibanez.html"
+            "nombre_pagina": "rio-ibanez.html",
+            "nombre_json": "rio-ibanez.json"
         },
         {
             "id": 248,
             "nombre": "Río Negro",
-            "nombre_pagina": "rio-negro.html"
+            "nombre_pagina": "rio-negro.html",
+            "nombre_json": "rio-negro.json"
         },
         {
             "id": 249,
             "nombre": "Saavedra",
-            "nombre_pagina": "saavedra.html"
+            "nombre_pagina": "saavedra.html",
+            "nombre_json": "saavedra.json"
         },
         {
             "id": 250,
             "nombre": "Sagrada Familia",
-            "nombre_pagina": "sagrada-familia.html"
+            "nombre_pagina": "sagrada-familia.html",
+            "nombre_json": "sagrada-familia.json"
         },
         {
             "id": 251,
             "nombre": "Salamanca",
-            "nombre_pagina": "salamanca.html"
+            "nombre_pagina": "salamanca.html",
+            "nombre_json": "salamanca.json"
         },
         {
             "id": 252,
             "nombre": "San Antonio",
-            "nombre_pagina": "san-antonio.html"
+            "nombre_pagina": "san-antonio.html",
+            "nombre_json": "san-antonio.json"
         },
         {
             "id": 253,
             "nombre": "San Bernardo",
-            "nombre_pagina": "san-bernardo.html"
+            "nombre_pagina": "san-bernardo.html",
+            "nombre_json": "san-bernardo.json"
         },
         {
             "id": 254,
             "nombre": "San Carlos",
-            "nombre_pagina": "san-carlos.html"
+            "nombre_pagina": "san-carlos.html",
+            "nombre_json": "san-carlos.json"
         },
         {
             "id": 255,
             "nombre": "San Clemente",
-            "nombre_pagina": "san-clemente.html"
+            "nombre_pagina": "san-clemente.html",
+            "nombre_json": "san-clemente.json"
         },
         {
             "id": 256,
             "nombre": "San Esteban",
-            "nombre_pagina": "san-esteban.html"
+            "nombre_pagina": "san-esteban.html",
+            "nombre_json": "san-esteban.json"
         },
         {
             "id": 257,
             "nombre": "San Fabián",
-            "nombre_pagina": "san-fabian.html"
+            "nombre_pagina": "san-fabian.html",
+            "nombre_json": "san-fabian.json"
         },
         {
             "id": 258,
             "nombre": "San Felipe",
-            "nombre_pagina": "san-felipe.html"
+            "nombre_pagina": "san-felipe.html",
+            "nombre_json": "san-felipe.json"
         },
         {
             "id": 259,
             "nombre": "San Fernando",
-            "nombre_pagina": "san-fernando.html"
+            "nombre_pagina": "san-fernando.html",
+            "nombre_json": "san-fernando.json"
         },
         {
             "id": 260,
             "nombre": "San Gregorio",
-            "nombre_pagina": "san-gregorio.html"
+            "nombre_pagina": "san-gregorio.html",
+            "nombre_json": "san-gregorio.json"
         },
         {
             "id": 261,
             "nombre": "San Ignacio",
-            "nombre_pagina": "san-ignacio.html"
+            "nombre_pagina": "san-ignacio.html",
+            "nombre_json": "san-ignacio.json"
         },
         {
             "id": 262,
             "nombre": "San Javier",
-            "nombre_pagina": "san-javier.html"
+            "nombre_pagina": "san-javier.html",
+            "nombre_json": "san-javier.json"
         },
         {
             "id": 263,
             "nombre": "San Joaquín",
-            "nombre_pagina": "san-joaquin.html"
+            "nombre_pagina": "san-joaquin.html",
+            "nombre_json": "san-joaquin.json"
         },
         {
             "id": 264,
             "nombre": "San José de Maipo",
-            "nombre_pagina": "san-jose-de-maipo.html"
+            "nombre_pagina": "san-jose-de-maipo.html",
+            "nombre_json": "san-jose-de-maipo.json"
         },
         {
             "id": 265,
             "nombre": "San Miguel",
-            "nombre_pagina": "san-miguel.html"
+            "nombre_pagina": "san-miguel.html",
+            "nombre_json": "san-miguel.json"
         },
         {
             "id": 266,
             "nombre": "San Nicolás",
-            "nombre_pagina": "san-nicolas.html"
+            "nombre_pagina": "san-nicolas.html",
+            "nombre_json": "san-nicolas.json"
         },
         {
             "id": 267,
             "nombre": "San Pablo",
-            "nombre_pagina": "san-pablo.html"
+            "nombre_pagina": "san-pablo.html",
+            "nombre_json": "san-pablo.json"
         },
         {
             "id": 268,
             "nombre": "San Pedro",
-            "nombre_pagina": "san-pedro.html"
+            "nombre_pagina": "san-pedro.html",
+            "nombre_json": "san-pedro.json"
         },
         {
             "id": 269,
             "nombre": "San Pedro de Atacama",
-            "nombre_pagina": "san-pedro-de-atacama.html"
+            "nombre_pagina": "san-pedro-de-atacama.html",
+            "nombre_json": "san-pedro-de-atacama.json"
         },
         {
             "id": 270,
             "nombre": "San Pedro de la Paz",
-            "nombre_pagina": "san-pedro-de-la-paz.html"
+            "nombre_pagina": "san-pedro-de-la-paz.html",
+            "nombre_json": "san-pedro-de-la-paz.json"
         },
         {
             "id": 271,
             "nombre": "San Rafael",
-            "nombre_pagina": "san-rafael.html"
+            "nombre_pagina": "san-rafael.html",
+            "nombre_json": "san-rafael.json"
         },
         {
             "id": 272,
             "nombre": "San Ramón",
-            "nombre_pagina": "san-ramon.html"
+            "nombre_pagina": "san-ramon.html",
+            "nombre_json": "san-ramon.json"
         },
         {
             "id": 273,
             "nombre": "San Vicente",
-            "nombre_pagina": "san-vicente.html"
+            "nombre_pagina": "san-vicente.html",
+            "nombre_json": "san-vicente.json"
         },
         {
             "id": 274,
             "nombre": "Santa Bárbara",
-            "nombre_pagina": "santa-barbara.html"
+            "nombre_pagina": "santa-barbara.html",
+            "nombre_json": "santa-barbara.json"
         },
         {
             "id": 275,
             "nombre": "Santa Cruz",
-            "nombre_pagina": "santa-cruz.html"
+            "nombre_pagina": "santa-cruz.html",
+            "nombre_json": "santa-cruz.json"
         },
         {
             "id": 276,
             "nombre": "Santa Juana",
-            "nombre_pagina": "santa-juana.html"
+            "nombre_pagina": "santa-juana.html",
+            "nombre_json": "santa-juana.json"
         },
         {
             "id": 277,
             "nombre": "Santa María",
-            "nombre_pagina": "santa-maria.html"
+            "nombre_pagina": "santa-maria.html",
+            "nombre_json": "santa-maria.json"
         },
         {
             "id": 278,
             "nombre": "Santiago Centro",
-            "nombre_pagina": "santiago-centro.html"
+            "nombre_pagina": "santiago-centro.html",
+            "nombre_json": "santiago-centro.json"
         },
         {
             "id": 279,
             "nombre": "Santo Domingo",
-            "nombre_pagina": "santo-domingo.html"
+            "nombre_pagina": "santo-domingo.html",
+            "nombre_json": "santo-domingo.json"
         },
         {
             "id": 280,
             "nombre": "Sierra Gorda",
-            "nombre_pagina": "sierra-gorda.html"
+            "nombre_pagina": "sierra-gorda.html",
+            "nombre_json": "sierra-gorda.json"
         },
         {
             "id": 281,
             "nombre": "Talagante",
-            "nombre_pagina": "talagante.html"
+            "nombre_pagina": "talagante.html",
+            "nombre_json": "talagante.json"
         },
         {
             "id": 282,
             "nombre": "Talca",
-            "nombre_pagina": "talca.html"
+            "nombre_pagina": "talca.html",
+            "nombre_json": "talca.json"
         },
         {
             "id": 283,
             "nombre": "Talcahuano",
-            "nombre_pagina": "talcahuano.html"
+            "nombre_pagina": "talcahuano.html",
+            "nombre_json": "talcahuano.json"
         },
         {
             "id": 284,
             "nombre": "Taltal",
-            "nombre_pagina": "taltal.html"
+            "nombre_pagina": "taltal.html",
+            "nombre_json": "taltal.json"
         },
         {
             "id": 285,
             "nombre": "Temuco",
-            "nombre_pagina": "temuco.html"
+            "nombre_pagina": "temuco.html",
+            "nombre_json": "temuco.json"
         },
         {
             "id": 286,
             "nombre": "Teno",
-            "nombre_pagina": "teno.html"
+            "nombre_pagina": "teno.html",
+            "nombre_json": "teno.json"
         },
         {
             "id": 287,
             "nombre": "Teodoro Schmidt",
-            "nombre_pagina": "teodoro-schmidt.html"
+            "nombre_pagina": "teodoro-schmidt.html",
+            "nombre_json": "teodoro-schmidt.json"
         },
         {
             "id": 288,
             "nombre": "Tierra Amarilla",
-            "nombre_pagina": "tierra-amarilla.html"
+            "nombre_pagina": "tierra-amarilla.html",
+            "nombre_json": "tierra-amarilla.json"
         },
         {
             "id": 289,
             "nombre": "Tiltil",
-            "nombre_pagina": "tiltil.html"
+            "nombre_pagina": "tiltil.html",
+            "nombre_json": "tiltil.json"
         },
         {
             "id": 290,
             "nombre": "Tirúa",
-            "nombre_pagina": "tirua.html"
+            "nombre_pagina": "tirua.html",
+            "nombre_json": "tirua.json"
         },
         {
             "id": 291,
             "nombre": "Tocopilla",
-            "nombre_pagina": "tocopilla.html"
+            "nombre_pagina": "tocopilla.html",
+            "nombre_json": "tocopilla.json"
         },
         {
             "id": 292,
             "nombre": "Toltén",
-            "nombre_pagina": "tolten.html"
+            "nombre_pagina": "tolten.html",
+            "nombre_json": "tolten.json"
         },
         {
             "id": 293,
             "nombre": "Tomé",
-            "nombre_pagina": "tome.html"
+            "nombre_pagina": "tome.html",
+            "nombre_json": "tome.json"
         },
         {
             "id": 294,
             "nombre": "Tortel",
-            "nombre_pagina": "tortel.html"
+            "nombre_pagina": "tortel.html",
+            "nombre_json": "tortel.json"
         },
         {
             "id": 295,
             "nombre": "Traiguén",
-            "nombre_pagina": "traiguen.html"
+            "nombre_pagina": "traiguen.html",
+            "nombre_json": "traiguen.json"
         },
         {
             "id": 296,
             "nombre": "Tucapel",
-            "nombre_pagina": "tucapel.html"
+            "nombre_pagina": "tucapel.html",
+            "nombre_json": "tucapel.json"
         },
         {
             "id": 297,
             "nombre": "Valdivia",
-            "nombre_pagina": "valdivia.html"
+            "nombre_pagina": "valdivia.html",
+            "nombre_json": "valdivia.json"
         },
         {
             "id": 298,
             "nombre": "Vallenar",
-            "nombre_pagina": "vallenar.html"
+            "nombre_pagina": "vallenar.html",
+            "nombre_json": "vallenar.json"
         },
         {
             "id": 299,
             "nombre": "Valparaíso",
-            "nombre_pagina": "valparaiso.html"
+            "nombre_pagina": "valparaiso.html",
+            "nombre_json": "valparaiso.json"
         },
         {
             "id": 300,
             "nombre": "Vichuquén",
-            "nombre_pagina": "vichuquen.html"
+            "nombre_pagina": "vichuquen.html",
+            "nombre_json": "vichuquen.json"
         },
         {
             "id": 301,
             "nombre": "Victoria",
-            "nombre_pagina": "victoria.html"
+            "nombre_pagina": "victoria.html",
+            "nombre_json": "victoria.json"
         },
         {
             "id": 302,
             "nombre": "Vicuña",
-            "nombre_pagina": "vicuna.html"
+            "nombre_pagina": "vicuna.html",
+            "nombre_json": "vicuna.json"
         },
         {
             "id": 303,
             "nombre": "Vilcún",
-            "nombre_pagina": "vilcun.html"
+            "nombre_pagina": "vilcun.html",
+            "nombre_json": "vilcun.json"
         },
         {
             "id": 304,
             "nombre": "Villa Alegre",
-            "nombre_pagina": "villa-alegre.html"
+            "nombre_pagina": "villa-alegre.html",
+            "nombre_json": "villa-alegre.json"
         },
         {
             "id": 305,
             "nombre": "Villa Alemana",
-            "nombre_pagina": "villa-alemana.html"
+            "nombre_pagina": "villa-alemana.html",
+            "nombre_json": "villa-alemana.json"
         },
         {
             "id": 306,
             "nombre": "Villarrica",
-            "nombre_pagina": "villarrica.html"
+            "nombre_pagina": "villarrica.html",
+            "nombre_json": "villarrica.json"
         },
         {
             "id": 307,
             "nombre": "Vitacura",
-            "nombre_pagina": "vitacura.html"
+            "nombre_pagina": "vitacura.html",
+            "nombre_json": "vitacura.json"
         },
         {
             "id": 308,
             "nombre": "Viña del Mar",
-            "nombre_pagina": "vina-del-mar.html"
+            "nombre_pagina": "vina-del-mar.html",
+            "nombre_json": "vina-del-mar.json"
         },
         {
             "id": 309,
             "nombre": "Yerbas Buenas",
-            "nombre_pagina": "yerbas-buenas.html"
+            "nombre_pagina": "yerbas-buenas.html",
+            "nombre_json": "yerbas-buenas.json"
         },
         {
             "id": 310,
             "nombre": "Yumbel",
-            "nombre_pagina": "yumbel.html"
+            "nombre_pagina": "yumbel.html",
+            "nombre_json": "yumbel.json"
         },
         {
             "id": 311,
             "nombre": "Yungay",
-            "nombre_pagina": "yungay.html"
+            "nombre_pagina": "yungay.html",
+            "nombre_json": "yungay.json"
         },
         {
             "id": 312,
             "nombre": "Zapallar",
-            "nombre_pagina": "zapallar.html"
+            "nombre_pagina": "zapallar.html",
+            "nombre_json": "zapallar.json"
         },
         {
             "id": 313,
             "nombre": "Ñiquén",
-            "nombre_pagina": "niquen.html"
+            "nombre_pagina": "niquen.html",
+            "nombre_json": "niquen.json"
         },
         {
             "id": 314,
             "nombre": "Ñuñoa",
-            "nombre_pagina": "nunoa.html"
+            "nombre_pagina": "nunoa.html",
+            "nombre_json": "nunoa.json"
         }
     ]
 }

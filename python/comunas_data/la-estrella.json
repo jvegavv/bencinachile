@@ -1,0 +1,130 @@
+{
+    "comuna": "La Estrella",
+    "estaciones": [
+        {
+            "id": 608,
+            "marca": 116,
+            "direccion": "Manuel Rodriguez 983",
+            "latitud": "-34.206908903857375",
+            "longitud": "-71.65541768074036",
+            "region": "Del Libertador Gral. Bernardo O’Higgins",
+            "comuna": "La Estrella",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/",
+            "logo": "https://api.bencinaenlinea.cl/",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 608,
+                    "precio": "1245.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 meses",
+                    "precio_fecha": "2025-10-02 14:19:32",
+                    "updated_at": "2025-10-02 14:19:32",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 608,
+                    "precio": "978.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 meses",
+                    "precio_fecha": "2025-10-02 14:19:32",
+                    "updated_at": "2025-10-02 14:19:32",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 608,
+                    "precio": "1100.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 7 meses",
+                    "precio_fecha": "2025-08-25 09:17:36",
+                    "updated_at": "2025-08-25 09:17:36",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 608,
+                    "precio": "1276.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 meses",
+                    "precio_fecha": "2025-10-02 14:19:32",
+                    "updated_at": "2025-10-02 14:19:32",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 608
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COMBUSTIBLES ANLOA"
+        }
+    ]
+}
