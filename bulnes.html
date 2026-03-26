@@ -1,722 +1,180 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css?asdsdd">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-        <title>resideo.</title>
-    </head>
-    <body>
-        
-        <!--####################### MENU #######################-->
-        <div class="pxp-header pxp-full fixed-top">
-            <div class="pxp-container-full">
-                <div class="row align-items-center">
-                    <div class="col-5 col-md-2">
-                        <a href="index.html" class="pxp-logo text-decoration-none">resideo.</a>
-                    </div>
-                    <div class="col-2 col-md-8 text-center">
-                        <ul class="pxp-nav list-inline">
-                            <li class="list-inline-item">
-                                <a href="#">Home</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="index.html">Version 1</a></li>
-                                    <li><a href="index-2.html">Version 2</a></li>
-                                    <li><a href="index-3.html">Version 3</a></li>
-                                    <li><a href="index-4.html">Version 4</a></li>
-                                    <li><a href="index-5.html">Version 5</a></li>
-                                    <li><a href="index-6.html">Version 6</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">Properties</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="properties.html">All Properties</a></li>
-                                    <li><a href="single-property.html">Single Property</a></li>
-                                    <li><a href="submit-property.html">Submit New Property</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">Agents</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="agents.html">All Agents</a></li>
-                                    <li><a href="single-agent.html">Single Agent</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">Blog</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="blog.html">All Blog Posts</a></li>
-                                    <li><a href="single-post.html">Single Blog Post</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">Themes</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="../light/properties.html">Light</a></li>
-                                    <li><a href="../dark/properties.html">Dark</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item pxp-is-last"><a href="contact.html">Contact Us</a></li>
-                            <li class="list-inline-item pxp-has-btns">
-                                <div class="pxp-user-btns">
-                                    <a href="#" class="pxp-user-btns-signup pxp-signup-trigger">Sign Up</a>
-                                    <a href="#" class="pxp-user-btns-login pxp-signin-trigger">Sign In</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-5 col-md-2 text-right">
-                        <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
-                        <a href="javascript:void(0);" class="pxp-header-user pxp-signin-trigger"><span class="fa fa-user-o"></span></a>
-                    </div>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css?asdsdd">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css_custom/style_custom.css" />
+
+    <title>resideo.</title>
+</head>
+
+<body>
+    <input type="hidden" id="latitud"  value="-36.792243382824694">
+    <input type="hidden" id="longitud" value="-72.20220291791674">
+    <input type="hidden" id="comuna" value="Bulnes">
+
+    <!--####################### MENU #######################-->
+    <div class="pxp-header pxp-full fixed-top">
+        <div class="pxp-container-full">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-2">
+                    <a href="index.html" class="pxp-logo text-decoration-none"><span id="log_html"></span></a>
+                </div>
+                <div class="col-2 col-md-8 text-center">
+                    <ul class="pxp-nav list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Bencineras</a>
+                            <ul class="pxp-nav-sub rounded-lg">
+                                <li><a href="properties.html">Mapa</a></li>
+                                <li><a href="single-property.html">Listado</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item pxp-is-last"><a href="contact.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-2 text-right">
+                    <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
                 </div>
             </div>
         </div>
-        <!--####################### MENU #######################-->
+    </div>
+    <!--####################### MENU #######################-->
 
-        <div class="pxp-content pxp-full-height">
-            <div class="pxp-map-side pxp-map-right pxp-half">
-                <div id="results-map"></div>
-                <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
-            </div>
-            <div class="pxp-content-side pxp-content-left pxp-half">
-                <div class="pxp-content-side-wrapper">
+    <div class="pxp-content pxp-full-height">
 
-                    <!--####################### FILTRO #######################-->
-                    <div class="d-flex">
-                        <div class="pxp-content-side-search-form">
-                            <div class="row pxp-content-side-search-form-row">
-                                <div class="col-5 col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
-                                </div>
-                                <div class="col-7 col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
-                                   
-                                    <select class="form-control pxp-is-address" id="pxp-p-search-location" style="width: 100%;">
-                                        <option value="">Quillon</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <a role="button" class="pxp-adv-toggle"><span class="fa fa-sliders"></span></a>
-                        </div>
-                    </div>
-                    <div class="pxp-content-side-search-form-adv mb-3">
+        <!--####################### Seccion 1  #######################-->
+        <!--####################### MAPA #######################-->
+        <div class="pxp-map-side pxp-map-right pxp-half">
+            <div id="results-map"></div>
+            <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
+        </div>
+        <!--####################### MAPA #######################-->
+        <!--####################### Seccion 1  #######################-->
+
+        <!--####################### Seccion 2  #######################-->
+        <div class="pxp-content-side pxp-content-left pxp-half">
+            <div class="pxp-content-side-wrapper">
+
+                <!--####################### FILTRO #######################-->
+                <div class="d-flex">
+                    <div class="pxp-content-side-search-form">
                         <div class="row pxp-content-side-search-form-row">
-                            <div class="col-sm-6 col-md-3 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-price-min">Price</label>
-                                    <input type="text" class="form-control" placeholder="Min" id="pxp-p-filter-price-min">
+                            <div class="col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
+                                <div class="d-flex justify-content-end align-items-center h-100">
+                                    <span class="pxp-bencina-label">Seleccione Ubicación</span>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-3 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-price-max" class="d-none d-sm-inline-block">&nbsp;</label>
-                                    <input type="text" class="form-control" placeholder="Max" id="pxp-p-filter-price-max">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-beds">Beds</label>
-                                    <select class="custom-select" id="pxp-p-filter-beds">
-                                        <option value="" selected="selected">Any</option>
-                                        <option value="">Studio</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5+</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-baths">Baths</label>
-                                    <select class="custom-select" id="pxp-p-filter-baths">
-                                        <option value="" selected="selected">Any</option>
-                                        <option value="">1+</option>
-                                        <option value="">1.5+</option>
-                                        <option value="">2+</option>
-                                        <option value="">3+</option>
-                                        <option value="">4+</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-type">Type</label>
-                                    <select class="custom-select" id="pxp-p-filter-type">
-                                        <option value="">Select type</option>
-                                        <option value="">Apartment</option>
-                                        <option value="">House</option>
-                                        <option value="">Townhome</option>
-                                        <option value="">Multi-Family</option>
-                                        <option value="">Land</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-size-min">Size (sq ft)</label>
-                                    <input type="text" class="form-control" id="pxp-p-filter-size-min" placeholder="Min">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                <div class="form-group">
-                                    <label for="pxp-p-filter-size-max" class="d-none d-sm-inline-block">&nbsp;</label>
-                                    <input type="text" class="form-control" id="pxp-p-filter-size-max" placeholder="Max">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="mb-2">Amenities</label>
-                            <div class="row pxp-content-side-search-form-row">
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Internet</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Garage</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Air Conditioning</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Dishwasher</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Disposal</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Balcony</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Gym</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Playroom</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 pxp-content-side-search-form-col">
-                                    <div class="form-group">
-                                        <div class="checkbox custom-checkbox">
-                                            <label><input type="checkbox" value="1"><span class="fa fa-check"></span> Bar</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <a href="#" class="pxp-filter-btn">Apply Filters</a>
-                    </div>
-                    <div class="row pb-4">
-                        <div class="col-sm-6">
-                            <h2 class="pxp-content-side-h2">1,684 Results</h2>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="pxp-sort-form form-inline float-right">
-                                <div class="form-group">
-                                    <select class="custom-select" id="pxp-sort-results">
-                                        <option value="" selected="selected">Default Sort</option>
-                                        <option value="">Price (Lo-Hi)</option>
-                                        <option value="">Price (Hi-Lo)</option>
-                                        <option value="">Beds</option>
-                                        <option value="">Baths</option>
-                                        <option value="">Size</option>
-                                    </select>
-                                </div>
-                                <div class="form-group d-flex">
-                                    <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
-                                </div>
+                            <div
+                                class="col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
+
+                                <select class="custom-select" id="pxp-p-search-location">
+                                </select>
                             </div>
                         </div>
                     </div>
-                     <!--####################### FILTRO #######################-->
 
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-sm-6">
+                        <h2 class="pxp-content-side-h2">1,684 Results</h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="pxp-sort-form form-inline float-right">
+                            <div class="form-group">
+                                <select class="custom-select" id="pxp-sort-results">
+                                    <option value="" selected="selected">Ordenar mas enconomica</option>
+                                    <option value="">Kerosene</option>
+                                    <option value="">Petroleo Diesel</option>
+                                    <option value="">Gasolina 93</option>
+                                    <option value="">Gasolina 95</option>
+                                    <option value="">Gasolina 97</option>
+                                    <option value="">GLP Vehicular</option>
+                                    <option value="">GNC</option>
+                                </select>
+                            </div>
+                            <div class="form-group d-flex">
+                                <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--####################### FILTRO #######################-->
+
+                <!--####################### LIstado #######################-->
+                <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 col-xxxl-4">
-                            <a href="bulnes.html" class="pxp-results-card-1 rounded-lg" data-prop="531">
-                                <div id="card-carousel-13-1" class="carousel slide" data-ride="carousel" data-interval="false">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active" style="
-                                            background-image: url('https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg');
-                                            background-size: 340px 340px; 
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <a href="single-agent.html" class="pxp-agents-1-item" data-prop="1109">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                            background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                            background-position: top center;
+                                            background-size: 330 330; 
                                             background-repeat: no-repeat;
-                                            width: 340px; 
-                                            height: 340px;">
-                                        </div>
-                                    </div>
-                                    <span class="carousel-control-prev" data-href="#card-carousel-13-1" data-slide="prev">
-                                        <span class="fa fa-angle-left" aria-hidden="true"></span>
-                                    </span>
-                                    <span class="carousel-control-next" data-href="#card-carousel-13-1" data-slide="next">
-                                        <span class="fa fa-angle-right" aria-hidden="true"></span>
-                                    </span>
+                                            width: 458px; 
+                                            height: 100px;
+                                            
+                                            "></div>
                                 </div>
-                                <div class="pxp-results-card-1-gradient"></div>
-                                <div class="pxp-results-card-1-details">
-                                    <div class="pxp-results-card-1-details-title texto-destacado">
-                                        <span> 93 : 1.342 </span>|<span> 97 : 1.438 </span>|<span> 95 : 1.387 </span><br>
-                                        <span> DI : 1.049 </span>|<span> KE : 1.151 </span>
-                                    </div>
-                                    <div class="pxp-results-card-1-details-price">ANIBAL PINTO 398</div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+
+                                    <div class="pxp-agents-1-item-details-name">O'Higgins 622</div>
+                                    <div class="pxp-agents-1-item-details-email"> 93 <span
+                                            class="fa fa-dollar"></span>1.000</div>
+                                    <div class="pxp-agents-1-item-details-email"> 95 <span
+                                            class="fa fa-dollar"></span>1.000</div>
+                                    <div class="pxp-agents-1-item-details-email"> 97 <span
+                                            class="fa fa-dollar"></span>1.000</div>
+                                    <div class="pxp-agents-1-item-details-email"> DI <span
+                                            class="fa fa-dollar"></span>1.000</div>
+                                    <div class="pxp-agents-1-item-details-email"> KE <span
+                                            class="fa fa-dollar"></span>1.000</div>
                                 </div>
-                                <div class="pxp-results-card-1-features">
-                                    <span>Copec - Bulnes</span>
-                                </div>
-                                <div class="pxp-results-card-1-save"><span class="fa fa-star-o"></span></div>
                             </a>
                         </div>
-                        
-                        <div class="col-sm-12 col-md-6 col-xxxl-4">
-                            <a href="bulnes.html" class="pxp-results-card-1 rounded-lg" data-prop="1391">
-                                <div id="card-carousel-13-2" class="carousel slide" data-ride="carousel" data-interval="false">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active" style="
-                                            background-image: url('https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png');
-                                            background-size: 340px 340px; 
-                                            background-repeat: no-repeat;
-                                            width: 340px; 
-                                            height: 340px;">
-                                        </div>
-                                    </div>
-                                    <span class="carousel-control-prev" data-href="#card-carousel-13-2" data-slide="prev">
-                                        <span class="fa fa-angle-left" aria-hidden="true"></span>
-                                    </span>
-                                    <span class="carousel-control-next" data-href="#card-carousel-13-2" data-slide="next">
-                                        <span class="fa fa-angle-right" aria-hidden="true"></span>
-                                    </span>
-                                </div>
-                                <div class="pxp-results-card-1-gradient"></div>
-                                <div class="pxp-results-card-1-details">
-                                    <div class="pxp-results-card-1-details-title texto-destacado">
-                                        <span> 93 : 1.342 </span>|<span> 97 : 1.438 </span>|<span> 95 : 1.387 </span><br>
-                                        <span> DI : 1.049 </span>|<span> GLP : 658 </span>
-                                    </div>
-                                    <div class="pxp-results-card-1-details-price">CARLOS PALACIOS 495</div>
-                                </div>
-                                <div class="pxp-results-card-1-features">
-                                    <span>Shell - Bulnes</span>
-                                </div>
-                                <div class="pxp-results-card-1-save"><span class="fa fa-star-o"></span></div>
-                            </a>
-                        </div>
-
-                </div>
-                <div class="pxp-footer pxp-content-side-wrapper">
-                    <div class="pxp-footer-bottom">
-                        <div class="pxp-footer-copyright">&copy; Resideo. All Rights Reserved. 2021</div>
                     </div>
+                </div>
+                <!--####################### LISTADO #######################-->
+            </div>
+            <div class="pxp-footer pxp-content-side-wrapper">
+                <div class="pxp-footer-bottom">
+                    <div class="pxp-footer-copyright">&copy; Resideo. All Rights Reserved. 2021</div>
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="pxp-signin-modal" tabindex="-1" role="dialog" aria-labelledby="pxpSigninModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h5 class="modal-title" id="pxpSigninModal">Welcome back!</h5>
-                        <form class="mt-4">
-                            <div class="form-group">
-                                <label for="pxp-signin-email">Email</label>
-                                <input type="text" class="form-control" id="pxp-signin-email" placeholder="Enter your email address">
-                            </div>
-                            <div class="form-group">
-                                <label for="pxp-signin-pass">Password</label>
-                                <input type="password" class="form-control" id="pxp-signin-pass" placeholder="Enter your password">
-                            </div>
-                            <div class="form-group">
-                                <a href="#" class="pxp-agent-contact-modal-btn">Sign In</a>
-                            </div>
-                            <div class="form-group mt-4 text-center pxp-modal-small">
-                                <a href="#" class="pxp-modal-link">Forgot password</a>
-                            </div>
-                            <div class="text-center pxp-modal-small">
-                                New to Resideo? <a href="javascript:void(0);" class="pxp-modal-link pxp-signup-trigger">Create an account</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="pxp-signup-modal" tabindex="-1" role="dialog" aria-labelledby="pxpSignupModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h5 class="modal-title" id="pxpSignupModal">Create an account</h5>
-                        <form class="mt-4">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="pxp-signup-firstname">First Name</label>
-                                        <input type="text" class="form-control" id="pxp-signup-firstname" placeholder="Enter first name">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="pxp-signup-lastname">Last Name</label>
-                                        <input type="text" class="form-control" id="pxp-signup-lastname" placeholder="Enter last name">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="pxp-signup-email">Email</label>
-                                <input type="text" class="form-control" id="pxp-signup-email" placeholder="Enter your email address">
-                            </div>
-                            <div class="form-group">
-                                <label for="pxp-signup-pass">Password</label>
-                                <input type="password" class="form-control" id="pxp-signup-pass" placeholder="Create a password">
-                            </div>
-                            <div class="form-group">
-                                <a href="#" class="pxp-agent-contact-modal-btn">Sign Up</a>
-                            </div>
-                            <div class="text-center mt-4 pxp-modal-small">
-                                Already have an account? <a href="javascript:void(0);" class="pxp-modal-link pxp-signin-trigger">Sign in</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-
-        <!-- Codigo agregado manual-->
-        <script>
-            var marcadoresEstaciones = {};
-            var map;
-
-            /* Estye codigo abre y cierra los popup cuando nos acercamos a las propiedades*/
-
-                $(document).ready(function() {
-
-                     /********************* Select Comunas*******************/
-
-                    // 1. Inicializar Select2 con los estilos
-                    $('#pxp-p-search-location').select2({
-                        placeholder: "Bulnes",
-                        allowClear: true,
-                        language: {
-                            noResults: function() { return "No se encontraron resultados"; }
-                        }
-                    });
-
-                    // 2. Cargar los datos desde el JSON generado por el script de Python
-                    fetch('python/mapeo_identificadores.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const select = $('#pxp-p-search-location');
-                        select.empty().append(new Option("Selecciona Comuna o Región...", ""));
-
-                        // Agregar Regiones como Grupo
-                        const grupoRegiones = $('<optgroup label="Regiones"></optgroup>');
-                        data.regiones.forEach(reg => {
-                            // Creamos el elemento option manualmente para añadirle el atributo data
-                            const option = new Option(reg.nombre, 'reg_' + reg.id);
-                            $(option).attr('data-nombre-pagina', reg.nombre_pagina);
-                            grupoRegiones.append(option);
-                        });
-                        select.append(grupoRegiones);
-
-                        // Agregar Comunas como Grupo
-                        const grupoComunas = $('<optgroup label="Comunas"></optgroup>');
-                        data.comunas.forEach(com => {
-                            const option = new Option(com.nombre, 'com_' + com.id);
-                            $(option).attr('data-nombre-pagina', com.nombre_pagina);
-                            grupoComunas.append(option);
-                        });
-                        select.append(grupoComunas);
-                    })
-                    .catch(error => console.error('Error cargando ubicaciones:', error));
-
-                  // 3. Evento al seleccionar una ubicación
-                    $('#pxp-p-search-location').on('select2:select', function (e) {
-                        // Obtenemos el ID seleccionado (ej: reg_1 o com_15)
-                        const idSeleccionado = e.params.data.id;
-                        
-                        // Obtenemos el atributo 'data-nombre-pagina' del elemento <option> real
-                        const nombrePagina = $(this).find(':selected').data('nombre-pagina');
-                        
-                        console.log("ID Seleccionado:", idSeleccionado);
-                        console.log("Nombre para URL (Slug):", nombrePagina);
-
-                        // Ejemplo de uso: Redirigir o filtrar
-                        if (nombrePagina) {
-                             window.location.href = nombrePagina;
-                        }
-                    });
-    
-
-
-                    /********************* POP UP MAPA *******************/
-
-                    // Detectar el paso del mouse sobre la tarjeta
-                    $('.pxp-results-card-1').on('mouseenter', function() {
-                        // Obtenemos el ID de la estación desde el atributo data-prop
-                        var propId = $(this).attr('data-prop');
-                        // Verificamos si el marcador existe en nuestro objeto global
-                        if (marcadoresEstaciones[propId]) {
-                            var marker_map = marcadoresEstaciones[propId];
-                            
-                            // Abrimos el popup
-                            marker_map.openPopup();
-                            
-                            // Opcional: Centrar el mapa suavemente en la estación al pasar el mouse
-                            map.panTo(marker_map.getLatLng());
-                        }
-                    });
-
-                    // Opcional: Cerrar el popup al quitar el mouse
-                    $('.pxp-results-card-1').on('mouseleave', function() {
-                        var propId = $(this).attr('data-prop');
-                        if (marcadoresEstaciones[propId]) {
-                            marcadoresEstaciones[propId].closePopup();
-                        }
-                    });
+        <!--####################### Seccion 2  #######################-->
+    </div>
 
 
 
 
 
-                });
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js_custom/map_custom.js"></script>
+    <script src="js_custom/select_custom.js"></script>
 
+</body>
 
-            document.addEventListener('DOMContentLoaded', function() {
-                // 1. Inicializar mapa con estilo "Voyager" (estilo Google Maps)
-                    map = L.map('results-map', {
-                    zoomControl: false // Los controles de Resideo suelen chocar, mejor quitarlos o moverlos
-                }).setView([-36.74896004477087, -72.28687405586242], 15);
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-                    attribution: '© OpenStreetMap'
-                }).addTo(map);
-        
-                L.control.zoom({ position: 'bottomright' }).addTo(map);
-        
-                // 2. Iconos Personalizados
-                var iconoAuto = L.icon({
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/3085/3085330.png',
-                    iconSize: [40, 40],
-                    iconAnchor: [20, 20]
-                });
-        
-                var iconoBomba = L.icon({
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/3448/3448636.png',
-                    iconSize: [35, 35],
-                    iconAnchor: [17, 34],
-                    popupAnchor: [0, -30]
-                });
-        
-                // 3. Datos de las Estaciones
-                var estaciones = [
-                   // --- BULNES ---
-                    {
-                        lat: -36.742211, lng: -72.298289,
-                        nombre: "COPEC - Bulnes",
-                        direccion: "ANIBAL PINTO 398",
-                        precios: "93: $1.342 | 95: $1.387 | 97: $1.438 | DI: $1.049",
-                        estacion_id: 531
-                    },
-                    {
-                        lat: -36.738870, lng: -72.302190,
-                        nombre: "SHELL - Bulnes",
-                        direccion: "CARLOS PALACIOS 495",
-                        precios: "93: $1.342 | 95: $1.387 | 97: $1.438 | DI: $1.049",
-                        estacion_id: 1391
-                    },
-                ];
-        
-                // 4. Dibujar marcadores de bombas
-                
-                estaciones.forEach(function(est) {
-                    var marker_map = L.marker([est.lat, est.lng], { icon: iconoBomba })
-                        .addTo(map)
-                        .bindPopup(`<b>${est.nombre}</b><br><small>${est.direccion}</small><br><div class="precio">${est.precios}</div>`);
-                        marcadoresEstaciones[est.estacion_id] = marker_map;
-                        console.log(marcadoresEstaciones);
-                });
-        
-                // 5. GPS con Icono de Auto
-              
-                // 1. Definir el marcador fuera para mayor control
-                    var userMarker;
-
-                    // 2. Escuchar el evento 'locationfound'
-                    map.on('locationfound', function(e) {
-      
-
-                        if (!userMarker) {
-                            // Primera vez: creamos el marcador y centramos el mapa
-                            userMarker = L.marker(e.latlng, { icon: iconoAuto }).addTo(map)
-                                .bindPopup("Estás aqui").openPopup();
-                            
-                            map.setView(e.latlng, 16); // Centrar la cámara la primera vez
-                        } else {
-                            // Actualizaciones siguientes: solo movemos el marcador
-                            userMarker.setLatLng(e.latlng);
-                            
-                            // OPCIONAL: Si quieres que el mapa SIEMPRE te siga al centro:
-                            map.panTo(e.latlng); 
-                        }
-                    });
-
-                    // 3. Manejo de errores (Muy importante en móviles)
-                    map.on('locationerror', function(e) {
-                        alert("No se pudo obtener tu ubicación: " + e.message);
-                    });
-
-                    // 4. Iniciar el rastreo
-                    map.locate({ 
-                        setView: false, // Lo manejamos manualmente arriba para mejor control
-                        watch: true, 
-                        enableHighAccuracy: true,
-                        maximumAge: 1000, // No usar posiciones guardadas en caché de más de 1 seg
-                        timeout: 10000    // Tiempo límite para encontrar señal
-});
-        
-
-                // Seleccionamos todos los botones que activan cambios de vista
-                const toggleButtons = document.querySelectorAll('.pxp-adv-toggle, .pxp-map-toggle, .pxp-list-toggle');
-
-                toggleButtons.forEach(button => {
-                    button.addEventListener('click', function() {
-                        // Esperamos un momento breve (200ms) para que la animación de CSS termine 
-                        // y el div tenga su tamaño final antes de recalcular.
-                        setTimeout(function() {
-                            map.invalidateSize({
-                                animate: true
-                            });
-                            console.log("Mapa recalculado");
-                        }, 300); 
-                    });
-                });
-            });
-        </script>
-
-   
-        <style>
-            /* Estilo para que el mapa llene todo su contenedor lateral */
-            #results-map {
-                width: 100% !important;
-                height: 100% !important;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                background-color: #e5e3df;
-            }
-
-            /* Estilo del Popup estilo Gmaps */
-            .leaflet-popup-content-wrapper { border-radius: 12px; padding: 5px; }
-            .popup-combustible { display: flex; justify-content: space-between; font-size: 0.9em; margin: 4px 0; }
-            .precio { font-weight: bold; color: #1e88e5; }
-            
-         
-            /* Aquí pegas tu fragmento de CSS */
-            .texto-destacado {
-                font-weight: 900;
-                color: black;
-                text-shadow: 
-                1px 1px 0px #fff, -1px -1px 0px #fff, 
-                1px -1px 0px #fff, -1px 1px 0px #fff,
-                0px 1px 0px #000, 0px -1px 0px #000,
-                1px 0px 0px #000, -1px 0px 0px #000;
-                line-height: 1.5;
-            }
-
-            /*Campos select2*/
-
-            /* Personalización para que coincida con el estilo Resideo */
-            .select2-container--default .select2-selection--single {
-                border: 1px solid #e2e2e2;
-                border-radius: 10px; /* Estilo rounded-lg de tu template */
-                height: 54px; /* Altura de tus inputs .form-control */
-                display: flex;
-                align-items: center;
-                font-family: 'Roboto', sans-serif;
-            }
-            .select2-container--default .select2-selection--single .select2-selection__rendered {
-                color: #333;
-                padding-left: 45px; /* Espacio para el icono de lupa */
-            }
-            .select2-container--default .select2-selection--single .select2-selection__arrow {
-                height: 52px;
-            }
-            .select2-dropdown {
-                border: 1px solid #e2e2e2;
-                border-radius: 10px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-                z-index: 9999;
-            }
-            /* Estilo para el icono dentro del select */
-            .pxp-search-container { position: relative; }
-            .pxp-search-icon {
-                position: absolute;
-                left: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 10;
-                color: #777;
-            }
-
-        </style>
-        <!-- Codigo agregado manual-->
-    </body>
 </html>
 
 <!-- APIS
@@ -725,3 +183,5 @@ https://api.bencinaenlinea.cl/api/marca_ciudadano indica el id de las bencineras
 https://api.bencinaenlinea.cl/api/combustible_ciudadano indica los tipos de combustibles
 https://api.bencinaenlinea.cl/api/servicio_ciudadano tipos de servicios
 -->
+
+
