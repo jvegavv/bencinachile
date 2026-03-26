@@ -1,0 +1,105 @@
+{
+    "comuna": "Quinchao",
+    "estaciones": [
+        {
+            "id": 1439,
+            "marca": 4,
+            "direccion": "Miranda Velasquez 042",
+            "latitud": "-42.53813299999999",
+            "longitud": "-73.41877299999999",
+            "region": "De los Lagos",
+            "comuna": "Quinchao",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697479767_Shell.png",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1439,
+                    "precio": "1294.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 2 semanas",
+                    "precio_fecha": "2026-03-05 16:42:32",
+                    "updated_at": "2026-03-05 16:42:32",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1439,
+                    "precio": "1052.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 2 semanas",
+                    "precio_fecha": "2026-03-05 16:42:32",
+                    "updated_at": "2026-03-05 16:42:32",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 1439,
+                    "precio": "1601.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 6 días",
+                    "precio_fecha": "2026-03-19 14:48:07",
+                    "updated_at": "2026-03-19 14:48:07",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1439,
+                    "precio": "1338.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 2 semanas",
+                    "precio_fecha": "2026-03-05 16:42:32",
+                    "updated_at": "2026-03-05 16:42:32",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1439
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1439
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "SHELL"
+        }
+    ]
+}

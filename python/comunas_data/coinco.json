@@ -1,0 +1,29 @@
+{
+    "comuna": "Coinco",
+    "estaciones": [
+        {
+            "id": 546,
+            "marca": 10,
+            "direccion": "Libertador Bernardo O'higgins 758",
+            "latitud": "-34.262267",
+            "longitud": "-70.949457",
+            "region": "Del Libertador Gral. Bernardo O’Higgins",
+            "comuna": "Coinco",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/",
+            "logo": "https://api.bencinaenlinea.cl/",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "Sin Bandera"
+        }
+    ]
+}

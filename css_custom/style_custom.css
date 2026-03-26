@@ -1,0 +1,121 @@
+      /* Estilo para que el mapa llene todo su contenedor lateral */
+      #results-map {
+          width: 100% !important;
+          height: 100% !important;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background-color: #e5e3df;
+      }
+
+      /* Estilo del Popup estilo Gmaps */
+      .leaflet-popup-content-wrapper {
+          border-radius: 12px;
+          padding: 5px;
+      }
+
+      .popup-combustible {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.9em;
+          margin: 4px 0;
+      }
+
+      .precio {
+          font-weight: bold;
+          color: #1e88e5;
+      }
+
+
+      /* Aquí pegas tu fragmento de CSS */
+      .texto-destacado {
+          font-weight: 900;
+          color: black;
+          text-shadow:
+              1px 1px 0px #fff, -1px -1px 0px #fff,
+              1px -1px 0px #fff, -1px 1px 0px #fff,
+              0px 1px 0px #000, 0px -1px 0px #000,
+              1px 0px 0px #000, -1px 0px 0px #000;
+          line-height: 1.5;
+      }
+
+      /*Campos select2*/
+
+      /* AJUSTE SELECT2 PARA PLANTILLA RESIDEO */
+
+      /* Contenedor principal: Usamos la altura de 54px de tus otros inputs */
+      .select2-container--default .select2-selection--single {
+          border: 1px solid #e2e2e2 !important;
+          border-radius: 10px !important;
+          height: 54px !important;
+          display: flex;
+          align-items: center;
+          transition: all .3s ease-in-out;
+          background-color: #fff;
+      }
+
+      /* La flecha de la derecha */
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+          height: 52px !important;
+          right: 15px !important;
+      }
+
+      /*Texto filtro comuna region*/
+      .pxp-bencina-label {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 700;
+          /* Grosor elegante */
+          color: #333;
+          /* Color principal de tu plantilla */
+          font-size: 14px;
+          /* Tamaño equilibrado */
+          text-transform: uppercase;
+          /* Opcional: Da un aspecto de etiqueta técnica */
+          letter-spacing: 1px;
+          /* Espaciado entre letras elegante */
+          white-space: nowrap;
+          /* Evita que se rompa en dos líneas */
+          border-right: 3px solid #fec42d;
+          /* Detalle: línea de color (puedes usar el amarillo de Aramco) */
+          padding-right: 15px;
+          /* Espacio entre el texto y el borde derecho */
+      }
+
+      .pxp-agents-1-item-details {
+          transform: translateY(1%) !important;
+      }
+
+      .pxp-agents-1-item-fig-container {
+          /* Añade estas líneas */
+          border: 1px solid #ccc !important;
+          box-sizing: border-box !important;
+      }
+
+     /* Botón de Geoubicación Personalizado MAPA */
+.leaflet-control-locate {
+    background: #fff;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.leaflet-control-locate:hover {
+    background: #f4f4f4;
+    color: #007bff; /* Color primario de tu tema */
+}
+
+/* Animación opcional para el marcador de usuario */
+.user-location-marker {
+    background-color: #007bff;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.3);
+}
