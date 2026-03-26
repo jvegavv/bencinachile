@@ -1,0 +1,121 @@
+{
+    "comuna": "Codegua",
+    "estaciones": [
+        {
+            "id": 545,
+            "marca": 4,
+            "direccion": "Andes 460",
+            "latitud": "-34.034921",
+            "longitud": "-70.660648",
+            "region": "Del Libertador Gral. Bernardo O’Higgins",
+            "comuna": "Codegua",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697479767_Shell.png",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 545,
+                    "precio": "1595.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 8 minutos",
+                    "precio_fecha": "2026-03-26 09:13:26",
+                    "updated_at": "2026-03-26 09:13:26",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 545,
+                    "precio": "1563.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 8 minutos",
+                    "precio_fecha": "2026-03-26 09:13:26",
+                    "updated_at": "2026-03-26 09:13:26",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 545,
+                    "precio": "1547.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 8 minutos",
+                    "precio_fecha": "2026-03-26 09:13:26",
+                    "updated_at": "2026-03-26 09:13:26",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 545,
+                    "precio": "1635.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 8 minutos",
+                    "precio_fecha": "2026-03-26 09:13:26",
+                    "updated_at": "2026-03-26 09:13:26",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 545,
+                    "precio": "1673.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 8 minutos",
+                    "precio_fecha": "2026-03-26 09:13:26",
+                    "updated_at": "2026-03-26 09:13:26",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 545
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 545
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "SHELL"
+        }
+    ]
+}

@@ -9,7 +9,7 @@ URL_ESTACIONES = 'https://api.bencinaenlinea.cl/api/busqueda_estacion_filtro'
 URL_MARCAS = 'https://api.bencinaenlinea.cl/api/marca_ciudadano'
 FILE_OUTPUT = 'busqueda_estacion_con_ids.json'
 FILE_MAPEO = 'mapeo_identificadores.json'
-FOLDER_COMUNAS = 'comunas_data'
+FOLDER_COMUNAS = '../comunas_data'
 
 def limpiar_texto_url(texto, extension=".html"):
     """Convierte un nombre a formato slug/url"""

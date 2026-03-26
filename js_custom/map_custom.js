@@ -3,7 +3,7 @@ var map;
 var latitud = -33.447487
 var longitud = -70.673676
 var carMarker;
-const rutaJson = 'python/comunas_data/quillon.json'; 
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -223,6 +223,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // 3. Carga dinámica de Datos desde el JSON de la comuna
 // Ajusta la ruta según donde esté tu carpeta 'comunas_data' respecto al HTML
 
+var nombre_json =  $('#comuna_json').val();
+
+const rutaJson = 'comunas_data/'+nombre_json; 
 
 fetch(rutaJson)
     .then(response => {
@@ -281,6 +284,8 @@ fetch(rutaJson)
     $('.pxp-agents-1-item').on('mouseenter', function () {
         // Obtenemos el ID de la estación desde el atributo data-prop
         var propId = $(this).attr('data-prop');
+
+        console.log("mouse sobre tarjeta "+propId)
         // Verificamos si el marcador existe en nuestro objeto global
         if (marcadoresEstaciones[propId]) {
             var marker_map = marcadoresEstaciones[propId];
