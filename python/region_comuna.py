@@ -17,6 +17,7 @@ def limpiar_texto_url(texto, extension=".html"):
         return ""
     texto = unicodedata.normalize('NFKD', texto).encode('ascii', 'ignore').decode('ascii')
     texto = texto.lower()
+    # Reemplazar caracteres no alfanuméricos por guiones
     texto = re.sub(r'[^a-z0-9]+', '-', texto)
     texto = texto.strip('-')
     return f"{texto}{extension}"
@@ -28,35 +29,14 @@ def obtener_mapa_marcas():
         res = requests.get(URL_MARCAS, timeout=20)
         res.raise_for_status()
         marcas_data = res.json().get('data', [])
-        # Creamos un diccionario donde la clave es el ID (como string) y el valor es el nombre
         return {str(m['id']): m['nombre'] for m in marcas_data}
     except Exception as e:
         print(f"⚠️ No se pudieron obtener las marcas: {e}")
         return {}
 
-def generar_archivos_por_comuna(estaciones):
-    """Agrupa estaciones por comuna y crea un archivo .json por cada una"""
-    if not os.path.exists(FOLDER_COMUNAS):
-        os.makedirs(FOLDER_COMUNAS)
-
-    comunas_dict = {}
-    for estacion in estaciones:
-        nombre_comuna = estacion.get('comuna')
-        if nombre_comuna:
-            if nombre_comuna not in comunas_dict:
-                comunas_dict[nombre_comuna] = []
-            comunas_dict[nombre_comuna].append(estacion)
-
-    for nombre_comuna, lista_estaciones in comunas_dict.items():
-        nombre_archivo = limpiar_texto_url(nombre_comuna, extension=".json")
-        ruta_completa = os.path.join(FOLDER_COMUNAS, nombre_archivo)
-        
-        with open(ruta_completa, 'w', encoding='utf-8') as f:
-            json.dump({"comuna": nombre_comuna, "estaciones": lista_estaciones}, f, indent=4, ensure_ascii=False)
-
 def procesar_datos():
     try:
-        # 1. Obtener Mapa de Marcas (Cruce)
+        # 1. Obtener Marcas
         mapa_marcas = obtener_mapa_marcas()
 
         # 2. Obtener Estaciones
@@ -65,34 +45,48 @@ def procesar_datos():
         response.raise_for_status()
         estaciones = response.json().get('data', [])
 
-        # 3. Realizar el cruce de "marca" -> "nombre_bencinera"
+        # Diccionarios para almacenar coordenadas de referencia por comuna
+        coordenadas_comunas = {}
+
+        # 3. Procesar estaciones y capturar primera coordenada por comuna
         for estacion in estaciones:
+            nombre_comuna = estacion.get('comuna')
             id_marca = str(estacion.get('marca', ''))
-            # Agregamos el nuevo campo buscando en nuestro mapa de marcas
+            
+            # Cruce de nombre de bencinera
             estacion['nombre_bencinera'] = mapa_marcas.get(id_marca, "Independiente/Otra")
 
-        # 4. Generar archivos individuales por comuna (ya con el nombre_bencinera incluido)
-        generar_archivos_por_comuna(estaciones)
+            # Guardar la lat/lng de la primera estación que encontremos de esta comuna
+            if nombre_comuna and nombre_comuna not in coordenadas_comunas:
+                coordenadas_comunas[nombre_comuna] = {
+                    "latitud": estacion.get('latitud'),
+                    "longitud": estacion.get('longitud')
+                }
 
-        # 5. Crear mapeos de ID para Regiones y Comunas (para los archivos maestros)
+        # 4. Generar archivos JSON individuales
+        if not os.path.exists(FOLDER_COMUNAS):
+            os.makedirs(FOLDER_COMUNAS)
+
+        comunas_dict = {}
+        for est in estaciones:
+            com = est.get('comuna')
+            if com:
+                if com not in comunas_dict: comunas_dict[com] = []
+                comunas_dict[com].append(est)
+
+        for nom_comuna, lista in comunas_dict.items():
+            ruta = os.path.join(FOLDER_COMUNAS, limpiar_texto_url(nom_comuna, ".json"))
+            with open(ruta, 'w', encoding='utf-8') as f:
+                json.dump({"comuna": nom_comuna, "estaciones": lista}, f, indent=4, ensure_ascii=False)
+
+        # 5. Crear mapeos de ID
         regiones_unicas = sorted(list(set(e.get('region') for e in estaciones if e.get('region'))))
         comunas_unicas = sorted(list(set(e.get('comuna') for e in estaciones if e.get('comuna'))))
 
         mapa_id_regiones = {nombre: i + 1 for i, nombre in enumerate(regiones_unicas)}
         mapa_id_comunas = {nombre: i + 1 for i, nombre in enumerate(comunas_unicas)}
 
-        # 6. Guardar archivo general con IDs numéricos
-        estaciones_con_ids = []
-        for est in estaciones:
-            nueva = est.copy()
-            nueva['region'] = mapa_id_regiones.get(est.get('region'), est.get('region'))
-            nueva['comuna'] = mapa_id_comunas.get(est.get('comuna'), est.get('comuna'))
-            estaciones_con_ids.append(nueva)
-
-        with open(FILE_OUTPUT, 'w', encoding='utf-8') as f:
-            json.dump({"data": estaciones_con_ids}, f, indent=4, ensure_ascii=False)
-
-        # 7. Actualizar mapeo_identificadores.json
+        # 6. Generar mapeo_identificadores.json con coordenadas
         mapeo_referencia = {
             "regiones": [
                 {"id": v, "nombre": k, "nombre_pagina": limpiar_texto_url(k, ".html")} 
@@ -103,7 +97,9 @@ def procesar_datos():
                     "id": v, 
                     "nombre": k, 
                     "nombre_pagina": limpiar_texto_url(k, ".html"),
-                    "nombre_json": limpiar_texto_url(k, ".json")
+                    "nombre_json": limpiar_texto_url(k, ".json"),
+                    "latitud": coordenadas_comunas.get(k, {}).get('latitud'), # <--- Nuevo
+                    "longitud": coordenadas_comunas.get(k, {}).get('longitud') # <--- Nuevo
                 } 
                 for k, v in mapa_id_comunas.items()
             ]
@@ -112,10 +108,10 @@ def procesar_datos():
         with open(FILE_MAPEO, 'w', encoding='utf-8') as f:
             json.dump(mapeo_referencia, f, indent=4, ensure_ascii=False)
 
-        print(f"✅ Proceso finalizado. Se incluyó 'nombre_bencinera' mediante cruce de APIs.")
+        print(f"✅ Archivo {FILE_MAPEO} actualizado con coordenadas de referencia.")
 
     except Exception as e:
-        print(f"❌ Error general: {e}")
+        print(f"❌ Error: {e}")
 
 if __name__ == "__main__":
     procesar_datos()
