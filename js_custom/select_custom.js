@@ -18,7 +18,7 @@ $(document).ready(function () {
             const select = $('#pxp-p-search-location');
             select.empty().append(new Option("Selecciona Comuna o Región...", ""));
 
-            // Agregar Regiones como Grupo
+          /*  // Agregar Regiones como Grupo
             const grupoRegiones = $('<optgroup label="Regiones"></optgroup>');
             data.regiones.forEach(reg => {
                 // Creamos el elemento option manualmente para añadirle el atributo data
@@ -26,7 +26,7 @@ $(document).ready(function () {
                 $(option).attr('data-nombre-pagina', reg.nombre_pagina);
                 grupoRegiones.append(option);
             });
-            select.append(grupoRegiones);
+            select.append(grupoRegiones);*/
 
             // Agregar Comunas como Grupo
             const grupoComunas = $('<optgroup label="Comunas"></optgroup>');
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
         // Ejemplo de uso: Redirigir o filtrar
         if (nombrePagina) {
-            window.location.href = "python/paginas_comunas/"+nombrePagina;
+            window.location.href = nombrePagina;
         }
     });
 });

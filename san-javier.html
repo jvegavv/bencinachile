@@ -1,0 +1,284 @@
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css?asdsdd">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <link rel="stylesheet" href="css_custom/style_custom.css" />
+
+        <title>resideo.</title>
+    </head>
+    
+    <body>
+        <input type="hidden" id="latitud"  value="-35.595588287229816">
+        <input type="hidden" id="longitud" value="-71.72935009002686">
+        <input type="hidden" id="comuna" value="San Javier">
+        <input type="hidden" id="comuna_json" value="san-javier.json">
+    
+    <div class="pxp-header pxp-full fixed-top">
+        <div class="pxp-container-full">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-2">
+                    <a href="index.html" class="pxp-logo text-decoration-none"><span id="log_html"></span></a>
+                </div>
+                <div class="col-2 col-md-8 text-center">
+                    <ul class="pxp-nav list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Bencineras</a>
+                            <ul class="pxp-nav-sub rounded-lg">
+                                <li><a href="santiago.html">Mapa</a></li>
+                                <li><a href="VAR_LISTADO_BENCINERAS.html">Listado</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item pxp-is-last"><a href="contact.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-2 text-right">
+                    <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="pxp-content pxp-full-height">
+
+            <!--####################### Seccion 1  #######################-->
+            <!--####################### MAPA #######################-->
+            <div class="pxp-map-side pxp-map-right pxp-half">
+                <div id="results-map"></div>
+                <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
+            </div>
+            <!--####################### MAPA #######################-->
+            <!--####################### Seccion 1  #######################-->
+
+            <!--####################### Seccion 2  #######################-->
+            <div class="pxp-content-side pxp-content-left pxp-half">
+                <div class="pxp-content-side-wrapper">
+
+                    <!--####################### FILTRO #######################-->
+                    <div class="d-flex">
+                        <div class="pxp-content-side-search-form">
+                            <div class="row pxp-content-side-search-form-row">
+                                <div class="col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
+                                    <div class="d-flex justify-content-end align-items-center h-100">
+                                        <span class="pxp-bencina-label">Seleccione Ubicación</span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
+
+                                    <select class="custom-select" id="pxp-p-search-location">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row pb-4">
+                        <div class="col-sm-6">
+                            <h2 class="pxp-content-side-h2"> 8 Resultados</h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pxp-sort-form form-inline float-right">
+                                <div class="form-group">
+                                    <select class="custom-select" id="pxp-sort-results">
+                                        <option value="" selected="selected">Ordenar mas enconomica</option>
+                                        <option value="4-12">Kerosene</option>
+                                        <option value="3-11-">Petroleo Diesel</option>
+                                        <option value="1-8">Gasolina 93</option>
+                                        <option value="7-9">Gasolina 95</option>
+                                        <option value="2-10">Gasolina 97</option>
+                                        <option value="6">GLP Vehicular</option>
+                                        <option value="5">GNC</option>
+                                    </select>
+                                </div>
+                                <div class="form-group d-flex">
+                                    <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <div class="container"><div class="row">
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="840">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">CHORRILLOS 1398</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1566.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1642.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1515.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1538.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1604.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="841">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">BALMACEDA, ESQ. CHORRILLOS 0</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1566.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1642.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1516.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1538.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1604.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="842">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">CARRETERA LONGITUDINAL SUR KM 275.3 0</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1589.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1658.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1526.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1621.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A93 <span class="fa fa-dollar"></span>1574.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A95 <span class="fa fa-dollar"></span>1606.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A97 <span class="fa fa-dollar"></span>1643.000 ($/L )</div><div class="pxp-agents-1-item-details-email">ADI <span class="fa fa-dollar"></span>1511.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="843">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478412_logo25.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">HN</div>
+                                <div class="pxp-agents-1-item-details-name">BALMACEDA 555</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1181.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>929.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1370.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1209.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="845">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697485697_logo67.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">Mimbral</div>
+                                <div class="pxp-agents-1-item-details-name">Longitudinal Sur km 275</div>
+                <div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1500.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="847">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697485370_logo54.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">FACAZ</div>
+                                <div class="pxp-agents-1-item-details-name">Ruta los Conquistadores Km. 3. 7</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1196.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>932.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1223.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="848">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Chorrillos 1715</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1568.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1643.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1515.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1538.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1606.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="849">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">ORILLA DE MAULE KM2 0</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1567.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1643.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1515.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1605.000 ($/L )</div></div></a></div></div></div>
+               <!--####################### LISTADO #######################-->
+            </div>
+            <div class="pxp-footer pxp-content-side-wrapper">
+                <div class="pxp-footer-bottom">
+                    <div class="pxp-footer-copyright">&copy; Resideo. All Rights Reserved. 2021</div>
+                </div>
+            </div>
+        </div>
+        <!--####################### Seccion 2  #######################-->
+    </div>
+    
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js_custom/map_custom.js"></script>
+    <script src="js_custom/select_custom.js"></script>
+
+</body>
+
+</html>
+    

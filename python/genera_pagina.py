@@ -6,12 +6,15 @@ import json
 
 
 
-def generar_html_comuna(comuna, carpeta_salida="paginas_comunas"):
+def generar_html_comuna(comuna, carpeta_salida="../"):
     # 1. Preparar nombres y rutas
 
-    print(comuna)
-    ruta_json = f"python/comunas_data/{comuna['nombre_json']}" # Ajusta según tu estructura real
+    print(f"COMUNA -- >{comuna}")
+    ruta_json = f"../comunas_data/{comuna['nombre_json']}" # Ajusta según tu estructura real
     
+    if  os.path.exists(ruta_json):
+        print("existe ruta")
+
     if not os.path.exists(carpeta_salida):
         os.makedirs(carpeta_salida)
 
@@ -39,9 +42,10 @@ def generar_html_comuna(comuna, carpeta_salida="paginas_comunas"):
 
     body_html1=f"""
     <body>
-        <input type="hidden" id="latitud"  value="VAR_LATITUD">
-        <input type="hidden" id="longitud" value="VAR_LONGITUD">
-        <input type="hidden" id="comuna" value="VAR_COMUNA">
+        <input type="hidden" id="latitud"  value="{comuna['latitud']}">
+        <input type="hidden" id="longitud" value="{comuna['longitud']}">
+        <input type="hidden" id="comuna" value="{comuna['nombre']}">
+        <input type="hidden" id="comuna_json" value="{comuna['nombre_json']}">
     """;
 
 
@@ -60,7 +64,7 @@ def generar_html_comuna(comuna, carpeta_salida="paginas_comunas"):
                         <li class="list-inline-item">
                             <a href="#">Bencineras</a>
                             <ul class="pxp-nav-sub rounded-lg">
-                                <li><a href="santiago.html">Mapa</a></li>
+                                <li><a href="santiago-centro.html">Mapa</a></li>
                                 <li><a href="VAR_LISTADO_BENCINERAS.html">Listado</a></li>
                             </ul>
                         </li>
@@ -75,103 +79,123 @@ def generar_html_comuna(comuna, carpeta_salida="paginas_comunas"):
     </div>
     """
 
+   
+
+    listado_bencineras_html =f"""<div class="container"><div class="row">"""
+    cantidad_estaciones = 0;
+    try:
+            # 1. Abrir y cargar el archivo de mapeo
+            with open(ruta_json, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            print(f"DATA JSON {data}")
+            # 2. Obtener la lista de comunas
+            lista_estaciones = data.get('estaciones', [])
+            cantidad_estaciones = len(lista_estaciones)
+            print(f"lista_estaciones {lista_estaciones}")
+               
+            
+            print(f"📂 Leídas {len(lista_estaciones)} estaciones desde {ruta_json}")
+
+            # 3. Invocar la generación para cada una
+            for estacion in lista_estaciones:
+            
+                listado_bencineras_html+=f"""
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="{estacion['id']}">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url({estacion['logo']}); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">{estacion['nombre_bencinera']}</div>
+                                <div class="pxp-agents-1-item-details-name">{estacion['direccion']}</div>
+                """
+
+                for combustible in estacion['combustibles']:
+                    listado_bencineras_html+=f"""<div class="pxp-agents-1-item-details-email">{combustible['nombre_corto']} <span class="fa fa-dollar"></span>{combustible['precio']} ({combustible['unidad_cobro']} )</div>"""
+
+
+                listado_bencineras_html+=f"""</div></a></div>"""
+
+            print("\n✨ ¡Proceso de generación masiva completado!")
+
+    except FileNotFoundError:
+        print(f"❌ Error: No se encontró el archivo '{ruta_json}'. Asegúrate de que el script de Python lo haya generado primero.")
+    except Exception as e:
+        print(f"❌ Ocurrió un error inesperado: {e}")
+
+    listado_bencineras_html+=f"""</div></div>"""
+
     mapa_filtro_html=f"""
-       <div class="pxp-content pxp-full-height">
+        <div class="pxp-content pxp-full-height">
 
-        <!--####################### Seccion 1  #######################-->
-        <!--####################### MAPA #######################-->
-        <div class="pxp-map-side pxp-map-right pxp-half">
-            <div id="results-map"></div>
-            <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
-        </div>
-        <!--####################### MAPA #######################-->
-        <!--####################### Seccion 1  #######################-->
+            <!--####################### Seccion 1  #######################-->
+            <!--####################### MAPA #######################-->
+            <div class="pxp-map-side pxp-map-right pxp-half">
+                <div id="results-map"></div>
+                <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
+            </div>
+            <!--####################### MAPA #######################-->
+            <!--####################### Seccion 1  #######################-->
 
-        <!--####################### Seccion 2  #######################-->
-        <div class="pxp-content-side pxp-content-left pxp-half">
-            <div class="pxp-content-side-wrapper">
+            <!--####################### Seccion 2  #######################-->
+            <div class="pxp-content-side pxp-content-left pxp-half">
+                <div class="pxp-content-side-wrapper">
 
-                <!--####################### FILTRO #######################-->
-                <div class="d-flex">
-                    <div class="pxp-content-side-search-form">
-                        <div class="row pxp-content-side-search-form-row">
-                            <div class="col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
-                                <div class="d-flex justify-content-end align-items-center h-100">
-                                    <span class="pxp-bencina-label">Seleccione Ubicación</span>
+                    <!--####################### FILTRO #######################-->
+                    <div class="d-flex">
+                        <div class="pxp-content-side-search-form">
+                            <div class="row pxp-content-side-search-form-row">
+                                <div class="col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
+                                    <div class="d-flex justify-content-end align-items-center h-100">
+                                        <span class="pxp-bencina-label">Seleccione Ubicación</span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
+
+                                    <select class="custom-select" id="pxp-p-search-location">
+                                    </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <div
-                                class="col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
+                    </div>
 
-                                <select class="custom-select" id="pxp-p-search-location">
-                                </select>
+                    <div class="row pb-4">
+                        <div class="col-sm-6">
+                            <h2 class="pxp-content-side-h2"> {cantidad_estaciones} Resultados</h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pxp-sort-form form-inline float-right">
+                                <div class="form-group">
+                                    <select class="custom-select" id="pxp-sort-results">
+                                        <option value="" selected="selected">Ordenar mas enconomica</option>
+                                        <option value="4-12">Kerosene</option>
+                                        <option value="3-11-">Petroleo Diesel</option>
+                                        <option value="1-8">Gasolina 93</option>
+                                        <option value="7-9">Gasolina 95</option>
+                                        <option value="2-10">Gasolina 97</option>
+                                        <option value="6">GLP Vehicular</option>
+                                        <option value="5">GNC</option>
+                                    </select>
+                                </div>
+                                <div class="form-group d-flex">
+                                    <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="row pb-4">
-                    <div class="col-sm-6">
-                        <h2 class="pxp-content-side-h2"> VAR_RESULTADOS Resultados</h2>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="pxp-sort-form form-inline float-right">
-                            <div class="form-group">
-                                <select class="custom-select" id="pxp-sort-results">
-                                    <option value="" selected="selected">Ordenar mas enconomica</option>
-                                    <option value="4-12">Kerosene</option>
-                                    <option value="3-11-">Petroleo Diesel</option>
-                                    <option value="1-8">Gasolina 93</option>
-                                    <option value="7-9">Gasolina 95</option>
-                                    <option value="2-10">Gasolina 97</option>
-                                    <option value="6">GLP Vehicular</option>
-                                    <option value="5">GNC</option>
-                                </select>
-                            </div>
-                            <div class="form-group d-flex">
-                                <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    """
-
-    listado_bencineras_html=f"""
-  <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <a href="single-agent.html" class="pxp-agents-1-item" data-prop="1109">
-                                <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                            background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                            background-position: top center;
-                                            background-size: 330 330; 
-                                            background-repeat: no-repeat;
-                                            width: 458px; 
-                                            height: 100px;
-                                            
-                                            "></div>
-                                </div>
-                                <div class="pxp-agents-1-item-details rounded-lg">
-
-                                    <div class="pxp-agents-1-item-details-name">O'Higgins 622</div>
-                                    <div class="pxp-agents-1-item-details-email"> 93 <span
-                                            class="fa fa-dollar"></span>1.000</div>
-                                    <div class="pxp-agents-1-item-details-email"> 95 <span
-                                            class="fa fa-dollar"></span>1.000</div>
-                                    <div class="pxp-agents-1-item-details-email"> 97 <span
-                                            class="fa fa-dollar"></span>1.000</div>
-                                    <div class="pxp-agents-1-item-details-email"> DI <span
-                                            class="fa fa-dollar"></span>1.000</div>
-                                    <div class="pxp-agents-1-item-details-email"> KE <span
-                                            class="fa fa-dollar"></span>1.000</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
     """
 
     footer_html=f"""
@@ -233,7 +257,7 @@ if __name__ == "__main__":
 
         # 3. Invocar la generación para cada una
         for comuna_info in lista_comunas:
-            print("Generamos")
+            print(f"COMUNA INFO ---> {comuna_info}")
             generar_html_comuna(comuna_info)
             
         print("\n✨ ¡Proceso de generación masiva completado!")

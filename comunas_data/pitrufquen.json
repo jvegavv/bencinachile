@@ -1,0 +1,221 @@
+{
+    "comuna": "Pitrufquén",
+    "estaciones": [
+        {
+            "id": 1214,
+            "marca": 5,
+            "direccion": "O'HIGGINS ESQ. BALMACEDA 680",
+            "latitud": "-38.9820804945748",
+            "longitud": "-72.64120995998383",
+            "region": "De la Araucanía",
+            "comuna": "Pitrufquén",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1214,
+                    "precio": "1591.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 21 minutos",
+                    "precio_fecha": "2026-03-26 09:00:22",
+                    "updated_at": "2026-03-26 09:00:22",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1214,
+                    "precio": "1653.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 21 minutos",
+                    "precio_fecha": "2026-03-26 09:00:22",
+                    "updated_at": "2026-03-26 09:00:22",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1214,
+                    "precio": "1550.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 21 minutos",
+                    "precio_fecha": "2026-03-26 09:00:22",
+                    "updated_at": "2026-03-26 09:00:22",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 1214,
+                    "precio": "1537.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 9 horas",
+                    "precio_fecha": "2026-03-26 00:19:20",
+                    "updated_at": "2026-03-26 00:19:20",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1214,
+                    "precio": "1622.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 21 minutos",
+                    "precio_fecha": "2026-03-26 09:00:22",
+                    "updated_at": "2026-03-26 09:00:22",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1214
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 1215,
+            "marca": 151,
+            "direccion": "O'Higgins 290",
+            "latitud": "-38.979615986729364",
+            "longitud": "-72.63758361339156",
+            "region": "De la Araucanía",
+            "comuna": "Pitrufquén",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1715355420_Aramco1.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1215,
+                    "precio": "1214.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-12 09:31:50",
+                    "updated_at": "2026-03-12 09:31:50",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1215,
+                    "precio": "1255.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-12 09:31:50",
+                    "updated_at": "2026-03-12 09:31:50",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1215,
+                    "precio": "970.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-12 09:31:50",
+                    "updated_at": "2026-03-12 09:31:50",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1215,
+                    "precio": "1234.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-12 09:31:50",
+                    "updated_at": "2026-03-12 09:31:50",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1215
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1215
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1215
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "ARAMCO"
+        }
+    ]
+}

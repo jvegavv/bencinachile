@@ -1,0 +1,626 @@
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css?asdsdd">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <link rel="stylesheet" href="css_custom/style_custom.css" />
+
+        <title>resideo.</title>
+    </head>
+    
+    <body>
+        <input type="hidden" id="latitud"  value="-29.93627640771037">
+        <input type="hidden" id="longitud" value="-71.26073062419891">
+        <input type="hidden" id="comuna" value="La Serena">
+        <input type="hidden" id="comuna_json" value="la-serena.json">
+    
+    <div class="pxp-header pxp-full fixed-top">
+        <div class="pxp-container-full">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-2">
+                    <a href="index.html" class="pxp-logo text-decoration-none"><span id="log_html"></span></a>
+                </div>
+                <div class="col-2 col-md-8 text-center">
+                    <ul class="pxp-nav list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Bencineras</a>
+                            <ul class="pxp-nav-sub rounded-lg">
+                                <li><a href="santiago.html">Mapa</a></li>
+                                <li><a href="VAR_LISTADO_BENCINERAS.html">Listado</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item pxp-is-last"><a href="contact.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-2 text-right">
+                    <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="pxp-content pxp-full-height">
+
+            <!--####################### Seccion 1  #######################-->
+            <!--####################### MAPA #######################-->
+            <div class="pxp-map-side pxp-map-right pxp-half">
+                <div id="results-map"></div>
+                <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
+            </div>
+            <!--####################### MAPA #######################-->
+            <!--####################### Seccion 1  #######################-->
+
+            <!--####################### Seccion 2  #######################-->
+            <div class="pxp-content-side pxp-content-left pxp-half">
+                <div class="pxp-content-side-wrapper">
+
+                    <!--####################### FILTRO #######################-->
+                    <div class="d-flex">
+                        <div class="pxp-content-side-search-form">
+                            <div class="row pxp-content-side-search-form-row">
+                                <div class="col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
+                                    <div class="d-flex justify-content-end align-items-center h-100">
+                                        <span class="pxp-bencina-label">Seleccione Ubicación</span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
+
+                                    <select class="custom-select" id="pxp-p-search-location">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row pb-4">
+                        <div class="col-sm-6">
+                            <h2 class="pxp-content-side-h2"> 27 Resultados</h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pxp-sort-form form-inline float-right">
+                                <div class="form-group">
+                                    <select class="custom-select" id="pxp-sort-results">
+                                        <option value="" selected="selected">Ordenar mas enconomica</option>
+                                        <option value="4-12">Kerosene</option>
+                                        <option value="3-11-">Petroleo Diesel</option>
+                                        <option value="1-8">Gasolina 93</option>
+                                        <option value="7-9">Gasolina 95</option>
+                                        <option value="2-10">Gasolina 97</option>
+                                        <option value="6">GLP Vehicular</option>
+                                        <option value="5">GNC</option>
+                                    </select>
+                                </div>
+                                <div class="form-group d-flex">
+                                    <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <div class="container"><div class="row">
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="170">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1759928841_Logo Gasco Autogas VS.V300.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">Gasco Autogas</div>
+                                <div class="pxp-agents-1-item-details-name">Balmaceda 3850</div>
+                <div class="pxp-agents-1-item-details-email">GLP <span class="fa fa-dollar"></span>639.000 ($/m3 )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="171">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">AV. COLO COLO 4486</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1630.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1710.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1589.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1670.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="172">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">PANAMERICANA NORTE, ESQ. FCO. AGUIRRE Km 476</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1630.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1710.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1590.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1670.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="174">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">Balmaceda 1839</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1616.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1693.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1565.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1656.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="175">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">COLO COLO s/n La Antena 00</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1630.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1710.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1589.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1554.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1670.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="176">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">Avda Jose Manuel Balmaceda 4895</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1624.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1701.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1573.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1664.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A97 <span class="fa fa-dollar"></span>1693.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A93 <span class="fa fa-dollar"></span>1616.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A95 <span class="fa fa-dollar"></span>1656.000 ($/L )</div><div class="pxp-agents-1-item-details-email">ADI <span class="fa fa-dollar"></span>1565.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="178">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">G. GONZALEZ VIDELA 1965</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1621.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1698.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1570.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1557.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1661.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="179">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">NICARAGUA 1480</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1629.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1709.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1585.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1669.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="180">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">PANAMERICANA NORTE KM 480, SECTOR V 00</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1630.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1710.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1590.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1670.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="181">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">Av. El Islon 2561</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1629.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1709.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1585.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1669.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="182">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">4 esquinas 1550</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1624.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1701.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1573.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1664.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="183">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">Parcela 20 Vega Sur, caletera ruta 5 norte km 46 0</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1630.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1710.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1590.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1670.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="184">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                <div class="pxp-agents-1-item-details-name">Av Colo Colo 5300</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1630.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1710.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1589.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1670.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="186">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697485611_logo64.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">APM</div>
+                                <div class="pxp-agents-1-item-details-name">Nicaragua 1990</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1246.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1003.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1276.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="187">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                <div class="pxp-agents-1-item-details-name">Balmaceda 1665</div>
+                <div class="pxp-agents-1-item-details-email">A93 <span class="fa fa-dollar"></span>1620.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A95 <span class="fa fa-dollar"></span>1660.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A97 <span class="fa fa-dollar"></span>1697.000 ($/L )</div><div class="pxp-agents-1-item-details-email">AKE <span class="fa fa-dollar"></span>1557.000 ($/L )</div><div class="pxp-agents-1-item-details-email">ADI <span class="fa fa-dollar"></span>1570.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="188">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                <div class="pxp-agents-1-item-details-name">Balmaceda 3464</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1622.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1699.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1572.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1662.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="189">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                <div class="pxp-agents-1-item-details-name">Ruta 5 Norte esq. Juan de Dios Peni 0</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1247.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1307.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1008.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1277.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="190">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                <div class="pxp-agents-1-item-details-name">Avda. Cuatro Esquinas 1580</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1622.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1699.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1572.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1662.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="191">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                <div class="pxp-agents-1-item-details-name">Avenida Guillermo Ulriksen 1630</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1241.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1298.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>991.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1271.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="193">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Balmaceda esq Brasil 306</div>
+                <div class="pxp-agents-1-item-details-email">A95 <span class="fa fa-dollar"></span>1655.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A97 <span class="fa fa-dollar"></span>1692.000 ($/L )</div><div class="pxp-agents-1-item-details-email">ADI <span class="fa fa-dollar"></span>1564.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A93 <span class="fa fa-dollar"></span>1615.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="194">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Balmaceda esquina 4 Esquinas 3507</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1623.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1700.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1572.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1663.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="195">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Avda. Islon/Nicaragua 564689</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1628.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1708.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1584.000 ($/L )</div><div class="pxp-agents-1-item-details-email">KE <span class="fa fa-dollar"></span>1553.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1668.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="196">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Avda. Huanhuali s/n° esq  Panamericana Norte 0</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1623.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1700.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1572.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1663.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="197">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Avda. Balmaceda 2884</div>
+                <div class="pxp-agents-1-item-details-email">A93 <span class="fa fa-dollar"></span>1623.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A95 <span class="fa fa-dollar"></span>1663.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A97 <span class="fa fa-dollar"></span>1700.000 ($/L )</div><div class="pxp-agents-1-item-details-email">ADI <span class="fa fa-dollar"></span>1572.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="198">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">AVDA. CUATRO ESQUINAS 1617</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1623.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1700.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1572.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1663.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A93 <span class="fa fa-dollar"></span>1615.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A95 <span class="fa fa-dollar"></span>1655.000 ($/L )</div><div class="pxp-agents-1-item-details-email">A97 <span class="fa fa-dollar"></span>1692.000 ($/L )</div><div class="pxp-agents-1-item-details-email">ADI <span class="fa fa-dollar"></span>1564.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="199">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Avenida Balmaceda 5505</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1623.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1700.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1572.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1663.000 ($/L )</div></div></a></div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="200">
+                            <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 330 330; 
+                                        background-repeat: no-repeat;
+                                        width: 458px; 
+                                        height: 100px;
+                                        
+                                        "></div>
+                            </div>
+                            <div class="pxp-agents-1-item-details rounded-lg">
+                                <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                <div class="pxp-agents-1-item-details-name">Ruta 41 7801</div>
+                <div class="pxp-agents-1-item-details-email">93 <span class="fa fa-dollar"></span>1629.000 ($/L )</div><div class="pxp-agents-1-item-details-email">97 <span class="fa fa-dollar"></span>1709.000 ($/L )</div><div class="pxp-agents-1-item-details-email">DI <span class="fa fa-dollar"></span>1588.000 ($/L )</div><div class="pxp-agents-1-item-details-email">95 <span class="fa fa-dollar"></span>1669.000 ($/L )</div></div></a></div></div></div>
+               <!--####################### LISTADO #######################-->
+            </div>
+            <div class="pxp-footer pxp-content-side-wrapper">
+                <div class="pxp-footer-bottom">
+                    <div class="pxp-footer-copyright">&copy; Resideo. All Rights Reserved. 2021</div>
+                </div>
+            </div>
+        </div>
+        <!--####################### Seccion 2  #######################-->
+    </div>
+    
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js_custom/map_custom.js"></script>
+    <script src="js_custom/select_custom.js"></script>
+
+</body>
+
+</html>
+    
