@@ -8,13 +8,10 @@ import json
 
 def generar_html_comuna(comuna, carpeta_salida="../"):
     # 1. Preparar nombres y rutas
+    
 
-    print(f"COMUNA -- >{comuna}")
     ruta_json = f"../comunas_data/{comuna['nombre_json']}" # Ajusta según tu estructura real
     
-    if  os.path.exists(ruta_json):
-        print("existe ruta")
-
     if not os.path.exists(carpeta_salida):
         os.makedirs(carpeta_salida)
 
@@ -88,31 +85,46 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
             with open(ruta_json, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
-            print(f"DATA JSON {data}")
+
             # 2. Obtener la lista de comunas
             lista_estaciones = data.get('estaciones', [])
             cantidad_estaciones = len(lista_estaciones)
-            print(f"lista_estaciones {lista_estaciones}")
+
                
             
             print(f"📂 Leídas {len(lista_estaciones)} estaciones desde {ruta_json}")
 
             # 3. Invocar la generación para cada una
             for estacion in lista_estaciones:
-            
+
+                campos_hidden_precio =""
+                print(f"---------------------------------------" )
+                print(f"---------------------------------------" )
+                print(f"📂 Revisando estacion {estacion['id']}" )
+
+                for combustible in estacion['combustibles']:
+
+                    precio_combustible = "-"
+                    
+                    if (combustible['precio'] != None):
+                        precio_combustible = int(float(combustible['precio']))
+
+                    print(f"Precio Combustible {combustible['nombre_corto']} $ {precio_combustible}")
+
+                    campos_hidden_precio+=f""" <input type="hidden" id="{combustible['nombre_corto']}"  value="{precio_combustible}">"""
+                 
+
                 listado_bencineras_html+=f"""
                 
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 estacion-item">
+                        {campos_hidden_precio}
                         <a href="single-agent.html" class="pxp-agents-1-item" data-prop="{estacion['id']}">
                             <div class="pxp-agents-1-item-fig-container rounded-lg">
                                 <div class="pxp-agents-1-item-fig pxp-cover" style="
                                         background-image: url({estacion['logo']}); 
                                         background-position: top center;
-                                        background-size: 330 330; 
-                                        background-repeat: no-repeat;
-                                        width: 458px; 
-                                        height: 100px;
-                                        
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
                                         "></div>
                             </div>
                             <div class="pxp-agents-1-item-details rounded-lg">
@@ -120,9 +132,94 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
                                 <div class="pxp-agents-1-item-details-name">{estacion['direccion']}</div>
                 """
 
-                for combustible in estacion['combustibles']:
-                    listado_bencineras_html+=f"""<div class="pxp-agents-1-item-details-email">{combustible['nombre_corto']} <span class="fa fa-dollar"></span>{combustible['precio']} ({combustible['unidad_cobro']} )</div>"""
+                valor_93 ="" #1
+                valor_95 ="" #7
+                valor_97 ="" #2
+                valor_DI ="" #3
+                valor_KE ="" #4
+                valor_GNC ="" #5
+                valor_GLP ="" #6
+                valor_A93 ="" #8
+                valor_A95 ="" #9
+                valor_A97 ="" #10
+                valor_ADI ="" #11
+                valor_AKE ="" #12
 
+                for combustible in estacion['combustibles']:
+
+            
+                    precio_combustible = "-"
+                    html_temp = ""
+                    
+                    if (combustible['precio'] != None):
+                        precio_combustible = int(float(combustible['precio']))
+
+
+                    if (precio_combustible == "-"):
+                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}">{combustible['nombre_corto']} <span class="fa fa-dollar"></span> No Informado </div>"""
+                    else:
+                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}">{combustible['nombre_corto']} <span class="fa fa-dollar"></span>{f"{precio_combustible:,}".replace(",", ".")} ({combustible['unidad_cobro']} )</div>"""
+
+                    if (combustible['id'] == 1):
+                         valor_93 = html_temp 
+                    elif (combustible['id'] == 7):
+                        valor_95 = html_temp 
+                    elif (combustible['id'] == 2):
+                        valor_97 = html_temp 
+                    elif (combustible['id'] == 3):
+                        valor_DI = html_temp 
+                    elif (combustible['id'] == 4):
+                        valor_KE = html_temp 
+                    elif (combustible['id'] == 5):
+                        valor_GNC = html_temp 
+                    elif (combustible['id'] == 6):
+                        valor_GLP = html_temp 
+                    elif (combustible['id'] == 8):
+                        valor_A93 = html_temp 
+                    elif (combustible['id'] == 9):
+                        valor_A95 = html_temp 
+                    elif (combustible['id'] == 10):
+                        valor_A97 = html_temp 
+                    elif (combustible['id'] == 11):
+                        valor_ADI = html_temp 
+                    elif (combustible['id'] == 12):
+                        valor_AKE = html_temp 
+
+                if (valor_93 != ""):
+                    listado_bencineras_html += valor_93
+                
+                if (valor_A93 != ""):
+                    listado_bencineras_html += valor_A93
+
+                if (valor_95 != ""):
+                    listado_bencineras_html += valor_95
+
+                if (valor_A95 != ""):
+                    listado_bencineras_html += valor_A95
+
+                if (valor_97 != ""):
+                    listado_bencineras_html += valor_97
+
+                if (valor_A97 != ""):
+                    listado_bencineras_html += valor_A97
+
+                if (valor_DI != ""):
+                    listado_bencineras_html += valor_DI
+
+                if (valor_ADI != ""):
+                    listado_bencineras_html += valor_ADI
+
+                if (valor_KE != ""):
+                    listado_bencineras_html += valor_KE
+
+                if (valor_AKE != ""):
+                    listado_bencineras_html += valor_AKE
+
+                if (valor_GNC != ""):
+                    listado_bencineras_html += valor_GNC
+
+                if (valor_GLP != ""):
+                    listado_bencineras_html += valor_GLP
 
                 listado_bencineras_html+=f"""</div></a></div>"""
 
@@ -174,7 +271,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
 
                     <div class="row pb-4">
                         <div class="col-sm-6">
-                            <h2 class="pxp-content-side-h2"> {cantidad_estaciones} Resultados</h2>
+                            <h2 class="pxp-content-side-h2"> {cantidad_estaciones} Resultados en {comuna['nombre']}</h2>
                         </div>
                         <div class="col-sm-6">
                             <div class="pxp-sort-form form-inline float-right">
@@ -182,7 +279,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
                                     <select class="custom-select" id="pxp-sort-results">
                                         <option value="" selected="selected">Ordenar mas enconomica</option>
                                         <option value="4-12">Kerosene</option>
-                                        <option value="3-11-">Petroleo Diesel</option>
+                                        <option value="3-11">Petroleo Diesel</option>
                                         <option value="1-8">Gasolina 93</option>
                                         <option value="7-9">Gasolina 95</option>
                                         <option value="2-10">Gasolina 97</option>
@@ -222,6 +319,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js_custom/map_custom.js"></script>
     <script src="js_custom/select_custom.js"></script>
+    <script src="js_custom/orderby.js"></script>
 
 </body>
 
@@ -257,8 +355,9 @@ if __name__ == "__main__":
 
         # 3. Invocar la generación para cada una
         for comuna_info in lista_comunas:
-            print(f"COMUNA INFO ---> {comuna_info}")
-            generar_html_comuna(comuna_info)
+           
+            if (comuna_info["nombre"] == "Santiago Centro"):
+                generar_html_comuna(comuna_info)
             
         print("\n✨ ¡Proceso de generación masiva completado!")
 

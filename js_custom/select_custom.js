@@ -1,11 +1,13 @@
 $(document).ready(function () {
 
+    let comuna = $('#comuna').val();
+
     /********************* Select Comunas*******************/
 
     // 1. Inicializar Select2 con los estilos
     if ($('#pxp-p-search-location').length > 0) {
         $('#pxp-p-search-location').select2({
-            placeholder: "Seleccione ubicación",
+            placeholder: comuna,
             width: '100%',
             // minimumResultsForSearch: Infinity // Descomenta esto si NO quieres que aparezca el buscador interno
         });
