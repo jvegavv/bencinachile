@@ -3,6 +3,7 @@ var map;
 var latitud = -33.447487
 var longitud = -70.673676
 var carMarker;
+const ancho_responsive = 991
 
 
 
@@ -195,12 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
           button.addEventListener('click', function () {
               // Esperamos un momento breve (200ms) para que la animación de CSS termine 
               // y el div tenga su tamaño final antes de recalcular.
-              setTimeout(function () {
-                  map.invalidateSize({
-                      animate: true
-                  });
-                  console.log("Mapa recalculado");
-              }, 300);
+            redimensionar_mapa(map)
           });
       });
     
@@ -305,6 +301,56 @@ fetch(rutaJson)
             marcadoresEstaciones[propId].closePopup();
         }
     });
-    
+
+
+    /*************************Apretamos el boton MAPA en la version mobile *****************/
+
+
+    $('.pxp-agents-1-item').on('click', function(e) {
+
+        var anchoVentana = $(window).width();
+
+        // Obtiene el valor "1838"
+        var propId = $(this).data('prop');
+        
+        if (anchoVentana <= 991){
+
+            $('.pxp-map-side').addClass('pxp-max');
+            $('.pxp-content-side').addClass('pxp-min');
+            $('.pxp-list-toggle').show();
+
+            if (marcadoresEstaciones[propId]) {
+                var marker_map = marcadoresEstaciones[propId];
+                marker_map.getPopup().options.closeOnClick = true;
+
+            // Opcional: Centrar el mapa suavemente en la estación al pasar el mouse
+          
+                redimensionar_mapa(map).then(() => {
+            
+                    map.setView(marker_map.getLatLng(), 16); // Centrar la cámara la primera vez
+                    map.once('moveend', function() {
+                        marker_map.openPopup();
+                    });
+        
+                });     
+               
+            }
+        }
+    });     
 });
 
+function redimensionar_mapa(map){
+
+    return new Promise((resolve) => {
+
+        map.once('resize', () => {
+            console.log("Evento resize completado");
+            resolve();
+        });
+
+        setTimeout(function () {
+          map.invalidateSize({ animate: true }); 
+        }, 300);
+    });
+
+}

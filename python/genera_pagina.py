@@ -118,7 +118,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
                 
                     <div class="col-sm-12 col-md-6 col-lg-4 estacion-item">
                         {campos_hidden_precio}
-                        <a href="single-agent.html" class="pxp-agents-1-item" data-prop="{estacion['id']}">
+                        <a href="#" class="pxp-agents-1-item" data-prop="{estacion['id']}">
                             <div class="pxp-agents-1-item-fig-container rounded-lg">
                                 <div class="pxp-agents-1-item-fig pxp-cover" style="
                                         background-image: url({estacion['logo']}); 
@@ -320,6 +320,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
     <script src="js_custom/map_custom.js"></script>
     <script src="js_custom/select_custom.js"></script>
     <script src="js_custom/orderby.js"></script>
+    <script src="js_custom/tamano_pagina.js"></script>
 
 </body>
 
