@@ -356,7 +356,7 @@ if __name__ == "__main__":
         # 3. Invocar la generación para cada una
         for comuna_info in lista_comunas:
            
-            if (comuna_info["nombre"] == "Santiago Centro"):
+            #if (comuna_info["nombre"] == "Santiago Centro"):
                 generar_html_comuna(comuna_info)
             
         print("\n✨ ¡Proceso de generación masiva completado!")
