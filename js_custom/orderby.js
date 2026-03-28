@@ -48,9 +48,12 @@ $(document).ready(function () {
         }else if (seleccion == "6"){
             item_order = "GLP"
             elementos = document.querySelectorAll('.combustible_GLP');
-        }else{
+        }else if (seleccion == "5"){
             item_order="GNC"
             elementos = document.querySelectorAll('.combustible_GNC');
+        }else{
+            item_order = "93"
+            elementos = document.querySelectorAll('.combustible_93, .combustible_A93'); 
         }
 
         console.log("Item Orden "+item_order)

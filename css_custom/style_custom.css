@@ -26,6 +26,10 @@
           color: #1e88e5;
       }
 
+      /* Quita el borde azul de los botones de zoom y otros controles del mapa */
+    .leaflet-container :focus {
+        outline: none !important;
+    }
 
       /* Aquí pegas tu fragmento de CSS */
       .texto-destacado {
@@ -79,6 +83,8 @@
           /* Detalle: línea de color (puedes usar el amarillo de Aramco) */
           padding-right: 15px;
           /* Espacio entre el texto y el borde derecho */
+          text-align: left;
+          display: block; /* O inline-block si prefieres */
       }
 
       .pxp-agents-1-item-details {
@@ -118,4 +124,23 @@
     border: 2px solid white;
     border-radius: 50%;
     box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+
+/*ALERT GPS*/
+#gps-alert {
+    background-color: #ffffff;
+    border-left: 4px solid #adb5bd !important; /* Borde sutil lateral */
+    border-radius: 8px;
+    color: #495057;
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+#gps-alert .alert-heading {
+    font-size: 0.95rem;
+}
+
+#gps-alert p {
+    line-height: 1.4;
 }
