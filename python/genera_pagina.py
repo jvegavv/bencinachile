@@ -57,7 +57,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
                 <div class="col-2 col-md-8 text-center">
                     <ul class="pxp-nav list-inline">
                         <li class="list-inline-item">
-                            <a href="#">Inicio</a>
+                            <a href="index.html">Inicio</a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">Bencineras</a>
