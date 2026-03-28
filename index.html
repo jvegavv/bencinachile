@@ -6,75 +6,44 @@
 
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css_custom/style_custom.css" />
 
-        <title>resideo.</title>
+
+        
+
+        <title>TodoBencina.</title>
     </head>
     <body>
         <div class="pxp-header fixed-top pxp-animate">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-5 col-md-2">
-                        <a href="index.html" class="pxp-logo text-decoration-none">resideo.</a>
+                        <a href="index.html" class="pxp-logo text-decoration-none">TodoBencina.</a>
                     </div>
                     <div class="col-2 col-md-8 text-center">
                         <ul class="pxp-nav list-inline">
                             <li class="list-inline-item">
-                                <a href="#">Home</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="index.html">Version 1</a></li>
-                                    <li><a href="index-2.html">Version 2</a></li>
-                                    <li><a href="index-3.html">Version 3</a></li>
-                                    <li><a href="index-4.html">Version 4</a></li>
-                                    <li><a href="index-5.html">Version 5</a></li>
-                                    <li><a href="index-6.html">Version 6</a></li>
-                                </ul>
+                                <a href="index.html">Inicio</a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#">Properties</a>
+                                <a href="#">Bencineras</a>
                                 <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="properties.html">All Properties</a></li>
-                                    <li><a href="single-property.html">Single Property</a></li>
-                                    <li><a href="submit-property.html">Submit New Property</a></li>
+                                    <li><a href="santiago-centro.html">Mapa</a></li>
+                                    <li><a href="VAR_LISTADO_BENCINERAS.html">Listado</a></li>
                                 </ul>
                             </li>
-                            <li class="list-inline-item">
-                                <a href="#">Agents</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="agents.html">All Agents</a></li>
-                                    <li><a href="single-agent.html">Single Agent</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">Blog</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="blog.html">All Blog Posts</a></li>
-                                    <li><a href="single-post.html">Single Blog Post</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">Themes</a>
-                                <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="../light/index.html">Light</a></li>
-                                    <li><a href="../dark/index.html">Dark</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item pxp-is-last"><a href="contact.html">Contact Us</a></li>
-                            <li class="list-inline-item pxp-has-btns">
-                                <div class="pxp-user-btns">
-                                    <a href="#" class="pxp-user-btns-signup pxp-signup-trigger">Sign Up</a>
-                                    <a href="#" class="pxp-user-btns-login pxp-signin-trigger">Sign In</a>
-                                </div>
-                            </li>
+                            
+                            <li class="list-inline-item pxp-is-last"><a href="contact.html">Contactanos</a></li>
                         </ul>
                     </div>
                     <div class="col-5 col-md-2 text-right">
                         <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
-                        <a href="javascript:void(0);" class="pxp-header-user pxp-signin-trigger"><span class="fa fa-user-o"></span></a>
                     </div>
                 </div>
             </div>
@@ -82,26 +51,23 @@
 
         <div class="pxp-content">
             <div class="pxp-hero vh-100">
-                <div class="pxp-hero-bg pxp-cover pxp-cover-bottom" style="background-image: url(images/ph-big.jpg);"></div>
+                <div class="pxp-hero-bg pxp-cover pxp-cover-bottom" style="background-image: url(images/cargando-bencina.webp);"></div>
                 <div class="pxp-hero-opacity"></div>
                 <div class="pxp-hero-caption">
                     <div class="container">
-                        <h1 class="text-white">Hola Mamosh</h1>
+                        <h1 class="text-white">Quieres ahorrar en bencina</h1>
 
                         <form class="pxp-hero-search mt-4" action="properties.html">
                             <div class="row">
-                                <div class="col-sm-12 col-md-4">
+                                <div class="col-sm-12 col-md-6">
                                     <div class="form-group">
-                                        <select class="custom-select">
-                                            <option selected>Buy</option>
-                                            <option value="1">Rent</option>
-                                        </select>
+                                        <h2 class="text-white">Ingresa Comuna</h2>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-8">
+                                <div class="col-sm-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control pxp-is-address" placeholder="Enter address...">
-                                        <span class="fa fa-search"></span>
+                                        <select class="custom-select" id="pxp-p-search-location">
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -607,6 +573,11 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
-        <script src="js/main.js?lasjkj"></script>
+        <script src="js/main.js"></script>
+        <script src="js_custom/select_custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+        
+
     </body>
 </html>
