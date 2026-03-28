@@ -33,7 +33,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
         <link rel="stylesheet" href="css_custom/style_custom.css" />
 
-        <title>resideo.</title>
+        <title>TodoBencina.</title>
     </head>
     """;
 
@@ -51,7 +51,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
         <div class="pxp-container-full">
             <div class="row align-items-center">
                 <div class="col-5 col-md-2">
-                    <a href="index.html" class="pxp-logo text-decoration-none"><span id="log_html"></span></a>
+                    <a href="index.html" class="pxp-logo text-decoration-none">TodoBencina</a>
                 </div>
                 <div class="col-2 col-md-8 text-center">
                     <ul class="pxp-nav list-inline">
@@ -300,7 +300,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
             </div>
             <div class="pxp-footer pxp-content-side-wrapper">
                 <div class="pxp-footer-bottom">
-                    <div class="pxp-footer-copyright">&copy; Resideo. All Rights Reserved. 2021</div>
+                    <div class="pxp-footer-copyright">&copy; TodoBencina. All Rights Reserved. 2021</div>
                 </div>
             </div>
         </div>
@@ -342,6 +342,7 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
 # Ejemplo de uso:
 if __name__ == "__main__":
 
+    cont_errores=0;
     ruta_mapeo = 'mapeo_identificadores.json'
     
     try:
@@ -364,5 +365,9 @@ if __name__ == "__main__":
 
     except FileNotFoundError:
         print(f"❌ Error: No se encontró el archivo '{ruta_mapeo}'. Asegúrate de que el script de Python lo haya generado primero.")
+        cont_errores = 1;
     except Exception as e:
         print(f"❌ Ocurrió un error inesperado: {e}")
+        cont_errores = 1;
+
+    print(f"❌ Error: ERRORES '{cont_errores}'.")
