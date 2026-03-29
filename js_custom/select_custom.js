@@ -18,7 +18,7 @@ $(document).ready(function () {
         .then(response => response.json())
         .then(data => {
             const select = $('#pxp-p-search-location');
-            select.empty().append(new Option("Selecciona Comuna o Región...", ""));
+            select.empty().append(new Option("Selecciona Comuna", ""));
 
           /*  // Agregar Regiones como Grupo
             const grupoRegiones = $('<optgroup label="Regiones"></optgroup>');

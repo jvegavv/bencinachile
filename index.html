@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css_custom/style_custom.css" />
-
+        <link rel="stylesheet" href="css_custom/style_index.css" />
 
         
 
@@ -34,8 +34,8 @@
                             <li class="list-inline-item">
                                 <a href="#">Bencineras</a>
                                 <ul class="pxp-nav-sub rounded-lg">
-                                    <li><a href="santiago-centro.html">Mapa</a></li>
-                                    <li><a href="VAR_LISTADO_BENCINERAS.html">Listado</a></li>
+                                    <li><a href="santiago-centro.html">Mapa por Comuna</a></li>
+                                    <li><a href="VAR_LISTADO_BENCINERAS.html">Listado por Comuna</a></li>
                                 </ul>
                             </li>
                             
@@ -51,164 +51,71 @@
 
         <div class="pxp-content">
             <div class="pxp-hero vh-100">
-                <div class="pxp-hero-bg pxp-cover pxp-cover-bottom" style="background-image: url(images/cargando-bencina.webp);"></div>
-                <div class="pxp-hero-opacity"></div>
+                <div class="pxp-hero-bg pxp-cover pxp-cover-bottom" style="background-image: url(images/image_index_car.png);"></div>
+                <div class="pxp-hero-opacity" style="background: rgba(0,0,0,0.2);"></div>
                 <div class="pxp-hero-caption">
                     <div class="container">
-                        <h1 class="text-white">Quieres ahorrar en bencina</h1>
+                        <h1 class="text-white">Ahorrar en bencina nunca fue tan fácil</h1>
+                        <p class="pxp-text-light text-white mb-0">Tu ruta comienza aquí: encuentra la estación más económica de tu comuna y ahorra en cada carga.</p>
 
-                        <form class="pxp-hero-search mt-4" action="properties.html">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group">
-                                        <h2 class="text-white">Ingresa Comuna</h2>
+                        <div class="hero-search pxp-has-tabs-margin">
+                            <form class="pxp-hero-search mt-4" id="form-comunas" action="#">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <select class="custom-select" id="pxp-p-search-location">
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group">
-                                        <select class="custom-select" id="pxp-p-search-location">
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container-fluid pxp-props-carousel-right mt-100">
-                <h2 class="pxp-section-h2">Featured Properties</h2>
-                <p class="pxp-text-light">Browse our latest hot offers</p>
-                <div class="pxp-props-carousel-right-container mt-4 mt-md-5">
-                    <div class="owl-carousel pxp-props-carousel-right-stage">
-                        <div>
-                            <a href="single-property.html" class="pxp-prop-card-1 rounded-lg">
-                                <div class="pxp-prop-card-1-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
-                                <div class="pxp-prop-card-1-gradient pxp-animate"></div>
-                                <div class="pxp-prop-card-1-details">
-                                    <div class="pxp-prop-card-1-details-title">Chic Apartment in Downtown</div>
-                                    <div class="pxp-prop-card-1-details-price">$890,000</div>
-                                    <div class="pxp-prop-card-1-details-features text-uppercase">2 BD <span>|</span> 2 BA <span>|</span> 920 SF</div>
-                                </div>
-                                <div class="pxp-prop-card-1-details-cta text-uppercase">View Details</div>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="single-property.html" class="pxp-prop-card-1 rounded-lg">
-                                <div class="pxp-prop-card-1-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
-                                <div class="pxp-prop-card-1-gradient pxp-animate"></div>
-                                <div class="pxp-prop-card-1-details">
-                                    <div class="pxp-prop-card-1-details-title">Colorful Little Apartment</div>
-                                    <div class="pxp-prop-card-1-details-price">$2,675</div>
-                                    <div class="pxp-prop-card-1-details-features text-uppercase">1 BD <span>|</span> 1 BA <span>|</span> 500 SF</div>
-                                </div>
-                                <div class="pxp-prop-card-1-details-cta text-uppercase">View Details</div>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="single-property.html" class="pxp-prop-card-1 rounded-lg">
-                                <div class="pxp-prop-card-1-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
-                                <div class="pxp-prop-card-1-gradient pxp-animate"></div>
-                                <div class="pxp-prop-card-1-details">
-                                    <div class="pxp-prop-card-1-details-title">Cozy Two Bedroom Apartment</div>
-                                    <div class="pxp-prop-card-1-details-price">$960,000</div>
-                                    <div class="pxp-prop-card-1-details-features text-uppercase">2 BD <span>|</span> 2 BA <span>|</span> 870 SF</div>
-                                </div>
-                                <div class="pxp-prop-card-1-details-cta text-uppercase">View Details</div>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="single-property.html" class="pxp-prop-card-1 rounded-lg">
-                                <div class="pxp-prop-card-1-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
-                                <div class="pxp-prop-card-1-gradient pxp-animate"></div>
-                                <div class="pxp-prop-card-1-details">
-                                    <div class="pxp-prop-card-1-details-title">Beautiful House in Marina</div>
-                                    <div class="pxp-prop-card-1-details-price">$5,198,000</div>
-                                    <div class="pxp-prop-card-1-details-features text-uppercase">5 BD <span>|</span> 4.5 BA <span>|</span> 3,945 SF</div>
-                                </div>
-                                <div class="pxp-prop-card-1-details-cta text-uppercase">View Details</div>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="single-property.html" class="pxp-prop-card-1 rounded-lg">
-                                <div class="pxp-prop-card-1-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
-                                <div class="pxp-prop-card-1-gradient pxp-animate"></div>
-                                <div class="pxp-prop-card-1-details">
-                                    <div class="pxp-prop-card-1-details-title">Modern Residence</div>
-                                    <div class="pxp-prop-card-1-details-price">$7,995</div>
-                                    <div class="pxp-prop-card-1-details-features text-uppercase">4 BD <span>|</span> 1.5 BA <span>|</span> 2,240 SF</div>
-                                </div>
-                                <div class="pxp-prop-card-1-details-cta text-uppercase">View Details</div>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="single-property.html" class="pxp-prop-card-1 rounded-lg">
-                                <div class="pxp-prop-card-1-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
-                                <div class="pxp-prop-card-1-gradient pxp-animate"></div>
-                                <div class="pxp-prop-card-1-details">
-                                    <div class="pxp-prop-card-1-details-title">Luxury Mansion</div>
-                                    <div class="pxp-prop-card-1-details-price">$5,430,000</div>
-                                    <div class="pxp-prop-card-1-details-features text-uppercase">4 BD <span>|</span> 5 BA <span>|</span> 5,200 SF</div>
-                                </div>
-                                <div class="pxp-prop-card-1-details-cta text-uppercase">View Details</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <a href="properties.html" class="pxp-primary-cta text-uppercase mt-4 mt-md-5 pxp-animate">Browse All</a>
-                </div>
-            </div>
 
             <div class="pxp-services pxp-cover mt-100 pt-100 mb-200" style="background-image: url(images/ph-big.jpg); background-position: 50% 60%;">
-                <h2 class="text-center pxp-section-h2">Why Choose Us</h2>
-                <p class="pxp-text-light text-center">We offer perfect real estate services</p>
+                <h2 class="text-center pxp-section-h2">¿Por qué elegir TodoBencina?</h2>
+                <p class="pxp-text-light text-center">Ofrecemos el servicio de comparación de combustibles más preciso de Chile.</p>
 
                 <div class="container">
                     <div class="pxp-services-container rounded-lg mt-4 mt-md-5">
                         <a href="properties.html" class="pxp-services-item">
                             <div class="pxp-services-item-fig">
-                                <img src="images/service-icon-1.svg" alt="...">
+                                <img src="images/service-icon-estacion.svg" alt="...">
                             </div>
                             <div class="pxp-services-item-text text-center">
-                                <div class="pxp-services-item-text-title">Find your future home</div>
-                                <div class="pxp-services-item-text-sub">We help you find a new home by offering<br>a smart real estate experience</div>
+                                <div class="pxp-services-item-text-title">Encuentra tu estación ideal</div>
+                                <div class="pxp-services-item-text-sub">Te ayudamos a localizar la bencina más barata ofreciendo una experiencia de búsqueda inteligente y en tiempo real.</div>
                             </div>
-                            <div class="pxp-services-item-cta text-uppercase text-center">Learn More</div>
                         </a>
                         <a href="agents.html" class="pxp-services-item">
                             <div class="pxp-services-item-fig">
                                 <img src="images/service-icon-2.svg" alt="...">
                             </div>
                             <div class="pxp-services-item-text text-center">
-                                <div class="pxp-services-item-text-title">Experienced agents</div>
-                                <div class="pxp-services-item-text-sub">Find an agent who knows<br>your market best</div>
+                                <div class="pxp-services-item-text-title">Vence al alza histórica</div>
+                                <div class="pxp-services-item-text-sub">No dejes que los nuevos precios controlen tu presupuesto. Nuestra tecnología te permite visualizar cual es la becina mas enconomica de la comuna asegurando que siempre pagues lo mínimo posible.</div>
                             </div>
-                            <div class="pxp-services-item-cta text-uppercase text-center">Learn More</div>
+                        </a>
+                        <a href="agents.html" class="pxp-services-item">
+                            <div class="pxp-services-item-fig">
+                                <img src="images/service-icon-2.svg" alt="...">
+                            </div>
+                            <div class="pxp-services-item-text text-center">
+                                <div class="pxp-services-item-text-title">Información 100% Oficial</div>
+                                <div class="pxp-services-item-text-sub">Accede a datos actualizados directamente de la CNE. Encuentra los precios reales de Copec, Shell, Aramco e independientes sin errores.</div>
+                            </div>
                         </a>
                         <a href="properties.html" class="pxp-services-item">
                             <div class="pxp-services-item-fig">
                                 <img src="images/service-icon-3.svg" alt="...">
                             </div>
                             <div class="pxp-services-item-text text-center">
-                                <div class="pxp-services-item-text-title">Buy or rent homes</div>
-                                <div class="pxp-services-item-text-sub">Millions of houses and apartments in<br>your favourite cities</div>
+                                <div class="pxp-services-item-text-title">Todos los combustibles</div>
+                                <div class="pxp-services-item-text-sub">Bencina desde 93 octanos hasta Parafina y Gas Vehicular. Compara precios en todas las comunas y ciudades de Chile en un solo lugar.</div>
                             </div>
-                            <div class="pxp-services-item-cta text-uppercase text-center">Learn More</div>
-                        </a>
-                        <a href="submit-property.html" class="pxp-services-item">
-                            <div class="pxp-services-item-fig">
-                                <img src="images/service-icon-4.svg" alt="...">
-                            </div>
-                            <div class="pxp-services-item-text text-center">
-                                <div class="pxp-services-item-text-title">List your own property</div>
-                                <div class="pxp-services-item-text-sub">Sign up now and sell or rent<br>your own properties</div>
-                            </div>
-                            <div class="pxp-services-item-cta text-uppercase text-center">Learn More</div>
                         </a>
                         <div class="clearfix"></div>
                     </div>
@@ -216,79 +123,70 @@
             </div>
 
             <div class="container mt-100">
-                <h2 class="pxp-section-h2">Explore Our Neighborhoods</h2>
-                <p class="pxp-text-light">Browse our comprehensive neighborhood listings</p>
+                <h2 class="pxp-section-h2">Explora Comunas</h2>
+                <p class="pxp-text-light">Encuentra todas las estaciones de bencima de tu comuna: información real para el conductor local.</p>
 
                 <div class="row mt-4 mt-md-5">
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <a href="properties.html" class="pxp-areas-1-item rounded-lg">
-                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
+                        <a href="santiago-centro.html" class="pxp-areas-1-item rounded-lg">
+                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/santiago.png);"></div>
                             <div class="pxp-areas-1-item-details">
-                                <div class="pxp-areas-1-item-details-area">Bluemont</div>
-                                <div class="pxp-areas-1-item-details-city">Arlington, VA</div>
+                                <div class="pxp-areas-1-item-details-area">Santiago</div>
                             </div>
-                            <div class="pxp-areas-1-item-counter"><span>324 Properties</span></div>
-                            <div class="pxp-areas-1-item-cta text-uppercase">Explore</div>
+                            <div class="pxp-areas-1-item-cta text-uppercase">Ir al Mapa</div>
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <a href="properties.html" class="pxp-areas-1-item rounded-lg">
-                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
+                        <a href="antofagasta.html" class="pxp-areas-1-item rounded-lg">
+                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/antofa.png);"></div>
                             <div class="pxp-areas-1-item-details">
-                                <div class="pxp-areas-1-item-details-area">Overlake</div>
-                                <div class="pxp-areas-1-item-details-city">Redmond, WA</div>
+                                <div class="pxp-areas-1-item-details-area">Antofagasta</div>
                             </div>
-                            <div class="pxp-areas-1-item-counter"><span>158 Properties</span></div>
-                            <div class="pxp-areas-1-item-cta text-uppercase">Explore</div>
+                            <div class="pxp-areas-1-item-cta text-uppercase">Ir al Mapa</div>
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <a href="properties.html" class="pxp-areas-1-item rounded-lg">
-                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
+                        <a href="la-serena.html" class="pxp-areas-1-item rounded-lg">
+                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/serena.png);"></div>
                             <div class="pxp-areas-1-item-details">
-                                <div class="pxp-areas-1-item-details-area">College Terrace</div>
-                                <div class="pxp-areas-1-item-details-city">Palo Alto, CA</div>
+                                <div class="pxp-areas-1-item-details-area">La Serena</div>
                             </div>
-                            <div class="pxp-areas-1-item-counter"><span>129 Properties</span></div>
-                            <div class="pxp-areas-1-item-cta text-uppercase">Explore</div>
+                            <div class="pxp-areas-1-item-cta text-uppercase">Ir al Mapa</div>
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <a href="properties.html" class="pxp-areas-1-item rounded-lg">
-                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
+                        <a href="vina-del-mar.html" class="pxp-areas-1-item rounded-lg">
+                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/vina.png);"></div>
                             <div class="pxp-areas-1-item-details">
-                                <div class="pxp-areas-1-item-details-area">Inner Sunset</div>
-                                <div class="pxp-areas-1-item-details-city">San Francisco, CA</div>
+                                <div class="pxp-areas-1-item-details-area">Viña del Mar</div>
                             </div>
-                            <div class="pxp-areas-1-item-counter"><span>129 Properties</span></div>
-                            <div class="pxp-areas-1-item-cta text-uppercase">Explore</div>
+                            <div class="pxp-areas-1-item-cta text-uppercase">Ir al Mapa</div>
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <a href="properties.html" class="pxp-areas-1-item rounded-lg">
-                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
+                        <a href="concepcion.html" class="pxp-areas-1-item rounded-lg">
+                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/conce.png);"></div>
                             <div class="pxp-areas-1-item-details">
-                                <div class="pxp-areas-1-item-details-area">Upper West Side</div>
-                                <div class="pxp-areas-1-item-details-city">New York City, NY</div>
+                                <div class="pxp-areas-1-item-details-area">Concepción</div>
                             </div>
-                            <div class="pxp-areas-1-item-counter"><span>324 Properties</span></div>
-                            <div class="pxp-areas-1-item-cta text-uppercase">Explore</div>
+                            <div class="pxp-areas-1-item-cta text-uppercase">Ir al Mapa</div>
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <a href="properties.html" class="pxp-areas-1-item rounded-lg">
-                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/ph-gallery.jpg);"></div>
+                        <a href="puerto-montt.html" class="pxp-areas-1-item rounded-lg">
+                            <div class="pxp-areas-1-item-fig pxp-cover" style="background-image: url(images/puerto.png);"></div>
                             <div class="pxp-areas-1-item-details">
-                                <div class="pxp-areas-1-item-details-area">Marina District</div>
-                                <div class="pxp-areas-1-item-details-city">San Francisco, CA</div>
+                                <div class="pxp-areas-1-item-details-area">Puerto Montt</div>
                             </div>
-                            <div class="pxp-areas-1-item-counter"><span>158 Properties</span></div>
-                            <div class="pxp-areas-1-item-cta text-uppercase">Explore</div>
+                            <div class="pxp-areas-1-item-cta text-uppercase">Ir al Mapa</div>
                         </a>
                     </div>
+
+
+                   
                 </div>
 
-                <a href="properties.html" class="pxp-primary-cta text-uppercase mt-2 mt-md-4 pxp-animate">Explore Neighborhoods</a>
+                <a href="#form-comunas" class="pxp-primary-cta text-uppercase mt-2 mt-md-4 pxp-animate">Explora Otras Comunas</a>
             </div>
 
             <div class="pxp-cta-1 pxp-cover mt-100 pt-300" style="background-image: url(images/ph-big.jpg); background-position: 50% 60%;">
