@@ -110,9 +110,5 @@ $(document).ready(function () {
             div.style.padding = '5px';             // Opcional: para que se vea mejor el fondo
             div.style.borderRadius = '4px';        // Opcional: bordes redondeados
         });
-        
-
-
     });
-
 });
