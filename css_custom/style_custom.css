@@ -144,3 +144,10 @@
 #gps-alert p {
     line-height: 1.4;
 }
+
+.texto-destacado-blanco {
+    color: #ffffff !important;      /* Blanco puro */
+    font-weight: 700 !important;   /* Negrita (Bold) */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra sutil para legibilidad */
+    font-family: 'Roboto', sans-serif;
+}

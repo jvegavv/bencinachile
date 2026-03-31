@@ -6,7 +6,7 @@ import json
 
 
 
-def generar_html_comuna(comuna, carpeta_salida="../"):
+def generar_html_comuna(comuna, carpeta_salida="../comuna"):
     # 1. Preparar nombres y rutas
     
 
@@ -27,11 +27,11 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
 
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css?asdsdd">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/style.css?asdsdd">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-        <link rel="stylesheet" href="css_custom/style_custom.css" />
+        <link rel="stylesheet" href="../css_custom/style_custom.css" />
         <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
         <title>TodoBencina.</title>
@@ -52,27 +52,49 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
         <div class="pxp-container-full">
             <div class="row align-items-center">
                 <div class="col-5 col-md-2">
-                    <a href="index.html" class="pxp-logo text-decoration-none">TodoBencina</a>
+                    <a href="index.html" class="pxp-logo text-decoration-none">TodoBencina.</a>
                 </div>
                 <div class="col-2 col-md-8 text-center">
                     <ul class="pxp-nav list-inline">
                         <li class="list-inline-item">
-                            <a href="index.html">Inicio</a>
+                            <a href="/index.html">Inicio</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">Bencineras</a>
+                            <a href="#">Bencineras Cerca</a>
                             <ul class="pxp-nav-sub rounded-lg">
-                                <li><a href="santiago-centro.html">Mapa</a></li>
-                                <li><a href="VAR_LISTADO_BENCINERAS.html">Listado</a></li>
+                                <li><a href="/comuna/santiago-centro.html">Mapa por Comuna</a></li>
                             </ul>
                         </li>
-                        <li class="list-inline-item pxp-is-last"><a href="contact.html">Contactanos</a></li>
+                        <li class="list-inline-item">
+                            <a href="#">Conoce tu Combustible</a>
+                            <ul class="pxp-nav-sub rounded-lg">
+                                <li><a href="/combustible/bencina_93_octanos.html">Bencina 93</a></li>
+                                <li><a href="/combustible/bencina_95_octanos.html">Bencina 95</a></li>
+                                <li><a href="/combustible/bencina_97_octanos.html">Bencina 97</a></li>
+                                <li><a href="/combustible/kerosene_parafina.html">Kerosene Parafina</a></li>
+                                <li><a href="/combustible/petroleo_diesel.html">Petroleo Diesel</a></li>
+                                <li><a href="/combustible/gas_liquado_petroleo_glp.html">Gas Liquado Petroleo (GLP)</a>
+                                </li>
+                                <li><a href="/combustible/gas_natural_comprimido_gnc.html">Gas Natural Comprimido
+                                        (GNC)</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Conoce tu Bencinera</a>
+                            <ul class="pxp-nav-sub rounded-lg">
+                                <li><a href="/estacion-servicio/aramco.html">Aramco</a></li>
+                                <li><a href="/estacion-servicio/copec.html">Copec</a></li>
+                                <li><a href="/estacion-servicio/shell.html">Shell</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="list-inline-item pxp-is-last"><a href="/contacto.html">Contactanos</a></li>
                     </ul>
                 </div>
                 <div class="col-5 col-md-2 text-right">
                     <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
                 </div>
-            </div>
+            </div><!--row align-->
         </div>
     </div>
     """
@@ -299,11 +321,58 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
     footer_html=f"""
                <!--####################### LISTADO #######################-->
             </div>
-            <div class="pxp-footer pxp-content-side-wrapper">
-                <div class="pxp-footer-bottom">
-                    <div class="pxp-footer-copyright">&copy; TodoBencina. All Rights Reserved. 2021</div>
+               <div class="pxp-footer pt-100 pb-100 mt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-4">
+                        <div class="pxp-footer-logo">TodoBencina.</div>
+                        <div class="pxp-footer-social mt-2">
+                            <a href="mailto:jvegavv@gmail.com"><span class="fa fa-envelope-o"></span></a>
+                            <a href="https://wa.me/56992285043"><span class="fa fa-whatsapp"></span></a>
+                            <a href="https://www.instagram.com/jvegavv1/?hl=es""><span class="fa fa-instagram"></span></a>
+                            <a href="https://www.tiktok.com/@jvegavv"><span class="fa fa-mobile"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <h4 class="pxp-footer-header mt-4 mt-lg-0">Bencineras Cerca</h4>
+                                <ul class="list-unstyled pxp-footer-links mt-2">
+                                    <li><a href="/comuna/santiago-centro.html">Mapa por Comuna</a></li>                                
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <h4 class="pxp-footer-header mt-4 mt-lg-0">Conoce tu Combustible</h4>
+                                <ul class="list-unstyled pxp-footer-links mt-2">
+                                    <li><a href="/combustible/bencina_93_octanos.html">Bencina 93</a></li>
+                                    <li><a href="/combustible/bencina_95_octanos.html">Bencina 95</a></li>
+                                    <li><a href="/combustible/bencina_97_octanos.html">Bencina 97</a></li>
+                                    <li><a href="/combustible/kerosene_parafina.html">Kerosene Parafina</a></li>
+                                    <li><a href="/combustible/petroleo_diesel.html">Petroleo Diesel</a></li>
+                                    <li><a href="/combustible/gas_liquado_petroleo_glp.html">Gas Liquado Petroleo (GLP)</a>
+                                    </li>
+                                    <li><a href="/combustible/gas_natural_comprimido_gnc.html">Gas Natural Comprimido
+                                            (GNC)</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <h4 class="pxp-footer-header mt-4 mt-lg-0">Conoce tu Bencinera</h4>
+                                <ul class="list-unstyled pxp-footer-links mt-2">
+                                    <li><a href="/estacion-servicio/aramco.html">Aramco</a></li>
+                                    <li><a href="/estacion-servicio/copec.html">Copec</a></li>
+                                    <li><a href="/estacion-servicio/shell.html">Shell</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pxp-footer-bottom mt-2">
+                    <div><a href="#">Terminos y Condiciones</a> y <a href="#">Politica Privada</a></div>
+                    <div class="pxp-footer-copyright">&copy; TodoBencina. Todos los derechos reservados. 2026</div>
                 </div>
             </div>
+        </div>
         </div>
         <!--####################### Seccion 2  #######################-->
     </div>
@@ -339,17 +408,17 @@ def generar_html_comuna(comuna, carpeta_salida="../"):
 
     end_html=f"""
     
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js_custom/map_custom.js"></script>
-    <script src="js_custom/select_custom.js"></script>
-    <script src="js_custom/orderby.js"></script>
-    <script src="js_custom/tamano_pagina.js"></script>
+    <script src="../js_custom/map_custom.js"></script>
+    <script src="../js_custom/select_custom.js"></script>
+    <script src="../js_custom/orderby.js"></script>
+    <script src="../js_custom/tamano_pagina.js"></script>
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 </body>
 

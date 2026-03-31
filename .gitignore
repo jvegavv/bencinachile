@@ -1,0 +1,9 @@
+# Ignorar la carpeta raíz llamada "python"
+/python/
+
+# También es recomendable ignorar los archivos temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
