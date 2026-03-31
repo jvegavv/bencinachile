@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var nombre_json = $('#comuna_json').val();
 
-    const rutaJson = 'comunas_data/' + nombre_json;
+    const rutaJson = '../comunas_data/' + nombre_json;
 
     fetch(rutaJson)
         .then(response => {

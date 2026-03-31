@@ -1,3 +1,5 @@
+const baseURL = window.location.origin;
+
 $(document).ready(function () {
 
     let comuna = $('#comuna').val();
@@ -14,7 +16,7 @@ $(document).ready(function () {
     }
 
     // 2. Cargar los datos desde el JSON generado por el script de Python
-    fetch('python/mapeo_identificadores.json')
+    fetch('../python/mapeo_identificadores.json')
         .then(response => response.json())
         .then(data => {
             const select = $('#pxp-p-search-location');
@@ -44,7 +46,6 @@ $(document).ready(function () {
     // 3. Evento al seleccionar una ubicación
     $('#pxp-p-search-location').on('select2:select', function (e) {
         localStorage.setItem('centrarMapaEnAuto', false);
-        // Obtenemos el ID seleccionado (ej: reg_1 o com_15)
         const idSeleccionado = e.params.data.id;
 
         // Obtenemos el atributo 'data-nombre-pagina' del elemento <option> real
@@ -55,7 +56,9 @@ $(document).ready(function () {
 
         // Ejemplo de uso: Redirigir o filtrar
         if (nombrePagina) {
-            window.location.href = nombrePagina;
+            
+            window.location.href = baseURL+"/comuna/"+nombrePagina;
+            
         }
     });
 });
