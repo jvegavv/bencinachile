@@ -23,6 +23,7 @@
 
     <!--####################### MENU #######################-->
     <div class="pxp-header pxp-full fixed-top">
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: JuanPerez123"> hh
         <div class="pxp-container-full">
             <div class="row align-items-center">
                 <div class="col-5 col-md-2">
@@ -31,7 +32,7 @@
                 <div class="col-2 col-md-8 text-center">
                     <ul class="pxp-nav list-inline">
                         <li class="list-inline-item">
-                            <a href="#">Inicio</a>
+                            <a href="#">Inicio2</a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">Bencineras</a>
@@ -40,7 +41,7 @@
                                 <li><a href="single-property.html">Listado</a></li>
                             </ul>
                         </li>
-                        <li class="list-inline-item pxp-is-last"><a href="contact.html">Contactanos</a></li>
+                        <li class="list-inline-item pxp-is-last"><a href="/contacto.html">Contactanos</a></li>
                     </ul>
                 </div>
                 <div class="col-5 col-md-2 text-right">
@@ -88,10 +89,13 @@
                 </div>
 
                 <div class="row pb-4">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-lg-3">
                         <h2 class="pxp-content-side-h2">1,684 Results</h2>
                     </div>
-                    <div class="col-sm-6">
+                    <div>
+                        <span class= "pxp-bencina-label col-lg-2">Seleccione Ubicación</span>
+                    </div>
+                    <div class="col-sm-6 col-lg-7>
                         <div class="pxp-sort-form form-inline float-right">
                             <div class="form-group">
                                 <select class="custom-select" id="pxp-sort-results">
@@ -116,15 +120,15 @@
                 <!--####################### LIstado #######################-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="col-sm-12 col-md-6 col-lg-4" class="estacion_item">
                             <a href="single-agent.html" class="pxp-agents-1-item">
                                 <div class="pxp-agents-1-item-fig-container rounded-lg">
                                     <div class="pxp-agents-1-item-fig pxp-cover" style="
                                             background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
                                             background-position: top center;
-                                            background-size: 330 330; 
+                                           
                                             background-repeat: no-repeat;
-                                            width: 458px; 
+                                            width: 200px; 
                                             height: 100px;
                                             
                                             "></div>
@@ -146,7 +150,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-4">
-                            <a href="single-agent.html" class="pxp-agents-1-item">
+                            <a href="#" class="pxp-agents-1-item">
                                 <div class="pxp-agents-1-item-fig-container rounded-lg">
                                     <div class="pxp-agents-1-item-fig pxp-cover" style="
                                             background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
@@ -200,6 +204,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js_custom/map_custom.js"></script>
     <script src="js_custom/select_custom.js"></script>
+    <script src="js_custom/tamano_pagina.js"></script>
 
 </body>
 
