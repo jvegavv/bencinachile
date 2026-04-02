@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 est.combustibles.forEach(function (combustible) {
 
-                    html_temp = `<span> ${combustible.nombre_largo} : $ ${combustible.precio} (${combustible.unidad_cobro})</span></br>`
+                    html_temp = `<span> ${combustible.nombre_largo} : $ ${combustible.precio} (${combustible.unidad_cobro}) ${combustible.precio_fecha}</span></br>`
 
                     if (combustible['id'] == 1)
                         valor_93 = html_temp
@@ -310,6 +310,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="precio">
                         ${listado_bencineras_html}
                     </div>
+                    <div><a href="https://www.google.com/maps/search/?api=1&query=${est.latitud},${est.longitud}">Google Maps</a></div>
+                    <div><a href="https://waze.com/ul?ll=${est.latitud},${est.longitud}&navigate=yes">Waze</a></div>
                 `);
 
                 // Usamos la ID real de la estación para el objeto de seguimiento
