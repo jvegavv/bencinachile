@@ -34,5 +34,9 @@
 }
 
 .pxp-services-container {
-    height: 350px!important;
+    height: 390px!important;
+}
+
+.pxp-services-accordion-fig {
+    height: 650px !important;
 }

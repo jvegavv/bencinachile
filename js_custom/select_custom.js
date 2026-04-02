@@ -16,7 +16,7 @@ $(document).ready(function () {
     }
 
     // 2. Cargar los datos desde el JSON generado por el script de Python
-    fetch('/bencinachile/python/mapeo_identificadores.json')
+    fetch('../python/mapeo_identificadores.json')
         .then(response => response.json())
         .then(data => {
             const select = $('#pxp-p-search-location');
