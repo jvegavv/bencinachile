@@ -139,7 +139,7 @@ def generar_html_comuna(comuna, carpeta_salida="../comuna"):
 
                 listado_bencineras_html+=f"""
                 
-                    <div class="col-sm-12 col-md-6 col-lg-4 estacion-item">
+                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                         {campos_hidden_precio}
                         <a href="#" class="pxp-agents-1-item" data-prop="{estacion['id']}">
                             <div class="pxp-agents-1-item-fig-container rounded-lg">
@@ -179,9 +179,9 @@ def generar_html_comuna(comuna, carpeta_salida="../comuna"):
 
 
                     if (precio_combustible == "-"):
-                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}">{combustible['nombre_corto']} <span class="fa fa-dollar"></span> No Informado </div>"""
+                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}"> <b> {combustible['nombre_largo']} </b><span class="fa fa-dollar"></span> No Informado [ {combustible['precio_fecha']} ]</div>"""
                     else:
-                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}">{combustible['nombre_corto']} <span class="fa fa-dollar"></span>{f"{precio_combustible:,}".replace(",", ".")} ({combustible['unidad_cobro']} )</div>"""
+                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}"> <b> {combustible['nombre_largo']} </b><span class="fa fa-dollar"></span>{f"{precio_combustible:,}".replace(",", ".")} ({combustible['unidad_cobro']} ) [ {combustible['precio_fecha']} ]</div>"""
 
                     if (combustible['id'] == 1):
                          valor_93 = html_temp 

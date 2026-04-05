@@ -53,17 +53,17 @@ document.addEventListener('DOMContentLoaded', function () {
             L.DomEvent.on(button, 'click', function (e) {
 
                 if (navigator.permissions) {
-                    navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
+                    navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
                         // El estado puede ser: 'granted', 'denied' o 'prompt'
                         console.log("Estado actual del permiso:", result.state);
-                
+
                         permisos_geo_navegador(result);
-                
+
                         // Escuchar si el usuario cambia el permiso mientras está en la página
-                        result.onchange = function() {
+                        result.onchange = function () {
 
                             permisos_geo_navegador(result);
-                
+
 
                             console.log("El permiso ha cambiado a:", result.state);
                         };
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     console.log("Tu navegador no soporta la API de Permisos.");
                 }
-              
+
             });
 
             return container;
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 3. Manejo de errores (Muy importante en móviles)
         map.on('locationerror', function (e) {
-            
+
             error_geo_localizacion(map);
         });
 
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 est.combustibles.forEach(function (combustible) {
 
-                    html_temp = `<span> ${combustible.nombre_largo} : $ ${combustible.precio} (${combustible.unidad_cobro}) ${combustible.precio_fecha}</span></br>`
+                    html_temp = `<span> <b> ${combustible.nombre_largo} : ${formatearTodoBencina(combustible.precio, "precio")} </b>  (${combustible.unidad_cobro}) [ ${formatearTodoBencina(combustible.precio_fecha, "fecha")} ]</span></br>`
 
                     if (combustible['id'] == 1)
                         valor_93 = html_temp
@@ -302,17 +302,36 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (valor_GLP != "")
                     listado_bencineras_html += valor_GLP
 
-                var marker_map = L.marker([est.latitud, est.longitud], { icon: iconoBomba })
+                    var marker_map = L.marker([est.latitud, est.longitud], { icon: iconoBomba })
                     .addTo(map)
                     .bindPopup(`
-                    <b>${est.nombre_bencinera}</br>
-                    <small>${est.direccion}</small><br>
-                    <div class="precio">
-                        ${listado_bencineras_html}
-                    </div>
-                    <div><a href="https://www.google.com/maps/search/?api=1&query=${est.latitud},${est.longitud}">Google Maps</a></div>
-                    <div><a href="https://waze.com/ul?ll=${est.latitud},${est.longitud}&navigate=yes">Waze</a></div>
-                `);
+                        <div class="custom-bencina-popup">
+                            <header>
+                                <strong>${est.nombre_bencinera}</strong>
+                                <address><i class="bi bi-geo-alt"></i> ${est.direccion}</address>
+                            </header>
+                            
+                            <div class="precios-container">
+                                ${listado_bencineras_html}
+                            </div>
+                
+                            <div class="rutas-grid">
+                                <a href="https://www.google.com/maps/search/?api=1&query=${est.latitud},${est.longitud}" 
+                                   target="_blank" class="btn-ruta gmaps">
+                                   GOOGLE MAPS
+                                </a>
+                                <a href="https://waze.com/ul?ll=${est.latitud},${est.longitud}&navigate=yes" 
+                                   target="_blank" class="btn-ruta waze">
+                                   WAZE
+                                </a>
+                            </div>
+                        </div>
+                    `, {
+                        maxWidth: 350,   // Aumentado a 350px para una vista más cómoda
+                        minWidth: 300,   // Forzamos a que no sea más pequeño de 300px
+                        className: 'custom-popup-pane' // Clase extra por si necesitas más control
+                    });
+                
 
                 // Usamos la ID real de la estación para el objeto de seguimiento
                 marcadoresEstaciones[est.id] = marker_map;
@@ -421,7 +440,7 @@ function redimensionar_mapa(map) {
 }
 
 
-function geolocalizar_mapa(map){
+function geolocalizar_mapa(map) {
 
     var iconoAuto = L.icon({
         iconUrl: 'https://cdn-icons-png.flaticon.com/512/3085/3085330.png',
@@ -469,7 +488,7 @@ function geolocalizar_mapa(map){
 
 }
 
-function permisos_geo_navegador(result){
+function permisos_geo_navegador(result) {
 
     map.stopLocate();
     map.off('locationfound');
@@ -498,8 +517,8 @@ function permisos_geo_navegador(result){
             console.log("Error en mapa full");
             mapaContenedor.appendChild(modal);
         }
-            $('#gpsModal').modal('show');
-        
+        $('#gpsModal').modal('show');
+
 
     } else if (result.state === 'denied') {
         console.log("❌ El usuario bloqueó la geolocalización.");
@@ -508,14 +527,14 @@ function permisos_geo_navegador(result){
             console.log("Error en mapa full");
             mapaContenedor.appendChild(modal);
         }
-            $('#gpsModal').modal('show');
-        
+        $('#gpsModal').modal('show');
+
 
         localStorage.setItem('geolocalizar', false);
     }
 }
 
-function error_geo_localizacion(map){
+function error_geo_localizacion(map) {
 
     map.stopLocate();
     map.off('locationfound');
@@ -524,4 +543,45 @@ function error_geo_localizacion(map){
     console.log("❌ Llegamos por el error exception");
     $('#gpsModal').modal('show');
 
+}
+
+/**
+ * Formatea datos técnicos al estándar de Chile
+ * @param {string|number} valor - El dato raw (ej: "1000,000" o "2026-03-26")
+ * @param {string} tipo - 'precio' o 'fecha'
+ */
+/**
+ * Formatea datos técnicos al estándar de Chile (Incluye Fecha + Hora)
+ * @param {string|number} valor - El dato raw (ej: "2026-03-26 14:30:00" o "1000,000")
+ * @param {string} tipo - 'precio' o 'fecha'
+ */
+function formatearTodoBencina(valor, tipo) {
+    if (!valor) return "N/D";
+
+    if (tipo === 'precio') {
+        let num = parseFloat(valor.toString().replace(',', '.'));
+        return new Intl.NumberFormat('es-CL', {
+            style: 'currency',
+            currency: 'CLP',
+            minimumFractionDigits: 0
+        }).format(num);
+    }
+
+    if (tipo === 'fecha') {
+        // Creamos el objeto Date. 
+        // Si el valor ya trae hora, Date() lo reconocerá automáticamente.
+        const fechaObj = new Date(valor.replace(' ', 'T')); 
+
+        return fechaObj.toLocaleString('es-CL', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false // Formato 24 horas (ej: 14:30 en vez de 2:30 PM)
+        });
+    }
+
+    return valor;
 }
