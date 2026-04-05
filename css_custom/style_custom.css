@@ -155,3 +155,66 @@
 .pxp-services-item:hover .pxp-services-item-text {
     transform: translateY(-30%)!important;
 }
+
+/* ****************************************** */
+/* POP UP */
+/* ****************************************** */
+/* Forzar el ancho del contenedor de Leaflet */
+.leaflet-popup-content-wrapper {
+    padding: 0;
+    border-radius: 10px;
+}
+
+.leaflet-popup-content {
+    margin: 0 !important;
+    width: 350px !important; /* Mismo valor que el maxWidth de JS */
+}
+
+.custom-bencina-popup header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+.custom-bencina-popup strong {
+    font-size: 18px; /* Nombre más grande */
+    display: block;
+    margin-bottom: 4px;
+}
+
+.custom-bencina-popup address {
+    font-size: 13px;
+    opacity: 0.8;
+    font-style: normal;
+}
+
+/* Si tu listado_bencineras_html tiene items, dales espacio */
+.precios-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espacio entre cada combustible */
+}
+
+/* Estilo para los botones en la parte inferior */
+.rutas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #eee;
+}
+
+.btn-ruta {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-decoration: none !important;
+}
+
+.gmaps { background: #fff; color: #4285F4 !important; }
+.waze { background: #fff; color: #33CCFF !important; border-left: 1px solid #eee; }
+
+.btn-ruta:hover {
+    background: #f8f9fa;
+}
