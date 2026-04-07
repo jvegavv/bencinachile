@@ -144,7 +144,7 @@ def generar_html_comuna(comuna, carpeta_salida="../comuna"):
                         <a href="#" class="pxp-agents-1-item" data-prop="{estacion['id']}">
                             <div class="pxp-agents-1-item-fig-container rounded-lg">
                                 <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url({estacion['logo']}); 
+                                        background-image: url({estacion['logo'].replace(" ", "%20")}); 
                                         background-position: top center;
                                         background-size: 200px 100px; 
                                         background-repeat: no-repeat;    
@@ -179,7 +179,7 @@ def generar_html_comuna(comuna, carpeta_salida="../comuna"):
 
 
                     if (precio_combustible == "-"):
-                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}"> <b> {combustible['nombre_largo']} </b><span class="fa fa-dollar"></span> No Informado [ {combustible['precio_fecha']} ]</div>"""
+                        html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}"> <b> {combustible['nombre_largo']} </b><span class="fa fa-dollar"></span> No Informado </div>"""
                     else:
                         html_temp=f"""<div class="pxp-agents-1-item-details-email combustible_{combustible['nombre_corto']}"> <b> {combustible['nombre_largo']} </b><span class="fa fa-dollar"></span>{f"{precio_combustible:,}".replace(",", ".")} ({combustible['unidad_cobro']} ) [ {combustible['precio_fecha']} ]</div>"""
 
@@ -275,14 +275,14 @@ def generar_html_comuna(comuna, carpeta_salida="../comuna"):
                     <div class="d-flex">
                         <div class="pxp-content-side-search-form">
                             <div class="row pxp-content-side-search-form-row">
-                                <div class="col-sm-5 col-md-4 col-lg-3 pxp-content-side-search-form-col">
-                                    <div class="d-flex justify-content-end align-items-center h-100">
+                                <div class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col">
+                                    <div class="d-flex justify-content-start align-items-center h-100">
                                         <span class="pxp-bencina-label">Seleccione Ubicación</span>
                                     </div>
                                 </div>
 
                                 <div
-                                    class="col-sm-7 col-md-8 col-lg-9 pxp-content-side-search-form-col pxp-search-container">
+                                    class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col pxp-search-container">
 
                                     <select class="custom-select" id="pxp-p-search-location">
                                     </select>
@@ -292,28 +292,37 @@ def generar_html_comuna(comuna, carpeta_salida="../comuna"):
 
                     </div>
 
-                    <div class="row pb-4">
-                        <div class="col-sm-6">
-                            <h2 class="pxp-content-side-h2"> {cantidad_estaciones} Resultados en {comuna['nombre']}</h2>
+                    
+
+                
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="pxp-content-side-h2"> {cantidad_estaciones} Estaciones de Servicio en {comuna['nombre']}</h2>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="pxp-sort-form form-inline float-right">
-                                <div class="form-group">
-                                    <select class="custom-select" id="pxp-sort-results">
-                                        <option value="" selected="selected">Ordenar mas enconomica</option>
-                                        <option value="4-12">Kerosene</option>
-                                        <option value="3-11">Petroleo Diesel</option>
-                                        <option value="1-8">Gasolina 93</option>
-                                        <option value="7-9">Gasolina 95</option>
-                                        <option value="2-10">Gasolina 97</option>
-                                        <option value="6">GLP Vehicular</option>
-                                        <option value="5">GNC</option>
-                                    </select>
-                                </div>
-                                <div class="form-group d-flex">
-                                    <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
-                                </div>
+                    </div>    
+
+                    <div class="row pb-4">
+                        <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
+                        <span class="pxp-bencina-label">Ordenar por</span>
+                    </div>
+                    
+                        <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
+                            <div class="form-group d-flex">
+                                <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
                             </div>
+                            <div class="form-group">
+                                <select class="custom-select" id="pxp-sort-results">
+                                    <option value="1-8" selected="selected">Gasolina 93</option>
+                                    <option value="7-9">Gasolina 95</option>
+                                    <option value="2-10">Gasolina 97</option>
+                                    <option value="4-12">Kerosene</option>
+                                    <option value="3-11">Petroleo Diesel</option>
+                                    <option value="6">GLP Vehicular</option>
+                                    <option value="5">GNC</option>
+                                </select>
+                            </div>
+                          
                         </div>
                     </div>
     """
