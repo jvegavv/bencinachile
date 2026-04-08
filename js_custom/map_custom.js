@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var nombre_json = $('#comuna_json').val();
 
-    const rutaJson = '../comunas_data/' + nombre_json;
+    const rutaJson = '/comunas_data/' + nombre_json;
 
     fetch(rutaJson)
         .then(response => {
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (valor_GLP != "")
                     listado_bencineras_html += valor_GLP
 
-                    var marker_map = L.marker([est.latitud, est.longitud], { icon: iconoBomba })
+                var marker_map = L.marker([est.latitud, est.longitud], { icon: iconoBomba })
                     .addTo(map)
                     .bindPopup(`
                         <div class="custom-bencina-popup">
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         minWidth: 300,   // Forzamos a que no sea más pequeño de 300px
                         className: 'custom-popup-pane' // Clase extra por si necesitas más control
                     });
-                
+
 
                 // Usamos la ID real de la estación para el objeto de seguimiento
                 marcadoresEstaciones[est.id] = marker_map;
@@ -570,7 +570,7 @@ function formatearTodoBencina(valor, tipo) {
     if (tipo === 'fecha') {
         // Creamos el objeto Date. 
         // Si el valor ya trae hora, Date() lo reconocerá automáticamente.
-        const fechaObj = new Date(valor.replace(' ', 'T')); 
+        const fechaObj = new Date(valor.replace(' ', 'T'));
 
         return fechaObj.toLocaleString('es-CL', {
             day: '2-digit',
