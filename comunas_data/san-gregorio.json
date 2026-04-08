@@ -1,0 +1,131 @@
+{
+    "comuna": "San Gregorio",
+    "estaciones": [
+        {
+            "id": 1529,
+            "marca": 2,
+            "direccion": "Entrada campamento Posesion, Enap 000",
+            "latitud": "-52.260135016132686",
+            "longitud": "-68.93033891916275",
+            "region": "Magallanes y de la Antártica Chilena",
+            "comuna": "San Gregorio",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697477989_logo2.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697477989_logo2.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1529,
+                    "precio": "1697.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1529,
+                    "precio": "1696.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1529
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "PETROBRAS"
+        },
+        {
+            "id": 1530,
+            "marca": 2,
+            "direccion": "Km 114, ruta 255 / Entrada Terminal San Gregorio/ Enap 000",
+            "latitud": "-52.6003498339191",
+            "longitud": "-70.1951265335083",
+            "region": "Magallanes y de la Antártica Chilena",
+            "comuna": "San Gregorio",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697477989_logo2.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697477989_logo2.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1530,
+                    "precio": "1678.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1530,
+                    "precio": "1683.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1530
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "PETROBRAS"
+        }
+    ]
+}
