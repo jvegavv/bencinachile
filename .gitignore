@@ -1,6 +1,13 @@
 # Ignorar la carpeta raíz llamada "python"
 /python/
 
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Archivo de tareas del agente
+agents.md
+
 # También es recomendable ignorar los archivos temporales de Python
 __pycache__/
 *.py[cod]
