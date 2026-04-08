@@ -1,0 +1,282 @@
+{
+    "comuna": "Salamanca",
+    "estaciones": [
+        {
+            "id": 248,
+            "marca": 5,
+            "direccion": "Carretera D-81, Lote E 0",
+            "latitud": "-31.774752949578843",
+            "longitud": "-70.99502969335936",
+            "region": "Coquimbo",
+            "comuna": "Salamanca",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 248,
+                    "precio": "1544.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 02:01:35",
+                    "updated_at": "2026-03-26 02:01:35",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 249,
+            "marca": 5,
+            "direccion": "O'HIGGINS 490",
+            "latitud": "-31.782518284454067",
+            "longitud": "-70.96056193113327",
+            "region": "Coquimbo",
+            "comuna": "Salamanca",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 249,
+                    "precio": "1595.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:25:27",
+                    "updated_at": "2026-04-02 10:25:27",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 249,
+                    "precio": "1685.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:25:27",
+                    "updated_at": "2026-04-02 10:25:27",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 249,
+                    "precio": "1544.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 02:01:00",
+                    "updated_at": "2026-03-26 02:01:00",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 249,
+                    "precio": "1093.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 11:35:26",
+                    "updated_at": "2026-04-02 11:35:26",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 249,
+                    "precio": "1639.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:25:27",
+                    "updated_at": "2026-04-02 10:25:27",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 249
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 249
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 250,
+            "marca": 4,
+            "direccion": "Jose Joaquin Perez 400",
+            "latitud": "-31.78284154",
+            "longitud": "-70.9641038",
+            "region": "Coquimbo",
+            "comuna": "Salamanca",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697479767_Shell.png",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 250,
+                    "precio": "1595.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 12:46:38",
+                    "updated_at": "2026-04-02 12:46:38",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 250,
+                    "precio": "1685.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 12:46:38",
+                    "updated_at": "2026-04-02 12:46:38",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 250,
+                    "precio": "1544.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 10:36:12",
+                    "updated_at": "2026-03-26 10:36:12",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 250,
+                    "precio": "1639.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 12:46:38",
+                    "updated_at": "2026-04-02 12:46:38",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 250
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 250
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 250
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 250
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 250
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 250
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "SHELL"
+        }
+    ]
+}

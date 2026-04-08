@@ -1,0 +1,188 @@
+{
+    "comuna": "Primavera",
+    "estaciones": [
+        {
+            "id": 1533,
+            "marca": 2,
+            "direccion": "Prat s/n 000",
+            "latitud": "-52.7731222085566",
+            "longitud": "-69.28799271583557",
+            "region": "Magallanes y de la Antártica Chilena",
+            "comuna": "Primavera",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697477989_logo2.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697477989_logo2.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1533,
+                    "precio": "1811.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1533,
+                    "precio": "1744.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1533
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "PETROBRAS"
+        },
+        {
+            "id": 1534,
+            "marca": 2,
+            "direccion": "Entrada, campamento Culle, Enap. 000",
+            "latitud": "-52.88579659619905",
+            "longitud": "-68.8629698753357",
+            "region": "Magallanes y de la Antártica Chilena",
+            "comuna": "Primavera",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697477989_logo2.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697477989_logo2.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1534,
+                    "precio": "1863.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1534,
+                    "precio": "1790.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:37:35",
+                    "updated_at": "2026-04-02 10:37:35",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1534
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "PETROBRAS"
+        },
+        {
+            "id": 1535,
+            "marca": 5,
+            "direccion": "RUTA CH-257 0",
+            "latitud": "-52.759",
+            "longitud": "-69.290",
+            "region": "Magallanes y de la Antártica Chilena",
+            "comuna": "Primavera",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1535,
+                    "precio": "1809.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 11:03:35",
+                    "updated_at": "2026-04-02 11:03:35",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1535,
+                    "precio": "1740.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 11:03:35",
+                    "updated_at": "2026-04-02 11:03:35",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                }
+            ],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        }
+    ]
+}

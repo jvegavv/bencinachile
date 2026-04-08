@@ -1,0 +1,247 @@
+{
+    "comuna": "San José de Maipo",
+    "estaciones": [
+        {
+            "id": 2005,
+            "marca": 5,
+            "direccion": "Avda. Comercio 20173",
+            "latitud": "-33.644015488961955",
+            "longitud": "-70.35294923545224",
+            "region": "Metropolitana de Santiago",
+            "comuna": "San José de Maipo",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 2005,
+                    "precio": "1525.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 21:19:33",
+                    "updated_at": "2026-03-26 21:19:33",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 2005,
+                    "precio": "1681.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-30 14:36:20",
+                    "updated_at": "2026-03-30 14:36:20",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 2005,
+                    "precio": "1419.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 21:19:33",
+                    "updated_at": "2026-03-26 21:19:33",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 2005,
+                    "precio": "1053.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 09:46:07",
+                    "updated_at": "2026-04-02 09:46:07",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 2005,
+                    "precio": "1531.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 21:19:33",
+                    "updated_at": "2026-03-26 21:19:33",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2005
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2005
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 2006,
+            "marca": 151,
+            "direccion": "Camino al Volcan 10751",
+            "latitud": "-33.5833217",
+            "longitud": "-70.3982511",
+            "region": "Metropolitana de Santiago",
+            "comuna": "San José de Maipo",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1715355420_Aramco1.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 8,
+                    "nombre_corto": "A93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 2006,
+                    "precio": "1558.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 12:52:43",
+                    "updated_at": "2026-03-26 12:52:43",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 5
+                },
+                {
+                    "id": 9,
+                    "nombre_corto": "A95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 2006,
+                    "precio": "1622.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 12:52:43",
+                    "updated_at": "2026-03-26 12:52:43",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 4
+                },
+                {
+                    "id": 10,
+                    "nombre_corto": "A97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 2006,
+                    "precio": "1681.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 12:52:43",
+                    "updated_at": "2026-03-26 12:52:43",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 3
+                },
+                {
+                    "id": 11,
+                    "nombre_corto": "ADI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 2006,
+                    "precio": "1517.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 12:52:43",
+                    "updated_at": "2026-03-26 12:52:43",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 2
+                },
+                {
+                    "id": 12,
+                    "nombre_corto": "AKE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 2006,
+                    "precio": "1081.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 21:29:52",
+                    "updated_at": "2026-04-02 21:29:52",
+                    "clase": "Gas",
+                    "tipo_atencion": 1,
+                    "tipo_atencion_nombre": "Asistido",
+                    "orden": 1
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2006
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2006
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2006
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 2006
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "ARAMCO"
+        }
+    ]
+}

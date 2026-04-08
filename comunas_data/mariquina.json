@@ -1,0 +1,351 @@
+{
+    "comuna": "Mariquina",
+    "estaciones": [
+        {
+            "id": 1322,
+            "marca": 5,
+            "direccion": "RUTA 5 KM 785,6 0",
+            "latitud": "-39.55021744266929",
+            "longitud": "-72.95209407806396",
+            "region": "De los Ríos",
+            "comuna": "Mariquina",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1322,
+                    "precio": "1623.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 3 días",
+                    "precio_fecha": "2026-04-04 16:11:28",
+                    "updated_at": "2026-04-04 16:11:28",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1322,
+                    "precio": "1711.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 3 días",
+                    "precio_fecha": "2026-04-04 16:11:28",
+                    "updated_at": "2026-04-04 16:11:28",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1322,
+                    "precio": "1555.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-27 15:43:41",
+                    "updated_at": "2026-03-27 15:43:41",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1322,
+                    "precio": "1663.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 3 días",
+                    "precio_fecha": "2026-04-04 16:11:28",
+                    "updated_at": "2026-04-04 16:11:28",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1322
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1322
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1322
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1322
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1322
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1322
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 1323,
+            "marca": 5,
+            "direccion": "José Puchi 1700",
+            "latitud": "-39.53935460406483",
+            "longitud": "-72.96720027923584",
+            "region": "De los Ríos",
+            "comuna": "Mariquina",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1323,
+                    "precio": "1637.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 09:00:00",
+                    "updated_at": "2026-04-02 09:00:00",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1323,
+                    "precio": "1707.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 09:00:00",
+                    "updated_at": "2026-04-02 09:00:00",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1323,
+                    "precio": "1587.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 11:59:57",
+                    "updated_at": "2026-03-26 11:59:57",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 4,
+                    "nombre_corto": "KE",
+                    "nombre_largo": "Kerosene",
+                    "suministra": 1,
+                    "estacion_id": 1323,
+                    "precio": "1107.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 4 días",
+                    "precio_fecha": "2026-04-03 16:16:36",
+                    "updated_at": "2026-04-03 16:16:36",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 8
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1323,
+                    "precio": "1675.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 09:00:00",
+                    "updated_at": "2026-04-02 09:00:00",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1323
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        },
+        {
+            "id": 1324,
+            "marca": 4,
+            "direccion": "Ruta 5 Sur Km. 780, Sector El Ciruelo. 0",
+            "latitud": "-39.51854251507471",
+            "longitud": "-72.82776832580566",
+            "region": "De los Ríos",
+            "comuna": "Mariquina",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697479767_Shell.png",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 1,
+                    "nombre_corto": "93",
+                    "nombre_largo": "Gasolina 93",
+                    "suministra": 1,
+                    "estacion_id": 1324,
+                    "precio": "1627.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:06:02",
+                    "updated_at": "2026-04-02 10:06:02",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 12
+                },
+                {
+                    "id": 2,
+                    "nombre_corto": "97",
+                    "nombre_largo": "Gasolina 97",
+                    "suministra": 1,
+                    "estacion_id": 1324,
+                    "precio": "1710.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:06:02",
+                    "updated_at": "2026-04-02 10:06:02",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 10
+                },
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1324,
+                    "precio": "1556.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 1 semana",
+                    "precio_fecha": "2026-03-26 10:06:43",
+                    "updated_at": "2026-03-26 10:06:43",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1324,
+                    "precio": "1664.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-02 10:06:02",
+                    "updated_at": "2026-04-02 10:06:02",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1324
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1324
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1324
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1324
+                },
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 1324
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "SHELL"
+        }
+    ]
+}

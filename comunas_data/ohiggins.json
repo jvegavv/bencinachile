@@ -1,0 +1,62 @@
+{
+    "comuna": "O’Higgins",
+    "estaciones": [
+        {
+            "id": 1506,
+            "marca": 5,
+            "direccion": "CARRETERA AUSTRAL S/N 0",
+            "latitud": "-48.46349582806796",
+            "longitud": "-72.56110917699884",
+            "region": "Aysén del Gral. Carlos Ibáñez del Campo",
+            "comuna": "O’Higgins",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1697478048_logo5.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 1506,
+                    "precio": "1827.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-01 23:58:51",
+                    "updated_at": "2026-04-01 23:58:51",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 1506,
+                    "precio": "1856.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 5 días",
+                    "precio_fecha": "2026-04-01 23:58:51",
+                    "updated_at": "2026-04-01 23:58:51",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [],
+            "control_calidad": [],
+            "nombre_bencinera": "COPEC"
+        }
+    ]
+}
