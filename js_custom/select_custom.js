@@ -16,21 +16,21 @@ $(document).ready(function () {
     }
 
     // 2. Cargar los datos desde el JSON generado por el script de Python
-    fetch('../python/mapeo_identificadores.json')
+    fetch('/comuna_data/mapeo_identificadores.json')
         .then(response => response.json())
         .then(data => {
             const select = $('#pxp-p-search-location');
             select.empty().append(new Option("Selecciona Comuna", ""));
 
-          /*  // Agregar Regiones como Grupo
-            const grupoRegiones = $('<optgroup label="Regiones"></optgroup>');
-            data.regiones.forEach(reg => {
-                // Creamos el elemento option manualmente para añadirle el atributo data
-                const option = new Option(reg.nombre, 'reg_' + reg.id);
-                $(option).attr('data-nombre-pagina', reg.nombre_pagina);
-                grupoRegiones.append(option);
-            });
-            select.append(grupoRegiones);*/
+            /*  // Agregar Regiones como Grupo
+              const grupoRegiones = $('<optgroup label="Regiones"></optgroup>');
+              data.regiones.forEach(reg => {
+                  // Creamos el elemento option manualmente para añadirle el atributo data
+                  const option = new Option(reg.nombre, 'reg_' + reg.id);
+                  $(option).attr('data-nombre-pagina', reg.nombre_pagina);
+                  grupoRegiones.append(option);
+              });
+              select.append(grupoRegiones);*/
 
             // Agregar Comunas como Grupo
             const grupoComunas = $('<optgroup label="Comunas"></optgroup>');
@@ -56,9 +56,9 @@ $(document).ready(function () {
 
         // Ejemplo de uso: Redirigir o filtrar
         if (nombrePagina) {
-            
-            window.location.href = baseURL+"/comuna/"+nombrePagina;
-            
+
+            window.location.href = baseURL + "/comuna/" + nombrePagina;
+
         }
     });
 });
