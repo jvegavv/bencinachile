@@ -211,3 +211,7 @@
     .pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_sm.png); }
     .pxp-service-step-4 { background-image: url(/images/mapa_todobencina_sm.png); }
 }
+
+.pxp-services-tabs-content-item-fig{
+    margin-top: 10px;
+}
