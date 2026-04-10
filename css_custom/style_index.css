@@ -41,6 +41,16 @@
     height: 350px !important;
 }
 
+.carousel-item,
+.carousel-item.active {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.pxp-services-tabs-content-item {
+    padding-top: 0 !important;
+}
+
 /* ── Responsive: liberar alturas fijas bajo 1200px ──────────────────────────
    El template intenta aplicar height: auto en estos breakpoints, pero el
    !important de arriba lo anula. Lo corregimos explícitamente aquí.
@@ -50,31 +60,38 @@
         height: auto !important;
         padding-bottom: 20px;
     }
+
     .pxp-services-container {
         height: auto !important;
     }
+
     /* El div con mt-300 debe comportarse como mt-200 (120px) bajo 1200px */
     .mt-300 {
         margin-top: 120px !important;
     }
+
     /* Invertir orden y expandir al 100% de ancho */
     .pxp-services-accordion .row.no-gutters {
         display: flex;
         flex-direction: column-reverse;
     }
-    .pxp-services-accordion .row.no-gutters > div {
+
+    .pxp-services-accordion .row.no-gutters>div {
         width: 100% !important;
         max-width: 100% !important;
         flex: 0 0 100% !important;
     }
+
     /* Hacer que el título ocupe todo el ancho para que entre en una sola línea */
     .pxp-services-accordion .container .col-md-5 {
         width: 100% !important;
         max-width: 100% !important;
         flex: 0 0 100% !important;
     }
+
     .pxp-services-accordion-fig {
-        height: 400px !important; /* Altura más adecuada para móvil */
+        height: 400px !important;
+        /* Altura más adecuada para móvil */
         position: relative;
         top: 0;
         left: 0;
@@ -86,25 +103,35 @@
         height: auto !important;
         padding-bottom: 16px;
     }
+
     .pxp-services-container {
         height: auto !important;
     }
+
     .mt-300 {
         margin-top: 120px !important;
     }
+
+    .pxp-services-tabs-content-item {
+        padding-top: 40px !important;
+    }
 }
+
 
 @media screen and (max-width: 767px) {
     .pxp-services {
         height: auto !important;
         padding-bottom: 12px;
     }
+
     .pxp-services-container {
         height: auto !important;
     }
+
     .mt-300 {
         margin-top: 120px !important;
     }
+
     /* En móvil los items ocupan el 100% del ancho */
     .pxp-services-item {
         width: 100% !important;
@@ -117,9 +144,11 @@
         height: auto !important;
         padding-bottom: 10px;
     }
+
     .pxp-services-container {
         height: auto !important;
     }
+
     .mt-300 {
         margin-top: 120px !important;
     }
@@ -127,4 +156,58 @@
 
 .pxp-services-accordion-fig {
     height: 650px !important;
+}
+
+/* Texto introductorio justificado y elegante */
+.custom-intro-text {
+    text-align: justify;
+    text-align-last: center;
+    /* Para que la última línea también quede centrada si es corta */
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Aplicando el comportamiento de mobile a resoluciones más grandes para pxp-services-tabs-items */
+.pxp-services-tabs-items {
+    padding-bottom: 0 !important;
+}
+
+.pxp-services-tabs-items .carousel.pxp-services-tabs-carousel {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1365 / 768; /* Proporción de las fotos *_lg.png */
+}
+
+.pxp-services-tabs-carousel .carousel-inner,
+.pxp-services-tabs-carousel .carousel-item {
+    height: 100% !important;
+}
+
+.pxp-services-tabs-items-content {
+    position: static !important;
+}
+
+/* Mostrar la imagen completa en todas las resoluciones (xs, sm, md, lg, xl) */
+.pxp-services-tabs-items .carousel-item.pxp-cover {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+}
+/* Background images for services carousel steps */
+.pxp-service-step-1 { background-image: url(/images/selector_comuna_todobencina_lg.png); }
+.pxp-service-step-2 { background-image: url(/images/listado_estaciones_servicio_todobencina_lg.png); }
+.pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_lg.png); }
+.pxp-service-step-4 { background-image: url(/images/mapa_todobencina_lg.png); }
+
+/* Ajustar proporción para fotos de móvil */
+@media screen and (max-width: 990px) {
+    .pxp-services-tabs-items .carousel.pxp-services-tabs-carousel {
+        aspect-ratio: 1200 / 896 !important; /* Proporción de las fotos *_sm.png */
+    }
+    
+    .pxp-service-step-1 { background-image: url(/images/selector_comuna_todobencina_sm.png); }
+    .pxp-service-step-2 { background-image: url(/images/listado_estaciones_servicio_todobencina_sm.png); }
+    .pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_sm.png); }
+    .pxp-service-step-4 { background-image: url(/images/mapa_todobencina_sm.png); }
 }
