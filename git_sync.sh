@@ -11,9 +11,11 @@ git push origin feature/ia_help
 echo "📍 Haciendo merge a develop..."
 git checkout develop
 git merge feature/ia_help
+git push origin develop
 
 echo "📍 Haciendo merge a master..."
 git checkout master
 git merge develop
+git push origin master
 
 echo "✅ Proceso completado."
