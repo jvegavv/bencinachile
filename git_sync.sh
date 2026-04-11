@@ -19,3 +19,4 @@ git merge develop
 git push origin master
 
 echo "✅ Proceso completado."
+git checkout feature/ia_help2

@@ -185,7 +185,12 @@
                             <h2 class="pxp-section-h2 d-block d-lg-none">¿Como usar TodoBencina?</h2>
                             <p class="pxp-text-light mt-3 mt-lg-4 d-block d-lg-none">Busca bencina de forma más inteligente, ahorra en cada carga.</p>
 
-                            <div class="pxp-services-tabs-items mt-4 mt-md-5 mt-lg-0">
+                            <div class="pxp-services-tabs-items mt-4 mt-md-5 mt-lg-0" style="position: relative;">
+                                <div class="pxp-carousel-controls">
+                                    <button id="pxp-services-carousel-pause-play" title="Pausar/Reproducir">
+                                        <span class="fa fa-pause"></span>
+                                    </button>
+                                </div>
                                 <div id="pxp-services-tabs-carousel" class="carousel slide carousel-fade pxp-services-tabs-carousel" data-ride="carousel" data-interval="5000">
                                     <div class="carousel-inner">
                                         <div class="carousel-item pxp-cover pxp-service-step-1 active"></div>
@@ -204,7 +209,15 @@
                                                     <div class="pxp-services-tabs-content-item-fig">
                                                         <img src="/images/icono_lupa_todobencina.png" alt="Selecciona una comuna en TodoBencina" />
                                                     </div>
-                                                    <div class="pxp-services-tabs-content-item-text">Usa el buscador para seleccionar la comuna donde estás o hacia donde te diriges. Nuestro sistema desplegara un listado y un mapa con todas las estaciones de servicio de la comuna.</div>
+                                                    <div class="pxp-services-tabs-content-item-text">
+                                                        
+                                                    <ul>
+                                                        <li>Dentro del banner principal haga clic en el cuadro de selección "Seleccione Ubicación" .</li>
+                                                        <li>Comportamiento Esperado: Se desplegará un menú interactivo (Select2) que permite escribir el nombre de la comuna (ej: "Santiago", "Las Condes", "Concepción").</li>
+                                                        <li>Nota Técnica: El buscador filtra automáticamente mientras escribe. Una vez seleccionada la comuna, el sistema lo redirigirá a la página específica de esa localidad (ej: /comuna/santiago-centro.html).</li>
+                                                    </ul>
+                                                    
+                                                    </div>
                                                 </a>
                                             </div>
                                             <div class="carousel-item">
@@ -629,6 +642,7 @@
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js_custom/select_custom.js"></script>
+    <script src="/js_custom/carrusel_custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 

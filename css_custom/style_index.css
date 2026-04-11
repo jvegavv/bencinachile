@@ -221,3 +221,51 @@
 .pxp-services-tabs-content-item-fig{
     margin-top: 10px;
 }
+
+/* Pause/Play Button for Carousel */
+.pxp-carousel-controls {
+    position: absolute;
+    top: 20px;
+    right: 35px; /* Ajustado para que no toque exactamente el borde */
+    z-index: 100;
+}
+
+#pxp-services-carousel-pause-play {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #333;
+    outline: none;
+    padding: 0;
+}
+
+#pxp-services-carousel-pause-play:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    color: #fec42d; /* Color de énfasis del sitio */
+}
+
+#pxp-services-carousel-pause-play span {
+    font-size: 14px;
+    line-height: 1;
+}
+
+@media screen and (max-width: 991px) {
+    .pxp-carousel-controls {
+        top: 15px;
+        right: 25px;
+    }
+    #pxp-services-carousel-pause-play {
+        width: 34px;
+        height: 34px;
+    }
+}
