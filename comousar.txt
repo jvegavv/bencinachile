@@ -1,0 +1,48 @@
+================================================================================
+GUÍA DE USUARIO: TODOBENCINA - ANÁLISIS DESDE PERSPECTIVA QA (12 AÑOS EXP)
+================================================================================
+
+Este documento detalla el flujo de usuario principal de la plataforma TodoBencina. 
+Como experto en QA, he desglosado las funcionalidades críticas para asegurar una 
+experiencia de usuario fluida y eficiente en la búsqueda de ahorro de combustible.
+
+1. SELECCIÓN DE COMUNA (Punto de Entrada)
+-----------------------------------------
+El proceso inicia en la página principal (index.html), donde se presenta el "Buscador de Comunas".
+
+- Acción: Haga clic en el cuadro de selección "Seleccione Ubicación" dentro del banner principal.
+- Comportamiento Esperado: Se desplegará un menú interactivo (Select2) que permite escribir el nombre de la comuna (ej: "Santiago", "Las Condes", "Concepción").
+- Nota Técnica: El buscador filtra automáticamente mientras escribe. Una vez seleccionada la comuna, el sistema lo redirigirá a la página específica de esa localidad (ej: /comuna/santiago-centro.html).
+
+2. REVISAR LISTADO DE ESTACIONES DE SERVICIO
+--------------------------------------------
+Una vez en la página de la comuna, el usuario accede a una vista dividida (Split Screen).
+
+- Dashboard Izquierdo: Contiene el listado completo de estaciones detectadas en la zona.
+- Elementos de Cada Estación: Cada ítem muestra el logo de la distribuidora (Copec, Shell, Aramco, etc.), la dirección exacta y el precio de los combustibles disponibles (93, 95, 97, Diesel, Kerosene, etc.).
+- Fecha de Actualización: Es vital observar la marca de tiempo [YYYY-MM-DD HH:MM:SS] junto a cada precio para asegurar que la información sea reciente.
+
+3. ORDENAR PRECIOS DE LAS BENCINAS (Optimización de Ahorro)
+-----------------------------------------------------------
+Para encontrar la opción más económica rápidamente, se debe utilizar el control de ordenamiento.
+
+- Acción: Localice el menú desplegable "Ordenar por" en la parte superior derecha del listado.
+- Flujo: Seleccione el tipo de combustible que desea cargar (ej: "Gasolina 95").
+- Resultado QA: El listado se reordenará automáticamente dejando en la parte superior las estaciones con el precio más bajo. 
+- Feedback Visual: El sistema aplicará un resaltado (fondo verde suave) al combustible seleccionado en todas las estaciones para facilitar la comparación visual rápida.
+
+4. VER ESTACIONES GEOLOCALIZADAS EN EL MAPA
+-------------------------------------------
+La plataforma ofrece una visualización espacial mediante un mapa interactivo (Leaflet).
+
+- Vista Móvil/Escritorio: En escritorio, el mapa ocupa la mitad derecha de la pantalla. En móviles, se puede alternar entre lista y mapa usando el ícono de mapa/lista flotante.
+- Interacción: 
+    * Marcadores: Cada estación aparece con un "pin" en el mapa. Al hacer clic, se muestra la información básica.
+    * Geolocalización Real: Si el usuario otorga permisos de GPS, el mapa mostrará su ubicación actual y calculará la distancia relativa a las estaciones.
+- Nota de Error (QA): Si su GPS está desactivado, aparecerá un modal informativo ("GPS Desactivado") indicando que debe activarlo para ver las estaciones más cercanas a su posición actual.
+
+--------------------------------------------------------------------------------
+RECOMENDACIÓN DEL TESTER:
+Siempre verifique el ordenamiento justo antes de salir de casa para asegurar que 
+está visualizando los datos más frescos capturados por nuestro motor de scraping.
+--------------------------------------------------------------------------------

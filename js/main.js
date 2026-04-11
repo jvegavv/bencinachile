@@ -739,6 +739,12 @@
         $('#pxp-services-tabs-content-carousel').carousel(parseInt(slide));
     });
 
+    $('#pxp-services-tabs-carousel').on('slide.bs.carousel', function(carousel) {
+        $('#pxp-services-tabs-content-carousel').carousel(carousel.to);
+        $('.pxp-services-tabs .carousel-indicators li').removeClass('active');
+        $('.pxp-services-tabs .carousel-indicators li[data-slide-to="' + carousel.to + '"]').addClass('active');
+    });
+
     // Toogle properties advanced search form section
     $('.pxp-search-properties-toggle').click(function () {
         $(this).toggleClass('pxp-active');

@@ -199,6 +199,7 @@
 .pxp-service-step-2 { background-image: url(/images/listado_estaciones_servicio_todobencina_lg.png); }
 .pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_lg.png); }
 .pxp-service-step-4 { background-image: url(/images/mapa_todobencina_lg.png); }
+.pxp-service-step-5 { background-image: url(/images/mapa_todobencina_lg.png); } /* Fallback to step 4 image */
 
 /* Ajustar proporción para fotos de móvil */
 @media screen and (max-width: 990px) {
@@ -210,6 +211,7 @@
     .pxp-service-step-2 { background-image: url(/images/listado_estaciones_servicio_todobencina_sm.png); }
     .pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_sm.png); }
     .pxp-service-step-4 { background-image: url(/images/mapa_todobencina_sm.png); }
+    .pxp-service-step-5 { background-image: url(/images/mapa_todobencina_sm.png); } /* Fallback to step 4 image */
 }
 
 .pxp-services-tabs-content-item-fig{
