@@ -1,29 +1,30 @@
+<!doctype html>
+<html lang="en">
 
-    <!doctype html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-        <link rel="shortcut icon" href="images/favicon_todobencina.png" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/style.css?asdsdd">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-        <link rel="stylesheet" href="../css_custom/style_custom.css" />
-        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link rel="shortcut icon" href="/images/favicon_todobencina.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css?asdsdd">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../css_custom/style_custom.css" />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
 
-        <title>TodoBencina.</title>
-    </head>
-    
-    <body>
-        <input type="hidden" id="latitud"  value="-23.60129279529261">
-        <input type="hidden" id="longitud" value="-70.38556605577469">
-        <input type="hidden" id="comuna" value="Antofagasta">
-        <input type="hidden" id="comuna_json" value="antofagasta.json">
-    
+    <title>TodoBencina.</title>
+</head>
+
+<body>
+    <input type="hidden" id="latitud" value="-23.60129279529261">
+    <input type="hidden" id="longitud" value="-70.38556605577469">
+    <input type="hidden" id="comuna" value="Antofagasta">
+    <input type="hidden" id="comuna_json" value="antofagasta.json">
+
     <div class="pxp-header pxp-full fixed-top">
         <div class="pxp-container-full">
             <div class="row align-items-center">
@@ -73,643 +74,1022 @@
             </div><!--row align-->
         </div>
     </div>
-    
-        <div class="pxp-content pxp-full-height">
 
-            <!--####################### Seccion 1  #######################-->
-            <!--####################### MAPA #######################-->
-            <div class="pxp-map-side pxp-map-right pxp-half">
-                <div id="results-map"></div>
-                <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
-            </div>
-            <!--####################### MAPA #######################-->
-            <!--####################### Seccion 1  #######################-->
+    <div class="pxp-content pxp-full-height">
 
-            <!--####################### Seccion 2  #######################-->
-            <div class="pxp-content-side pxp-content-left pxp-half">
-                <div class="pxp-content-side-wrapper">
+        <!--####################### Seccion 1  #######################-->
+        <!--####################### MAPA #######################-->
+        <div class="pxp-map-side pxp-map-right pxp-half">
+            <div id="results-map"></div>
+            <a href="javascript:void(0);" class="pxp-list-toggle"><span class="fa fa-list"></span></a>
+        </div>
+        <!--####################### MAPA #######################-->
+        <!--####################### Seccion 1  #######################-->
 
-                    <!--####################### FILTRO #######################-->
-                    <div class="d-flex">
-                        <div class="pxp-content-side-search-form">
-                            <div class="row pxp-content-side-search-form-row">
-                                <div class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col">
-                                    <div class="d-flex justify-content-start align-items-center h-100">
-                                        <span class="pxp-bencina-label">Seleccione Ubicación</span>
-                                    </div>
-                                </div>
+        <!--####################### Seccion 2  #######################-->
+        <div class="pxp-content-side pxp-content-left pxp-half">
+            <div class="pxp-content-side-wrapper">
 
-                                <div
-                                    class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col pxp-search-container">
-
-                                    <select class="custom-select" id="pxp-p-search-location">
-                                    </select>
+                <!--####################### FILTRO #######################-->
+                <div class="d-flex">
+                    <div class="pxp-content-side-search-form">
+                        <div class="row pxp-content-side-search-form-row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col">
+                                <div class="d-flex justify-content-start align-items-center h-100">
+                                    <span class="pxp-bencina-label">Seleccione Ubicación</span>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
+                            <div
+                                class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col pxp-search-container">
 
-                    
-
-                
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h2 class="pxp-content-side-h2"> 30 Estaciones de Servicio en Antofagasta</h2>
-                        </div>
-                    </div>    
-
-                    <div class="row pb-4">
-                        <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
-                        <span class="pxp-bencina-label">Ordenar por</span>
-                    </div>
-                    
-                        <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
-                            <div class="form-group d-flex">
-                                <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select" id="pxp-sort-results">
-                                    <option value="1-8" selected="selected">Gasolina 93</option>
-                                    <option value="7-9">Gasolina 95</option>
-                                    <option value="2-10">Gasolina 97</option>
-                                    <option value="4-12">Kerosene</option>
-                                    <option value="3-11">Petroleo Diesel</option>
-                                    <option value="6">GLP Vehicular</option>
-                                    <option value="5">GNC</option>
+                                <select class="custom-select" id="pxp-p-search-location">
                                 </select>
                             </div>
-                          
                         </div>
                     </div>
-    <div class="container"><div class="row">
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="GLP"  value="629">
-                        <a href="#" class="pxp-agents-1-item" data-prop="68">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
+
+                </div>
+
+
+
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="pxp-content-side-h2"> 30 Estaciones de Servicio en Antofagasta</h2>
+                    </div>
+                </div>
+
+                <div class="row pb-4">
+                    <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
+                        <span class="pxp-bencina-label">Ordenar por</span>
+                    </div>
+
+                    <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
+                        <div class="form-group d-flex">
+                            <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select" id="pxp-sort-results">
+                                <option value="1-8" selected="selected">Gasolina 93</option>
+                                <option value="7-9">Gasolina 95</option>
+                                <option value="2-10">Gasolina 97</option>
+                                <option value="4-12">Kerosene</option>
+                                <option value="3-11">Petroleo Diesel</option>
+                                <option value="6">GLP Vehicular</option>
+                                <option value="5">GNC</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="GLP" value="629">
+                            <a href="#" class="pxp-agents-1-item" data-prop="68">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
                                         background-image: url(https://api.bencinaenlinea.cl/storage/logo/1759928841_Logo%20Gasco%20Autogas%20VS.V300.png); 
                                         background-position: top center;
                                         background-size: 200px 100px; 
                                         background-repeat: no-repeat;    
                                         "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">Gasco Autogas</div>
-                                <div class="pxp-agents-1-item-details-name">AVENIDA RADOMIRO TOMIC esq DR. RUIZ TAGLE 000</div>
-                <div class="pxp-agents-1-item-details-email combustible_GLP"> <b> GLP Vehicular </b><span class="fa fa-dollar"></span>629 ($/m3 ) [ 2026-04-02 13:52:11 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="KE"  value="1213"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="69">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">AV. ANTONIO RENDIC 3855</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 15:34:10 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 15:34:10 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 15:34:10 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 15:34:10 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.213 ($/L ) [ 2026-04-03 12:24:35 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1642"> <input type="hidden" id="97"  value="1710"> <input type="hidden" id="DI"  value="1589"> <input type="hidden" id="95"  value="1679">
-                        <a href="#" class="pxp-agents-1-item" data-prop="70">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">AV. MEJILLONES 4950 ESQ. ILLAPEL 4950</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.642 ($/L ) [ 2026-03-31 11:07:47 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.679 ($/L ) [ 2026-03-31 11:07:47 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.710 ($/L ) [ 2026-03-31 11:07:47 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-31 11:07:47 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="KE"  value="1213"> <input type="hidden" id="95"  value="1692"> <input type="hidden" id="A95"  value="1684"> <input type="hidden" id="ADI"  value="1582"> <input type="hidden" id="A93"  value="1646"> <input type="hidden" id="A97"  value="1716">
-                        <a href="#" class="pxp-agents-1-item" data-prop="71">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">SAN MARTIN ESQ. URIBE 0</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.646 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.684 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.716 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.582 ($/L ) [ 2026-04-02 07:20:15 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.213 ($/L ) [ 2026-04-02 21:38:10 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="A93"  value="1649"> <input type="hidden" id="A95"  value="1687"> <input type="hidden" id="A97"  value="1719"> <input type="hidden" id="ADI"  value="1585">
-                        <a href="#" class="pxp-agents-1-item" data-prop="72">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">AV. ANGAMOS 0633</div>
-                <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.649 ($/L ) [ 2026-04-02 07:55:13 ]</div><div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.687 ($/L ) [ 2026-04-02 07:55:13 ]</div><div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.719 ($/L ) [ 2026-04-02 07:55:13 ]</div><div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.585 ($/L ) [ 2026-04-02 07:55:13 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1659"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1595"> <input type="hidden" id="95"  value="1695">
-                        <a href="#" class="pxp-agents-1-item" data-prop="73">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">RUTA 5 NORTE KM 1351 00</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.659 ($/L ) [ 2026-04-07 12:42:06 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-07 12:42:06 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-07 12:42:06 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-07 12:42:06 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1657"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1593"> <input type="hidden" id="KE"  value="1213"> <input type="hidden" id="95"  value="1695">
-                        <a href="#" class="pxp-agents-1-item" data-prop="74">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">AV. ARGENTINA 1103</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-02 11:54:13 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-02 11:54:13 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-02 11:54:13 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-02 11:54:13 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.213 ($/L ) [ 2026-04-03 08:29:07 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="75">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">Pedro Aguirre Cerda 7240</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 15:25:13 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 15:25:13 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 15:25:13 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-03-26 02:03:46 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="A93"  value="1641"> <input type="hidden" id="A95"  value="1676"> <input type="hidden" id="A97"  value="1706"> <input type="hidden" id="ADI"  value="1587">
-                        <a href="#" class="pxp-agents-1-item" data-prop="76">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">AV. ARGENTINA 3211</div>
-                <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.641 ($/L ) [ 2026-03-26 10:11:26 ]</div><div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.676 ($/L ) [ 2026-03-26 10:11:26 ]</div><div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.706 ($/L ) [ 2026-03-26 10:11:26 ]</div><div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.587 ($/L ) [ 2026-03-26 10:11:26 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="77">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">AV. EDMUNDO PEREZ ZUJOVIC 4256</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 08:03:03 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 08:03:03 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 08:03:03 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 08:03:03 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1655"> <input type="hidden" id="97"  value="1725"> <input type="hidden" id="DI"  value="1592"> <input type="hidden" id="95"  value="1693">
-                        <a href="#" class="pxp-agents-1-item" data-prop="78">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">República de Croacia 286</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.655 ($/L ) [ 2026-04-02 11:02:50 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.693 ($/L ) [ 2026-04-02 11:02:50 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.725 ($/L ) [ 2026-04-02 11:02:50 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.592 ($/L ) [ 2026-04-02 11:02:50 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="79">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">Avenida Pedro Aguirre Cerda 10980</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 16:47:37 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 16:47:37 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 16:47:37 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 16:47:37 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1595"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="80">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">Av. Pedro Edmundo Perez Zujovic 10675</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 10:04:52 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 10:04:52 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 10:04:52 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-02 10:04:52 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1653"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1589"> <input type="hidden" id="95"  value="1691">
-                        <a href="#" class="pxp-agents-1-item" data-prop="81">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Avda. Pedro Aguirre Cerda 10615</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 10:02:35 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.691 ($/L ) [ 2026-04-02 10:02:35 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-02 10:02:35 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-04-02 10:02:35 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1659"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1595"> <input type="hidden" id="95"  value="1695">
-                        <a href="#" class="pxp-agents-1-item" data-prop="82">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">Ruta 5 Norte Km. 1398 0</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.659 ($/L ) [ 2026-04-02 08:31:31 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-02 08:31:31 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-02 08:31:31 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-02 08:31:31 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1655"> <input type="hidden" id="97"  value="1725"> <input type="hidden" id="DI"  value="1592"> <input type="hidden" id="95"  value="1693">
-                        <a href="#" class="pxp-agents-1-item" data-prop="84">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Avda. Grecia 430</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.655 ($/L ) [ 2026-04-02 09:40:23 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.693 ($/L ) [ 2026-04-02 09:40:23 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.725 ($/L ) [ 2026-04-02 09:40:23 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.592 ($/L ) [ 2026-04-02 09:40:23 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1657"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1593"> <input type="hidden" id="95"  value="1695">
-                        <a href="#" class="pxp-agents-1-item" data-prop="85">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Av. Argentina 2802</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-03 14:48:51 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-03 14:48:51 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-03 14:48:51 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-03 14:48:51 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1653"> <input type="hidden" id="97"  value="1722"> <input type="hidden" id="DI"  value="1589"> <input type="hidden" id="95"  value="1690">
-                        <a href="#" class="pxp-agents-1-item" data-prop="86">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Av. Cabo Juan Bolivar 907 esquina Huamachuco</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 14:24:03 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.690 ($/L ) [ 2026-04-02 14:24:03 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.722 ($/L ) [ 2026-04-02 14:24:03 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-04-02 14:24:03 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="88">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Av. Antonio Rendic 6850</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 10:15:03 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-06 11:41:17 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-06 11:41:17 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 10:15:04 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="89">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Av. Edmundo Pérez Zujovic 5030</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-07 07:21:31 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-07 07:21:31 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-07 07:21:31 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-07 07:21:31 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1589"> <input type="hidden" id="95"  value="1692">
-                        <a href="#" class="pxp-agents-1-item" data-prop="90">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">PEDRO AGUIRRE CERDA 11385</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-03 21:33:05 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-03 21:33:05 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-03 21:33:05 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-31 21:45:25 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1653"> <input type="hidden" id="97"  value="1722"> <input type="hidden" id="DI"  value="1589"> <input type="hidden" id="95"  value="1690">
-                        <a href="#" class="pxp-agents-1-item" data-prop="91">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Avda Pedro Aguirre Cerda 10850</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 08:30:41 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.690 ($/L ) [ 2026-04-02 08:30:41 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.722 ($/L ) [ 2026-04-02 08:30:41 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-31 15:20:35 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692"> <input type="hidden" id="A93"  value="1646"> <input type="hidden" id="A95"  value="1684"> <input type="hidden" id="A97"  value="1719"> <input type="hidden" id="ADI"  value="1582">
-                        <a href="#" class="pxp-agents-1-item" data-prop="92">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Antonio Rendic 4561</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 13:21:03 ]</div><div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.646 ($/L ) [ 2026-04-02 13:21:03 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 13:21:03 ]</div><div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.684 ($/L ) [ 2026-04-02 13:21:03 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-07 20:05:49 ]</div><div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.719 ($/L ) [ 2026-04-07 20:05:49 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-07 20:05:49 ]</div><div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.582 ($/L ) [ 2026-04-07 20:05:49 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1657"> <input type="hidden" id="97"  value="1731"> <input type="hidden" id="DI"  value="1593"> <input type="hidden" id="95"  value="1695">
-                        <a href="#" class="pxp-agents-1-item" data-prop="93">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Avda. 21 De Mayo/Avda. Argentina 1119</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-06 14:06:05 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-06 14:06:05 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.731 ($/L ) [ 2026-04-06 14:06:05 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-02 10:05:53 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1657"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1593"> <input type="hidden" id="95"  value="1695">
-                        <a href="#" class="pxp-agents-1-item" data-prop="94">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Avda. Argentina 1105</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-06 14:06:08 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-06 14:06:08 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-06 14:06:08 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-02 10:06:00 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1654"> <input type="hidden" id="97"  value="1724"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1692"> <input type="hidden" id="A93"  value="1646"> <input type="hidden" id="A97"  value="1716"> <input type="hidden" id="ADI"  value="1582"> <input type="hidden" id="A95"  value="1684">
-                        <a href="#" class="pxp-agents-1-item" data-prop="95">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Balmaceda 2408</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 13:21:04 ]</div><div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.646 ($/L ) [ 2026-04-02 13:21:04 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 13:21:04 ]</div><div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.684 ($/L ) [ 2026-04-02 13:21:04 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-07 20:05:50 ]</div><div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.716 ($/L ) [ 2026-04-07 20:05:50 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-07 20:05:50 ]</div><div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.582 ($/L ) [ 2026-04-07 20:05:50 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1658"> <input type="hidden" id="97"  value="1726"> <input type="hidden" id="DI"  value="1595"> <input type="hidden" id="95"  value="1694">
-                        <a href="#" class="pxp-agents-1-item" data-prop="96">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Panamericana Norte Km 1354</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.658 ($/L ) [ 2026-04-02 10:06:00 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.694 ($/L ) [ 2026-04-02 10:06:00 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.726 ($/L ) [ 2026-04-02 10:06:00 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-02 10:06:00 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1653"> <input type="hidden" id="97"  value="1723"> <input type="hidden" id="DI"  value="1590"> <input type="hidden" id="95"  value="1691">
-                        <a href="#" class="pxp-agents-1-item" data-prop="97">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Pedro Aguirre Cerda 8450</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 10:05:54 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.691 ($/L ) [ 2026-04-02 10:05:54 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.723 ($/L ) [ 2026-04-02 10:05:54 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 10:05:54 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1658"> <input type="hidden" id="95"  value="1693"> <input type="hidden" id="97"  value="1725"> <input type="hidden" id="DI"  value="1594">
-                        <a href="#" class="pxp-agents-1-item" data-prop="2167">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Panamericana Norte KM 1352, Antofagasta</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.658 ($/L ) [ 2026-04-02 14:13:48 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.693 ($/L ) [ 2026-04-02 14:13:48 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.725 ($/L ) [ 2026-04-02 14:13:48 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.594 ($/L ) [ 2026-03-26 11:44:18 ]</div></div></a></div>
-                
-                    <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
-                         <input type="hidden" id="93"  value="1659"> <input type="hidden" id="95"  value="1695"> <input type="hidden" id="97"  value="1727"> <input type="hidden" id="DI"  value="1595">
-                        <a href="#" class="pxp-agents-1-item" data-prop="2183">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
-                            </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
-                                <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">RUTA 5 NORTE KM 1392</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.659 ($/L ) [ 2026-04-03 08:57:47 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-03 08:57:47 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-03 08:57:47 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-03 08:57:59 ]</div></div></a></div></div></div>
-               <!--####################### LISTADO #######################-->
-            </div>
-               <div class="pxp-footer pt-100 pb-100 mt-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-4">
-                        <div class="pxp-footer-logo">TodoBencina.</div>
-                        <div class="pxp-footer-social mt-2">
-                            <a href="mailto:jvegavv@gmail.com"><span class="fa fa-envelope-o"></span></a>
-                            <a href="https://wa.me/56992285043"><span class="fa fa-whatsapp"></span></a>
-                            <a href="https://www.instagram.com/jvegavv1/?hl=es""><span class="fa fa-instagram"></span></a>
-                            <a href="https://www.tiktok.com/@jvegavv"><span class="fa fa-mobile"></span></a>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">Gasco Autogas</div>
+                                    <div class="pxp-agents-1-item-details-name">AVENIDA RADOMIRO TOMIC esq DR. RUIZ
+                                        TAGLE 000</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_GLP"> <b> GLP Vehicular
+                                        </b><span class="fa fa-dollar"></span>629 ($/m3 ) [ 2026-04-02 13:52:11 ]</div>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-8">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-4">
-                                <h4 class="pxp-footer-header mt-4 mt-lg-0">Bencineras Cerca</h4>
-                                <ul class="list-unstyled pxp-footer-links mt-2">
-                                    <li><a href="/comuna/santiago-centro.html">Mapa por Comuna</a></li>                                
-                                </ul>
-                            </div>
-                            <div class="col-sm-12 col-md-4">
-                                <h4 class="pxp-footer-header mt-4 mt-lg-0">Conoce tu Combustible</h4>
-                                <ul class="list-unstyled pxp-footer-links mt-2">
-                                    <li><a href="/combustible/bencina_93_octanos.html">Bencina 93</a></li>
-                                    <li><a href="/combustible/bencina_95_octanos.html">Bencina 95</a></li>
-                                    <li><a href="/combustible/bencina_97_octanos.html">Bencina 97</a></li>
-                                    <li><a href="/combustible/kerosene_parafina.html">Kerosene Parafina</a></li>
-                                    <li><a href="/combustible/petroleo_diesel.html">Petroleo Diesel</a></li>
-                                    <li><a href="/combustible/gas_liquado_petroleo_glp.html">Gas Liquado Petroleo (GLP)</a>
-                                    </li>
-                                    <li><a href="/combustible/gas_natural_comprimido_gnc.html">Gas Natural Comprimido
-                                            (GNC)</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-12 col-md-4">
-                                <h4 class="pxp-footer-header mt-4 mt-lg-0">Conoce tu Bencinera</h4>
-                                <ul class="list-unstyled pxp-footer-links mt-2">
-                                    <li><a href="/estacion-servicio/aramco.html">Aramco</a></li>
-                                    <li><a href="/estacion-servicio/copec.html">Copec</a></li>
-                                    <li><a href="/estacion-servicio/shell.html">Shell</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="pxp-footer-bottom mt-2">
-                    <div><a href="#">Terminos y Condiciones</a> y <a href="#">Politica Privada</a></div>
-                    <div class="pxp-footer-copyright">&copy; TodoBencina. Todos los derechos reservados. 2026</div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="KE" value="1213"> <input
+                                type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="69">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">AV. ANTONIO RENDIC 3855</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 15:34:10 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 15:34:10 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 15:34:10 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 15:34:10 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span
+                                            class="fa fa-dollar"></span>1.213 ($/L ) [ 2026-04-03 12:24:35 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1642"> <input type="hidden" id="97" value="1710"> <input
+                                type="hidden" id="DI" value="1589"> <input type="hidden" id="95" value="1679">
+                            <a href="#" class="pxp-agents-1-item" data-prop="70">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">AV. MEJILLONES 4950 ESQ. ILLAPEL 4950
+                                    </div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.642 ($/L ) [ 2026-03-31 11:07:47 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.679 ($/L ) [ 2026-03-31 11:07:47 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.710 ($/L ) [ 2026-03-31 11:07:47 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-31 11:07:47 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="KE" value="1213"> <input
+                                type="hidden" id="95" value="1692"> <input type="hidden" id="A95" value="1684"> <input
+                                type="hidden" id="ADI" value="1582"> <input type="hidden" id="A93" value="1646"> <input
+                                type="hidden" id="A97" value="1716">
+                            <a href="#" class="pxp-agents-1-item" data-prop="71">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">SAN MARTIN ESQ. URIBE 0</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.646 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.684 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.716 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.582 ($/L ) [ 2026-04-02 07:20:15 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span
+                                            class="fa fa-dollar"></span>1.213 ($/L ) [ 2026-04-02 21:38:10 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="A93" value="1649"> <input type="hidden" id="A95" value="1687">
+                            <input type="hidden" id="A97" value="1719"> <input type="hidden" id="ADI" value="1585">
+                            <a href="#" class="pxp-agents-1-item" data-prop="72">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">AV. ANGAMOS 0633</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.649 ($/L ) [ 2026-04-02 07:55:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.687 ($/L ) [ 2026-04-02 07:55:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.719 ($/L ) [ 2026-04-02 07:55:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.585 ($/L ) [ 2026-04-02 07:55:13 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1659"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1595"> <input type="hidden" id="95" value="1695">
+                            <a href="#" class="pxp-agents-1-item" data-prop="73">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">RUTA 5 NORTE KM 1351 00</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.659 ($/L ) [ 2026-04-07 12:42:06 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-07 12:42:06 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-07 12:42:06 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-07 12:42:06 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1657"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1593"> <input type="hidden" id="KE" value="1213"> <input
+                                type="hidden" id="95" value="1695">
+                            <a href="#" class="pxp-agents-1-item" data-prop="74">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">AV. ARGENTINA 1103</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-02 11:54:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-02 11:54:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-02 11:54:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-02 11:54:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span
+                                            class="fa fa-dollar"></span>1.213 ($/L ) [ 2026-04-03 08:29:07 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="75">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">Pedro Aguirre Cerda 7240</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 15:25:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 15:25:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 15:25:13 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-03-26 02:03:46 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="A93" value="1641"> <input type="hidden" id="A95" value="1676">
+                            <input type="hidden" id="A97" value="1706"> <input type="hidden" id="ADI" value="1587">
+                            <a href="#" class="pxp-agents-1-item" data-prop="76">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">AV. ARGENTINA 3211</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.641 ($/L ) [ 2026-03-26 10:11:26 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.676 ($/L ) [ 2026-03-26 10:11:26 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.706 ($/L ) [ 2026-03-26 10:11:26 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.587 ($/L ) [ 2026-03-26 10:11:26 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="77">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">AV. EDMUNDO PEREZ ZUJOVIC 4256</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 08:03:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 08:03:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 08:03:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 08:03:03 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1655"> <input type="hidden" id="97" value="1725"> <input
+                                type="hidden" id="DI" value="1592"> <input type="hidden" id="95" value="1693">
+                            <a href="#" class="pxp-agents-1-item" data-prop="78">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">República de Croacia 286</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.655 ($/L ) [ 2026-04-02 11:02:50 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.693 ($/L ) [ 2026-04-02 11:02:50 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.725 ($/L ) [ 2026-04-02 11:02:50 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.592 ($/L ) [ 2026-04-02 11:02:50 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="79">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">Avenida Pedro Aguirre Cerda 10980</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 16:47:37 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 16:47:37 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 16:47:37 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 16:47:37 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1595"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="80">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">Av. Pedro Edmundo Perez Zujovic 10675
+                                    </div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 10:04:52 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 10:04:52 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-02 10:04:52 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-02 10:04:52 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1653"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1589"> <input type="hidden" id="95" value="1691">
+                            <a href="#" class="pxp-agents-1-item" data-prop="81">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Avda. Pedro Aguirre Cerda 10615</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 10:02:35 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.691 ($/L ) [ 2026-04-02 10:02:35 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-02 10:02:35 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-04-02 10:02:35 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1659"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1595"> <input type="hidden" id="95" value="1695">
+                            <a href="#" class="pxp-agents-1-item" data-prop="82">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">Ruta 5 Norte Km. 1398 0</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.659 ($/L ) [ 2026-04-02 08:31:31 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-02 08:31:31 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-02 08:31:31 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-02 08:31:31 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1655"> <input type="hidden" id="97" value="1725"> <input
+                                type="hidden" id="DI" value="1592"> <input type="hidden" id="95" value="1693">
+                            <a href="#" class="pxp-agents-1-item" data-prop="84">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Avda. Grecia 430</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.655 ($/L ) [ 2026-04-02 09:40:23 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.693 ($/L ) [ 2026-04-02 09:40:23 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.725 ($/L ) [ 2026-04-02 09:40:23 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.592 ($/L ) [ 2026-04-02 09:40:23 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1657"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1593"> <input type="hidden" id="95" value="1695">
+                            <a href="#" class="pxp-agents-1-item" data-prop="85">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Av. Argentina 2802</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-03 14:48:51 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-03 14:48:51 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-03 14:48:51 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-03 14:48:51 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1653"> <input type="hidden" id="97" value="1722"> <input
+                                type="hidden" id="DI" value="1589"> <input type="hidden" id="95" value="1690">
+                            <a href="#" class="pxp-agents-1-item" data-prop="86">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Av. Cabo Juan Bolivar 907 esquina
+                                        Huamachuco</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 14:24:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.690 ($/L ) [ 2026-04-02 14:24:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.722 ($/L ) [ 2026-04-02 14:24:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-04-02 14:24:03 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="88">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Av. Antonio Rendic 6850</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 10:15:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-06 11:41:17 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-06 11:41:17 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 10:15:04 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="89">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Av. Edmundo Pérez Zujovic 5030</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-07 07:21:31 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-07 07:21:31 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-07 07:21:31 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-07 07:21:31 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1589"> <input type="hidden" id="95" value="1692">
+                            <a href="#" class="pxp-agents-1-item" data-prop="90">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">PEDRO AGUIRRE CERDA 11385</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-03 21:33:05 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-03 21:33:05 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-03 21:33:05 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-31 21:45:25 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1653"> <input type="hidden" id="97" value="1722"> <input
+                                type="hidden" id="DI" value="1589"> <input type="hidden" id="95" value="1690">
+                            <a href="#" class="pxp-agents-1-item" data-prop="91">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Avda Pedro Aguirre Cerda 10850</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 08:30:41 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.690 ($/L ) [ 2026-04-02 08:30:41 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.722 ($/L ) [ 2026-04-02 08:30:41 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-31 15:20:35 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692"> <input
+                                type="hidden" id="A93" value="1646"> <input type="hidden" id="A95" value="1684"> <input
+                                type="hidden" id="A97" value="1719"> <input type="hidden" id="ADI" value="1582">
+                            <a href="#" class="pxp-agents-1-item" data-prop="92">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Antonio Rendic 4561</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 13:21:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.646 ($/L ) [ 2026-04-02 13:21:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 13:21:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.684 ($/L ) [ 2026-04-02 13:21:03 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-07 20:05:49 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.719 ($/L ) [ 2026-04-07 20:05:49 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-07 20:05:49 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.582 ($/L ) [ 2026-04-07 20:05:49 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1657"> <input type="hidden" id="97" value="1731"> <input
+                                type="hidden" id="DI" value="1593"> <input type="hidden" id="95" value="1695">
+                            <a href="#" class="pxp-agents-1-item" data-prop="93">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Avda. 21 De Mayo/Avda. Argentina 1119
+                                    </div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-06 14:06:05 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-06 14:06:05 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.731 ($/L ) [ 2026-04-06 14:06:05 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-02 10:05:53 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1657"> <input type="hidden" id="97" value="1727"> <input
+                                type="hidden" id="DI" value="1593"> <input type="hidden" id="95" value="1695">
+                            <a href="#" class="pxp-agents-1-item" data-prop="94">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Avda. Argentina 1105</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.657 ($/L ) [ 2026-04-06 14:06:08 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-06 14:06:08 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-06 14:06:08 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-04-02 10:06:00 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1654"> <input type="hidden" id="97" value="1724"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1692"> <input
+                                type="hidden" id="A93" value="1646"> <input type="hidden" id="A97" value="1716"> <input
+                                type="hidden" id="ADI" value="1582"> <input type="hidden" id="A95" value="1684">
+                            <a href="#" class="pxp-agents-1-item" data-prop="95">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Balmaceda 2408</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.654 ($/L ) [ 2026-04-02 13:21:04 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.646 ($/L ) [ 2026-04-02 13:21:04 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.692 ($/L ) [ 2026-04-02 13:21:04 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.684 ($/L ) [ 2026-04-02 13:21:04 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.724 ($/L ) [ 2026-04-07 20:05:50 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.716 ($/L ) [ 2026-04-07 20:05:50 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-07 20:05:50 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.582 ($/L ) [ 2026-04-07 20:05:50 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1658"> <input type="hidden" id="97" value="1726"> <input
+                                type="hidden" id="DI" value="1595"> <input type="hidden" id="95" value="1694">
+                            <a href="#" class="pxp-agents-1-item" data-prop="96">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Panamericana Norte Km 1354</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.658 ($/L ) [ 2026-04-02 10:06:00 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.694 ($/L ) [ 2026-04-02 10:06:00 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.726 ($/L ) [ 2026-04-02 10:06:00 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-02 10:06:00 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1653"> <input type="hidden" id="97" value="1723"> <input
+                                type="hidden" id="DI" value="1590"> <input type="hidden" id="95" value="1691">
+                            <a href="#" class="pxp-agents-1-item" data-prop="97">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">SHELL</div>
+                                    <div class="pxp-agents-1-item-details-name">Pedro Aguirre Cerda 8450</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-04-02 10:05:54 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.691 ($/L ) [ 2026-04-02 10:05:54 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.723 ($/L ) [ 2026-04-02 10:05:54 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.590 ($/L ) [ 2026-04-02 10:05:54 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1658"> <input type="hidden" id="95" value="1693"> <input
+                                type="hidden" id="97" value="1725"> <input type="hidden" id="DI" value="1594">
+                            <a href="#" class="pxp-agents-1-item" data-prop="2167">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">ARAMCO</div>
+                                    <div class="pxp-agents-1-item-details-name">Panamericana Norte KM 1352, Antofagasta
+                                    </div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.658 ($/L ) [ 2026-04-02 14:13:48 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.693 ($/L ) [ 2026-04-02 14:13:48 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.725 ($/L ) [ 2026-04-02 14:13:48 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.594 ($/L ) [ 2026-03-26 11:44:18 ]</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
+                            <input type="hidden" id="93" value="1659"> <input type="hidden" id="95" value="1695"> <input
+                                type="hidden" id="97" value="1727"> <input type="hidden" id="DI" value="1595">
+                            <a href="#" class="pxp-agents-1-item" data-prop="2183">
+                                <div class="pxp-agents-1-item-fig-container rounded-lg">
+                                    <div class="pxp-agents-1-item-fig pxp-cover" style="
+                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
+                                        background-position: top center;
+                                        background-size: 200px 100px; 
+                                        background-repeat: no-repeat;    
+                                        "></div>
+                                </div>
+                                <div class="pxp-agents-1-item-details rounded-lg">
+                                    <div class="pxp-agents-1-item-details-name">COPEC</div>
+                                    <div class="pxp-agents-1-item-details-name">RUTA 5 NORTE KM 1392</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93
+                                        </b><span class="fa fa-dollar"></span>1.659 ($/L ) [ 2026-04-03 08:57:47 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95
+                                        </b><span class="fa fa-dollar"></span>1.695 ($/L ) [ 2026-04-03 08:57:47 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97
+                                        </b><span class="fa fa-dollar"></span>1.727 ($/L ) [ 2026-04-03 08:57:47 ]</div>
+                                    <div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel
+                                        </b><span class="fa fa-dollar"></span>1.595 ($/L ) [ 2026-04-03 08:57:59 ]</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--####################### LISTADO #######################-->
+            </div>
+            <div class="pxp-footer pt-100 pb-100 mt-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="pxp-footer-logo">TodoBencina.</div>
+                            <div class="pxp-footer-social mt-2">
+                                <a href="mailto:jvegavv@gmail.com"><span class="fa fa-envelope-o"></span></a>
+                                <a href="https://wa.me/56992285043"><span class="fa fa-whatsapp"></span></a>
+                                <a href="https://www.instagram.com/jvegavv1/?hl=es""><span class=" fa
+                                    fa-instagram"></span></a>
+                                <a href="https://www.tiktok.com/@jvegavv"><span class="fa fa-mobile"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-8">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <h4 class="pxp-footer-header mt-4 mt-lg-0">Bencineras Cerca</h4>
+                                    <ul class="list-unstyled pxp-footer-links mt-2">
+                                        <li><a href="/comuna/santiago-centro.html">Mapa por Comuna</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <h4 class="pxp-footer-header mt-4 mt-lg-0">Conoce tu Combustible</h4>
+                                    <ul class="list-unstyled pxp-footer-links mt-2">
+                                        <li><a href="/combustible/bencina_93_octanos.html">Bencina 93</a></li>
+                                        <li><a href="/combustible/bencina_95_octanos.html">Bencina 95</a></li>
+                                        <li><a href="/combustible/bencina_97_octanos.html">Bencina 97</a></li>
+                                        <li><a href="/combustible/kerosene_parafina.html">Kerosene Parafina</a></li>
+                                        <li><a href="/combustible/petroleo_diesel.html">Petroleo Diesel</a></li>
+                                        <li><a href="/combustible/gas_liquado_petroleo_glp.html">Gas Liquado Petroleo
+                                                (GLP)</a>
+                                        </li>
+                                        <li><a href="/combustible/gas_natural_comprimido_gnc.html">Gas Natural
+                                                Comprimido
+                                                (GNC)</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <h4 class="pxp-footer-header mt-4 mt-lg-0">Conoce tu Bencinera</h4>
+                                    <ul class="list-unstyled pxp-footer-links mt-2">
+                                        <li><a href="/estacion-servicio/aramco.html">Aramco</a></li>
+                                        <li><a href="/estacion-servicio/copec.html">Copec</a></li>
+                                        <li><a href="/estacion-servicio/shell.html">Shell</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pxp-footer-bottom mt-2">
+                        <div><a href="#">Terminos y Condiciones</a> y <a href="#">Politica Privada</a></div>
+                        <div class="pxp-footer-copyright">&copy; TodoBencina. Todos los derechos reservados. 2026</div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <!--####################### Seccion 2  #######################-->
     </div>
-    
-        <div class="modal fade" id="gpsModal" tabindex="-1" role="dialog" aria-labelledby="gpsModalLabel" aria-hidden="false">
+
+    <div class="modal fade" id="gpsModal" tabindex="-1" role="dialog" aria-labelledby="gpsModalLabel"
+        aria-hidden="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content border-0 shadow">
-            <div class="modal-header border-0 pb-0">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center pt-0">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-light rounded-circle"
+                        style="width: 80px; height: 80px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#6c757d"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </div>
+
+                    <h5 class="modal-title font-weight-bold mb-2" id="gpsModalLabel">GPS Desactivado</h5>
+                    <p class="text-muted px-3">Para mostrarte las bencineras cercanas en la región, necesitamos acceder
+                        a tu ubicación. Por favor, actívala en tu navegador.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center pb-4">
+                    <button type="button" class="btn btn-dark px-4 shadow-sm" data-dismiss="modal">Entendido</button>
+                </div>
             </div>
-            <div class="modal-body text-center pt-0">
-              <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 80px; height: 80px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#6c757d" viewBox="0 0 16 16">
-                  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </div>
-              
-              <h5 class="modal-title font-weight-bold mb-2" id="gpsModalLabel">GPS Desactivado</h5>
-              <p class="text-muted px-3">Para mostrarte las bencineras cercanas en la región, necesitamos acceder a tu ubicación. Por favor, actívala en tu navegador.</p>
-            </div>
-            <div class="modal-footer border-0 justify-content-center pb-4">
-              <button type="button" class="btn btn-dark px-4 shadow-sm" data-dismiss="modal">Entendido</button>
-            </div>
-          </div>
         </div>
-      </div>
-    
-    
-    <script src="../js/jquery-3.4.1.min.js"></script>
+    </div>
+
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
@@ -724,4 +1104,3 @@
 </body>
 
 </html>
-    
