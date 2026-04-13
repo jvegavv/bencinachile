@@ -41,6 +41,22 @@ La plataforma ofrece una visualización espacial mediante un mapa interactivo (L
     * Geolocalización Real: Si el usuario otorga permisos de GPS, el mapa mostrará su ubicación actual y calculará la distancia relativa a las estaciones.
 - Nota de Error (QA): Si su GPS está desactivado, aparecerá un modal informativo ("GPS Desactivado") indicando que debe activarlo para ver las estaciones más cercanas a su posición actual.
 
+
+5. INFORMACIÓN DE LOS POPUPS Y NAVEGACIÓN (GPS)
+-----------------------------------------------
+Al interactuar con los marcadores (pins) en el mapa, se activará un "Popup" informativo.
+
+- Contenido del Popup:
+    * Nombre y Dirección: Identificación clara de la bencinera y su ubicación exacta.
+    * Precios Detallados: Listado de todos los combustibles disponibles con su precio formateado en pesos chilenos ($).
+    * Timestamp: Fecha y hora exacta de la última captura de datos para ese combustible específico.
+
+- Cómo navegar a la estación (Waze/Google Maps):
+    * Acción: Dentro del mismo popup, en la parte inferior, encontrará dos botones de acción rápida: "GOOGLE MAPS" y "WAZE".
+    * Google Maps: Abre la ubicación en Google Maps para obtener la ruta óptima.
+    * Waze: Abre la aplicación Waze configurada directamente para iniciar la navegación ("Direct to").
+    * Nota QA: Esta integración asegura que las coordenadas sean exactas, evitando errores de búsqueda manual en las aplicaciones de mapas.
+
 --------------------------------------------------------------------------------
 RECOMENDACIÓN DEL TESTER:
 Siempre verifique el ordenamiento justo antes de salir de casa para asegurar que 
