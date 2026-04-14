@@ -221,3 +221,10 @@
 .btn-ruta:hover {
     background: #f8f9fa;
 }
+
+/* Reubicación de cuadro de contacto para pantallas >= 768px */
+@media (min-width: 768px) {
+    .pxp-contact-hero-offices-container {
+        bottom: 200px !important; /* Lo sube para que sea visible al ingresar */
+    }
+}
