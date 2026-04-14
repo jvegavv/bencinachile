@@ -58,10 +58,10 @@ $(document).ready(function () {
     // 3. Inyectar al final del body
     $('body').append(bannerHTML);
 
-    // 4. Mostrar con un ligero retraso de 1.5 segundos
+    // 4. Mostrar con un ligero retraso de 2 segundos para que sea menos brusco
     setTimeout(function() {
         $('#pxp-cookie-banner').addClass('show');
-    }, 1500);
+    }, 2000);
 
     // 5. Función para cerrar el banner y guardar preferencia
     function closeBanner(accepted) {
