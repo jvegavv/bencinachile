@@ -352,3 +352,45 @@
         width: 100%;
     }
 }
+
+/* ****************************************** */
+/* SOCIAL ICONS 'COMING SOON' STYLE */
+/* ****************************************** */
+.pxp-social-item-coming-soon {
+    filter: grayscale(100%);
+    opacity: 0.4;
+    cursor: help !important;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.pxp-social-item-coming-soon:hover {
+    opacity: 0.7 !important;
+    filter: grayscale(50%) !important;
+}
+
+.pxp-social-item-coming-soon::after {
+    content: attr(data-pxp-title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: #333;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 99;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.pxp-social-item-coming-soon:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
