@@ -228,3 +228,127 @@
         bottom: 200px !important; /* Lo sube para que sea visible al ingresar */
     }
 }
+
+/* ****************************************** */
+/* COOKIE BANNER PREMIUM (GLASSMORPHISM) */
+/* ****************************************** */
+#pxp-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none; /* Se maneja via JS */
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#pxp-cookie-banner.show {
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pxp-cookie-text {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.pxp-cookie-text a {
+    color: #333;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.pxp-cookie-btns {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.pxp-cookie-btn-accept {
+    background-color: #fec42d;
+    color: #333;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.pxp-cookie-btn-accept:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pxp-cookie-btn-reject {
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pxp-cookie-btn-reject:hover {
+    background-color: #f8f8f8;
+    color: #333;
+    border-color: #999;
+}
+
+/* Adaptación para Modo Oscuro si la clase existe en body */
+.pxp-dark-mode #pxp-cookie-banner {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pxp-dark-mode .pxp-cookie-text {
+    color: #fff;
+}
+
+.pxp-dark-mode .pxp-cookie-text a {
+    color: #fec42d;
+}
+
+@media (max-width: 767px) {
+    #pxp-cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        padding: 20px;
+    }
+    .pxp-cookie-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .pxp-cookie-btns {
+        margin-left: 0;
+        width: 100%;
+    }
+    .pxp-cookie-btn-accept {
+        width: 100%;
+    }
+}
