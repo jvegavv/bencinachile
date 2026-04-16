@@ -68,23 +68,14 @@
       .pxp-bencina-label {
           font-family: 'Roboto', sans-serif;
           font-weight: 700;
-          /* Grosor elegante */
-          color: #333;
-          /* Color principal de tu plantilla */
+          color: #111;
           font-size: 14px;
-          /* Tamaño equilibrado */
           text-transform: uppercase;
-          /* Opcional: Da un aspecto de etiqueta técnica */
           letter-spacing: 1px;
-          /* Espaciado entre letras elegante */
           white-space: nowrap;
-          /* Evita que se rompa en dos líneas */
-          border-right: 3px solid #fec42d;
-          /* Detalle: línea de color (puedes usar el amarillo de Aramco) */
-          padding-right: 15px;
-          /* Espacio entre el texto y el borde derecho */
+          padding-right: 0px;
           text-align: left;
-          display: block; /* O inline-block si prefieres */
+          display: block;
       }
 
       .pxp-agents-1-item-details {
@@ -393,4 +384,356 @@
 .pxp-social-item-coming-soon:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(-5px);
+}
+/* ****************************************** */
+/* GAS STATION ITEM MODERN DESIGN (LLAMATIVO) */
+/* ****************************************** */
+.pxp-agents-1-item {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin-bottom: 24px !important; /* Consistent spacing */
+    height: auto !important; /* Adapt to content */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none !important;
+}
+
+.pxp-agents-1-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border-color: #fec42d; /* Aramco yellow accent on hover */
+}
+
+/* BRAND LOGO CONTAINER */
+.pxp-agents-1-item-fig-container {
+    position: relative !important;
+    width: 100% !important;
+    height: 100px !important;
+    background: #f8f9fa;
+    border: none !important;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.pxp-agents-1-item-fig {
+    position: relative !important;
+    width: 60% !important;
+    height: 60px !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* DETAILS SECTION */
+.pxp-agents-1-item-details {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    padding: 0 !important;
+    transform: none !important; /* Reset Resideo defaults */
+    background: none !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pxp-agents-1-item-details-name {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pxp-agents-1-item-details-address {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pxp-agents-1-item-details-address::before {
+    content: "\f041"; /* FontAwesome map-marker */
+    font-family: FontAwesome;
+    color: #fec42d;
+}
+
+/* FUEL PRICE GRID */
+.fuel-price-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.fuel-badge {
+    background: #fdfdfd;
+    border: 1px solid #eeeeee;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.fuel-badge:hover {
+    background: #fffbef;
+    border-color: #fec42d;
+}
+
+.fuel-type {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.fuel-value {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #222;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.fuel-currency {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #aaa;
+    margin-left: 2px;
+}
+
+.fuel-updated {
+    font-size: 0.65rem;
+    color: #bbb;
+    margin-top: 4px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 8px;
+    font-style: italic;
+    text-align: right;
+}
+
+/* DARK MODE OVERRIDES */
+body.pxp-dark-mode .pxp-agents-1-item {
+    background: #111;
+    border-color: #222;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.pxp-dark-mode .pxp-agents-1-item-details-name {
+    color: #eee;
+}
+
+body.pxp-dark-mode .fuel-badge {
+    background: #1a1a1a;
+    border-color: #222;
+}
+
+body.pxp-dark-mode .fuel-value {
+    color: #fff;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 576px) {
+    .fuel-price-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    .pxp-agents-1-item {
+        padding: 16px;
+    }
+}
+
+/* HIGHLIGHTING FOR SORTED FUEL TYPE (VERDE SUAVE) */
+.fuel-badge.highlight {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.1) !important;
+}
+
+.fuel-badge.highlight .fuel-type {
+    color: #155724 !important;
+}
+
+.fuel-badge.highlight .fuel-value {
+    color: #155724 !important;
+}
+
+.fuel-badge.highlight .fuel-currency {
+    color: #2e7d32 !important;
+}
+
+body.pxp-dark-mode .fuel-badge.highlight {
+    background-color: #1e4620 !important;
+    border-color: #2e7d32 !important;
+}
+
+body.pxp-dark-mode .fuel-badge.highlight .fuel-type,
+body.pxp-dark-mode .fuel-badge.highlight .fuel-value {
+    color: #d4edda !important;
+}
+
+/* ****************************************** */
+/* SEARCH & FILTER SECTION OVERHAUL */
+/* ****************************************** */
+
+.pxp-content-side-search-form {
+    padding-bottom: 0px !important; /* Eliminate original template gap */
+}
+
+.pxp-content-side-wrapper {
+    padding-top: 15px !important; /* Half of original 30px */
+}
+
+/* MODERN CATEGORY LABELS (NO YELLOW) */
+.pxp-bencina-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900 !important;
+    color: #111;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0px;
+    position: relative;
+    padding-left: 0px;
+    border-right: none !important;
+}
+
+/* Replaced yellow bar with a subtle gray thin line if needed, but per instruction "eliminar amarillo" */
+.pxp-bencina-label::before {
+    display: none !important;
+}
+
+/* SELECT2 PREMIUM OVERRIDES */
+.select2-container--default .select2-selection--single {
+    border: 2px solid #f0f0f0 !important;
+    background-color: #fdfdfd !important;
+    border-radius: 12px !important;
+    height: 60px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+}
+
+.select2-container--default .select2-selection--single:hover {
+    border-color: #fec42d !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 56px !important;
+    padding-left: 20px !important;
+    font-weight: 700;
+    color: #1a1a1a !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 58px !important;
+    right: 15px !important;
+}
+
+/* STATION COUNT MESSAGE: ULTIMATE DESTAQUE & COMPACT SPACING */
+.pxp-content-side-h2 {
+    font-weight: 900 !important;
+    font-size: 1.6rem !important;
+    color: #111;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+    padding: 32px 30px; /* Increased vertical padding for prominence */
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px !important; /* Dramatic reduction of vertical gap */
+    margin-bottom: 30px !important;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.06);
+    text-align: center !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 3px solid #f0f0f0; /* Substantial base line */
+}
+
+.pxp-content-side-h2 span.fa {
+    color: #fec42d;
+    font-size: 1.4rem;
+}
+
+/* MAP TOGGLE BUTTON (PREMIUM PILL) */
+.pxp-map-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 14px !important;
+    margin-right: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(26, 26, 26, 0.2);
+    text-decoration: none !important;
+    border: none !important;
+}
+
+.pxp-map-toggle:hover {
+    background-color: #fec42d !important;
+    color: #1a1a1a !important;
+    transform: rotate(90deg) scale(1.05);
+}
+
+.pxp-map-toggle span {
+    font-size: 1.2rem;
+}
+
+/* SORT SELECT CUSTOMIZATION */
+#pxp-sort-results {
+    border: 2px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    padding-left: 15px !important;
+    font-weight: 700;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fdfdfd;
+}
+
+#pxp-sort-results:hover {
+    border-color: #fec42d !important;
+}
+
+/* DARK MODE ADJUSTMENTS */
+body.pxp-dark-mode .pxp-content-side-h2 {
+    background: #111;
+    color: #eee;
+}
+
+body.pxp-dark-mode .pxp-bencina-label {
+    color: #eee;
+}
+
+body.pxp-dark-mode .select2-container--default .select2-selection--single {
+    background-color: #0c0c0c !important;
+    border-color: #222 !important;
+}
+
+body.pxp-dark-mode .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #eee !important;
+}
+
+body.pxp-dark-mode #pxp-sort-results {
+    background-color: #0c0c0c;
+    border-color: #222 !important;
+    color: #eee;
 }

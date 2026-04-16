@@ -96,28 +96,9 @@ function ordenar_select_bencina(seleccion){
 
 
    
-    const todosLosCombustibles = document.querySelectorAll('[class*="combustible_"]');
+    /* Limpiamos todos los resaltados previos */
+    $('[class*="combustible_"]').removeClass('highlight');
 
-    console.log(todosLosCombustibles.length)
-    todosLosCombustibles.forEach(div => {
-        console.log("Holi"+div)
-    });
-
-    console.log(todosLosCombustibles)
-    todosLosCombustibles.forEach(div => {
-        div.style.backgroundColor = 'white';
-        div.style.color = '#333';
-        div.style.padding = '0px';
-        div.style.borderRadius = '0px';
-    });
-
-
-    /* Recorremos cada uno y cambiamos el color de fondo*/
-    elementos.forEach(div => {
-        div.style.backgroundColor = '#d4edda'; // Verde suave
-        div.style.color = '#155724';           // Texto verde oscuro para que contraste
-        div.style.padding = '5px';             // Opcional: para que se vea mejor el fondo
-        div.style.borderRadius = '4px';        // Opcional: bordes redondeados
-    });
-
+    /* Resaltamos los que corresponden con la selección */
+    $(elementos).addClass('highlight');
 }
