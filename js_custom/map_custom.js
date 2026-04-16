@@ -188,12 +188,25 @@ document.addEventListener('DOMContentLoaded', function () {
       ###################### Cargar estaciones ####################
      -----------------------------------------------------------------*/
 
-    var iconoBomba = L.icon({
-        iconUrl: 'https://cdn-icons-png.flaticon.com/512/3448/3448636.png',
-        iconSize: [35, 35],
-        iconAnchor: [17, 34],
-        popupAnchor: [0, -30]
-    });
+    // 3. Iconos Personalizados - Definimos una función para crear marcadores dinámicos
+    function crearIconoEstacion(logoUrl) {
+        // Fallback si el logo es inválido o nulo
+        const fallbackLogo = '../images/estacion_servicio_independientes.png';
+        const finalLogo = (logoUrl && logoUrl !== 'https://api.bencinaenlinea.cl/' && logoUrl !== '/') 
+                          ? logoUrl : fallbackLogo;
+
+        return L.divIcon({
+            className: 'custom-marker-container',
+            html: `
+                <div class="custom-station-marker">
+                    <div class="marker-logo-inner" style="background-image: url('${finalLogo}');"></div>
+                </div>
+            `,
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+    }
 
 
     // 3. Carga dinámica de Datos desde el JSON de la comuna
@@ -233,103 +246,58 @@ document.addEventListener('DOMContentLoaded', function () {
                 let valor_ADI = "" //11
                 let valor_AKE = "" //12
                 let listado_bencineras_html = ""
-                let html_temp = ""
-
-                est.combustibles.forEach(function (combustible) {
-
-                    html_temp = `<span> <b> ${combustible.nombre_largo} : ${formatearTodoBencina(combustible.precio, "precio")} </b>  (${combustible.unidad_cobro}) [ ${formatearTodoBencina(combustible.precio_fecha, "fecha")} ]</span></br>`
-
-                    if (combustible['id'] == 1)
-                        valor_93 = html_temp
-                    else if (combustible['id'] == 7)
-                        valor_95 = html_temp
-                    else if (combustible['id'] == 2)
-                        valor_97 = html_temp
-                    else if (combustible['id'] == 3)
-                        valor_DI = html_temp
-                    else if (combustible['id'] == 4)
-                        valor_KE = html_temp
-                    else if (combustible['id'] == 5)
-                        valor_GNC = html_temp
-                    else if (combustible['id'] == 6)
-                        valor_GLP = html_temp
-                    else if (combustible['id'] == 8)
-                        valor_A93 = html_temp
-                    else if (combustible['id'] == 9)
-                        valor_A95 = html_temp
-                    else if (combustible['id'] == 10)
-                        valor_A97 = html_temp
-                    else if (combustible['id'] == 11)
-                        valor_ADI = html_temp
-                    else if (combustible['id'] == 12)
-                        valor_AKE = html_temp
-
+                             est.combustibles.forEach(function (combustible) {
+                    // Badge moderno por cada combustible
+                    let badge_html = `
+                        <div class="popup-fuel-badge">
+                            <div class="popup-fuel-type">${combustible.nombre_largo}</div>
+                            <div class="popup-fuel-price">${formatearTodoBencina(combustible.precio, "precio")} <span>${combustible.unidad_cobro}</span></div>
+                        </div>
+                    `;
+                    listado_bencineras_html += badge_html;
                 });
 
-                if (valor_93 != "")
-                    listado_bencineras_html += valor_93
+                // Logo con fallback para el popup
+                const fallbackPopupLogo = '../images/estacion_servicio_independientes.png';
+                const finalPopupLogo = (est.logo && est.logo !== 'https://api.bencinaenlinea.cl/' && est.logo !== '/') 
+                                       ? est.logo : fallbackPopupLogo;
 
-                if (valor_A93 != "")
-                    listado_bencineras_html += valor_A93
-
-                if (valor_95 != "")
-                    listado_bencineras_html += valor_95
-
-                if (valor_A95 != "")
-                    listado_bencineras_html += valor_A95
-
-                if (valor_97 != "")
-                    listado_bencineras_html += valor_97
-
-                if (valor_A97 != "")
-                    listado_bencineras_html += valor_A97
-
-                if (valor_DI != "")
-                    listado_bencineras_html += valor_DI
-
-                if (valor_ADI != "")
-                    listado_bencineras_html += valor_ADI
-
-                if (valor_KE != "")
-                    listado_bencineras_html += valor_KE
-
-                if (valor_AKE != "")
-                    listado_bencineras_html += valor_AKE
-
-                if (valor_GNC != "")
-                    listado_bencineras_html += valor_GNC
-
-                if (valor_GLP != "")
-                    listado_bencineras_html += valor_GLP
-
-                var marker_map = L.marker([est.latitud, est.longitud], { icon: iconoBomba })
+                var marker_map = L.marker([est.latitud, est.longitud], { icon: crearIconoEstacion(est.logo) })
                     .addTo(map)
                     .bindPopup(`
                         <div class="custom-bencina-popup">
-                            <header>
-                                <strong>${est.nombre_bencinera}</strong>
-                                <address><i class="bi bi-geo-alt"></i> ${est.direccion}</address>
-                            </header>
+                            <div class="popup-header">
+                                <div class="brand-logo-circle">
+                                    <img src="${finalPopupLogo}" alt="${est.nombre_bencinera}" onerror="this.src='${fallbackPopupLogo}'">
+                                </div>
+                                <div class="brand-info">
+                                    <h3>${est.nombre_bencinera}</h3>
+                                    <p><i class="bi bi-geo-alt"></i> ${est.direccion}</p>
+                                </div>
+                            </div>
                             
-                            <div class="precios-container">
+                            <div class="popup-prices-grid">
                                 ${listado_bencineras_html}
                             </div>
                 
-                            <div class="rutas-grid">
+                            <div class="popup-actions">
                                 <a href="https://www.google.com/maps/search/?api=1&query=${est.latitud},${est.longitud}" 
-                                   target="_blank" class="btn-ruta gmaps">
-                                   GOOGLE MAPS
+                                   target="_blank" class="btn-popup-ruta gmaps">
+                                   <i class="bi bi-geo-alt"></i> Google Maps
                                 </a>
                                 <a href="https://waze.com/ul?ll=${est.latitud},${est.longitud}&navigate=yes" 
-                                   target="_blank" class="btn-ruta waze">
-                                   WAZE
+                                   target="_blank" class="btn-popup-ruta waze">
+                                   <i class="bi bi-compass"></i> Waze
                                 </a>
                             </div>
                         </div>
                     `, {
-                        maxWidth: 350,   // Aumentado a 350px para una vista más cómoda
-                        minWidth: 300,   // Forzamos a que no sea más pequeño de 300px
-                        className: 'custom-popup-pane' // Clase extra por si necesitas más control
+                        maxWidth: 350,
+                        minWidth: 300,
+                        className: 'custom-popup-pane',
+                        autoPan: true,
+                        autoPanPadding: [50, 50], // Asegura que el popup siempre se vea
+                        keepInView: true
                     });
 
 
