@@ -89,48 +89,37 @@
             <div class="pxp-content-side pxp-content-left pxp-half">
                 <div class="pxp-content-side-wrapper">
 
-                    <!--####################### FILTRO #######################-->
-                    <div class="d-flex">
-                        <div class="pxp-content-side-search-form">
-                            <div class="row pxp-content-side-search-form-row">
-                                <div class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col">
-                                    <div class="d-flex justify-content-start align-items-center h-100">
-                                        <span class="pxp-bencina-label">Seleccione Ubicación</span>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="col-sm-12 col-md-12 col-lg-12 pxp-content-side-search-form-col pxp-search-container">
-
-                                    <select class="custom-select" id="pxp-p-search-location">
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    
-
-                
-
+                <!--####################### FILTRO #######################-->
+                <div class="pxp-content-side-search-form mt-0">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <h2 class="pxp-content-side-h2"> 8 Estaciones de Servicio en San Miguel</h2>
+                        <div class="col-12 py-2">
+                            <span class="pxp-bencina-label">Seleccione Ubicación</span>
                         </div>
-                    </div>    
-
-                    <div class="row pb-4">
-                        <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
-                        <span class="pxp-bencina-label">Ordenar por</span>
+                        <div class="col-12 pxp-search-container">
+                            <select class="custom-select" id="pxp-p-search-location"></select>
+                        </div>
                     </div>
-                    
-                        <div class=" col-lg-12 d-flex justify-content-end align-items-center h-100">
-                            <div class="form-group d-flex">
-                                <a role="button" class="pxp-map-toggle"><span class="fa fa-map-o"></span></a>
+                </div>
+
+                <!-- MJS ESTACIONES -->
+                <div class="row mt-0">
+                    <div class="col-12 text-center">
+                        <h2 class="pxp-content-side-h2"><span class="fa fa-gas-pump"></span> 17 Estaciones de Servicio
+                            en Iquique</h2>
+                    </div>
+                </div>
+
+
+                     <!-- ORDENAR Y MAPA -->
+                <div class="row pb-4">
+                    <div class="col-12 d-flex align-items-center justify-content-start flex-wrap">
+                        <span class="pxp-bencina-label mr-3" style="margin-right: 15px;">Ordenar por</span>
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="form-group mb-0 mr-2" style="margin-right: 10px;">
+                                <a role="button" class="pxp-map-toggle shadow-sm"><span class="fa fa-map-o"></span></a>
                             </div>
-                            <div class="form-group">
-                                <select class="custom-select" id="pxp-sort-results">
+                            <div class="form-group flex-grow-1 mb-0">
+                                <select class="custom-select w-100" id="pxp-sort-results">
                                     <option value="1-8" selected="selected">Gasolina 93</option>
                                     <option value="7-9">Gasolina 95</option>
                                     <option value="2-10">Gasolina 97</option>
@@ -140,138 +129,295 @@
                                     <option value="5">GNC</option>
                                 </select>
                             </div>
-                          
                         </div>
                     </div>
-    <div class="container"><div class="row">
+                </div>
+    <div class="container">
+    <div class="row">
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="GLP"  value="564">
                         <a href="#" class="pxp-agents-1-item" data-prop="1944">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1759928841_Logo%20Gasco%20Autogas%20VS.V300.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1759928841_Logo%20Gasco%20Autogas%20VS.V300.png);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">Gasco Autogas</div>
-                                <div class="pxp-agents-1-item-details-name">sebastopol 592</div>
-                <div class="pxp-agents-1-item-details-email combustible_GLP"> <b> GLP Vehicular </b><span class="fa fa-dollar"></span>564 ($/m3 ) [ 2026-02-12 12:11:10 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">sebastopol 592</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_GLP">
+<div class="fuel-type">GLP Vehicular</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>564 <span
+ class="fuel-currency">$/m3</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="GNC"  value="899"> <input type="hidden" id="GLP"  value="569">
                         <a href="#" class="pxp-agents-1-item" data-prop="1945">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1759928841_Logo%20Gasco%20Autogas%20VS.V300.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1759928841_Logo%20Gasco%20Autogas%20VS.V300.png);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">Gasco Autogas</div>
-                                <div class="pxp-agents-1-item-details-name">Gran Avenida Jose Miguel Carrera 2948</div>
-                <div class="pxp-agents-1-item-details-email combustible_GNC"> <b> GNC </b><span class="fa fa-dollar"></span>899 ($/m3 ) [ 2025-10-16 15:06:41 ]</div><div class="pxp-agents-1-item-details-email combustible_GLP"> <b> GLP Vehicular </b><span class="fa fa-dollar"></span>569 ($/m3 ) [ 2026-04-02 13:52:12 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">Gran Avenida Jose Miguel Carrera 2948</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_GNC">
+<div class="fuel-type">GNC</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>899 <span
+ class="fuel-currency">$/m3</span></div>
+</div> <div class="fuel-badge combustible_GLP">
+<div class="fuel-type">GLP Vehicular</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>569 <span
+ class="fuel-currency">$/m3</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="93"  value="1531"> <input type="hidden" id="97"  value="1653"> <input type="hidden" id="DI"  value="1518"> <input type="hidden" id="KE"  value="1082"> <input type="hidden" id="95"  value="1593">
                         <a href="#" class="pxp-agents-1-item" data-prop="1946">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">Santa Rosa 5499</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.531 ($/L ) [ 2026-03-26 00:50:23 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-03-26 00:50:23 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-03-26 00:50:23 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.518 ($/L ) [ 2026-03-26 00:50:23 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.082 ($/L ) [ 2026-04-02 10:55:19 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">Santa Rosa 5499</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_93">
+<div class="fuel-type">Gasolina 93</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.531 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_95">
+<div class="fuel-type">Gasolina 95</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.593 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_97">
+<div class="fuel-type">Gasolina 97</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.653 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_DI">
+<div class="fuel-type">Petroleo Diesel</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.518 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_KE">
+<div class="fuel-type">Kerosene</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.082 <span
+ class="fuel-currency">$/L</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="93"  value="1525"> <input type="hidden" id="97"  value="1634"> <input type="hidden" id="DI"  value="1492"> <input type="hidden" id="KE"  value="1079"> <input type="hidden" id="95"  value="1587">
                         <a href="#" class="pxp-agents-1-item" data-prop="1947">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697478048_logo5.jpg);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">COPEC</div>
-                                <div class="pxp-agents-1-item-details-name">Avenida Lo Ovalle 669</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.525 ($/L ) [ 2026-03-26 05:52:36 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.587 ($/L ) [ 2026-03-26 05:52:36 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.634 ($/L ) [ 2026-03-26 05:52:36 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.492 ($/L ) [ 2026-03-26 05:52:36 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.079 ($/L ) [ 2026-04-02 10:32:13 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">Avenida Lo Ovalle 669</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_93">
+<div class="fuel-type">Gasolina 93</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.525 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_95">
+<div class="fuel-type">Gasolina 95</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.587 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_97">
+<div class="fuel-type">Gasolina 97</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.634 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_DI">
+<div class="fuel-type">Petroleo Diesel</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.492 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_KE">
+<div class="fuel-type">Kerosene</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.079 <span
+ class="fuel-currency">$/L</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="KE"  value="1043"> <input type="hidden" id="A93"  value="1531"> <input type="hidden" id="A95"  value="1593"> <input type="hidden" id="A97"  value="1653"> <input type="hidden" id="ADI"  value="1509">
                         <a href="#" class="pxp-agents-1-item" data-prop="1949">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">San Ignacio 2470</div>
-                <div class="pxp-agents-1-item-details-email combustible_A93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.531 ($/L ) [ 2026-03-26 10:06:41 ]</div><div class="pxp-agents-1-item-details-email combustible_A95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-03-26 10:06:41 ]</div><div class="pxp-agents-1-item-details-email combustible_A97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-03-26 10:06:41 ]</div><div class="pxp-agents-1-item-details-email combustible_ADI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.509 ($/L ) [ 2026-03-26 10:06:41 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.043 ($/L ) [ 2026-04-02 10:06:01 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">San Ignacio 2470</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_A93">
+<div class="fuel-type">Gasolina 93</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.531 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_A95">
+<div class="fuel-type">Gasolina 95</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.593 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_A97">
+<div class="fuel-type">Gasolina 97</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.653 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_ADI">
+<div class="fuel-type">Petroleo Diesel</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.509 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_KE">
+<div class="fuel-type">Kerosene</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.043 <span
+ class="fuel-currency">$/L</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="93"  value="1530"> <input type="hidden" id="97"  value="1639"> <input type="hidden" id="DI"  value="1499"> <input type="hidden" id="KE"  value="1079"> <input type="hidden" id="95"  value="1592">
                         <a href="#" class="pxp-agents-1-item" data-prop="1950">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1715355420_Aramco1.jpg);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">ARAMCO</div>
-                                <div class="pxp-agents-1-item-details-name">Gran Avenida 4613</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.530 ($/L ) [ 2026-03-26 15:32:02 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.592 ($/L ) [ 2026-03-26 15:32:02 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.639 ($/L ) [ 2026-03-26 15:30:06 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.499 ($/L ) [ 2026-03-26 15:30:06 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.079 ($/L ) [ 2026-04-09 20:20:20 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">Gran Avenida 4613</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_93">
+<div class="fuel-type">Gasolina 93</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.530 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_95">
+<div class="fuel-type">Gasolina 95</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.592 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_97">
+<div class="fuel-type">Gasolina 97</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.639 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_DI">
+<div class="fuel-type">Petroleo Diesel</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.499 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_KE">
+<div class="fuel-type">Kerosene</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.079 <span
+ class="fuel-currency">$/L</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="93"  value="1531"> <input type="hidden" id="97"  value="1653"> <input type="hidden" id="DI"  value="1509"> <input type="hidden" id="KE"  value="1190"> <input type="hidden" id="95"  value="1593">
                         <a href="#" class="pxp-agents-1-item" data-prop="1951">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Avenida Santa Rosa 3639</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.531 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.593 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.653 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.509 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.190 ($/L ) [ 2025-09-03 17:37:44 ]</div></div></a></div>
+                                <div class="pxp-agents-1-item-details-address">Avenida Santa Rosa 3639</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_93">
+<div class="fuel-type">Gasolina 93</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.531 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_95">
+<div class="fuel-type">Gasolina 95</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.593 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_97">
+<div class="fuel-type">Gasolina 97</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.653 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_DI">
+<div class="fuel-type">Petroleo Diesel</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.509 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_KE">
+<div class="fuel-type">Kerosene</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.190 <span
+ class="fuel-currency">$/L</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div>
                 
                     <div class="col-sm-12 col-md-6 col-lg-6 estacion-item">
                          <input type="hidden" id="93"  value="1527"> <input type="hidden" id="97"  value="1636"> <input type="hidden" id="DI"  value="1496"> <input type="hidden" id="KE"  value="1085"> <input type="hidden" id="95"  value="1589">
                         <a href="#" class="pxp-agents-1-item" data-prop="1952">
-                            <div class="pxp-agents-1-item-fig-container rounded-lg">
-                                <div class="pxp-agents-1-item-fig pxp-cover" style="
-                                        background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png); 
-                                        background-position: top center;
-                                        background-size: 200px 100px; 
-                                        background-repeat: no-repeat;    
-                                        "></div>
+                            <div class="pxp-agents-1-item-fig-container">
+                                <div class="pxp-agents-1-item-fig" 
+                                style="background-image: url(https://api.bencinaenlinea.cl/storage/logo/1697479767_Shell.png);">
+                                </div>
                             </div>
-                            <div class="pxp-agents-1-item-details rounded-lg">
+                            <div class="pxp-agents-1-item-details">
                                 <div class="pxp-agents-1-item-details-name">SHELL</div>
-                                <div class="pxp-agents-1-item-details-name">Gran Avenida 5998</div>
-                <div class="pxp-agents-1-item-details-email combustible_93"> <b> Gasolina 93 </b><span class="fa fa-dollar"></span>1.527 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_95"> <b> Gasolina 95 </b><span class="fa fa-dollar"></span>1.589 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_97"> <b> Gasolina 97 </b><span class="fa fa-dollar"></span>1.636 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_DI"> <b> Petroleo Diesel </b><span class="fa fa-dollar"></span>1.496 ($/L ) [ 2026-03-26 10:06:34 ]</div><div class="pxp-agents-1-item-details-email combustible_KE"> <b> Kerosene </b><span class="fa fa-dollar"></span>1.085 ($/L ) [ 2025-06-26 10:53:12 ]</div></div></a></div></div></div>
+                                <div class="pxp-agents-1-item-details-address">Gran Avenida 5998</div>
+                                <div class="fuel-price-grid">
+                 <div class="fuel-badge combustible_93">
+<div class="fuel-type">Gasolina 93</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.527 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_95">
+<div class="fuel-type">Gasolina 95</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.589 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_97">
+<div class="fuel-type">Gasolina 97</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.636 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_DI">
+<div class="fuel-type">Petroleo Diesel</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.496 <span
+ class="fuel-currency">$/L</span></div>
+</div> <div class="fuel-badge combustible_KE">
+<div class="fuel-type">Kerosene</div>
+<div class="fuel-value"><span class="fa fa-dollar"></span>1.085 <span
+ class="fuel-currency">$/L</span></div>
+</div></div>
+                
+                 <div class="fuel-updated"><span class="fa fa-clock-o"></span> Actualizado:
+                                        2026-04-02 09:08:08</div>
+                                </div>
+                </a></div></div></div>
                <!--####################### LISTADO #######################-->
             </div>
                <div class="pxp-footer pt-100 pb-100 mt-100">
