@@ -90,19 +90,38 @@
                 <div class="pxp-content-side-wrapper">
 
                 <!--####################### FILTRO #######################-->
-                <div class="pxp-content-side-search-form mt-0">
+                <div class="pxp-content-side-search-form mt-0 mb-4">
                     <div class="row">
-                        <div class="col-12 py-2">
+                        <div class="col-12 col-md-6 py-2">
                             <span class="pxp-bencina-label">Seleccione Ubicación</span>
+                            <div class="pxp-search-container mt-2">
+                                <select class="custom-select" id="pxp-p-search-location"></select>
+                            </div>
                         </div>
-                        <div class="col-12 pxp-search-container">
-                            <select class="custom-select" id="pxp-p-search-location"></select>
+                        <div class="col-12 col-md-6 py-2">
+                            <span class="pxp-bencina-label">Ordenar por</span>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="form-group mb-0 mr-2" style="margin-right: 10px;">
+                                    <a role="button" class="pxp-map-toggle shadow-sm"><span class="fa fa-map-o"></span></a>
+                                </div>
+                                <div class="form-group flex-grow-1 mb-0">
+                                    <select class="custom-select w-100" id="pxp-sort-results">
+                                        <option value="1-8" selected="selected">Gasolina 93</option>
+                                        <option value="7-9">Gasolina 95</option>
+                                        <option value="2-10">Gasolina 97</option>
+                                        <option value="4-12">Kerosene</option>
+                                        <option value="3-11">Petroleo Diesel</option>
+                                        <option value="6">GLP Vehicular</option>
+                                        <option value="5">GNC</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- MJS ESTACIONES -->
-                <div class="row mt-0">
+                <div class="row mt-4">
                     <div class="col-12 text-center">
                         <h2 class="pxp-content-side-h2"><span class="fa fa-gas-pump"></span> 17 Estaciones de Servicio
                             en Iquique</h2>
@@ -110,28 +129,7 @@
                 </div>
 
 
-                     <!-- ORDENAR Y MAPA -->
-                <div class="row pb-4">
-                    <div class="col-12 d-flex align-items-center justify-content-start flex-wrap">
-                        <span class="pxp-bencina-label mr-3" style="margin-right: 15px;">Ordenar por</span>
-                        <div class="d-flex align-items-center flex-grow-1">
-                            <div class="form-group mb-0 mr-2" style="margin-right: 10px;">
-                                <a role="button" class="pxp-map-toggle shadow-sm"><span class="fa fa-map-o"></span></a>
-                            </div>
-                            <div class="form-group flex-grow-1 mb-0">
-                                <select class="custom-select w-100" id="pxp-sort-results">
-                                    <option value="1-8" selected="selected">Gasolina 93</option>
-                                    <option value="7-9">Gasolina 95</option>
-                                    <option value="2-10">Gasolina 97</option>
-                                    <option value="4-12">Kerosene</option>
-                                    <option value="3-11">Petroleo Diesel</option>
-                                    <option value="6">GLP Vehicular</option>
-                                    <option value="5">GNC</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
     <div class="container">
     <div class="row">
                 
