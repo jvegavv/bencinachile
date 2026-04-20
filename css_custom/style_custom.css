@@ -794,13 +794,14 @@ body.pxp-dark-mode .brand-logo-circle {
 }
 
 .fuel-updated {
-    font-size: 0.65rem;
-    color: #bbb;
-    margin-top: 4px;
+    font-size: 0.7rem;
+    color: #444; /* Oscurecido para mejor legibilidad */
+    margin-top: 6px;
     border-top: 1px solid #f0f0f0;
     padding-top: 8px;
-    font-style: italic;
-    text-align: right;
+    font-weight: 900; /* Negrita destacada */
+    text-align: left;
+    letter-spacing: 0.5px; /* Toque premium */
 }
 
 /* DARK MODE OVERRIDES */
