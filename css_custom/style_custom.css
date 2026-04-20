@@ -1011,3 +1011,32 @@ body.pxp-dark-mode #pxp-sort-results {
     border-color: #222 !important;
     color: #eee;
 }
+
+.pxp-content-side-h2 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    line-height: 46px;
+}
+
+.pxp-content-side-h2 h1,
+.pxp-content-side-h2 h2 {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    margin: 0 !important;
+    display: inline !important;
+    line-height: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    text-transform: inherit !important;
+}
+
+.pxp-agents-1-item-details-name h3,
+.pxp-agents-1-item-details-address h4 {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    margin: 0 !important;
+    line-height: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+}
