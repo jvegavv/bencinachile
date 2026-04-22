@@ -1053,3 +1053,80 @@ img.pxp-agents-1-item-fig {
     bottom: 0 !important;
     margin: auto !important;
 }
+
+/* FIX: Mantener mensaje h1/h2 siempre visible en todos los tamaños de pantalla */
+
+/* < 1306px: reducción leve de fuente, sin overflow hidden */
+@media (max-width: 1305px) {
+    .pxp-content-side-h2 {
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        font-size: 1.15rem !important;
+        line-height: 42px !important;
+        gap: 10px !important;
+    }
+
+    .pxp-content-side-h2 h1,
+    .pxp-content-side-h2 h2 {
+        white-space: nowrap;
+    }
+}
+
+/* < 1100px: reducción moderada */
+@media (max-width: 1100px) {
+    .pxp-content-side-h2 {
+        font-size: 1rem !important;
+        line-height: 38px !important;
+        padding: 24px 20px !important;
+        gap: 8px !important;
+    }
+
+    .pxp-content-side-h2 span.fa {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* < 900px: reducción notable */
+@media (max-width: 900px) {
+    .pxp-content-side-h2 {
+        font-size: 0.9rem !important;
+        line-height: 34px !important;
+        padding: 20px 16px !important;
+        gap: 7px !important;
+    }
+
+    .pxp-content-side-h2 span.fa {
+        font-size: 1rem !important;
+    }
+}
+
+/* < 768px: reducción fuerte */
+@media (max-width: 768px) {
+    .pxp-content-side-h2 {
+        font-size: 0.8rem !important;
+        line-height: 30px !important;
+        padding: 16px 12px !important;
+        gap: 6px !important;
+    }
+
+    .pxp-content-side-h2 span.fa {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* < 576px: tamaño mínimo legible */
+@media (max-width: 576px) {
+    .pxp-content-side-h2 {
+        font-size: 0.7rem !important;
+        line-height: 26px !important;
+        padding: 14px 10px !important;
+        gap: 5px !important;
+    }
+
+    .pxp-content-side-h2 span.fa {
+        font-size: 0.8rem !important;
+    }
+}
+
