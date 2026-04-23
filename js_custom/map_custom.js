@@ -434,7 +434,6 @@ function geolocalizar_mapa(map) {
 
             // Primera vez: creamos el marcador y centramos el mapa
             carMarker = L.marker(e.latlng, { icon: iconoAuto }).addTo(map)
-                .bindPopup("Estás aqui").openPopup();
             console.log("GEO AUTO 1 - 1");
 
             map.setView(e.latlng, 16); // Centrar la cámara la primera vez
