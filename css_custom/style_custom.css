@@ -1132,14 +1132,14 @@ img.pxp-agents-1-item-fig {
 /* < 576px: tamaño mínimo legible */
 @media (max-width: 576px) {
     .pxp-content-side-h2 {
-        font-size: 2rem !important;
+        font-size: 0.9rem !important;
         line-height: 26px !important;
         padding: 14px 10px !important;
         gap: 5px !important;
     }
 
     .pxp-content-side-h2 span.fa {
-        font-size: 2rem !important;
+        font-size: 0.8rem !important;
     }
 }
 
