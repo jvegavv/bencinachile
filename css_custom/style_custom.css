@@ -765,10 +765,7 @@ body.pxp-dark-mode .brand-logo-circle {
     cursor: default;
 }
 
-.fuel-badge:hover {
-    background: #fffbef;
-    border-color: #fec42d;
-}
+
 
 .fuel-badge.highlight {
     background: #fffbef !important;
