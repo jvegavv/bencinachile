@@ -770,6 +770,19 @@ body.pxp-dark-mode .brand-logo-circle {
     border-color: #fec42d;
 }
 
+.fuel-badge.highlight {
+    background: #fffbef !important;
+    border-color: #fec42d !important;
+    border-width: 2px;
+    box-shadow: 0 4px 12px rgba(254, 196, 45, 0.15);
+    z-index: 1;
+}
+
+.fuel-badge.highlight .fuel-type {
+    color: #fec42d;
+    font-weight: 800;
+}
+
 .fuel-type {
     font-size: 0.7rem;
     font-weight: 700;
