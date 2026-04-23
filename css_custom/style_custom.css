@@ -1076,7 +1076,7 @@ img.pxp-agents-1-item-fig {
         flex-wrap: nowrap;
         padding-left: 30px !important;
         padding-right: 30px !important;
-        font-size: 1.15rem !important;
+        font-size: 1.5rem !important;
         line-height: 42px !important;
         gap: 10px !important;
     }
@@ -1090,7 +1090,7 @@ img.pxp-agents-1-item-fig {
 /* < 1100px: reducción moderada */
 @media (max-width: 1100px) {
     .pxp-content-side-h2 {
-        font-size: 1rem !important;
+        font-size: 1.25rem !important;
         line-height: 38px !important;
         padding: 24px 20px !important;
         gap: 8px !important;
@@ -1104,7 +1104,7 @@ img.pxp-agents-1-item-fig {
 /* < 900px: reducción notable */
 @media (max-width: 900px) {
     .pxp-content-side-h2 {
-        font-size: 0.9rem !important;
+        font-size: 1.5rem !important;
         line-height: 34px !important;
         padding: 20px 16px !important;
         gap: 7px !important;
@@ -1118,7 +1118,7 @@ img.pxp-agents-1-item-fig {
 /* < 768px: reducción fuerte */
 @media (max-width: 768px) {
     .pxp-content-side-h2 {
-        font-size: 0.8rem !important;
+        font-size: 1.5rem !important;
         line-height: 30px !important;
         padding: 16px 12px !important;
         gap: 6px !important;
@@ -1132,7 +1132,7 @@ img.pxp-agents-1-item-fig {
 /* < 576px: tamaño mínimo legible */
 @media (max-width: 576px) {
     .pxp-content-side-h2 {
-        font-size: 0.7rem !important;
+        font-size: 0.9rem !important;
         line-height: 26px !important;
         padding: 14px 10px !important;
         gap: 5px !important;
@@ -1143,3 +1143,11 @@ img.pxp-agents-1-item-fig {
     }
 }
 
+/* Ajuste para evitar solapamiento de información en estaciones */
+/* Entre 991px y 1357px, mostrar solo una estación por fila */
+@media (min-width: 991px) and (max-width: 1357px) {
+    .estacion-item {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}

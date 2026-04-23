@@ -3584,9 +3584,60 @@
         </div>
       </div>
       <!--######### Fin Footer ####-->
+      <!-- Indicador de tamaño de ventana -->
+      <div id="window-size-indicator" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(15, 15, 25, 0.82);
+        color: #fff;
+        font-family: 'Roboto', monospace, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        padding: 7px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(255,255,255,0.15);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        z-index: 99999;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    "></div>
 
+      <script>
+        (function () {
+          var indicator = document.getElementById('window-size-indicator');
+          var hideTimer = null;
 
+          function updateSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            
+            var bp = 'xs';
+            if (w >= 1400) bp = 'xxl';
+            else if (w >= 1200) bp = 'xl';
+            else if (w >= 992) bp = 'lg';
+            else if (w >= 768) bp = 'md';
+            else if (w >= 576) bp = 'sm';
 
+            indicator.textContent = bp.toUpperCase() + ' | ' + w + ' × ' + h + ' px';
+            indicator.style.display = 'block';
+            indicator.style.opacity = '1';
+
+            if (hideTimer) clearTimeout(hideTimer);
+            hideTimer = setTimeout(function () {
+              indicator.style.opacity = '0';
+              setTimeout(function () {
+                indicator.style.display = 'none';
+              }, 300);
+            }, 1500);
+          }
+
+          window.addEventListener('resize', updateSize);
+        })();
+      </script>
 
       <script src="/js/jquery-3.4.1.min.js"></script>
       <script src="/js/popper.min.js"></script>
