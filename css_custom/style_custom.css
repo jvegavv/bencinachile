@@ -1148,3 +1148,17 @@ img.pxp-agents-1-item-fig {
         max-width: 100% !important;
     }
 }
+
+/* Copia de estilo de 'Ventajas Principales' (h3) a '¿Qué es la Bencina 93 octanos?' (h2) */
+.pxp-agent-section h2 {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+/* Soporte para que las imágenes funcionen como background-cover */
+img.pxp-cover {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
