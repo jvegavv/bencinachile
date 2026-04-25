@@ -1164,3 +1164,13 @@ img.pxp-cover {
     height: 100%;
     display: block;
 }
+
+/* Estilo para que los h3 de la sección de combustibles parezcan párrafos */
+.pxp-agent-specialities h3 {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #333 !important;
+    text-transform: none !important;
+    margin-bottom: 0 !important;
+    line-height: inherit !important;
+}
