@@ -17,3 +17,7 @@ venv/
 
 # Scripts
 git_sync.sh
+
+# IDE and Docs
+.vscode/
+docs/
