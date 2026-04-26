@@ -1165,6 +1165,45 @@ img.pxp-cover {
     display: block;
 }
 
+/* --- MIGRACIÓN A TAG IMAGES (Global) --- */
+.pxp-services,
+.pxp-cta-3-image,
+.pxp-contact-hero-fig {
+    position: relative;
+    overflow: hidden;
+}
+
+.pxp-hero-bg,
+.pxp-areas-1-item-fig,
+.pxp-prop-card-1-fig {
+    position: absolute !important;
+    overflow: hidden;
+}
+
+/* Asegurar que la imagen se comporte como fondo */
+.pxp-hero-bg img.pxp-cover,
+.pxp-services img.pxp-cover,
+.pxp-areas-1-item-fig img.pxp-cover,
+.pxp-cta-3-image img.pxp-cover,
+.pxp-prop-card-1-fig img.pxp-cover,
+.pxp-contact-hero-fig img.pxp-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Elevar el contenido para que no sea tapado por la imagen de fondo */
+.pxp-services h2,
+.pxp-services p,
+.pxp-services .container,
+.pxp-contact-hero-caption {
+    position: relative;
+    z-index: 1;
+}
+
 /* Estilo para que los h3 de la sección de combustibles parezcan párrafos */
 .pxp-agent-specialities h3 {
     font-size: 1rem !important;
@@ -1173,4 +1212,46 @@ img.pxp-cover {
     text-transform: none !important;
     margin-bottom: 0 !important;
     line-height: inherit !important;
+}
+
+
+/* ── Logo Branding Update ────────────────────────────────────────────────── */
+.pxp-logo {
+    color: #bc8d19 !important;
+    display: flex !important;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.pxp-logo:hover {
+    color: #996f01 !important;
+}
+
+.pxp-logo img {
+    height: 38px;
+    width: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.pxp-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive logo for smaller screens */
+@media (max-width: 767px) {
+    .pxp-logo img {
+        height: 30px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 575px) {
+    .pxp-logo {
+        font-size: 1.1rem;
+    }
+    .pxp-logo img {
+        height: 26px;
+        margin-right: 6px;
+    }
 }

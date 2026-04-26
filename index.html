@@ -68,7 +68,7 @@
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "jvegavv@gmail.com",
+        "email": "todobencina@gmail.com",
         "contactType": "customer service"
       },
       "sameAs": [
@@ -87,7 +87,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-5 col-md-2">
-                    <a href="/index.html" class="pxp-logo text-decoration-none">TodoBencina.</a>
+                    <a href="/index.html" class="pxp-logo text-decoration-none"><img src="/images/favicon-original.png"
+                            alt="TodoBencina Logo">TodoBencina.</a>
                 </div>
                 <div class="col-2 col-md-8 text-center">
                     <ul class="pxp-nav list-inline">
@@ -141,14 +142,14 @@
     <div class="pxp-content" id="ahorrar-index">
         <!--######### Inicio Buscador ####-->
         <div class="pxp-hero vh-100">
-            <div class="pxp-hero-bg pxp-cover pxp-cover-bottom"
-                style="background-image: url(/images/image_index_car.png);"></div>
+            <div class="pxp-hero-bg">
+                <img src="images/image_index_car.png?v=2" alt="Precios de Bencina en Chile"
+                    class="pxp-cover pxp-cover-bottom">
+            </div>
             <div class="pxp-hero-opacity" style="background: rgba(0,0,0,0.2);"></div>
             <div class="pxp-hero-caption">
                 <div class="container text-center">
                     <h1 class="text-white">Precios de Bencina y Combustibles en Chile</h1>
-                    <p class="texto-destacado-blanco mb-0 mx-auto" style="max-width: 800px;"><b>
-                            TodoBencina.</b></p>
 
                     <div class="hero-search pxp-has-tabs-margin">
                         <form class="pxp-hero-search mt-4" id="form-comunas" action="#">
@@ -168,8 +169,9 @@
         <!--######### Fin Buscador ####-->
 
         <!--######### Inicio Por qué elegir TodoBencina ####-->
-        <div class="pxp-services pxp-cover mt-100 pt-100 mb-300"
-            style="background-image: url(/images/fondo_todobencina.png); background-position: 50% 60%;">
+        <div class="pxp-services pxp-cover mt-100 pt-100 mb-200">
+            <img src="images/fondo_todobencina.png" alt="Ahorra en combustible con TodoBencina" class="pxp-cover"
+                style="object-position: 50% 60%;">
             <h2 class="text-center pxp-section-h2">¿Por qué elegir TodoBencina?</h2>
             <p class="pxp-text-light text-center">
                 <strong>TodoBencina es el mayor concentrador de estaciones de servicio en Chile.</strong>
@@ -261,12 +263,53 @@
                                 class="carousel slide carousel-fade pxp-services-tabs-carousel" data-ride="carousel"
                                 data-interval="5000">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item pxp-cover pxp-service-step-1 active"></div>
-                                    <div class="carousel-item pxp-cover pxp-service-step-2"></div>
-                                    <div class="carousel-item pxp-cover pxp-service-step-3"></div>
-                                    <div class="carousel-item pxp-cover pxp-service-step-4"></div>
-                                    <div class="carousel-item pxp-cover pxp-service-step-5"></div>
-                                    <div class="carousel-item pxp-cover pxp-service-step-6"></div>
+                                    <div class="carousel-item active">
+                                        <picture>
+                                            <source srcset="images/selector_comuna_todobencina_lg.png"
+                                                media="(min-width: 991px)">
+                                            <img src="images/selector_comuna_todobencina_sm.png"
+                                                alt="Busca tu comuna en TodoBencina" class="pxp-cover">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="images/listado_estaciones_servicio_todobencina_lg.png"
+                                                media="(min-width: 991px)">
+                                            <img src="images/listado_estaciones_servicio_todobencina_sm.png"
+                                                alt="Listado de estaciones de servicio" class="pxp-cover">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="images/ordenar_por_todobencina_lg.png"
+                                                media="(min-width: 991px)">
+                                            <img src="images/ordenar_por_todobencina_sm.png"
+                                                alt="Ordena por precio de bencina" class="pxp-cover">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="images/mapa_todobencina_lg.png" media="(min-width: 991px)">
+                                            <img src="images/mapa_todobencina_sm.png" alt="Mapa de bencineras"
+                                                class="pxp-cover">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="images/gmaps_waze_todobencina_lg.png"
+                                                media="(min-width: 991px)">
+                                            <img src="images/gmaps_waze_todobencina_sm.png"
+                                                alt="Navegación con Google Maps y Waze" class="pxp-cover">
+                                        </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="images/gmaps_waze_todobencina_lg.png"
+                                                media="(min-width: 991px)">
+                                            <img src="images/gmaps_waze_todobencina_sm.png"
+                                                alt="Ruta hacia la bencinera" class="pxp-cover">
+                                        </picture>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pxp-services-tabs-items-content">
@@ -276,7 +319,7 @@
                                         <div class="carousel-item active">
                                             <a href="javascript:void(0);" class="pxp-services-tabs-content-item">
                                                 <div class="pxp-services-tabs-content-item-fig">
-                                                    <img src="/images/icono_lupa_todobencina.png"
+                                                    <img src="images/icono_lupa_todobencina.png"
                                                         alt="Selecciona una comuna en TodoBencina" />
                                                 </div>
                                                 <div class="pxp-services-tabs-content-item-text">
@@ -302,7 +345,7 @@
                                         <div class="carousel-item">
                                             <a href="javascript:void(0);" class="pxp-services-tabs-content-item">
                                                 <div class="pxp-services-tabs-content-item-fig">
-                                                    <img src="/images/icono_lista_todobencina.png"
+                                                    <img src="images/icono_lista_todobencina.png"
                                                         alt="Revisa el Listado en TodoBencina" />
                                                 </div>
                                                 <div class="pxp-services-tabs-content-item-text">
@@ -349,7 +392,7 @@
                                         <div class=" carousel-item">
                                             <a href="javascript:void(0);" class="pxp-services-tabs-content-item">
                                                 <div class="pxp-services-tabs-content-item-fig">
-                                                    <img src="/images/icono_orden_todobencina.png"
+                                                    <img src="images/icono_orden_todobencina.png"
                                                         alt="Ordena los precios en TodoBencina" />
                                                 </div>
                                                 <div class="pxp-services-tabs-content-item-text">
@@ -395,7 +438,7 @@
                                         <div class="carousel-item">
                                             <a href="javascript:void(0);" class="pxp-services-tabs-content-item">
                                                 <div class="pxp-services-tabs-content-item-fig">
-                                                    <img src="/images/icono_mapa_todobencina.png"
+                                                    <img src="images/icono_mapa_todobencina.png"
                                                         alt="Revisa el mapa en TodoBencina" />
                                                 </div>
                                                 <div class="pxp-services-tabs-content-item-text">
@@ -471,7 +514,7 @@
                                         <div class="carousel-item">
                                             <a href="javascript:void(0);" class="pxp-services-tabs-content-item">
                                                 <div class="pxp-services-tabs-content-item-fig">
-                                                    <img src="/images/icono_ruta_todobencina.png"
+                                                    <img src="images/icono_ruta_todobencina.png"
                                                         alt="Conecta con Gmaps o Waze" />
                                                 </div>
                                                 <div class="pxp-services-tabs-content-item-text">
@@ -539,8 +582,9 @@
             <div class="row mt-4 mt-md-5">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <a href="/comuna/santiago-centro.html" class="pxp-areas-1-item rounded-lg">
-                        <div class="pxp-areas-1-item-fig pxp-cover"
-                            style="background-image: url(/images/comuna_santiago.png);">
+                        <div class="pxp-areas-1-item-fig">
+                            <img src="images/comuna_santiago.png" alt="Estaciones de servicio en Santiago"
+                                class="pxp-cover">
                         </div>
                         <div class="pxp-areas-1-item-details">
                             <div class="pxp-areas-1-item-details-area">
@@ -552,8 +596,9 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <a href="/comuna/antofagasta.html" class="pxp-areas-1-item rounded-lg">
-                        <div class="pxp-areas-1-item-fig pxp-cover"
-                            style="background-image: url(/images/comuna_antofagasta.png);">
+                        <div class="pxp-areas-1-item-fig">
+                            <img src="images/comuna_antofagasta.png" alt="Estaciones de servicio en Antofagasta"
+                                class="pxp-cover">
                         </div>
                         <div class="pxp-areas-1-item-details">
                             <div class="pxp-areas-1-item-details-area">
@@ -565,8 +610,9 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <a href="/comuna/la-serena.html" class="pxp-areas-1-item rounded-lg">
-                        <div class="pxp-areas-1-item-fig pxp-cover"
-                            style="background-image: url(/images/comuna_laserena.png);">
+                        <div class="pxp-areas-1-item-fig">
+                            <img src="images/comuna_laserena.png" alt="Estaciones de servicio en La Serena"
+                                class="pxp-cover">
                         </div>
                         <div class="pxp-areas-1-item-details">
                             <div class="pxp-areas-1-item-details-area">
@@ -578,8 +624,9 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <a href="/comuna/vina-del-mar.html" class="pxp-areas-1-item rounded-lg">
-                        <div class="pxp-areas-1-item-fig pxp-cover"
-                            style="background-image: url(/images/comuna_vinadelmar.png);">
+                        <div class="pxp-areas-1-item-fig">
+                            <img src="images/comuna_vinadelmar.png" alt="Estaciones de servicio en Viña del Mar"
+                                class="pxp-cover">
                         </div>
                         <div class="pxp-areas-1-item-details">
                             <div class="pxp-areas-1-item-details-area">
@@ -591,8 +638,9 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <a href="/comuna/concepcion.html" class="pxp-areas-1-item rounded-lg">
-                        <div class="pxp-areas-1-item-fig pxp-cover"
-                            style="background-image: url(/images/comuna_concepcion.png);">
+                        <div class="pxp-areas-1-item-fig">
+                            <img src="images/comuna_concepcion.png" alt="Estaciones de servicio en Concepción"
+                                class="pxp-cover">
                         </div>
                         <div class="pxp-areas-1-item-details">
                             <div class="pxp-areas-1-item-details-area">
@@ -604,8 +652,9 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <a href="/comuna/puerto-montt.html" class="pxp-areas-1-item rounded-lg">
-                        <div class="pxp-areas-1-item-fig pxp-cover"
-                            style="background-image: url(/images/comuna_puertomontt.png);">
+                        <div class="pxp-areas-1-item-fig">
+                            <img src="images/comuna_puertomontt.png" alt="Estaciones de servicio en Puerto Montt"
+                                class="pxp-cover">
                         </div>
                         <div class="pxp-areas-1-item-details">
                             <div class="pxp-areas-1-item-details-area">
@@ -652,8 +701,9 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5">
-                        <div class="pxp-cta-3-image pxp-cover rounded-lg"
-                            style="background-image: url(/images/estacion_servicio_copec.png);"></div>
+                        <div class="pxp-cta-3-image rounded-lg">
+                            <img src="images/estacion_servicio_copec.png" alt="Distribuidora Copec" class="pxp-cover">
+                        </div>
                     </div>
                     <div class="col-lg-2"></div>
                     <div class="col-lg-4">
@@ -689,8 +739,9 @@
                     </div>
                     <div class="col-lg-2"></div>
                     <div class="col-lg-5 order-first order-lg-last">
-                        <div class="pxp-cta-3-image pxp-cover rounded-lg"
-                            style="background-image: url(/images/estacion_servicio_shell.png);"></div>
+                        <div class="pxp-cta-3-image rounded-lg">
+                            <img src="images/estacion_servicio_shell.png" alt="Distribuidora Shell" class="pxp-cover">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -702,8 +753,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5">
-                        <div class="pxp-cta-3-image pxp-cover rounded-lg"
-                            style="background-image: url(/images/estacion_servicio_aramco.png);">
+                        <div class="pxp-cta-3-image rounded-lg">
+                            <img src="images/estacion_servicio_aramco.png" alt="Distribuidora Aramco" class="pxp-cover">
                         </div>
                     </div>
                     <div class="col-lg-2"></div>
@@ -747,8 +798,9 @@
                     </div>
                     <div class="col-lg-2"></div>
                     <div class="col-lg-5 order-first order-lg-last">
-                        <div class="pxp-cta-3-image pxp-cover rounded-lg"
-                            style="background-image: url(/images/estacion_servicio_independientes.png);">
+                        <div class="pxp-cta-3-image rounded-lg">
+                            <img src="images/estacion_servicio_independientes.png"
+                                alt="Distribuidoras Independientes en Chile" class="pxp-cover">
                         </div>
                     </div>
                 </div>
@@ -769,8 +821,9 @@
                 <div class="owl-carousel pxp-props-carousel-right-stage-1">
                     <div>
                         <a href="/combustible/bencina_93_octanos.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/bencina_93.png);"></div>
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/bencina_93.png" alt="Combustible Bencina 93" class="pxp-cover">
+                            </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
                                 <div class="pxp-prop-card-1-details-price">
@@ -783,8 +836,9 @@
 
                     <div>
                         <a href="/combustible/bencina_95_octanos.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/bencina_95.png);"></div>
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/bencina_95.png" alt="Combustible Bencina 95" class="pxp-cover">
+                            </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
                                 <div class="pxp-prop-card-1-details-price">
@@ -797,8 +851,9 @@
 
                     <div>
                         <a href="/combustible/bencina_97_octanos.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/bencina_97.png);"></div>
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/bencina_97.png" alt="Combustible Bencina 97" class="pxp-cover">
+                            </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
                                 <div class="pxp-prop-card-1-details-price">
@@ -810,8 +865,10 @@
                     </div>
                     <div>
                         <a href="/combustible/petroleo_diesel.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/combustible_petroleo.png);"></div>
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/combustible_petroleo.png" alt="Combustible Petróleo Diesel"
+                                    class="pxp-cover">
+                            </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
                                 <div class="pxp-prop-card-1-details-price">
@@ -823,8 +880,10 @@
                     </div>
                     <div>
                         <a href="/combustible/kerosene_parafina.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/combustible_kerosene.png);"></div>
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/combustible_kerosene.png" alt="Combustible Kerosene Parafina"
+                                    class="pxp-cover">
+                            </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
                                 <div class="pxp-prop-card-1-details-price">
@@ -836,8 +895,9 @@
                     </div>
                     <div>
                         <a href="/combustible/gas_liquado_petroleo_glp.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/combustible_gas_liquado_petroleo_glp.png);">
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/combustible_gas_liquado_petroleo_glp.png"
+                                    alt="Combustible Gas Licuado Petróleo (GLP)" class="pxp-cover">
                             </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
@@ -850,8 +910,9 @@
                     </div>
                     <div>
                         <a href="/combustible/gas_natural_comprimido_gnc.html" class="pxp-prop-card-1 rounded-lg">
-                            <div class="pxp-prop-card-1-fig pxp-cover"
-                                style="background-image: url(/images/combustible_gas_natural_comprimido_gnc.png);">
+                            <div class="pxp-prop-card-1-fig">
+                                <img src="images/combustible_gas_natural_comprimido_gnc.png"
+                                    alt="Combustible Gas Natural Comprimido (GNC)" class="pxp-cover">
                             </div>
                             <div class="pxp-prop-card-1-gradient pxp-animate"></div>
                             <div class="pxp-prop-card-1-details">
@@ -905,7 +966,7 @@
                 <div class="col-sm-12 col-lg-4">
                     <div class="pxp-footer-logo">TodoBencina.</div>
                     <div class="pxp-footer-social mt-2">
-                        <a href="mailto:jvegavv@gmail.com"><span class="fa fa-envelope-o"></span></a>
+                        <a href="mailto:todobencina@gmail.com"><span class="fa fa-envelope-o"></span></a>
                         <a href="javascript:void(0)" class="pxp-social-item-coming-soon"
                             data-pxp-title="Próximamente"><span class="fa fa-whatsapp"></span></a>
                         <a href="javascript:void(0)" class="pxp-social-item-coming-soon"
@@ -966,9 +1027,9 @@
     <script src="/js/main.js"></script>
     <script src="/js_custom/select_custom.js"></script>
     <script src="/js_custom/carrusel_custom.js"></script>
+    <script src="/js_custom/index_custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="/js_custom/cookie_banner.js"></script>
-
 
     <!-- Indicador de tamaño de ventana -->
     <div id="window-size-indicator" style="
@@ -992,30 +1053,6 @@
         transition: opacity 0.3s ease;
     "></div>
 
-    <script>
-        (function () {
-            var indicator = document.getElementById('window-size-indicator');
-            var hideTimer = null;
-
-            function updateSize() {
-                var w = window.innerWidth;
-                var h = window.innerHeight;
-                indicator.textContent = w + ' × ' + h + ' px';
-                indicator.style.display = 'block';
-                indicator.style.opacity = '1';
-
-                if (hideTimer) clearTimeout(hideTimer);
-                hideTimer = setTimeout(function () {
-                    indicator.style.opacity = '0';
-                    setTimeout(function () {
-                        indicator.style.display = 'none';
-                    }, 300);
-                }, 1500);
-            }
-
-            window.addEventListener('resize', updateSize);
-        })();
-    </script>
 </body>
 
 </html>

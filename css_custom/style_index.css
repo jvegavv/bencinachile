@@ -36,9 +36,49 @@
     outline: none;
 }
 
-/* Desktop: altura fija del contenedor de servicios */
+/* Estilo para el logo en la sección Hero */
+.favicon-hero {
+    max-height: 48px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.favicon-hero:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+    .favicon-hero {
+        max-height: 38px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .favicon-hero {
+        max-height: 32px;
+    }
+}
+
+/* Corregir visibilidad y posición de sección "¿Por qué elegir TodoBencina?" según index copy 2.html */
+.pxp-services {
+    height: auto !important;
+    min-height: 418px !important;
+    padding-top: 100px !important;    /* Restaurar padding-top original */
+    padding-bottom: 80px !important;   /* Comprimir la altura reduciendo el padding inferior */
+    position: relative;
+    z-index: 10;
+    overflow: visible !important;
+}
+
 .pxp-services-container {
-    height: 350px !important;
+    height: auto !important;
+    min-height: 350px !important;
+    overflow: visible !important;
+    padding-bottom: 0 !important;
+    margin-top: 40px !important;
 }
 
 .carousel-item,
@@ -57,12 +97,7 @@
    ──────────────────────────────────────────────────────────────────────────*/
 @media screen and (max-width: 1199px) {
     .pxp-services {
-        height: auto !important;
         padding-bottom: 20px;
-    }
-
-    .pxp-services-container {
-        height: auto !important;
     }
 
     /* El div con mt-300 debe comportarse como mt-200 (120px) bajo 1200px */
@@ -100,12 +135,7 @@
 
 @media screen and (max-width: 991px) {
     .pxp-services {
-        height: auto !important;
         padding-bottom: 16px;
-    }
-
-    .pxp-services-container {
-        height: auto !important;
     }
 
     .mt-300 {
@@ -120,12 +150,7 @@
 
 @media screen and (max-width: 767px) {
     .pxp-services {
-        height: auto !important;
         padding-bottom: 12px;
-    }
-
-    .pxp-services-container {
-        height: auto !important;
     }
 
     .mt-300 {
@@ -188,35 +213,23 @@
     position: static !important;
 }
 
-/* Mostrar la imagen completa en todas las resoluciones (xs, sm, md, lg, xl) */
-.pxp-services-tabs-items .carousel-item.pxp-cover {
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center top !important;
+/* Excepción para carousel: no debe ser absolute para mantener el flujo del carousel item */
+.pxp-services-tabs-items .carousel-item img.pxp-cover {
+    position: static !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Por encima del fondo si lo hubiera */
 }
-/* Background images for services carousel steps */
-.pxp-service-step-1 { background-image: url(/images/selector_comuna_todobencina_lg.png); }
-.pxp-service-step-2 { background-image: url(/images/listado_estaciones_servicio_todobencina_lg.png); }
-.pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_lg.png); }
-.pxp-service-step-4 { background-image: url(/images/mapa_todobencina_lg.png); }
-.pxp-service-step-5 { background-image: url(/images/gmaps_waze_todobencina_lg.png); } /* Fallback to step 5 image */
-.pxp-service-step-6 { background-image: url(/images/gmaps_waze_todobencina_lg.png); } 
 
 /* Ajustar proporción para fotos de móvil */
 @media screen and (max-width: 990px) {
     .pxp-services-tabs-items .carousel.pxp-services-tabs-carousel {
         aspect-ratio: 1200 / 896 !important; /* Proporción de las fotos *_sm.png */
     }
-    
-    .pxp-service-step-1 { background-image: url(/images/selector_comuna_todobencina_sm.png); }
-    .pxp-service-step-2 { background-image: url(/images/listado_estaciones_servicio_todobencina_sm.png); }
-    .pxp-service-step-3 { background-image: url(/images/ordenar_por_todobencina_sm.png); }
-    .pxp-service-step-4 { background-image: url(/images/mapa_todobencina_sm.png); }
-    .pxp-service-step-5 { background-image: url(/images/gmaps_waze_todobencina_sm.png); } 
-    .pxp-service-step-6 { background-image: url(/images/gmaps_waze_todobencina_sm.png); } 
-    
-    /* Fallback to step 5 image */
 }
+
 
 .pxp-services-tabs-content-item-fig{
     margin-top: 10px;
@@ -275,4 +288,51 @@
     color: #333;
     font-size: 1.3rem;
     font-weight: 900;
+}
+
+
+.pxp-hero-bg {
+    opacity: 1 !important;
+    z-index: 0 !important;
+}
+
+.pxp-hero-bg img.pxp-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    opacity: 1 !important;
+}
+.pxp-prop-card-1-fig {
+    position: absolute !important;
+    height: 100% !important;
+}
+
+.pxp-prop-card-1-fig img.pxp-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+.pxp-hero-bg img.pxp-cover-bottom {
+    object-position: center bottom !important;
+}
+
+.pxp-cta-3-image {
+    position: relative !important;
+    height: 480px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.pxp-cta-3-image img.pxp-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.pxp-hero-bg img.pxp-cover-top {
+    object-position: center top;
 }
