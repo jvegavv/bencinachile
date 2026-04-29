@@ -2,6 +2,69 @@
     "comuna": "Hualqui",
     "estaciones": [
         {
+            "id": 918,
+            "marca": 79,
+            "direccion": "Avda La Araucana  con Tegualda sitio 13",
+            "latitud": "-36.974018926975646",
+            "longitud": "-72.92704827267761",
+            "region": "Del Biobío",
+            "comuna": "Hualqui",
+            "en_mantenimiento_bandera": 0,
+            "electrolinera_bandera": 0,
+            "gasolinera_bandera": 1,
+            "imagen": "/storage/logo/1710939667_lasGalaxias.jpg",
+            "logo": "https://api.bencinaenlinea.cl/storage/logo/1710939667_lasGalaxias.jpg",
+            "likes": 0,
+            "dislikes": 0,
+            "usuario_favorito": null,
+            "usuario_likes": null,
+            "horario": null,
+            "combustibles": [
+                {
+                    "id": 3,
+                    "nombre_corto": "DI",
+                    "nombre_largo": "Petroleo Diesel",
+                    "suministra": 1,
+                    "estacion_id": 918,
+                    "precio": "1550.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 2 horas",
+                    "precio_fecha": "2026-04-28 18:14:24",
+                    "updated_at": "2026-04-28 18:14:24",
+                    "clase": "Gas",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 9
+                },
+                {
+                    "id": 7,
+                    "nombre_corto": "95",
+                    "nombre_largo": "Gasolina 95",
+                    "suministra": 1,
+                    "estacion_id": 918,
+                    "precio": "1621.000",
+                    "unidad_cobro": "$/L",
+                    "actualizado": "hace 2 horas",
+                    "precio_fecha": "2026-04-28 18:14:24",
+                    "updated_at": "2026-04-28 18:14:24",
+                    "clase": "Gasolina",
+                    "tipo_atencion": 2,
+                    "tipo_atencion_nombre": "AutoServicio",
+                    "orden": 11
+                }
+            ],
+            "atenciones": [],
+            "servicios": [
+                {
+                    "id": null,
+                    "nombre": null,
+                    "estacion_id": 918
+                }
+            ],
+            "control_calidad": [],
+            "nombre_bencinera": "Las Galaxias"
+        },
+        {
             "id": 1044,
             "marca": 151,
             "direccion": "Av. Linares 1027",
