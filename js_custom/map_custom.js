@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function crearIconoEstacion(logoUrl) {
         // Fallback si el logo es inválido o nulo
         const fallbackLogo = '../images/estacion_servicio_independientes.png';
-        const finalLogo = (logoUrl && logoUrl !== 'https://api.bencinaenlinea.cl/' && logoUrl !== '/') 
+        const finalLogo = (logoUrl && logoUrl !== '/') 
                           ? logoUrl : fallbackLogo;
 
         return L.divIcon({
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Logo con fallback para el popup
                 const fallbackPopupLogo = '../images/estacion_servicio_independientes.png';
-                const finalPopupLogo = (est.logo && est.logo !== 'https://api.bencinaenlinea.cl/' && est.logo !== '/') 
+                const finalPopupLogo = (est.logo && est.logo !== '/') 
                                        ? est.logo : fallbackPopupLogo;
 
                 var marker_map = L.marker([est.latitud, est.longitud], { icon: crearIconoEstacion(est.logo) })
