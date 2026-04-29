@@ -1257,26 +1257,45 @@ img.pxp-cover {
 }
 
 /* ==========================================================================
-   SCROLL FIX FOR GOOGLEBOT & MOBILE
-   Anula la altura fija para que el contenido empuje el footer hacia abajo
+   SCROLL FIX FOR GOOGLEBOT & MOBILE (Breakpoints <= 991px)
+   Aumentamos el breakpoint y aseguramos que el contenido fluya naturalmente
+   para que Googlebot pueda indexar todas las estaciones de servicio.
    ========================================================================== */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+    html, body {
+        height: auto !important;
+        min-height: 100% !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
     .pxp-full-height,
-    .pxp-content-side {
+    .pxp-content-side,
+    .pxp-content-side-wrapper {
         height: auto !important;
         min-height: 100vh !important;
         position: relative !important;
         overflow: visible !important;
+        display: block !important;
     }
 
-    /* Evita que el contenedor del mapa ocupe espacio cuando está oculto o vacío en móvil */
+    /* Evita que el mapa flote o bloquee el scroll en móvil cuando no está activo */
     .pxp-map-side {
+        position: relative !important;
+        top: 0 !important;
         height: auto !important;
         min-height: 0 !important;
+        width: 100% !important;
+        z-index: 1 !important;
     }
 
-    body {
-        overflow-y: auto !important;
+    /* Cuando el mapa está maximizado en móvil (vía JS), le damos una altura fija 
+       pero permitimos que el resto del body mantenga su flujo si es necesario */
+    .pxp-map-side.pxp-max {
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0 !important;
+        z-index: 1030 !important;
     }
 }
 
