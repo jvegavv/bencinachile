@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (navigator.permissions) {
                     navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
                         // El estado puede ser: 'granted', 'denied' o 'prompt'
-                        console.log("Estado actual del permiso:", result.state);
+                        //console.log("Estado actual del permiso:", result.state);
 
                         permisos_geo_navegador(result);
 
@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', function () {
                             permisos_geo_navegador(result);
 
 
-                            console.log("El permiso ha cambiado a:", result.state);
+                            //console.log("El permiso ha cambiado a:", result.state);
                         };
                     });
                 } else {
-                    console.log("Tu navegador no soporta la API de Permisos.");
+                    //console.log("Tu navegador no soporta la API de Permisos.");
                 }
 
             });
@@ -103,9 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (geolocalizar == 'true') {
 
-        console.log(" Geolocalizacion de segunda true");
-        console.log(" carMarker 2 " + carMarker);
-        console.log(" Boolean " + !carMarker);
+        //console.log(" Geolocalizacion de segunda true");
+        //console.log(" carMarker 2 " + carMarker);
+        //console.log(" Boolean " + !carMarker);
 
         if (!carMarker) {
 
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         // 2. Escuchar el evento 'locationfound'
         map.on('locationfound', function (e) {
-            console.log(`[${new Date().toLocaleTimeString()}] location-found 2`);
+            //console.log(`[${new Date().toLocaleTimeString()}] location-found 2`);
             if (!carMarker) {
 
 
@@ -136,13 +136,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     .bindPopup("Estás aqui");
 
 
-                console.log("GEO AUTO 2 - 1");
+                //console.log("GEO AUTO 2 - 1");
 
                 // map.setView(e.latlng, 16); // Centrar la cámara la primera vez
             } else {
                 // Actualizaciones siguientes: solo movemos el marcador
                 carMarker.setLatLng(e.latlng);
-                console.log("GEO AUTO 2 - 2");
+                //console.log("GEO AUTO 2 - 2");
                 // OPCIONAL: Si quieres que el mapa SIEMPRE te siga al centro:
                 // map.panTo(e.latlng);
             }
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Accedemos a data.estaciones porque así lo definimos en el script de Python
             const estaciones = data.estaciones;
 
-            console.log(estaciones)
+            //console.log(estaciones)
             // 4. Dibujar marcadores de bombas
             estaciones.forEach(function (est) {
                 // Importante: Verifica que los nombres de las propiedades (lat, lng, nombre) 
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 marcadoresEstaciones[est.id] = marker_map;
             });
 
-            console.log("Marcadores cargados desde JSON:", marcadoresEstaciones);
+            //console.log("Marcadores cargados desde JSON:", marcadoresEstaciones);
         })
         .catch(error => {
             console.error("Error al cargar las estaciones:", error);
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Obtenemos el ID de la estación desde el atributo data-prop
         var propId = $(this).attr('data-prop');
 
-        console.log("mouse sobre tarjeta " + propId)
+        //console.log("mouse sobre tarjeta " + propId)
         // Verificamos si el marcador existe en nuestro objeto global
         if (marcadoresEstaciones[propId]) {
             var marker_map = marcadoresEstaciones[propId];
@@ -396,7 +396,7 @@ function redimensionar_mapa(map) {
     return new Promise((resolve) => {
 
         map.once('resize', () => {
-            console.log("Evento resize completado");
+            //console.log("Evento resize completado");
             resolve();
         });
 
@@ -429,18 +429,18 @@ function geolocalizar_mapa(map) {
 
     // 2. Escuchar el evento 'locationfound'
     map.on('locationfound', function (e) {
-        console.log(`[${new Date().toLocaleTimeString()}] location-found 1`);
+        //console.log(`[${new Date().toLocaleTimeString()}] location-found 1`);
         if (!carMarker) {
 
             // Primera vez: creamos el marcador y centramos el mapa
             carMarker = L.marker(e.latlng, { icon: iconoAuto }).addTo(map)
-            console.log("GEO AUTO 1 - 1");
+            //console.log("GEO AUTO 1 - 1");
 
             map.setView(e.latlng, 16); // Centrar la cámara la primera vez
         } else {
             // Actualizaciones siguientes: solo movemos el marcador
             carMarker.setLatLng(e.latlng);
-            console.log("GEO AUTO 1 - 2");
+            //console.log("GEO AUTO 1 - 2");
             // OPCIONAL: Si quieres que el mapa SIEMPRE te siga al centro:
             map.panTo(e.latlng);
         }
@@ -473,25 +473,25 @@ function permisos_geo_navegador(result) {
     });
 
     if (result.state === 'granted') {
-        console.log("✅ El usuario ya aprobó el uso.");
+        //console.log("✅ El usuario ya aprobó el uso.");
         geolocalizar_mapa(map)
 
         // Aquí puedes llamar a tu función de obtener ubicación
     } else if (result.state === 'prompt') {
-        console.log("⏳ El navegador aún no ha preguntado o está esperando decisión.");
+        //console.log("⏳ El navegador aún no ha preguntado o está esperando decisión.");
 
         if (document.fullscreenElement || document.webkitFullscreenElement) {
-            console.log("Error en mapa full");
+            //console.log("Error en mapa full");
             mapaContenedor.appendChild(modal);
         }
         $('#gpsModal').modal('show');
 
 
     } else if (result.state === 'denied') {
-        console.log("❌ El usuario bloqueó la geolocalización.");
+        //console.log("❌ El usuario bloqueó la geolocalización.");
 
         if (document.fullscreenElement || document.webkitFullscreenElement) {
-            console.log("Error en mapa full");
+            //console.log("Error en mapa full");
             mapaContenedor.appendChild(modal);
         }
         $('#gpsModal').modal('show');
@@ -507,7 +507,7 @@ function error_geo_localizacion(map) {
     map.off('locationfound');
     map.off('locationerror');
     localStorage.setItem('geolocalizar', false);
-    console.log("❌ Llegamos por el error exception");
+    //console.log("❌ Llegamos por el error exception");
     $('#gpsModal').modal('show');
 
 }

@@ -8,7 +8,7 @@ $(document).ready(function () {
     
     // Función para Cargar Scripts de Seguimiento (Google Analytics, etc.)
     function loadTrackingScripts() {
-        console.log("TodoBencina: Cargando scripts de seguimiento (Consentimiento Aceptado)");
+        //console.log("TodoBencina: Cargando scripts de seguimiento (Consentimiento Aceptado)");
         
         /**
          * -------------------------------------------------------------------

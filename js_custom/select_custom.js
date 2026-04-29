@@ -51,8 +51,8 @@ $(document).ready(function () {
         // Obtenemos el atributo 'data-nombre-pagina' del elemento <option> real
         const nombrePagina = $(this).find(':selected').data('nombre-pagina');
 
-        console.log("ID Seleccionado:", idSeleccionado);
-        console.log("Nombre para URL (Slug):", nombrePagina);
+        //console.log("ID Seleccionado:", idSeleccionado);
+        //console.log("Nombre para URL (Slug):", nombrePagina);
 
         // Ejemplo de uso: Redirigir o filtrar
         if (nombrePagina) {

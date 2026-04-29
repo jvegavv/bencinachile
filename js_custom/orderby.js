@@ -76,7 +76,7 @@ function ordenar_select_bencina(seleccion){
         elementos = document.querySelectorAll('.combustible_93, .combustible_A93');
     }
 
-    console.log("Item Orden " + item_order_primary + (item_order_secondary ? "/" + item_order_secondary : ""));
+    //console.log("Item Orden " + item_order_primary + (item_order_secondary ? "/" + item_order_secondary : ""));
 
 
     var listaElementos = $('.estacion-item').toArray();
