@@ -1255,3 +1255,73 @@ img.pxp-cover {
         margin-right: 6px;
     }
 }
+
+/* ==========================================================================
+   SCROLL FIX FOR GOOGLEBOT & MOBILE
+   Anula la altura fija para que el contenido empuje el footer hacia abajo
+   ========================================================================== */
+@media (max-width: 767px) {
+    .pxp-full-height,
+    .pxp-content-side {
+        height: auto !important;
+        min-height: 100vh !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    /* Evita que el contenedor del mapa ocupe espacio cuando está oculto o vacío en móvil */
+    .pxp-map-side {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    body {
+        overflow-y: auto !important;
+    }
+}
+
+/* ==========================================================================
+   MAP LOADING MODAL (LAZY LOAD)
+   ========================================================================== */
+#mapLoadingModal .modal-content {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#mapLoadingModal .modal-body {
+    padding: 40px 20px;
+}
+
+.map-loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.map-loader-text {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
