@@ -1255,20 +1255,3 @@ img.pxp-cover {
         margin-right: 6px;
     }
 }
-
-/* FIX: Permite el scroll en móviles y Googlebot */
-@media (max-width: 767px) {
-    /* Anula la altura fija para que el contenido empuje el footer hacia abajo */
-    .pxp-full-height,
-    .pxp-content-side,
-    .pxp-half {
-        height: auto !important;
-        min-height: 100vh;
-        position: relative !important;
-        overflow: visible !important;
-    }
-
-    body {
-        overflow-y: auto !important;
-    }
-}
