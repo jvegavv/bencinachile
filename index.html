@@ -2,6 +2,11 @@
 <html lang="es">
 
 <head>
+
+
+    <!-- **********************************************************************************************
+    ********************************** Google Tag Manager *********************************************
+    ****************************************************************************************************-->
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -12,6 +17,11 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-T4HGS5WD');</script>
     <!-- End Google Tag Manager -->
+
+    <!-- **********************************************************************************************
+    ********************************** Google analytics 4  *********************************************
+    ****************************************************************************************************-->
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJZV8VCR10"></script>
     <script>
@@ -21,10 +31,21 @@
 
         gtag('config', 'G-TJZV8VCR10');
     </script>
+
+    <!-- **********************************************************************************************
+    ********************************** Meta tags  *********************************************
+    ****************************************************************************************************-->
+    <title>Precios de Combustibles en Chile | TodoBencina</title>
+    <link rel="canonical" href="https://todobencina.cl/" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Encuentra el precio mas economico de las bencinas 93, 95, 97, Kerosene (Parafina), Petroleo Diesel, Gas Licuado Petroleo (GLP) y Gas Natural Comprimido (GNC) en Chile. Encuentra la estación más cercana hoy en TodoBencina y ahorra en cada carga.">
+
+
+    <!-- **********************************************************************************************
+    ********************************** Favicon  *********************************************
+    ****************************************************************************************************-->
 
     <!-- 1. Para que GOOGLE muestre tu logo en el buscador (PNG 48x48 es la clave) -->
     <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png">
@@ -39,19 +60,38 @@
     <!-- 4. Respaldo universal (Opcional, para navegadores muy viejos) -->
     <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/png">
 
+    <!-- **********************************************************************************************
+    ********************************** Custom styles  *********************************************
+    ****************************************************************************************************-->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="/css/select2.min.css" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css_custom/style_custom.css" />
     <link rel="stylesheet" href="/css_custom/style_index.css" />
 
-    <title>Precios de Combustibles en Chile | TodoBencina</title>
-    <link rel="canonical" href="https://todobencina.cl/" />
+    <link rel="preload" href="/css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    </noscript>
+
+    <link rel="preload" href="/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/select2.min.css">
+    </noscript>
+
+    <link rel="preload" href="/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+    </noscript>
+
+
+    <!-- **********************************************************************************************
+    ********************************** Open Graph tags  *********************************************
+    ****************************************************************************************************-->
+
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://todobencina.cl/">
@@ -70,7 +110,14 @@
     <meta property="twitter:description"
         content="Encuentra el precio mas economico de las bencinas 93, 95, 97, Kerosene (Parafina), Petroleo Diesel, Gas Licuado Petroleo (GLP) y Gas Natural Comprimido (GNC) en Chile. Encuentra la estación más cercana hoy en TodoBencina y ahorra en cada carga.">
     <meta property="twitter:image" content="https://todobencina.cl/images/og-image.png">
+
+    <!-- **********************************************************************************************
+    ********************************** JSON-LD Schema  *********************************************
+    ****************************************************************************************************-->
+
     <script type="application/ld+json">
+
+
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -178,8 +225,16 @@
         <!--######### Inicio Buscador ####-->
         <div class="pxp-hero vh-100">
             <div class="pxp-hero-bg">
-                <img src="images/image_index_car.png?v=2" alt="Precios de Bencina y Combustibles en Chile"
-                    class="pxp-cover pxp-cover-bottom">
+
+                <picture>
+
+
+                    <source type="image/webp" srcset="images/image_index_car.webp">
+                    <img src="images/image_index_car.png?v=2" alt="Precios de Bencina y Combustibles en Chile"
+                        class="pxp-cover pxp-cover-bottom">
+
+                </picture>
+
             </div>
             <div class="pxp-hero-opacity" style="background: rgba(0,0,0,0.2);"></div>
             <div class="pxp-hero-caption">
@@ -302,6 +357,7 @@
                                         <picture>
                                             <source srcset="images/selector_comuna_todobencina_lg.png"
                                                 media="(min-width: 991px)">
+
                                             <img src="images/selector_comuna_todobencina_sm.png"
                                                 alt="Busca tu comuna en TodoBencina" class="pxp-cover">
                                         </picture>
