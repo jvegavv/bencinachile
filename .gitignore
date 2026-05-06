@@ -21,3 +21,8 @@ git_sync.sh
 # IDE and Docs
 .vscode/
 docs/
+
+# Node
+node_modules/
+package-lock.json
+package.json
