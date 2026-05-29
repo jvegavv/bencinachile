@@ -3,6 +3,8 @@
 
     $(document).ready(function() {
         var $carousel = $('#pxp-services-tabs-carousel');
+        if ($carousel.length === 0) return;
+
         var $btn = $('#pxp-services-carousel-pause-play');
         var $icon = $btn.find('span');
 
