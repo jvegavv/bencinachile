@@ -77,37 +77,28 @@
     ********************************** Google analytics 4 & Tag Manager Deferred ***********************
     ****************************************************************************************************-->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        // Función para inyectar de forma dinámica el script de GTM
+        function cargarGTM() {
+            if (window.gtmCargado) return; // Evita duplicados
+            window.gtmCargado = true;
 
-        function loadTrackingScripts() {
-            if (window.trackingLoaded) return;
-            window.trackingLoaded = true;
-
-            // Google Tag Manager
             (function (w, d, s, l, i) {
                 w[l] = w[l] || []; w[l].push({
                     'gtm.start':
                         new Date().getTime(), event: 'gtm.js'
                 }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-T4HGS5WD');
-
-            // Google Analytics 4 (gtag.js)
-            var gtagScript = document.createElement('script');
-            gtagScript.async = true;
-            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TJZV8VCR10';
-            document.head.appendChild(gtagScript);
-
-            gtag('js', new Date());
-            gtag('config', 'G-TJZV8VCR10');
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-T4HGS5WD'); // Tu ID de GTM
         }
 
-        ['mouseover', 'keydown', 'scroll', 'touchstart'].forEach(function (e) {
-            window.addEventListener(e, loadTrackingScripts, { once: true });
-        });
-        setTimeout(loadTrackingScripts, 4000);
+        // Opción A: Cargar tras 3 segundos de inactividad inicial
+        setTimeout(cargarGTM, 3000);
+
+        // Opción B: Cargar inmediatamente si el usuario interactúa antes de los 3 segundos
+        window.addEventListener('scroll', cargarGTM, { passive: true });
+        window.addEventListener('click', cargarGTM);
+        window.addEventListener('touchstart', cargarGTM, { passive: true });
     </script>
 
     <!-- **********************************************************************************************
