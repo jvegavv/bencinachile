@@ -1,0 +1,33 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;">
+    <style type="text/css">
+        .st-gray{fill:#333333;}
+        .st-orange{fill:#f39c12;}
+        .st-line{fill:none;stroke:#333333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    </style>
+    
+    <line class="st-line" x1="10" y1="110" x2="118" y2="110" />
+
+    <path class="st-gray" d="M20,40 h88 l5,10 h-98 z" />
+    <rect x="35" y="50" class="st-gray" width="4" height="60" />
+    <rect x="89" y="50" class="st-gray" width="4" height="60" />
+
+    <g transform="translate(45, 80)">
+        <rect x="0" y="0" class="st-line" width="12" height="25" />
+        <rect x="2" y="3" class="st-orange" width="8" height="6" /> <path class="st-line" d="M12,10 c4,0 5,2 5,5 v5" /> </g>
+
+    <g transform="translate(71, 80)">
+        <rect x="0" y="0" class="st-line" width="12" height="25" />
+        <rect x="2" y="3" class="st-orange" width="8" height="6" />
+        <path class="st-line" d="M12,10 c4,0 5,2 5,5 v5" />
+    </g>
+
+    <g transform="translate(105, 60)">
+        <rect x="0" y="0" class="st-gray" width="12" height="20" />
+        <rect x="4" y="20" class="st-gray" width="4" height="30" />
+        <rect x="2" y="3" class="st-orange" width="8" height="2" />
+        <rect x="2" y="7" class="st-orange" width="8" height="2" />
+        <rect x="2" y="11" class="st-orange" width="8" height="2" />
+    </g>
+
+    <path class="st-gray" d="M15,95 h15 l3,5 h8 v10 h-26 v-10 z" opacity="0.6" />
+</svg>
