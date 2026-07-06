@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages (robusto)
+name: Deploy to GitHub Pages (V1.0.0)
 
 on:
   push:
