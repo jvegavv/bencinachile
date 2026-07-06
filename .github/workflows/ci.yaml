@@ -1,0 +1,103 @@
+name: Deploy to GitHub Pages (robusto)
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node (si aplicable)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies and build
+        run: |
+          # Ajusta los comandos de instalación/build a tu proyecto
+          if [ -f package.json ]; then
+            npm ci
+            npm run build || npm run build:prod || true
+          fi
+          # Si usas Hugo:
+          if [ -f config.toml ] || [ -f config.yaml ]; then
+            if command -v hugo >/dev/null 2>&1; then
+              hugo --minify
+            fi
+          fi
+
+      - name: Debug - listar posibles salidas y tamaños
+        run: |
+          echo "Listado raíz del repositorio:"
+          ls -la
+          echo ""
+          echo "Buscar index.html en carpetas comunes:"
+          for d in public build dist out; do
+            if [ -f "${d}/index.html" ]; then
+              echo "Encontrado index en ./${d}"
+            fi
+          done
+          echo ""
+          echo "Archivos grandes (top 10):"
+          find . -type f -printf "%s %p\n" | sort -nr | head -n 10 || true
+
+      - name: Preparar carpeta para Pages (detectar y copiar)
+        run: |
+          set -e
+          TARGET="./pages_output"
+          rm -rf "$TARGET"
+          # Prioridad: public, build, dist, out, raíz con index.html
+          if [ -d ./public ] && [ -f ./public/index.html ]; then
+            echo "Usando ./public"
+            cp -R ./public "$TARGET"
+          elif [ -d ./build ] && [ -f ./build/index.html ]; then
+            echo "Usando ./build"
+            cp -R ./build "$TARGET"
+          elif [ -d ./dist ] && [ -f ./dist/index.html ]; then
+            echo "Usando ./dist"
+            cp -R ./dist "$TARGET"
+          elif [ -d ./out ] && [ -f ./out/index.html ]; then
+            echo "Usando ./out"
+            cp -R ./out "$TARGET"
+          elif [ -f ./index.html ]; then
+            echo "Usando index.html en raíz"
+            mkdir -p "$TARGET"
+            cp index.html "$TARGET/"
+            # copiar assets si existen
+            [ -d ./assets ] && cp -R ./assets "$TARGET/" || true
+          else
+            echo "ERROR: No se encontró index.html en ./public, ./build, ./dist, ./out ni en la raíz."
+            echo "Lista completa:"
+            ls -la
+            exit 1
+          fi
+          echo "Contenido de $TARGET:"
+          ls -la "$TARGET"
+
+      - name: Añadir CNAME (si despliegas dominio personalizado)
+        if: ${{ always() }}
+        run: |
+          # Cambia el dominio si es otro o usa una variable secreta
+          DOMAIN="todobencina.cl"
+          if [ -n "$DOMAIN" ]; then
+            echo "$DOMAIN" > ./pages_output/CNAME
+            echo "CNAME creado con $DOMAIN"
+          fi
+
+      - name: Subir artefacto para Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./pages_output
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v1
