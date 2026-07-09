@@ -111,10 +111,53 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="stylesheet" href="/css_custom/style_custom.min.css">xw
+    <link rel="stylesheet" href="/css_custom/style_custom.min.css">
 
     <link rel="preload" as="image" href="images/image_index_car.webp?v=2" type="image/webp" fetchpriority="high">
 
+    <!-- **********************************************************************************************
+    ********************************** Carga Posterior (Diferida) **********************************
+    ****************************************************************************************************-->
+    <!-- 
+      Si agrega hojas de estilo adicionales que no sean críticas para el primer renderizado,
+      puede cargarlas de forma diferida (para mejorar el rendimiento y velocidad de carga inicial)
+      de dos maneras:
+      
+      Opción 1: Usando la estructura standard de preload (CSS) o defer (JS) directamente:
+      <link rel="preload" href="/css/ejemplo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="/css/ejemplo.css"></noscript>
+      
+      Opción 2: Listándolas en el siguiente script dinámico, las cuales se cargarán 
+      completamente posterior al evento 'load' de la ventana (para evitar cualquier bloqueo):
+    -->
+    <script>
+        (function() {
+            window.addEventListener('load', function() {
+                var lazyCSS = [
+                    // Agregue aquí los CSS que desee cargar posterior a la carga inicial, ej:
+                    // "/css/ejemplo.css"
+                ];
+                var lazyJS = [
+                    // Agregue aquí los JS que desee cargar posterior a la carga inicial, ej:
+                    // "/js/ejemplo.js"
+                ];
+
+                lazyCSS.forEach(function(href) {
+                    var link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = href;
+                    document.head.appendChild(link);
+                });
+
+                lazyJS.forEach(function(src) {
+                    var script = document.createElement('script');
+                    script.src = src;
+                    script.defer = true;
+                    document.body.appendChild(script);
+                });
+            });
+        })();
+    </script>
 
 </head>
 
@@ -233,6 +276,16 @@
    
     
     
+    -->
+
+    <!-- **********************************************************************************************
+    ********************************** Scripts Posteriores *****************************************
+    ****************************************************************************************************-->
+    <!-- 
+      Cualquier script que agregue directamente en el HTML debe cargarse posterior al renderizado inicial.
+      Para lograr esto, asegúrese de utilizar el atributo 'defer' en sus etiquetas <script>:
+      Ejemplo:
+      <script src="/js/ejemplo.js" defer></script>
     -->
 
 </body>
