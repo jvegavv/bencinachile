@@ -109,9 +109,9 @@
     ********************************** Custom styles  *********************************************
     ****************************************************************************************************-->
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="stylesheet" href="/css_custom/style_custom.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.purged.css">
+    <link rel="stylesheet" href="/css/style.min.purged.css">
+    <link rel="stylesheet" href="/css_custom/style_custom.min.purged.css">
 
     <link rel="preload" as="image" href="images/image_index_car.webp?v=2" type="image/webp" fetchpriority="high">
 
@@ -131,8 +131,8 @@
       completamente posterior al evento 'load' de la ventana (para evitar cualquier bloqueo):
     -->
     <script>
-        (function() {
-            window.addEventListener('load', function() {
+        (function () {
+            window.addEventListener('load', function () {
                 var lazyCSS = [
                     // Agregue aquí los CSS que desee cargar posterior a la carga inicial, ej:
                     // "/css/ejemplo.css"
@@ -142,14 +142,14 @@
                     // "/js/ejemplo.js"
                 ];
 
-                lazyCSS.forEach(function(href) {
+                lazyCSS.forEach(function (href) {
                     var link = document.createElement('link');
                     link.rel = 'stylesheet';
                     link.href = href;
                     document.head.appendChild(link);
                 });
 
-                lazyJS.forEach(function(src) {
+                lazyJS.forEach(function (src) {
                     var script = document.createElement('script');
                     script.src = src;
                     script.defer = true;
