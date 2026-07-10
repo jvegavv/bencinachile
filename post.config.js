@@ -17,6 +17,7 @@ module.exports = {
 npx postcss css/bootstrap.min.css -o css/bootstrap.min.purged.css
 npx postcss css/style.min.css -o css/style.min.purged.css
 npx postcss css_custom/style_custom.min.css -o css_custom/style_custom.min.purged.css
+npx postcss css_custom/style_index.min.css -o css_custom/style_index.min.purged.css
 
     <link rel="stylesheet" href="/css/bootstrap.min.purged.css">
     <link rel="stylesheet" href="/css/style.min.purged.css">
