@@ -28,4 +28,5 @@ package-lock.json
 package.json
 
 purgedcss.sh
-git.sh.
+git.sh
+minificar.sh
