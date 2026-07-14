@@ -120,6 +120,45 @@
 
     <link rel="preload" as="image" href="images/image_index_car.webp?v=2" type="image/webp" fetchpriority="high">
 
+
+    <!-- Estilos críticos Select2 inline (garantiza aplicación antes de init JS) -->
+    <style>
+        .select2-container {
+            width: 100% !important;
+        }
+
+        .select2-container--default .select2-selection--single {
+            border: 2px solid #fec42d !important;
+            border-radius: 10px !important;
+            height: 54px !important;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 0 !important;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 54px !important;
+            color: #333;
+            font-weight: 700;
+            text-align: center !important;
+            width: 100% !important;
+            display: block !important;
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 52px !important;
+            right: 10px !important;
+        }
+
+        .select2-container--default.select2-container--focus .select2-selection--single {
+            border-color: #fec42d !important;
+            outline: none;
+        }
+    </style>
+
     <!-- **********************************************************************************************
     ********************************** Carga Posterior (Diferida) **********************************
     ****************************************************************************************************-->
