@@ -932,9 +932,14 @@
       <script src="/js/ejemplo.js" defer></script>
     -->
 
-    <!-- Accesibilidad: agrega aria-label a botones de navegación del carrusel de combustibles -->
+    <!-- Accesibilidad: corrige role="presentation" y agrega aria-label en botones del carrusel de combustibles -->
     <script>
         (function () {
+            function fixNavButton(btn, label) {
+                if (!btn) return;
+                btn.setAttribute('role', 'button');
+                btn.setAttribute('aria-label', label);
+            }
             function observeCarouselNav() {
                 var container = document.querySelector('.pxp-props-carousel-right-container');
                 if (!container) return;
@@ -942,10 +947,10 @@
                     mutations.forEach(function (mutation) {
                         mutation.addedNodes.forEach(function (node) {
                             if (node.nodeType !== 1) return;
-                            var prev = node.classList && node.classList.contains('owl-prev') ? node : node.querySelector && node.querySelector('.owl-prev');
-                            var next = node.classList && node.classList.contains('owl-next') ? node : node.querySelector && node.querySelector('.owl-next');
-                            if (prev && !prev.getAttribute('aria-label')) prev.setAttribute('aria-label', 'Anterior');
-                            if (next && !next.getAttribute('aria-label')) next.setAttribute('aria-label', 'Siguiente');
+                            var prev = node.classList && node.classList.contains('owl-prev') ? node : (node.querySelector && node.querySelector('.owl-prev'));
+                            var next = node.classList && node.classList.contains('owl-next') ? node : (node.querySelector && node.querySelector('.owl-next'));
+                            fixNavButton(prev, 'Anterior');
+                            fixNavButton(next, 'Siguiente');
                         });
                     });
                 });
