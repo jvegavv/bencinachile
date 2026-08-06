@@ -1,0 +1,32 @@
+# Ignorar la carpeta raíz llamada "python"
+/python/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# TODOS LOS MD
+*.md
+
+# También es recomendable ignorar los archivos temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Scripts
+git_sync.sh
+
+# IDE and Docs
+.vscode/
+docs/
+
+# Node
+node_modules/
+package-lock.json
+package.json
+
+purgedcss.sh
+git.sh
+minificar.sh
