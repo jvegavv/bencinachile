@@ -156,9 +156,10 @@ function initMap() {
             fullscreenControl: false
         }).setView([latitud, longitud], 15);
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
+       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
         new L.Control.Fullscreen({ position: 'topright' }).addTo(map);
         L.control.zoom({ position: 'bottomright' }).addTo(map);
