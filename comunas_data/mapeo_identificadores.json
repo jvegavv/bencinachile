@@ -103,8 +103,8 @@
             "nombre": "Alto Hospicio",
             "nombre_pagina": "alto-hospicio.html",
             "nombre_json": "alto-hospicio.json",
-            "latitud": "-20.2686722",
-            "longitud": "-70.10491689999998"
+            "latitud": "-20.26147244901372",
+            "longitud": "-70.06711006164551"
         },
         {
             "id": 4,
@@ -127,8 +127,8 @@
             "nombre": "Angol",
             "nombre_pagina": "angol.html",
             "nombre_json": "angol.json",
-            "latitud": "-37.8",
-            "longitud": "-72.7167"
+            "latitud": "-37.80874559644022",
+            "longitud": "-72.68872261047363"
         },
         {
             "id": 7,
@@ -535,8 +535,8 @@
             "nombre": "Concepción",
             "nombre_pagina": "concepcion.html",
             "nombre_json": "concepcion.json",
-            "latitud": "-36.8050637",
-            "longitud": "-73.0492407"
+            "latitud": "-36.8154869",
+            "longitud": "-73.0470358"
         },
         {
             "id": 58,
@@ -935,8 +935,8 @@
             "nombre": "La Granja",
             "nombre_pagina": "la-granja.html",
             "nombre_json": "la-granja.json",
-            "latitud": "-33.5240758",
-            "longitud": "-70.6228357"
+            "latitud": "-33.54754678247875",
+            "longitud": "-70.63307762145996"
         },
         {
             "id": 108,
@@ -1775,8 +1775,8 @@
             "nombre": "Puerto Montt",
             "nombre_pagina": "puerto-montt.html",
             "nombre_json": "puerto-montt.json",
-            "latitud": "-41.478224",
-            "longitud": "-72.98302060000003"
+            "latitud": "-41.48148379019156",
+            "longitud": "-72.95587599277496"
         },
         {
             "id": 213,
@@ -1927,8 +1927,8 @@
             "nombre": "Quinta Normal",
             "nombre_pagina": "quinta-normal.html",
             "nombre_json": "quinta-normal.json",
-            "latitud": "-33.4350447",
-            "longitud": "-70.7178763"
+            "latitud": "-33.43257844847753",
+            "longitud": "-70.69205939769745"
         },
         {
             "id": 232,
@@ -1959,8 +1959,8 @@
             "nombre": "Rancagua",
             "nombre_pagina": "rancagua.html",
             "nombre_json": "rancagua.json",
-            "latitud": "-34.1759354",
-            "longitud": "-70.7282103"
+            "latitud": "-34.163306",
+            "longitud": "-70.713079"
         },
         {
             "id": 236,
